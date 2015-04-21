@@ -1,4 +1,4 @@
-# 기여 가이드
+# 기여 가이드(Contribution Guide)
 
 - [버그 리포트](#bug-reports)
 - [핵심기능에 대한 개발 논의](#core-development-discussion)

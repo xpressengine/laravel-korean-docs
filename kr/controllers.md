@@ -1,4 +1,4 @@
-# HTTP 컨트롤러
+# HTTP 컨트롤러(HTTP Controllers)
 
 - [소개](#introduction)
 - [기본 사용법](#basic-controllers)

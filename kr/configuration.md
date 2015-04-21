@@ -1,4 +1,4 @@
-# 설정
+# 설정(Configuration)
 
 - [소개](#introduction)
 - [설치 후 할일](#after-installation)

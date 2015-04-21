@@ -1,4 +1,4 @@
-# 서비스 컨테이너
+# 서비스 컨테이너(Service Container)
 
 - [소개](#introduction)
 - [기본 사용법](#basic-usage)
