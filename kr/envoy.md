@@ -1,34 +1,31 @@
-# Envoy Task Runner
+# Envoy(Envoy Task Runner)
 
-- [Introduction 소개](#introduction)
-- [Installation 설치](#envoy-installation)
-- [Running Tasks 작업 수행하기](#envoy-running-tasks)
-- [Multiple Servers 다수의 서버](#envoy-multiple-servers)
-- [Parallel Execution 병렬 실행](#envoy-parallel-execution)
-- [Task Macros 작업 매크로](#envoy-task-macros)
-- [Notifications 알림](#envoy-notifications)
-- [Updating Envoy 업데이트](#envoy-updating-envoy)
+- [소개](#introduction)
+- [설치](#envoy-installation)
+- [작업 수행하기](#envoy-running-tasks)
+- [다수의 서버](#envoy-multiple-servers)
+- [병렬 실행](#envoy-parallel-execution)
+- [작업 매크로](#envoy-task-macros)
+- [알림](#envoy-notifications)
+- [envoy 업데이트](#envoy-updating-envoy)
 
 <a name="introduction"></a>
-## Introduction
 ## 소개
 
-[Laravel Envoy](https://github.com/laravel/envoy) provides a clean, minimal syntax for defining common tasks you run on your remote servers. 라라벨 Envoy는 원격 서버에서 정의된 공통의 작업을 수행하기 위한 깔끔하고 간결한 문법을 제공합니다. Using a Blade style syntax, you can easily setup tasks for deployment, Artisan commands, and more. 블레이드 스타일의 문법을 사용하여  손쉽게 배포, 아티즌 명령어 등의 작업을 설정할 수 있습니다.
+[라라벨 Envoy](https://github.com/laravel/envoy)는 원격 서버에서 정의된 공통의 작업을 수행하기 위한 간결한 문법을 제공합니다. 블레이드 스타일의 문법을 사용하여 손쉽게 배포, 아티즌 명령어 등의 작업을 설정할 수 있습니다.
 
-> **Note 주의:** Envoy requires PHP version 5.4 or greater, and only runs on Mac / Linux operating systems. Envoy는 PHP 버전 5.4 이상의 Mac 또는 Linux 운영 체제에서 동작합니다.
+> **주의:** Envoy는 PHP 버전 5.4 이상의 Mac 또는 Linux 운영 체제에서 동작합니다.
 
 <a name="envoy-installation"></a>
-## Installation
 ## 설치
 
-First, install Envoy using the Composer `global` command:
-먼저 컴포저의 `global` 명령어를 통해서 Envoy를 설치합니다. 
+먼저 컴포저의 `global` 명령어를 통해서 Envoy를 설치합니다:
 
 	composer global require "laravel/envoy=~1.0"
 
-Make sure to place the `~/.composer/vendor/bin` directory in your PATH so the `envoy` executable is found when you run the `envoy` command in your terminal. `~/.composer/vendor/bin` 디렉토리를 여러분의 PATH에 추가하여 터미널에서 `envoy` 명령어를 실행할 때 `envoy`를 바로 찾을 수 있도록 설정하십시오. 
+`~/.composer/vendor/bin` 디렉토리를 여러분의 PATH에 추가하여 터미널에서 `envoy` 명령어를 실행할 때 `envoy`를 바로 찾을 수 있도록 설정하십시오. 
 
-Next, create an `Envoy.blade.php` file in the root of your project. 그 다음 프로젝트 루트 디렉토리에 `Envoy.blade.php` 파일을 생성합니다. Here's an example to get you started: 다음은 간단한 예제 입니다. 
+그 다음 프로젝트 루트 디렉토리에 `Envoy.blade.php` 파일을 생성합니다. 다음은 간단한 예제 입니다:
 
 	@servers(['web' => '192.168.1.1'])
 
@@ -36,27 +33,24 @@ Next, create an `Envoy.blade.php` file in the root of your project. 그 다음 �
 		ls -la
 	@endtask
 
-As you can see, an array of `@servers` is defined at the top of the file. 보시다 시피 파일의 제일 윗 부분에 `@servers` 에 배열이 정의되어 있습니다. You can reference these servers in the `on` option of your task declarations. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. Within your `@task` declarations you should place the Bash code that will be run on your server when the task is executed. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다. 
+보시다 시피 파일의 제일 윗 부분에 `@servers` 에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다. 
 
-The `init` command may be used to easily create a stub Envoy file:
-`init` 명령어를 사용하여 Envoy 파일의 스텁을 쉽게 만들 수 있습니다.
+`init` 명령어를 사용하여 Envoy 파일의 스텁을 쉽게 만들 수 있습니다:
 
 	envoy init user@192.168.1.1
 
 <a name="envoy-running-tasks"></a>
-## Running Tasks
 ## 작업 실행하기
 
-To run a task, use the `run` command of your Envoy installation:
-작업을 수행하려면 설치 한 Envoy에서 `run` 명령을 실행하십시오.
+작업을 수행하려면 설치 한 Envoy에서 `run` 명령을 실행하십시오:
 
 	envoy run foo
 
-If needed, you may pass variables into the Envoy file using command line switches: 필요한 경우 명령어의 스위치를 사용하여 Envoy 파일에 변수를 전달할 수 있습니다.
+필요한 경우 명령어의 스위치를 사용하여 Envoy 파일에 변수를 전달할 수 있습니다:
 
 	envoy run deploy --branch=master
 
-You may use the options via the Blade syntax you are used to: Blade 표기법으로 지정한 옵션을 사용할 수 있습니다.
+Blade 표기법으로 지정한 옵션을 사용할 수 있습니다:
 
 	@servers(['web' => '192.168.1.1'])
 
@@ -66,11 +60,10 @@ You may use the options via the Blade syntax you are used to: Blade 표기법으
 		php artisan migrate
 	@endtask
 
-#### Bootstrapping
 #### 부트스트래핑
 
-You may use the ```@setup``` directive to declare variables and do general PHP work inside the Envoy file: 
-```@setup``` 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행시킬 수 있습니다.
+
+```@setup``` 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행시킬 수 있습니다:
 
 	@setup
 		$now = new DateTime();
@@ -78,15 +71,13 @@ You may use the ```@setup``` directive to declare variables and do general PHP w
 		$environment = isset($env) ? $env : "testing";
 	@endsetup
 
-You may also use ```@include``` to include any PHP files:
-PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있습니다. 
+PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있습니다:
 
 	@include('vendor/autoload.php');
 
-#### Confirming Tasks Before Running
 #### 작업을 수행하기 전에 확인하기
 
-If you would like to be prompted for confirmation before running a given task on your servers, you may use the `confirm` directive: 서버에 특정 작업을 실행하기 전에 확인 메시지를 추가하고 싶은 경우에는, `confirm` 지시어를 사용할 수 있습니다 :
+서버에 특정 작업을 실행하기 전에 확인 메시지를 추가하고 싶은 경우에는, `confirm` 지시어를 사용할 수 있습니다 :
 
 	@task('deploy', ['on' => 'web', 'confirm' => true])
 		cd site
@@ -95,10 +86,9 @@ If you would like to be prompted for confirmation before running a given task on
 	@endtask
 
 <a name="envoy-multiple-servers"></a>
-## Multiple Servers
 ## 다수의 서버
 
-You may easily run a task across multiple servers. Simply list the servers in the task declaration: 손쉽게 여러서버에서 작업을 실행시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다. 
+손쉽게 여러서버에서 작업을 실행시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다:
 
 	@servers(['web-1' => '192.168.1.1', 'web-2' => '192.168.1.2'])
 
@@ -111,10 +101,9 @@ You may easily run a task across multiple servers. Simply list the servers in th
 By default, the task will be executed on each server serially. Meaning, the task will finish running on the first server before proceeding to execute on the next server. 기본적으로 작업은 각 서버에서 순차적으로 실행 됩니다. 즉, 첫 번째 서버에서 실행이 끝나면 다음 서버의 실행으로 이동합니다.
 
 <a name="envoy-parallel-execution"></a>
-## Parallel Execution
 ## 병렬 실행
 
-If you would like to run a task across multiple servers in parallel, simply add the `parallel` option to your task declaration: 여러 서버에서 동시에 작업을 수행하려면 그냥 `parallel` 옵션을 작업 선언에 지정하십시오.
+여러 서버에서 동시에 작업을 수행하려면 그냥 `parallel` 옵션을 작업 선언에 지정하십시오:
 
 	@servers(['web-1' => '192.168.1.1', 'web-2' => '192.168.1.2'])
 
@@ -125,10 +114,9 @@ If you would like to run a task across multiple servers in parallel, simply add 
 	@endtask
 
 <a name="envoy-task-macros"></a>
-## Task Macros
 ## 작업 매크로
 
-Macros allow you to define a set of tasks to be run in sequence using a single command. 매크로는 하나의 명령으로 순차적으로 실행하는 일련의 작업을 정의합니다. For instance: 예를 들면 :
+매크로는 하나의 명령으로 순차적으로 실행하는 일련의 작업을 정의합니다. 예를 들면 :
 
 	@servers(['web' => '192.168.1.1'])
 
@@ -145,18 +133,17 @@ Macros allow you to define a set of tasks to be run in sequence using a single c
 		echo "WORLD"
 	@endtask
 
-The `deploy` macro can now be run via a single, simple command: 이제 `deploy` 매크로는 하나의 간단한 명령으로 실행됩니다.
+이제 `deploy` 매크로는 하나의 간단한 명령으로 실행됩니다:
 
 	envoy run deploy
 
 <a name="envoy-notifications"></a>
 <a name="envoy-hipchat-notifications"></a>
-## Notifications
 ## 알림
 
 #### HipChat
 
-After running a task, you may send a notification to your team's HipChat room using the simple `@hipchat` directive: `@hipchat` 지시어를 사용하여 작업을 수행 후, 여러분의 팀의 HipChat 룸에 알림을 보낼 수 있습니다.
+`@hipchat` 지시어를 사용하여 작업을 수행 후, 여러분의 팀의 HipChat 룸에 알림을 보낼 수 있습니다:
 
 	@servers(['web' => '192.168.1.1'])
 
@@ -168,47 +155,41 @@ After running a task, you may send a notification to your team's HipChat room us
 		@hipchat('token', 'room', 'Envoy')
 	@endafter
 
-You can also specify a custom message to the hipchat room. 또한 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. Any variables declared in ```@setup``` or included with ```@include``` will be available for use in the message: ```@setup``` 또는 ```@include```를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다.
+또한 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. ```@setup``` 또는 ```@include```를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다:
 
 	@after
 		@hipchat('token', 'room', 'Envoy', "$task ran on [$environment]")
 	@endafter
 
-This is an amazingly simple way to keep your team notified of the tasks being run on the server. 이것은 서버에서 작업이 실행 된 것을 팀에 알릴 수 있는 매우 간단한 방법입니다.
+이것은 서버에서 작업이 실행 된 것을 팀에 알릴 수 있는 매우 간단한 방법입니다.
 
 #### Slack
 
-The following syntax may be used to send a notification to [Slack](https://slack.com): [Slack](https://slack.com)에 알림을 보내려면 다음 표기법을 사용할 수 있습니다.
+[Slack](https://slack.com)에 알림을 보내려면 다음 표기법을 사용할 수 있습니다:
 
 	@after
 		@slack('hook', 'channel', 'message')
 	@endafter
 
-You may retrieve your webhook URL by creating an `Incoming WebHooks` integration on Slack's website. Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검색 할 수 있습니다. The `hook` argument should be the entire webhook URL provided by the Incoming Webhooks Slack Integration. For example: `hook` 인자는 수신되는 Webhooks Slack 통합에 의해서 제공되어지는 전체 webhook URL 이어야 합니다. 
+Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검색 할 수 있습니다. `hook` 인자는 수신되는 Webhooks Slack 통합에 의해서 제공되어지는 전체 webhook URL 이어야 합니다. 예를 들어 : 
 
 `Incoming WebHooks`
 
 	https://hooks.slack.com/services/ZZZZZZZZZ/YYYYYYYYY/XXXXXXXXXXXXXXX
 
-You may provide one of the following for the channel argument:
-여러분은 채널 인자에 대해 다음중 하나를 선택할 수 있습니다. 
+여러분은 채널 인자에 대해 다음중 하나를 선택할 수 있습니다:
 
-- To send the notification to a channel: `#channel`
 - `#channel` 채널에 알림 보내기
-- To send the notification to a user: `@user`
 - `@user` 사용자에게 알림 보내기
 
-If no `channel` argument is provided the default channel will be used.
 `channel` 인자가 없는 경우에 기본 채널이 사용되어 집니다.
 
-> Note 주의: Slack notifications will only be sent if all tasks complete successfully. Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다. 
+> Note의: Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다. 
 
 <a name="envoy-updating-envoy"></a>
-## Updating Envoy
 ## Envoy 업데이트
 
-To update Envoy, simply use Composer:
-Envoy 를 업데이트 하려면 컴포저를 사용합니다. 
+Envoy 를 업데이트 하려면 컴포저를 사용합니다:
 
 	composer global update
 
