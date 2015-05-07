@@ -19,7 +19,8 @@ a:hover,a:active,a:focus{text-decoration:none; color:#e74430}
 
 /* layout */
 header {height:100px; padding-top:29px; box-sizing: border-box}
-.container {width:1080px; margin:0 auto;}
+.container{min-width:1240px;}
+.wrap {width:1080px; margin:0 auto;}
 .supported {width:100%; height: 80px; padding-top:28px; background:#f8f8f8; box-sizing:border-box}
 
 /* style */
