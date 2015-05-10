@@ -34,7 +34,6 @@
 - Memcached
 - Beanstalkd
 - [Laravel Envoy](/docs/5.0/envoy)
-- Fabric + HipChat Extension
 - [Blackfire Profiler](#blackfire-profiler)
 
 <a name="installation-and-setup"></a>
@@ -60,9 +59,7 @@ VirtualBox / VMware 그리고 Vagrant 가 설치되었다면, 터미널에서 �
 
 ### 홈스테드 설치하기
 
-#### 옵션 1 - Git을 사용한 수동 설치 (로컬 PHP 없음) 
-
-여러분의 로컬 머신에 PHP를 설치하고 싶지 않다면, Git 저장소를 복제하여 수동으로 홈스테드를 설치할 수 있습니다. 여러분의 “home” 디렉토리안에 `Homestead` 폴더로 저장소를 복제하면 홈스테드 box가 라라벨(그리고 PHP) 프로젝트의 모든 호스트 역할을 할 것입니다:
+Git 저장소를 복제하여 수동으로 홈스테드를 설치할 수 있습니다. 여러분의 “home” 디렉토리안에 `Homestead` 폴더로 저장소를 복제하면 홈스테드 box가 라라벨(그리고 PHP) 프로젝트의 모든 호스트 역할을 할 것입니다:
 
 	git clone https://github.com/laravel/homestead.git Homestead
 
@@ -71,24 +68,6 @@ VirtualBox / VMware 그리고 Vagrant 가 설치되었다면, 터미널에서 �
 	bash init.sh
 
 `Homestead.yaml`파일은 여러분의 `~/.homestead` 디렉토리에 저장됩니다. 
-
-#### 옵션 2 - 컴포저와 PHP 툴 사용
-
-box 가 여러분의 Vagrant 에 추가되고 나면, 여러분은 컴포저를 통해서 홈스테드 CLI 를 설치할 준비가 되었습니다:
-
-	composer global require "laravel/homestead=~2.0"
-
-이제 `~/.composer/vendor/bin` 디렉토리를 여러분의 PATH 에 추가하여 터미널에서 `homestead` 명령어를 입력하면 바로 실행될 수 있게 합니다. 
-
-	PATH=~/.composer/vendor/bin:$PATH
-
-홈스테드 CLI 툴까지 설치하고 나면, `init` 명령어를 실행하여 `Homestead.yaml` 설정 파일을 생성할 수 있습니다:
-
-	homestead init
-
-yaml` 파일은 `~/.homestead`디렉토리에 저장됩니다. 맥이나 리눅스 시스템이라면 터미널에서 `homestead edit` 명령어를 실행시켜 `Homestead.yaml`파일을 편집할 수 있습니다:
-
-	homestead edit
 
 ### 프로바이더 설정하기
 
@@ -138,7 +117,7 @@ Bash 별칭을 Homestead box에 추가하려면 `~/.homestead` 디렉토리의 �
 
 ### Vagrant Box 구동하기
 
-`Homestead.yaml` 파일 설정이 끝났다면, 홈스테드 디렉토리에서 `homestead up` 명령어를 실행하십시오. 
+`Homestead.yaml` 파일 설정이 끝났다면, 홈스테드 디렉토리에서 `vagrant up` 명령어를 실행하십시오. 
 
 Vagrant가 가상머신을 구동시키고 공유폴더와 Nginx 사이트를 자동으로 설정할 것입니다. 가상 머신을 파괴하기 위해서는 `vagrant destroy --force` 명령어를 사용하면 됩니다.  
 
@@ -165,6 +144,8 @@ SSH를 통해서 홈스테드 환경에 접속하려면 홈스테드 디렉토�
 
 위와 같이 별칭을 생성하고 나면, 시스템의 어느곳에서도 “vm” 명령어를 통해서 홈스테드 머신에 SSH로 접속할 수 있습니다. 
 
+또한 홈스테드 디렉토리에서 `vagrant ssh` 명령어를 사용할 수도 있습니다. 
+
 ### 데이터베이스에 접속하기 
 
 별다른 설정 없이도 `homestead` 데이터베이스는 MySQL과 Postgres 가 설정되어 있습니다. 보다 편리하게하기 위해 라라벨의 `local` 데이터베이스 설정이 기본적으로 이 데이터베이스를 사용하도록 설정되어 있습니다.
@@ -175,7 +156,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 
 ### 추가적인 사이트 지정하기
 
-홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두가지 방법이 있습니다: 첫번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 `homestead provision` 이나 `vagrant provision` 을 실행하는 것입니다. 
+홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두가지 방법이 있습니다: 첫번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 홈스테드 디렉토리에서 `vagrant provision` 을 실행하는 것입니다. 
 
 > **주의:** 이 명령어는 내부에 변경사항이 있습니다. `provision` 명령어가 실행되면 이미 존재하는 데이터베이스가 삭제되고 다시 생성됩니다. 
 
@@ -220,4 +201,4 @@ SensioLabs 의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로
 	      client-id: your-client-id
 	      client-token: your-client-token
 
-Blackfire 인증정보를 설정하고 난 뒤에, `homestead provision` 또는 `vagrant provision` 을 사용하여 Box 를 다시 실행하십시오. 또한 Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오. 
+Blackfire 인증정보를 설정하고 난 뒤에, 여러분의 홈스테드 디렉토리에서 `vagrant provision`을 사용하여 Box 를 다시 실행하십시오. 또한 Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오. 

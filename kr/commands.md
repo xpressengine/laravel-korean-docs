@@ -20,7 +20,7 @@
 
 	php artisan make:console FooCommand
 
-이 명령어는 `app/Console/FooCommand.php`파일을 생성할 것입니다. 
+이 명령어는 `app/Console/Commands/FooCommand.php`파일을 생성할 것입니다.
 
 명령어를 생성할 때 `--command` 옵션을 사용하면 터미널에서 사용할 명령어 이름을 지정할 수 있습니다:
 
