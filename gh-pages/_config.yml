@@ -1,14 +1,15 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: 라라벨 한국어 매뉴얼
+email: developers@xpressengine.com
+description: 라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.
+baseurl: "/laravel-korean-docs" # the subpath of your site, e.g. /blog/
+url: "http://www.xpressengine.com" # the base hostname & protocol for your site
+github_username:  xpressengine
+
+# markdown settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "no_highlighter", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 # Build settings
-markdown: kramdown
+excerpt_separator: ""
