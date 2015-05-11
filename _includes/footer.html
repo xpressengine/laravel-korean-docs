@@ -1,0 +1,24 @@
+
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
