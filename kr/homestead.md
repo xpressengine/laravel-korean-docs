@@ -63,7 +63,7 @@ Git 저장소를 복제하여 수동으로 홈스테드를 설치할 수 있습�
 
 	git clone https://github.com/laravel/homestead.git Homestead
 
-홈스테드 CLI 툴이 설치된 경우, `bash init.sh` 명령어를 통해서 `Homestead.yaml` 설정 파일을 생성할 수 있습니다:
+홈스테드 CLI 툴을 클로닝한 뒤, 홈스테드 디렉토리에서 `bash init.sh` 명령어를 통해서 `Homestead.yaml` 설정 파일을 생성할 수 있습니다. 
 
 	bash init.sh
 
