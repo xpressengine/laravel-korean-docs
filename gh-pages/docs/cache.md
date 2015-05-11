@@ -100,7 +100,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 <a name="increments-and-decrements"></a>
 ## 증감 조작하기
 
-`file`과 `database`를 제외한 드라이버는 `increment` 및 `decrement` 조작을 지원하고 있습니다:
+`database`를 제외한 드라이버는 `increment` 및 `decrement` 조작을 지원하고 있습니다:
 
 #### 값 증가시키기
 
