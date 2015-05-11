@@ -71,7 +71,7 @@ Git 저장소를 복제하여 수동으로 홈스테드를 설치할 수 있습�
 
 ### 프로바이더 설정하기
 
-`Homestead.yaml` 파일의 `provider` 키는 `virtualbox` 와 `vmware_fusion` 중 어느 것을 사용할 것인지를 알려줍니다. 여러분이 원하는대로 프로바이더를 설정할 수 있습니다.  
+`Homestead.yaml` 파일의 `provider` 키는 `virtualbox`, `vmware_fusion`(Max OS X) 와 `vmware_workstation` (Windows) 중 어느 것을 사용할 것인지를 알려줍니다. 여러분이 원하는대로 프로바이더를 설정할 수 있습니다.  
 
 	provider: virtualbox
 

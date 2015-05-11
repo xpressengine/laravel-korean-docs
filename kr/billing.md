@@ -165,6 +165,18 @@
 	// Subtract five to the subscription's current quantity...
 	$user->subscription()->decrement(5);
 
+<a name="subscription-tax"></a>
+## 구독에 대한 세금처리
+
+캐셔를 사용하면 `tax_percent`(세금 비율)을 손쉽게 재지정하여 Stripe에 전달할 수 있습니다. 세금 비율을 지정하기 위해서는 사용자가 구독하고 지불하고자 하는 모델의 `getTaxPercent` 메소드를 구현하고 0에서 100사이의 숫자값을 반환하도록 하면 됩니다. 이때 이 값은 2개 이하의 소수점 자리를 가져야 합니다. 
+
+	public function getTaxPercent()
+	{
+		return 20;
+	}
+
+이렇게 하면 여러분이 다양한 국가에 있는 사용자들을 위한 모델별 세율을 적용할 수 있습니다. 
+
 <a name="cancelling-a-subscription"></a>
 ## 구독 취소하기
 

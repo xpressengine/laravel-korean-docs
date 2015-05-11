@@ -233,7 +233,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 라우트 그룹에 지정하는 배열의 `middleware` 값에 미들웨어의 목록을 정의함으로써 그룹내의 모든 라우트에 미들웨어가 적용됩니다. 미들웨어는 배열에 정의된 순서대로 실행될것입니다:
 
-	Route::group(['middleware' => 'foo|bar'], function()
+	Route::group(['middleware' => ['foo','bar']], function()
 	{
 		Route::get('/', function()
 		{
@@ -363,7 +363,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 	abort(404);
 
-`abort` 헬퍼함수는 지정된 상태 코드와 함께 `Symfony\Component\HttpFoundation\Exception\HttpException` 를 던집니다.
+`abort` 헬퍼함수는 지정된 상태 코드와 함께 `Symfony\Component\HttpKernel\Exception\HttpException` 를 던집니다.
 
 두번째로 직접으로 `Symfony\Component\HttpKernel\Exception\NotFoundHttpException`을 던지는 것입니다. 
 
