@@ -1,0 +1,15 @@
+# Site settings
+title: 라라벨 한국어 매뉴얼
+email: developers@xpressengine.com
+description: 라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.
+baseurl: "/laravel-korean-docs" # the subpath of your site, e.g. /blog/
+url: "http://www.xpressengine.com" # the base hostname & protocol for your site
+github_username:  xpressengine
+
+# markdown settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "no_highlighter", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+
+# Build settings
+excerpt_separator: ""
