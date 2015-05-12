@@ -73,11 +73,11 @@ permalink: /docs/5.0/routing/
 
     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-다음처럼 Blade [템플릿 엔진](/docs/5.0/templates)을 사용할 수 있습니다.
+다음처럼 Blade [템플릿 엔진](/laravel-korean-docs/docs/5.0/templates)을 사용할 수 있습니다.
 
 	<input type="hidden" name="_token" value="{% raw %}{{{% endraw %} csrf_token() {% raw %}}}{% endraw %}">
 
-일일이 수동으로 POST, PUT 또는 DELETE 요청에 대한 CSRF 토큰을 확인할 필요가 없습니다. `VerifyCsrfToken` [HTTP 미들웨어](/docs/5.0/middleware)가 요청중인 토큰을 세션에 저장되어 있는 토큰과 일치하는지 확인할 것입니다. 
+일일이 수동으로 POST, PUT 또는 DELETE 요청에 대한 CSRF 토큰을 확인할 필요가 없습니다. `VerifyCsrfToken` [HTTP 미들웨어](/laravel-korean-docs/docs/5.0/middleware)가 요청중인 토큰을 세션에 저장되어 있는 토큰과 일치하는지 확인할 것입니다. 
 
 #### X-CSRF-TOKEN
 
@@ -373,4 +373,4 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 두번째로 직접으로 `Symfony\Component\HttpKernel\Exception\NotFoundHttpException`을 던지는 것입니다. 
 
-404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 [errors](/docs/5.0/errors#http-exceptions) 부분을 참조하십시오.
+404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 [errors](/laravel-korean-docs/docs/5.0/errors#http-exceptions) 부분을 참조하십시오.

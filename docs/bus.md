@@ -61,7 +61,7 @@ permalink: /docs/5.0/bus/
 
 	}
 
-또한 `handle` 메소드에서도 타입힌트를 사용하여 [서비스 컨테이너](/docs/5.0/container)가 의존 객체를 자동으로 주입할 수 있도록 할 수 있습니다. 예를 들어:
+또한 `handle` 메소드에서도 타입힌트를 사용하여 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)가 의존 객체를 자동으로 주입할 수 있도록 할 수 있습니다. 예를 들어:
 
 		/**
 		 * Execute the command.
@@ -122,7 +122,7 @@ permalink: /docs/5.0/bus/
 
 그 다음에는, 정상적으로 커맨드를 작성하면 됩니다. 커맨드가 처리될 때 버스가 자동으로 해당 커맨드를 백그라운드 처리를 위해 큐에 추가합니다. 이보다 더 쉬울 순 없습니다.
 
-큐 커맨드의 상호 작용에 대한 보다 자세한 사항은 [큐 문서](/docs/5.0/queues)를 참고하십시오. 
+큐 커맨드의 상호 작용에 대한 보다 자세한 사항은 [큐 문서](/laravel-korean-docs/docs/5.0/queues)를 참고하십시오. 
 
 <a name="command-pipeline"></a>
 ## 커맨드 파이프라인
@@ -147,7 +147,7 @@ permalink: /docs/5.0/bus/
 
 	}
 
-커맨드 파이프 클래스는 [IoC 컨테이너](/docs/5.0/container)를 통해서 의존성이 해결되므로 생성자에서 타입힌트를 통한 의존성을 지정할 수 있습니다. 
+커맨드 파이프 클래스는 [IoC 컨테이너](/laravel-korean-docs/docs/5.0/container)를 통해서 의존성이 해결되므로 생성자에서 타입힌트를 통한 의존성을 지정할 수 있습니다. 
 
 커맨드 파이프에는 `Closure` 도 지정할 수 있습니다:
 

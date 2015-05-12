@@ -71,7 +71,7 @@ Once a model is defined, you are ready to start retrieving and creating records 
 
 	var_dump($user->name);
 
-> **Note:** All methods available on the [query builder](/docs/queries) are also available when querying Eloquent models.
+> **Note:** All methods available on the [query builder](/laravel-korean-docs/docs/queries) are also available when querying Eloquent models.
 
 #### Retrieving A Model By Primary Key Or Throw An Exception
 
@@ -138,7 +138,7 @@ You may also specify which database connection should be used when running an El
 
 	$user = User::on('connection-name')->find(1);
 
-If you are using [read / write connections](/docs/5.0/database#read-write-connections), you may force the query to use the "write" connection with the following method:
+If you are using [read / write connections](/laravel-korean-docs/docs/5.0/database#read-write-connections), you may force the query to use the "write" connection with the following method:
 
 	$user = User::onWriteConnection()->find(1);
 

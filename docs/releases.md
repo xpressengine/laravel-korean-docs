@@ -37,7 +37,7 @@ Application language files and views have been moved to the `resources` director
 
 All major Laravel components implement interfaces which are located in the `illuminate/contracts` repository. This repository has no external dependencies. Having a convenient, centrally located set of interfaces you may use for decoupling and dependency injection will serve as an easy alternative option to Laravel Facades.
 
-For more information on contracts, consult the [full documentation](/docs/5.0/contracts).
+For more information on contracts, consult the [full documentation](/laravel-korean-docs/docs/5.0/contracts).
 
 ### Route Cache
 
@@ -47,11 +47,11 @@ If your application is made up entirely of controller routes, you may utilize th
 
 In addition to Laravel 4 style route "filters", Laravel 5 now supports HTTP middleware, and the included authentication and CSRF "filters" have been converted to middleware. Middleware provides a single, consistent interface to replace all types of filters, allowing you to easily inspect, and even reject, requests before they enter your application.
 
-For more information on middleware, check out [the documentation](/docs/5.0/middleware).
+For more information on middleware, check out [the documentation](/laravel-korean-docs/docs/5.0/middleware).
 
 ### Controller Method Injection
 
-In addition to the existing constructor injection, you may now type-hint dependencies on controller methods. The [service container](/docs/5.0/container) will automatically inject the dependencies, even if the route contains other parameters:
+In addition to the existing constructor injection, you may now type-hint dependencies on controller methods. The [service container](/laravel-korean-docs/docs/5.0/container) will automatically inject the dependencies, even if the route contains other parameters:
 
 	public function createPost(Request $request, PostRepository $posts)
 	{
@@ -92,7 +92,7 @@ Of course, your event handler will receive the event object instead of a list of
 
 	}
 
-For more information on working with events, check out the [full documentation](/docs/5.0/events).
+For more information on working with events, check out the [full documentation](/laravel-korean-docs/docs/5.0/events).
 
 ### Commands / Queueing
 
@@ -133,7 +133,7 @@ The base Laravel controller utilizes the new `DispatchesCommands` trait, allowin
 
 	$this->dispatch(new PurchasePodcastCommand($user, $podcast));
 
-Of course, you may also use commands for tasks that are executed synchronously (are not queued). In fact, using commands is a great way to encapsulate complex tasks your application needs to perform. For more information, check out the [command bus](/docs/5.0/bus) documentation.
+Of course, you may also use commands for tasks that are executed synchronously (are not queued). In fact, using commands is a great way to encapsulate complex tasks your application needs to perform. For more information, check out the [command bus](/laravel-korean-docs/docs/5.0/bus) documentation.
 
 ### Database Queue
 
@@ -147,7 +147,7 @@ It looks like this:
 
 	$schedule->command('artisan:command')->dailyAt('15:00');
 
-Of course, check out the [full documentation](/docs/5.0/artisan#scheduling-artisan-commands) to learn all about the scheduler!
+Of course, check out the [full documentation](/laravel-korean-docs/docs/5.0/artisan#scheduling-artisan-commands) to learn all about the scheduler!
 
 ### Tinker / Psysh
 
@@ -157,13 +157,13 @@ The `php artisan tinker` command now utilizes [Psysh](https://github.com/bobthec
 
 ### DotEnv
 
-Instead of a variety of confusing, nested environment configuration directories, Laravel 5 now utilizes [DotEnv](https://github.com/vlucas/phpdotenv) by Vance Lucas. This library provides a super simple way to manage your environment configuration, and makes environment detection in Laravel 5 a breeze. For more details, check out the full [configuration documentation](/docs/5.0/configuration#environment-configuration).
+Instead of a variety of confusing, nested environment configuration directories, Laravel 5 now utilizes [DotEnv](https://github.com/vlucas/phpdotenv) by Vance Lucas. This library provides a super simple way to manage your environment configuration, and makes environment detection in Laravel 5 a breeze. For more details, check out the full [configuration documentation](/laravel-korean-docs/docs/5.0/configuration#environment-configuration).
 
 ### Laravel Elixir
 
 Laravel Elixir, by Jeffrey Way, provides a fluent, expressive interface to compiling and concatenating your assets. If you've ever been intimidated by learning Grunt or Gulp, fear no more. Elixir makes it a cinch to get started using Gulp to compile your Less, Sass, and CoffeeScript. It can even run your tests for you!
 
-For more information on Elixir, check out the [full documentation](/docs/5.0/elixir).
+For more information on Elixir, check out the [full documentation](/laravel-korean-docs/docs/5.0/elixir).
 
 ### Laravel Socialite
 
@@ -179,7 +179,7 @@ Laravel Socialite is an optional, Laravel 5.0+ compatible package that provides 
 		$user = Socialize::with('twitter')->user();
 	}
 
-No more spending hours writing OAuth authentication flows. Get started in minutes! The [full documentation](/docs/5.0/authentication#social-authentication) has all the details.
+No more spending hours writing OAuth authentication flows. Get started in minutes! The [full documentation](/laravel-korean-docs/docs/5.0/authentication#social-authentication) has all the details.
 
 ### Flysystem Integration
 
@@ -187,7 +187,7 @@ Laravel now includes the powerful [Flysystem](https://github.com/thephpleague/fl
 
 	Storage::put('file.txt', 'contents');
 
-For more information on the Laravel Flysystem integration, consult the [full documentation](/docs/5.0/filesystem).
+For more information on the Laravel Flysystem integration, consult the [full documentation](/laravel-korean-docs/docs/5.0/filesystem).
 
 ### Form Requests
 
@@ -219,7 +219,7 @@ Once the class has been defined, we can type-hint it on our controller action:
 		var_dump($request->input());
 	}
 
-When the Laravel service container identifies that the class it is injecting is a `FormRequest` instance, the request will **automatically be validated**. This means that if your controller action is called, you can safely assume the HTTP request input has been validated according to the rules you specified in your form request class. Even more, if the request is invalid, an HTTP redirect, which you may customize, will automatically be issued, and the error messages will be either flashed to the session or converted to JSON. **Form validation has never been more simple.** For more information on `FormRequest` validation, check out the [documentation](/docs/5.0/validation#form-request-validation).
+When the Laravel service container identifies that the class it is injecting is a `FormRequest` instance, the request will **automatically be validated**. This means that if your controller action is called, you can safely assume the HTTP request input has been validated according to the rules you specified in your form request class. Even more, if the request is invalid, an HTTP redirect, which you may customize, will automatically be issued, and the error messages will be either flashed to the session or converted to JSON. **Form validation has never been more simple.** For more information on `FormRequest` validation, check out the [documentation](/laravel-korean-docs/docs/5.0/validation#form-request-validation).
 
 ### Simple Controller Request Validation
 
@@ -235,7 +235,7 @@ The Laravel 5 base controller now includes a `ValidatesRequests` trait. This tra
 
 If the validation fails, an exception will be thrown and the proper HTTP response will automatically be sent back to the browser. The validation errors will even be flashed to the session! If the request was an AJAX request, Laravel even takes care of sending a JSON representation of the validation errors back to you.
 
-For more information on this new method, check out [the documentation](/docs/5.0/validation#controller-validation).
+For more information on this new method, check out [the documentation](/laravel-korean-docs/docs/5.0/validation#controller-validation).
 
 ### New Generators
 
@@ -260,7 +260,7 @@ The full change list for this release by running the `php artisan changes` comma
 
 ### PHP 5.4 Requirement
 
-Laravel 4.2 requires PHP 5.4 or greater. This upgraded PHP requirement allows us to use new PHP features such as traits to provide more expressive interfaces for tools like [Laravel Cashier](/docs/billing). PHP 5.4 also brings significant speed and performance improvements over PHP 5.3.
+Laravel 4.2 requires PHP 5.4 or greater. This upgraded PHP requirement allows us to use new PHP features such as traits to provide more expressive interfaces for tools like [Laravel Cashier](/laravel-korean-docs/docs/billing). PHP 5.4 also brings significant speed and performance improvements over PHP 5.3.
 
 ### Laravel Forge
 
@@ -276,7 +276,7 @@ Laravel Homestead is an official Vagrant environment for developing robust Larav
 
 The default Laravel 4.2 installation now includes an `app/config/local/database.php` configuration file that is configured to use the Homestead database out of the box, making Laravel initial installation and configuration more convenient.
 
-The official documentation has also been updated to include [Homestead documentation](/docs/homestead).
+The official documentation has also been updated to include [Homestead documentation](/laravel-korean-docs/docs/homestead).
 
 ### Laravel Cashier
 
@@ -286,7 +286,7 @@ Laravel Cashier is a simple, expressive library for managing subscription billin
 
 The Artisan `queue:work` command now supports a `--daemon` option to start a worker in "daemon mode", meaning the worker will continue to process jobs without ever re-booting the framework. This results in a significant reduction in CPU usage at the cost of a slightly more complex application deployment process.
 
-More information about daemon queue workers can be found in the [queue documentation](/docs/queues#daemon-queue-worker).
+More information about daemon queue workers can be found in the [queue documentation](/laravel-korean-docs/docs/queues#daemon-queue-worker).
 
 ### Mail API Drivers
 
@@ -296,7 +296,7 @@ Laravel 4.2 introduces new Mailgun and Mandrill API drivers for the `Mail` funct
 
 A much cleaner architecture for "soft deletes" and other "global scopes" has been introduced via PHP 5.4 traits. This new architecture allows for the easier construction of similar global traits, and a cleaner separation of concerns within the framework itself.
 
-More information on the new `SoftDeletingTrait` may be found in the [Eloquent documentation](/docs/eloquent#soft-deleting).
+More information on the new `SoftDeletingTrait` may be found in the [Eloquent documentation](/laravel-korean-docs/docs/eloquent#soft-deleting).
 
 ### Convenient Auth & Remindable Traits
 
@@ -319,7 +319,7 @@ The full change list for this release by running the `php artisan changes` comma
 
 ### New SSH Component
 
-An entirely new `SSH` component has been introduced with this release. This feature allows you to easily SSH into remote servers and run commands. To learn more, consult the [SSH component documentation](/docs/ssh).
+An entirely new `SSH` component has been introduced with this release. This feature allows you to easily SSH into remote servers and run commands. To learn more, consult the [SSH component documentation](/laravel-korean-docs/docs/ssh).
 
 The new `php artisan tail` command utilizes the new SSH component. For more information, consult the `tail` [command documentation](http://laravel.com/docs/ssh#tailing-remote-logs).
 
@@ -329,13 +329,13 @@ The `php artisan tinker` command now utilizes the [Boris REPL](https://github.co
 
 ### Eloquent Improvements
 
-A new `hasManyThrough` relationship has been added to Eloquent. To learn how to use it, consult the [Eloquent documentation](/docs/eloquent#has-many-through).
+A new `hasManyThrough` relationship has been added to Eloquent. To learn how to use it, consult the [Eloquent documentation](/laravel-korean-docs/docs/eloquent#has-many-through).
 
-A new `whereHas` method has also been introduced to allow [retrieving models based on relationship constraints](/docs/eloquent#querying-relations).
+A new `whereHas` method has also been introduced to allow [retrieving models based on relationship constraints](/laravel-korean-docs/docs/eloquent#querying-relations).
 
 ### Database Read / Write Connections
 
-Automatic handling of separate read / write connections is now available throughout the database layer, including the query builder and Eloquent. For more information, consult [the documentation](/docs/database#read-write-connections).
+Automatic handling of separate read / write connections is now available throughout the database layer, including the query builder and Eloquent. For more information, consult [the documentation](/laravel-korean-docs/docs/database#read-write-connections).
 
 ### Queue Priority
 
@@ -343,15 +343,15 @@ Queue priorities are now supported by passing a comma-delimited list to the `que
 
 ### Failed Queue Job Handling
 
-The queue facilities now include automatic handling of failed jobs when using the new `--tries` switch on `queue:listen`. More information on handling failed jobs can be found in the [queue documentation](/docs/queues#failed-jobs).
+The queue facilities now include automatic handling of failed jobs when using the new `--tries` switch on `queue:listen`. More information on handling failed jobs can be found in the [queue documentation](/laravel-korean-docs/docs/queues#failed-jobs).
 
 ### Cache Tags
 
-Cache "sections" have been superseded by "tags". Cache tags allow you to assign multiple "tags" to a cache item, and flush all items assigned to a single tag. More information on using cache tags may be found in the [cache documentation](/docs/cache#cache-tags).
+Cache "sections" have been superseded by "tags". Cache tags allow you to assign multiple "tags" to a cache item, and flush all items assigned to a single tag. More information on using cache tags may be found in the [cache documentation](/laravel-korean-docs/docs/cache#cache-tags).
 
 ### Flexible Password Reminders
 
-The password reminder engine has been changed to provide greater developer flexibility when validating passwords, flashing status messages to the session, etc. For more information on using the enhanced password reminder engine, [consult the documentation](/docs/security#password-reminders-and-reset).
+The password reminder engine has been changed to provide greater developer flexibility when validating passwords, flashing status messages to the session, etc. For more information on using the enhanced password reminder engine, [consult the documentation](/laravel-korean-docs/docs/security#password-reminders-and-reset).
 
 ### Improved Routing Engine
 

@@ -138,4 +138,4 @@ While your command is executing, you will obviously need to access the values fo
 		'App\Console\Commands\FooCommand'
 	];
 
-아티즌이 구동되면서 변수내의 모든 명령어들의 목록을 참고하여 [service container](/docs/5.0/container)들이 자동으로 실행가능한 상태로 아티즌에 등록됩니다. 
+아티즌이 구동되면서 변수내의 모든 명령어들의 목록을 참고하여 [service container](/laravel-korean-docs/docs/5.0/container)들이 자동으로 실행가능한 상태로 아티즌에 등록됩니다. 

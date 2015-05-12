@@ -55,7 +55,7 @@ permalink: /docs/5.0/artisan/
 		//
 	});
 
-[queue workers](/docs/5.0/queues)를 통해서 아티즌 명령어가 큐를 통해서 백그라운드에서 동작하도록 할 수도 있습니다:
+[queue workers](/laravel-korean-docs/docs/5.0/queues)를 통해서 아티즌 명령어가 큐를 통해서 백그라운드에서 동작하도록 할 수도 있습니다:
 
 	Route::get('/foo', function()
 	{

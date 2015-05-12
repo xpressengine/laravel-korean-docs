@@ -27,7 +27,7 @@ permalink: /docs/5.0/upgrade/
 
 업그레이드에 대한 권장사항은 새롭게 라라벨 `5.0` 버전을 인스톨하고 `4.2` 버전의 사이트의 고유한 어플리케이션 파일들을 새로운 어플리케이션에 복사하라는 것입니다. 여기에는 컨트롤러, 라우트, 엘로퀀트 모델들, 아티즌 명령어들, asset 파일들 그리고 어플리케이션에 지정된 기타 코드들을 포함합니다.
 
-업그레이드를 시작하기 위해서 로컬 환경의 새로운 디렉토리에 [라라벨 5 어플리케이션을 설치](/docs/5.0/installation)합니다. 업그레이드를 위한 각 단계의 진행에 대해서 차근차근 알아보겠습니다. 
+업그레이드를 시작하기 위해서 로컬 환경의 새로운 디렉토리에 [라라벨 5 어플리케이션을 설치](/laravel-korean-docs/docs/5.0/installation)합니다. 업그레이드를 위한 각 단계의 진행에 대해서 차근차근 알아보겠습니다. 
 
 ### 컴포저 의존성 & 패키지
 
@@ -47,7 +47,7 @@ permalink: /docs/5.0/upgrade/
 
 추가적으로 이전버전의 `.env.php` 파일에 들어 있던 사용자가 지정한 값들을 `.env` 파일(실제 로컬 환경을 위한 값 설정) 과 `.env.example` 파일 (다른 팀 구성원들이 참고할 샘플 값)에 복사합니다.)에 복사해 넣습니다. 
 
-환경 설정과 관련된 보다 자세한 내용은 [관련 문서](/docs/5.0/configuration#environment-configuration)를 확인하십시오. 
+환경 설정과 관련된 보다 자세한 내용은 [관련 문서](/laravel-korean-docs/docs/5.0/configuration#environment-configuration)를 확인하십시오. 
 
 > **주의** 라라벨5 어플리케이션을 실제 제품 서버에 배포하기 전에 적절한 값을 지정한 `.env` 파일을 준비해 둘 필요가 있습니다.
 
@@ -79,7 +79,7 @@ permalink: /docs/5.0/upgrade/
 
 ### 전역 CSRF
 
-기본적으로 [CSRF 방지](/docs/5.0/routing#csrf-protection) 가 전체 라우트에서 활성화되어 있습니다. 이를 비활성화 시키거나 특정 라우트에서만 수동으로 활성화하고자한다면 `App\Http\Kernel`파일의  `middleware` 배열에서 다음 미들웨어를 삭제합니다. 
+기본적으로 [CSRF 방지](/laravel-korean-docs/docs/5.0/routing#csrf-protection) 가 전체 라우트에서 활성화되어 있습니다. 이를 비활성화 시키거나 특정 라우트에서만 수동으로 활성화하고자한다면 `App\Http\Kernel`파일의  `middleware` 배열에서 다음 미들웨어를 삭제합니다. 
 
 	'App\Http\Middleware\VerifyCsrfToken',
 
@@ -87,7 +87,7 @@ permalink: /docs/5.0/upgrade/
 
 	'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
 
-이제 개별 라우트 / 컨트롤러에 대해서 `['middleware' => 'csrf']` 와 같이 미들웨어를 지정할 수 있습니다. 미들웨어에 대한 보다 자세한 사항은 [미들웨어 문서](/docs/5.0/middleware)를 참고하십시오. 
+이제 개별 라우트 / 컨트롤러에 대해서 `['middleware' => 'csrf']` 와 같이 미들웨어를 지정할 수 있습니다. 미들웨어에 대한 보다 자세한 사항은 [미들웨어 문서](/laravel-korean-docs/docs/5.0/middleware)를 참고하십시오. 
 
 ### Eloquent 모델
 
@@ -97,7 +97,7 @@ Eloquent 모델을 모아두기 위한 `app/Models` 디렉토리를 생성합니
 
 #### Eloquent 캐싱
 
-Eloquent 는 더이상 쿼리 캐시를 위한 `remember` 메소드를 제공하지 않습니다. 여러분은 이제 `Cache::remember` 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 [해당 문서](/docs/5.0/cache)를 참고하십시오. 
+Eloquent 는 더이상 쿼리 캐시를 위한 `remember` 메소드를 제공하지 않습니다. 여러분은 이제 `Cache::remember` 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 [해당 문서](/laravel-korean-docs/docs/5.0/cache)를 참고하십시오. 
 
 ### 사용자 인증 모델
 
@@ -137,7 +137,7 @@ use Authenticatable, CanResetPassword;
 
 ### 캐셔 변경사항
 
-[라라벨 캐셔](/docs/5.0/billing)의 trait 과 인터페이스의 이름이 변경되었습니다.  `BillableTrait` 대신 `Laravel\Cashier\Billable` trait을 사용합니다. 그리고 `Laravel\Cashier\BillableInterface` 대신에 `Laravel\Cashier\Contracts\Billable` 인터페이스를 사용합니다. 다른 메소드는 변경되지 않았습니다. 
+[라라벨 캐셔](/laravel-korean-docs/docs/5.0/billing)의 trait 과 인터페이스의 이름이 변경되었습니다.  `BillableTrait` 대신 `Laravel\Cashier\Billable` trait을 사용합니다. 그리고 `Laravel\Cashier\BillableInterface` 대신에 `Laravel\Cashier\Contracts\Billable` 인터페이스를 사용합니다. 다른 메소드는 변경되지 않았습니다. 
 
 ### 아티즌 명령어들
 
@@ -153,7 +153,7 @@ use Authenticatable, CanResetPassword;
 
 ### 글로벌 IoC 바인딩
 
-만약 `start/global.php` 파일에 [IoC](/docs/5.0/container) 바인딩들을 가지고 있었다면, `app/Providers/AppServiceProvider.php`의 `register` 메소드로 옮깁니다. `App` 파사드를 사용해야할 것입니다. 
+만약 `start/global.php` 파일에 [IoC](/laravel-korean-docs/docs/5.0/container) 바인딩들을 가지고 있었다면, `app/Providers/AppServiceProvider.php`의 `register` 메소드로 옮깁니다. `App` 파사드를 사용해야할 것입니다. 
 
 옵션으로, 바인딩들을 해당하는 개별 서비스 프로바이더에 나누어 옮길 수도있습니다. 
 
@@ -370,7 +370,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 ### 패스워드 리마인더(알리미) 업데이트
 
-패스워드 리마인더는 유연성을 높이기 위해서 많은 변경이 있었습니다. `php artisan auth:reminders-controller` 아티즌 명령어를 실행하여 작성되는 새로운 컨트롤러를 살펴보십시오. 혹은 [변경 관련 문서](/docs/security#password-reminders-and-reset)를 확인하고 그에 따라 어플리케이션을 업데이트 하십시오. 
+패스워드 리마인더는 유연성을 높이기 위해서 많은 변경이 있었습니다. `php artisan auth:reminders-controller` 아티즌 명령어를 실행하여 작성되는 새로운 컨트롤러를 살펴보십시오. 혹은 [변경 관련 문서](/laravel-korean-docs/docs/security#password-reminders-and-reset)를 확인하고 그에 따라 어플리케이션을 업데이트 하십시오. 
 
 `app/lang/en/reminders.php` 언어 파일을 [새로운 파일](https://github.com/laravel/laravel/blob/v4.1.0/app/lang/en/reminders.php)에 맞게 변경하십시오. 
 

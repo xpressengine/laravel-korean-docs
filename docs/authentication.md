@@ -64,7 +64,7 @@ permalink: /docs/5.0/authentication/
 
 	}
 
-`attempt` 메소드는 키 / 값의 쌍으로 이루어진 배열을 첫번째 인자로 전달 받습니다. `password` 값은 [해시처리](/docs/5.0/hashing)될 것입니다. 배열의 다른 값들은 데이터베이스 테이블에서 사용자를 찾는데 사용될것입니다. 따라서 위의 예제에서는, `email` 컬럼을 통해서 사용자를 찾게됩니다. 사용자를 찾았다면, 해시처리되어 데이터베이스에 저장된 패스워드와 매소드에 전달받은 배열의 해시처리된 `password` 값을 비교할 것입니다. 두개의 해시처리된 패스워드가 일치한다면 해당 사용자의 새로운 인증 세션이 시작됩니다. 
+`attempt` 메소드는 키 / 값의 쌍으로 이루어진 배열을 첫번째 인자로 전달 받습니다. `password` 값은 [해시처리](/laravel-korean-docs/docs/5.0/hashing)될 것입니다. 배열의 다른 값들은 데이터베이스 테이블에서 사용자를 찾는데 사용될것입니다. 따라서 위의 예제에서는, `email` 컬럼을 통해서 사용자를 찾게됩니다. 사용자를 찾았다면, 해시처리되어 데이터베이스에 저장된 패스워드와 매소드에 전달받은 배열의 해시처리된 `password` 값을 비교할 것입니다. 두개의 해시처리된 패스워드가 일치한다면 해당 사용자의 새로운 인증 세션이 시작됩니다. 
 
 `attempt` 메소드는 인증이 성공하면 `true` 를 반환합니다. 실패시 `false` 를 반환합니다.
 
@@ -146,7 +146,7 @@ permalink: /docs/5.0/authentication/
 
 #### 인증 이벤트 
 
-`attempt` 메소드가 호출될 때에는 `auth.attempt` [이벤트](/docs/5.0/events)가 발생합니다. 사용자 인증이 성공적이고 사용자가 로그인되었다면, 마찬가지로 `auth.login` 이벤트가 발생합니다. 
+`attempt` 메소드가 호출될 때에는 `auth.attempt` [이벤트](/laravel-korean-docs/docs/5.0/events)가 발생합니다. 사용자 인증이 성공적이고 사용자가 로그인되었다면, 마찬가지로 `auth.login` 이벤트가 발생합니다. 
 
 <a name="retrieving-the-authenticated-user"></a>
 ## 인증된 사용자 조회하기
@@ -200,7 +200,7 @@ permalink: /docs/5.0/authentication/
 
 	}
 
-세번째로는, `Illuminate\Contracts\Auth\Authenticatable` contract를 타입힌트로 지정하는 것입니다.  이 타입힌트는 [서비스 컨테이너](/docs/5.0/container)에 의해서 의존성이 해결되는 컨트롤러의 생성자, 컨트롤러 메소드 또는 다른 어떤 클래스의 생성자에서 추가될 수 있습니다:
+세번째로는, `Illuminate\Contracts\Auth\Authenticatable` contract를 타입힌트로 지정하는 것입니다.  이 타입힌트는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결되는 컨트롤러의 생성자, 컨트롤러 메소드 또는 다른 어떤 클래스의 생성자에서 추가될 수 있습니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -224,7 +224,7 @@ permalink: /docs/5.0/authentication/
 <a name="protecting-routes"></a>
 ## 라우트 제한하기
 
-[라우트 미들웨어](/docs/5.0/middleware)는 해당 라우트에 인증된 사용자들만 액세스가 가능하도록 할 수 있습니다. 라라벨은 기본적으로 `app\Http\Middleware\Authenticate.php`로 정의되어 있는 `auth` 미들웨어를 제공합니다. 여러분은 필요한 라우트를 추가하기만 하면 됩니다. 
+[라우트 미들웨어](/laravel-korean-docs/docs/5.0/middleware)는 해당 라우트에 인증된 사용자들만 액세스가 가능하도록 할 수 있습니다. 라라벨은 기본적으로 `app\Http\Middleware\Authenticate.php`로 정의되어 있는 `auth` 미들웨어를 제공합니다. 여러분은 필요한 라우트를 추가하기만 하면 됩니다. 
 
 	// With A Route Closure...
 
@@ -253,7 +253,7 @@ HTTP 기본 인증은 어플리케이션에 별도의 “login” 페이지 설�
 
 #### 상태를 유지하지 않는 HTTP 기본 필터 설정하기
 
-여러분은 또한 API 인증에 유용한, 세션의 사용자 식별 쿠키 없는 HTTP 기본 인증을 사용할 수 있습니다. 이렇게 하기 위해서는 `onceBasic` 메소드를 호출하는 [미들웨어를 정의](/docs/5.0/middleware)하면 됩니다. 
+여러분은 또한 API 인증에 유용한, 세션의 사용자 식별 쿠키 없는 HTTP 기본 인증을 사용할 수 있습니다. 이렇게 하기 위해서는 `onceBasic` 메소드를 호출하는 [미들웨어를 정의](/laravel-korean-docs/docs/5.0/middleware)하면 됩니다. 
 
 	public function handle($request, Closure $next)
 	{
@@ -300,7 +300,7 @@ Socialite 를 시작하기 위해서는 `composer.json` 파일에 다음 패키�
 
 	"laravel/socialite": "~2.0"
 
-다음으로 `config/app.php` 설정 파일에 `Laravel\Socialite\SocialiteServiceProvider`를 등록하십시오. [파사드](/docs/5.0/facades) 또한 등록해야 합니다:
+다음으로 `config/app.php` 설정 파일에 `Laravel\Socialite\SocialiteServiceProvider`를 등록하십시오. [파사드](/laravel-korean-docs/docs/5.0/facades) 또한 등록해야 합니다:
 
 	'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 

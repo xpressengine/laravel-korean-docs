@@ -77,7 +77,7 @@ permalink: /docs/5.0/events/
 <a name="queued-event-handlers"></a>
 ## 큐에 저장된 이벤트 핸들러
 
-이벤트 핸들러에 [큐](/docs/5.0/queues)가 필요한가요? 간단하게 할 수 있습니다. 핸들러를 생성할 때 `--queued` 플래스를 사용하면 됩니다:
+이벤트 핸들러에 [큐](/laravel-korean-docs/docs/5.0/queues)가 필요한가요? 간단하게 할 수 있습니다. 핸들러를 생성할 때 `--queued` 플래스를 사용하면 됩니다:
 
 	php artisan handler:event SendPurchaseConfirmation --event=PodcastWasPurchased --queued
 

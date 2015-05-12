@@ -70,7 +70,7 @@ permalink: /docs/5.0/redis/
 
 	$values = Redis::lrange('names', 5, 10);
 
-> **참고:** 레디스 [캐시](/docs/5.0/cache) 와 [세션](/docs/5.0/session) 드라이버가 라라벨에 포함되어 있습니다.
+> **참고:** 레디스 [캐시](/laravel-korean-docs/docs/5.0/cache) 와 [세션](/laravel-korean-docs/docs/5.0/session) 드라이버가 라라벨에 포함되어 있습니다.
 
 <a name="pipelining"></a>
 ## 파이프라이닝
