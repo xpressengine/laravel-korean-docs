@@ -49,7 +49,7 @@ Sometimes you may wish to execute an Artisan command outside of the CLI. For exa
 		//
 	});
 
-You may even queue Artisan commands so they are processed in the background by your [queue workers](/docs/5.0/queues):
+You may even queue Artisan commands so they are processed in the background by your [queue workers](/docs/{{version}}/queues):
 
 	Route::get('/foo', function()
 	{
@@ -170,3 +170,7 @@ In this example, the `foo` command will be run every minute if it is not already
 #### Ping A Given URL After The Job Runs
 
 	$schedule->command('foo')->thenPing($url);
+
+Using the `thenPing($url)` feature requires the Guzzle HTTP library. You can add Guzzle 5 to your project by adding the following line to your `composer.json` file:
+
+	"guzzlehttp/guzzle": "~5.0"

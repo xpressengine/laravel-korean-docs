@@ -20,7 +20,7 @@ Remember, if you are in a namespace, you will have to import the `Request` facad
 
 ### Via Dependency Injection
 
-To obtain an instance of the current HTTP request via dependency injection, you should type-hint the class on your controller constructor or method. The current request instance will automatically be injected by the [service container](/docs/5.0/container):
+To obtain an instance of the current HTTP request via dependency injection, you should type-hint the class on your controller constructor or method. The current request instance will automatically be injected by the [service container](/docs/{{version}}/container):
 
 	<?php namespace App\Http\Controllers;
 
@@ -108,7 +108,7 @@ Laravel also allows you to keep input from one request during the next request. 
 
 #### Flashing Input To The Session
 
-The `flash` method will flash the current input to the [session](/docs/5.0/session) so that it is available during the user's next request to the application:
+The `flash` method will flash the current input to the [session](/docs/{{version}}/session) so that it is available during the user's next request to the application:
 
 	Request::flash();
 
@@ -224,6 +224,14 @@ The `Request` class provides many methods for examining the HTTP request for you
 #### Retrieving The Request URI
 
 	$uri = Request::path();
+	
+#### Determine If The Request Is Using AJAX
+
+	if (Request::ajax())
+	{
+		//
+	}
+
 
 #### Retrieving The Request Method
 
