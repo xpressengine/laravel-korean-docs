@@ -16,11 +16,11 @@ permalink: /docs/5.0/facades/
 <a name="introduction"></a>
 ## 소개
 
-파사드는 어플리케이션의 [서비스 컨테이너](/docs/5.0/container)에서 사용가능한 클래스들에 대한 "정적" 인터페이스를 제공합니다. 라라벨은 많은 파사드를 가지고 있으며 여러분이 알지 못하는 사이에도 이미 사용하고 있을 것입니다. 라라벨 “파사드” 는 서비스 컨테이너에 등록된 클래스들에 대한 일종의 “정적 프록시” 역활을 수행하는데, 이를 통해서 전통적인 정적 메소드 보다 간결한 문법과 테스트의 용이성 그리고 코드의 유연성을 유지하는 이점을 제공합니다. 
+파사드는 어플리케이션의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에서 사용가능한 클래스들에 대한 "정적" 인터페이스를 제공합니다. 라라벨은 많은 파사드를 가지고 있으며 여러분이 알지 못하는 사이에도 이미 사용하고 있을 것입니다. 라라벨 “파사드” 는 서비스 컨테이너에 등록된 클래스들에 대한 일종의 “정적 프록시” 역활을 수행하는데, 이를 통해서 전통적인 정적 메소드 보다 간결한 문법과 테스트의 용이성 그리고 코드의 유연성을 유지하는 이점을 제공합니다. 
 
 때로는 여러분의 어플리케이션이나 패키지에서도  파사드를 만들고 싶어질 것입니다. 따라서 파사드의 개념과 개발 방법, 이러한 클래스들의 사용방법에 대해서 알아보겠습니다. 
 
-> **주의** 파사드에 대해서 알아보기 전에 라라벨의 [서비스 컨테이너](/docs/5.0/container)에 익숙질 것을 적극 권장합니다. 
+> **주의** 파사드에 대해서 알아보기 전에 라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 익숙질 것을 적극 권장합니다. 
 
 <a name="explanation"></a>
 ## 설명
@@ -112,7 +112,7 @@ permalink: /docs/5.0/facades/
 		return new \PaymentGateway\Payment;
 	});
 
-바인딩을 추가하는 좋은 방법은 `PaymentServiceProvider`라는 [서비스 프로바이더](/docs/5.0/container#service-providers)를 생성하고 `register` 메소드에서 바인딩을 추가하는 것입니다.  그 다음에 `config/app.php` 설정 파일에서 라라벨에서 로딩하는 서비스 프로바이더 항목을 설정합니다. 
+바인딩을 추가하는 좋은 방법은 `PaymentServiceProvider`라는 [서비스 프로바이더](/laravel-korean-docs/docs/5.0/container#service-providers)를 생성하고 `register` 메소드에서 바인딩을 추가하는 것입니다.  그 다음에 `config/app.php` 설정 파일에서 라라벨에서 로딩하는 서비스 프로바이더 항목을 설정합니다. 
 
 이제 파사드 클래스를 생성합니다. 
 
@@ -135,12 +135,12 @@ permalink: /docs/5.0/facades/
 <a name="mocking-facades"></a>
 ## 파사드 Mocking
 
-단위 테스트는 왜 파사드가 저렇게 동작하는지에 대한 매우 중요한 이유입니다. 사실 테스트의 용이성은 파사드가 존재하는 주요한 이유입니다. 보다 자세한 내용에 대해서는 문서의 [mocking facades](/docs/testing#mocking-facades) 섹션을 참고하십시오. 
+단위 테스트는 왜 파사드가 저렇게 동작하는지에 대한 매우 중요한 이유입니다. 사실 테스트의 용이성은 파사드가 존재하는 주요한 이유입니다. 보다 자세한 내용에 대해서는 문서의 [mocking facades](/laravel-korean-docs/docs/testing#mocking-facades) 섹션을 참고하십시오. 
 
 <a name="facade-class-reference"></a>
 ## 파사드 참조 목록
 
-다음은 모든 파사드 와 실제 클래스에 대한 목록입니다. 여러분이 특정한 파사드를 기준으로 API 문서를 빠르게 찾고자 하는 경우에 도움이 될것입니다. 응용이 가능하도록 [서비스 컨테이너 바인딩](/docs/5.0/container)도 포함되어 있습니다. 
+다음은 모든 파사드 와 실제 클래스에 대한 목록입니다. 여러분이 특정한 파사드를 기준으로 API 문서를 빠르게 찾고자 하는 경우에 도움이 될것입니다. 응용이 가능하도록 [서비스 컨테이너 바인딩](/laravel-korean-docs/docs/5.0/container)도 포함되어 있습니다. 
 
 Facade  |  Class  |  Service Container Binding
 ------------- | ------------- | -------------

@@ -35,7 +35,7 @@ S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하�
 <a name="basic-usage"></a>
 ## 기본적인 사용법
 
-`Storage` 파사드를 사용하여 설정된 디스크에 대한 작업을 처리할 수 있습니다. 또한 라라벨의 [서비스 컨테이너](/docs/5.0/container)에 의해서 의존성이 해결될 수 있도록 `Illuminate\Contracts\Filesystem\Factory` contract를 타입힌트에 사용할 수도 있습니다. 
+`Storage` 파사드를 사용하여 설정된 디스크에 대한 작업을 처리할 수 있습니다. 또한 라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결될 수 있도록 `Illuminate\Contracts\Filesystem\Factory` contract를 타입힌트에 사용할 수도 있습니다. 
 
 #### 지정된 디스크 객체 반환하기
 

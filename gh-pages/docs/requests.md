@@ -26,7 +26,7 @@ permalink: /docs/5.0/requests/
 
 ### 의존성 주입을 통한 방법 
 
-현재의 의존성 주입을 통해서 HTTP request 을 획득하기 위해서는 여러분의 컨트롤러 생성자나 메소드에서 타입힌트를 지정해야 합니다. 현재의 request의 인스턴스는 [서비스 컨테이너](/docs/5.0/container)에 의해서 자동으로 주입될것 입니다:
+현재의 의존성 주입을 통해서 HTTP request 을 획득하기 위해서는 여러분의 컨트롤러 생성자나 메소드에서 타입힌트를 지정해야 합니다. 현재의 request의 인스턴스는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 자동으로 주입될것 입니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -114,7 +114,7 @@ permalink: /docs/5.0/requests/
 
 #### 입력값들 세션에 저장하기
 
-`flash` 메소드는 현재의 입력들을 [세션](/docs/5.0/session)에 저장하여 사용자가 다음번에 request 를 보내도 사용가능하게 만들어 줍니다. 
+`flash` 메소드는 현재의 입력들을 [세션](/laravel-korean-docs/docs/5.0/session)에 저장하여 사용자가 다음번에 request 를 보내도 사용가능하게 만들어 줍니다. 
 
 	Request::flash();
 

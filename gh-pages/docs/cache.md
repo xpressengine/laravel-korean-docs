@@ -200,5 +200,5 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 <a name="redis-cache"></a>
 #### Redis Cache
 
-[Redis 설정](/docs/redis#configuration)을 참고하십시오. 
+[Redis 설정](/laravel-korean-docs/docs/redis#configuration)을 참고하십시오. 
 

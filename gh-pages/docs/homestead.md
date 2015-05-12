@@ -39,7 +39,7 @@ permalink: /docs/5.0/homestead/
 - Redis
 - Memcached
 - Beanstalkd
-- [Laravel Envoy](/docs/5.0/envoy)
+- [Laravel Envoy](/laravel-korean-docs/docs/5.0/envoy)
 - [Blackfire Profiler](#blackfire-profiler)
 
 <a name="installation-and-setup"></a>

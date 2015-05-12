@@ -53,7 +53,8 @@ module.exports = function(grunt) {
 
                 // replace regex
                 content = content.replace(/([\{|\}]{2,})/g, '{% raw %}$1{% endraw %}');
-
+                content = content.replace(/\((\/docs\/)/g, '(' + gh_pages.config.baseurl + '$1');
+                
                 // save file
                 grunt.file.write( file, [prepend, content, append].join('') );
             });

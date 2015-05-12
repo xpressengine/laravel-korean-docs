@@ -82,7 +82,7 @@ permalink: /docs/5.0/controllers/
 <a name="controller-middleware"></a>
 ## 컨트롤러 미들웨어 
 
-[미들웨어](/docs/5.0/middleware)는 다음과 같이 컨트롤러 라우트에 지정합니다. 
+[미들웨어](/laravel-korean-docs/docs/5.0/middleware)는 다음과 같이 컨트롤러 라우트에 지정합니다. 
 
 	Route::get('profile', [
 		'middleware' => 'auth',
@@ -226,7 +226,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 #### 생성자 주입
 
-라라벨의 [서비스 컨테이너](/docs/5.0/container)는 모든 라라벨 컨트롤러의 의존성을 해결하기 위해서 사용됩니다. 그 결과 컨트롤러가 필요로 하는 의존 객체들에 대해서 생성자에서 타입힌트로 지정할 수 있게 됩니다:
+라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)는 모든 라라벨 컨트롤러의 의존성을 해결하기 위해서 사용됩니다. 그 결과 컨트롤러가 필요로 하는 의존 객체들에 대해서 생성자에서 타입힌트로 지정할 수 있게 됩니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -253,7 +253,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	}
 
-당연하게도 [라라벨 contract](/docs/5.0/contracts)의 형태도 타입 힌트로 지정할 수 있습니다. 컨테이너가 의존성 해결을 할 수 있다면 타입 힌트에 지정할 수는 있습니다. 
+당연하게도 [라라벨 contract](/laravel-korean-docs/docs/5.0/contracts)의 형태도 타입 힌트로 지정할 수 있습니다. 컨테이너가 의존성 해결을 할 수 있다면 타입 힌트에 지정할 수는 있습니다. 
 
 #### 메소드 인젝션-주입
 
@@ -304,7 +304,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	}
 
-> **주의:** 메소드 인젝션-주입은 [모델 바인딩](/docs/5.0/routing#route-model-binding)에서도 마찬가지로 동작합니다. 컨테이너는 어느 인자가 모델 바인딩 되었고 어떤 인자가 주입될것인지 영리하게 판단할 것입니다.
+> **주의:** 메소드 인젝션-주입은 [모델 바인딩](/laravel-korean-docs/docs/5.0/routing#route-model-binding)에서도 마찬가지로 동작합니다. 컨테이너는 어느 인자가 모델 바인딩 되었고 어떤 인자가 주입될것인지 영리하게 판단할 것입니다.
 
 <a name="route-caching"></a>
 ## 라우트 캐시

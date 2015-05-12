@@ -49,9 +49,9 @@ permalink: /docs/5.0/queues/
 
 	Queue::push(new SendEmail($message));
 
-> **주의:** 이 예제에서는 `Queue` 파사드를 직접적으로 사용하고 있습니다. 그러나 일반적으로는 [Command Bus](/docs/5.0/bus)를 통해 큐에 작업을 보내게 됩니다. 이 페이지는 이후에도 계속 `Queue` 파사드를 사용하겠지만 어플리케이션에서 큐와 동기화 명령을 모두 실행 할 수 있으므로 커맨드 버스를 사용하는 것에도 익숙해져야 합니다.
+> **주의:** 이 예제에서는 `Queue` 파사드를 직접적으로 사용하고 있습니다. 그러나 일반적으로는 [Command Bus](/laravel-korean-docs/docs/5.0/bus)를 통해 큐에 작업을 보내게 됩니다. 이 페이지는 이후에도 계속 `Queue` 파사드를 사용하겠지만 어플리케이션에서 큐와 동기화 명령을 모두 실행 할 수 있으므로 커맨드 버스를 사용하는 것에도 익숙해져야 합니다.
 
-기본적으로 `make:command` 아티즌 명령어는 `handle` 메소드가 커멘드에 직접 추가되는  “self-handling” 명령을 생성합니다. 이 메소드는 작업이 큐에 의해 실행될 때 호출될 것입니다. 여러분은 `handle` 메소드에서 필요로 하는 의존 객체들을 type-hint로 지정 할 수 있으며 [service container](/docs/5.0/container) 는 자동으로 이 의존 객체들을 추가할 것입니다:
+기본적으로 `make:command` 아티즌 명령어는 `handle` 메소드가 커멘드에 직접 추가되는  “self-handling” 명령을 생성합니다. 이 메소드는 작업이 큐에 의해 실행될 때 호출될 것입니다. 여러분은 `handle` 메소드에서 필요로 하는 의존 객체들을 type-hint로 지정 할 수 있으며 [service container](/laravel-korean-docs/docs/5.0/container) 는 자동으로 이 의존 객체들을 추가할 것입니다:
 
 	public function handle(UserRepository $users)
 	{

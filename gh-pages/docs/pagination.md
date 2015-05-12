@@ -33,7 +33,7 @@ permalink: /docs/5.0/pagination/
 
 #### Eloquent Model 에서의 페이징
 
-또한 여러분은 [Eloquent](/docs/5.0/eloquent) models 에서도 페이징 처리를 할 수 있습니다:
+또한 여러분은 [Eloquent](/laravel-korean-docs/docs/5.0/eloquent) models 에서도 페이징 처리를 할 수 있습니다:
 
 	$allUsers = User::paginate(15);
 
