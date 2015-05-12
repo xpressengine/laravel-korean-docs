@@ -225,6 +225,13 @@ _영원히는 실제로는 5년을 의미합니다._
 
 	$uri = Request::path();
 
+#### Request 가 AJAX 요청인지 확인
+
+	if (Request::ajax())
+	{
+		//
+	}
+
 #### Request 메소드 확인하기
 
 	$method = Request::method();
