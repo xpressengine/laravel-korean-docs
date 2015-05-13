@@ -41,7 +41,7 @@
 		}
 	});
 
-`Closure`에서 `false` 를 반환하여 결과 분할을 중단 할 수 있습니다:
+`Closure`에서 `false`를 반환하여 결과 분할을 중단 할 수 있습니다:
 
 	DB::table('users')->chunk(100, function($users)
 	{
@@ -117,7 +117,7 @@
 
 #### 동적 where 구문
 
-매직 매소드를 사용하여 where 구문을 동적으로 구성할 수도 있습니다:
+매직 메소드를 사용하여 where 구문을 동적으로 구성할 수도 있습니다:
 
 	$admin = DB::table('users')->whereId(1)->first();
 
@@ -169,7 +169,7 @@
 	        })
 	        ->get();
 
-조인문에서 "where”구문을 사용하고 싶으면 `where`과 `orwhere` 메소드를 사용하십시오. 이러한 메소드는 두개의 컬럼을 비교 대신에 주어진 값과 컬럼을 비교합니다:
+조인문에서 "where”구문을 사용하고 싶으면 `where`과 `orwhere` 메소드를 사용하십시오. 이러한 메소드는 두 개의 컬럼을 비교 대신에 주어진 값과 컬럼을 비교합니다:
 
 	DB::table('users')
 	        ->join('contacts', function($join)
@@ -220,7 +220,7 @@
 <a name="aggregates"></a>
 ## Aggregates 집계
 
-쿼리 빌더는 또한 `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다. 
+쿼리 빌더는 또한, `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다. 
 
 #### 집계를 위한 메소드 사용하기
 
@@ -258,7 +258,7 @@
 
 #### Auto-Incrementing ID 방식 테이블에 레코드 추가하기
 
-테이블에 auto-incrementing id 가 있다면 `insertGetId` 를 사용하여 레코드를 추가하고 ID를 얻을 수 있습니다:
+테이블에 auto-incrementing id가 있다면 `insertGetId`를 사용하여 레코드를 추가하고 ID를 얻을 수 있습니다:
 
 	$id = DB::table('users')->insertGetId(
 		['email' => 'john@example.com', 'votes' => 0]
@@ -292,7 +292,7 @@
 
 	DB::table('users')->decrement('votes', 5);
 
-또한 업데이트할 추가적인 컬럼을 지정할 수도 있습니다:
+또한, 업데이트할 추가적인 컬럼을 지정할 수도 있습니다:
 
 	DB::table('users')->increment('votes', 1, ['name' => 'John']);
 
@@ -325,9 +325,9 @@
 <a name="pessimistic-locking"></a>
 ## Pessimistic Locking 배타적 잠금
 
-쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다. 
+쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇 가지 기능을 포함하고 있습니다. 
 
-“shared lock” 에서 SELECT 문을 실행하려면 `sharedLock` 메소드를 쿼리에 지정하십시오:
+“shared lock”에서 SELECT 문을 실행하려면 `sharedLock` 메소드를 쿼리에 지정하십시오:
 
 	DB::table('users')->where('votes', '>', 100)->sharedLock()->get();
 

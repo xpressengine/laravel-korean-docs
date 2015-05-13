@@ -11,7 +11,7 @@
 <a name="introduction"></a>
 ## 소개
 
-요청에 대한 모든 처리 로직을 하나의 `routes.php` 파일에 정의하는 것 보다 별도의 컨트롤러 클래스를 통해서 구성할 수도 있습니다. 컨트롤러는 클래스를 구성하여 HTTP 요청에 대한 그룹을 지정합니다. 컨트롤러는 일반적으로 `app/Http/Controllers` 디렉토리에 저장합니다. 
+요청에 대한 모든 처리 로직을 하나의 `routes.php` 파일에 정의하는 것보다 별도의 컨트롤러 클래스를 통해서 구성할 수도 있습니다. 컨트롤러는 클래스를 구성하여 HTTP 요청에 대한 그룹을 지정합니다. 컨트롤러는 일반적으로 `app/Http/Controllers` 디렉토리에 저장합니다. 
 
 <a name="basic-controllers"></a>
 ## 기본 컨트롤러
@@ -45,9 +45,9 @@
 
 #### 컨트롤러 & 네임스페이스
 
-한 가지 반드시 알고 있어야 할 부분은 컨트롤러의 네임스페이스를 지정할 때 전체 네임스페이스를 다 쓸 필요가 없다는 것입니다. 클래스의 이름은 `App\Http\Controllers` 네임스페이스를 “root”로 인식하게 됩니다. 기본적으로 `RouteServiceProvider` 가 `routes.php` 파일의 라우트들을 로드할 때 자동으로 이 “root” 네임스페이스를 포함하는 것으로 인식합니다. 
+한 가지 반드시 알고 있어야 할 부분은 컨트롤러의 네임스페이스를 지정할 때 전체 네임스페이스를 다 쓸 필요가 없다는 것입니다. 클래스의 이름은 `App\Http\Controllers` 네임스페이스를 “root”로 인식하게 됩니다. 기본적으로 `RouteServiceProvider`가 `routes.php` 파일의 라우트들을 로드할 때 자동으로 이 “root” 네임스페이스를 포함하는 것으로 인식합니다. 
 
-만약 `App\Http\Controllers` 하위에 중첩된 디렉토리를 구성하여 네임스페이스를 부여할 경우에는 단순히 `App\Http\Controllers`를 루트 네임 스페이스를 기준으로 하여 특정 클래스 이름을 사용하면 됩니다. 따라서 만약 컨트롤러가 `App\Http\Controllers\Photos\AdminController` 처럼 구성되어 있다면 다음처럼 라우트를 구성하면 됩니다. 
+만약 `App\Http\Controllers` 하위에 중첩된 디렉토리를 구성하여 네임스페이스를 부여할 경우에는 단순히 `App\Http\Controllers`를 루트 네임 스페이스를 기준으로 하여 특정 클래스 이름을 사용하면 됩니다. 따라서 만약 컨트롤러가 `App\Http\Controllers\Photos\AdminController`처럼 구성되어 있다면 다음처럼 라우트를 구성하면 됩니다. 
 
 	Route::get('foo', 'Photos\AdminController@method');
 
@@ -63,7 +63,7 @@
 
 	$url = action('App\Http\Controllers\FooController@method');
 
-단순히 컨트롤러의 전체 네임스페이스의 대신 클래스명만으로 URL 을 생성하고 싶은 경우에는 root 컨트롤러 네임스페이스를 URL 제너레이터에 등록하면 됩니다:
+단순히 컨트롤러의 전체 네임스페이스의 대신 클래스명만으로 URL을 생성하고 싶은 경우에는 root 컨트롤러 네임스페이스를 URL 제너레이터에 등록하면 됩니다:
 
 	URL::setRootControllerNamespace('App\Http\Controllers');
 
@@ -108,7 +108,7 @@
 
 	Route::controller('users', 'UserController');
 
-`controller` 메소드는 두개의 인자를 넘겨 받도록 되어 있습니다. 첫 번째 인자는 컨트롤러로 제어할 URI이고, 두 번째는 컨트롤러의 클래스명을 의미합니다. 이어서 해당하는 HTTP 메소드 이름을 접두어로 (get, post..) 사용하는 형태로 컨트롤러의 메소드를 추가합니다:
+`controller` 메소드는 두 개의 인자를 넘겨 받도록 되어 있습니다. 첫 번째 인자는 컨트롤러로 제어할 URI이고, 두 번째는 컨트롤러의 클래스명을 의미합니다. 이어서 해당하는 HTTP 메소드 이름을 접두어로 (get, post..) 사용하는 형태로 컨트롤러의 메소드를 추가합니다:
 
 	class UserController extends BaseController {
 
@@ -131,7 +131,7 @@
 
 위의 경우에 컨트롤러의 `index` 메소드는 `users` URI에 대한 루트 주소에 대한 결과를 반환합니다. 
 
-만약 컨트롤러의 메소드가 여러개의 단어로 구성되어 진 형태라면 "-"을 통해서 접속할 수 있는 URI를 제공하게 됩니다. 예를들어 `UserController`에 다음과 같은 액션이 정의되었다면 URI는 `users/admin-profile` 과 같이 구성됩니다:
+만약 컨트롤러의 메소드가 여러개의 단어로 구성되어 진 형태라면 "-"을 통해서 접속할 수 있는 URI를 제공하게 됩니다. 예를 들어, `UserController`에 다음과 같은 액션이 정의되었다면 URI는 `users/admin-profile`과 같이 구성됩니다:
 
 	public function getAdminProfile() {}
 
@@ -146,7 +146,7 @@
 <a name="restful-resource-controllers"></a>
 ## RESTful 리소스 컨트롤러
 
-리소스 컨트롤러는 리소스에 대한 RESTful 컨트롤러를 손쉽게 구성할 수 있게 해줍니다. 예를 들어 여러분은 어플리케이션에서 "photos" 를 처리하는 컨트롤러를 생성할 수 있습니다. `make:controller` 아티즌 명령어를 통해서 새로운 컨트롤러를 빠르게 생성할 수 있습니다:
+리소스 컨트롤러는 리소스에 대한 RESTful 컨트롤러를 손쉽게 구성할 수 있게 해줍니다. 예를 들어, 여러분은 어플리케이션에서 "photos"를 처리하는 컨트롤러를 생성할 수 있습니다. `make:controller` 아티즌 명령어를 통해서 새로운 컨트롤러를 빠르게 생성할 수 있습니다:
 
 	php artisan make:controller PhotoController
 
@@ -154,7 +154,7 @@
 
 	Route::resource('photo', 'PhotoController');
 
-한번의 선언만으로 photo 를 구성하는 RESTful 한 액션에 대한 다양한 라우트를 설정할 수 있습니다. 앞에서 직접 개별 메소드를 구성한것과 마찬가지로 생성된 컨트롤러는 각각의 메소드가 처리하는 URI와 액션에 대한 메모와 함께 구성됩니다. 
+한번의 선언만으로 photo를 구성하는 RESTful 한 액션에 대한 다양한 라우트를 설정할 수 있습니다. 앞에서 직접 개별 메소드를 구성한것과 마찬가지로 생성된 컨트롤러는 각각의 메소드가 처리하는 URI와 액션에 대한 메모와 함께 구성됩니다. 
 
 #### 리소스풀 컨트롤러에 의해서 구성된 액션들
 
@@ -170,7 +170,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 #### 리소스 라우트 사용자 지정하기
 
-추가적으로, 전체 액션의 일부만을 라우트에서 처리할 수 있게 지정할 수 있습니다:
+추가로, 전체 액션의 일부만을 라우트에서 처리할 수 있게 지정할 수 있습니다:
 
 	Route::resource('photo', 'PhotoController',
 					['only' => ['index', 'show']]);
@@ -209,7 +209,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 #### 리소스 컨트롤러에 추가적인 라우팅 구성하기 
 
-만약 리소스 컨트롤러에 추가적으로 라우팅을 구성해야 할 필요가 있다면 `Route::resource`가 호출되기 전에 등록해야 합니다:
+만약 리소스 컨트롤러에 추가로 라우팅을 구성해야 할 필요가 있다면 `Route::resource`가 호출되기 전에 등록해야 합니다:
 
 	Route::get('photos/popular', 'PhotoController@method');
 
@@ -251,7 +251,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 #### 메소드 인젝션-주입
 
-생성자 주입과 더불어 컨트롤러의 메소드에서도 타입힌트를 통한 의존성 주입을 할 수 있습니다. 예를 들어 메소드에서 `Request` 인스턴스를 타입힌트를 통해서 주입할 수 있습니다:
+생성자 주입과 더불어 컨트롤러의 메소드에서도 타입힌트를 통한 의존성 주입을 할 수 있습니다. 예를 들어, 메소드에서 `Request` 인스턴스를 타입힌트를 통해서 주입할 수 있습니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -275,7 +275,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	}
 
-컨트롤러 메소드가 라우트 인자로 부터 입력값을 받아야 한다면 간단하게 의존성 지정 뒤에 인자를 지정하면 됩니다:
+컨트롤러 메소드가 라우트 인자로부터 입력값을 받아야 한다면 간단하게 의존성 지정 뒤에 인자를 지정하면 됩니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -307,7 +307,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	php artisan route:cache
 
-저게 전부입니다. 캐시된 라우트 파일이 `app/Http/routes.php` 파일 대신에 사용될것입니다. 명심할 것은 새로운 라우트를 추가하면 라우트 캐시를 다시 생성해줘야 한다는 것입니다. 이러한점 때문에 `route:cache` 명령어는 프로젝트가 배포되고 나서 실행하는 것이 좋습니다. 
+저게 전부입니다. 캐시된 라우트 파일이 `app/Http/routes.php` 파일 대신에 사용될 것입니다. 명심할 것은 새로운 라우트를 추가하면 라우트 캐시를 다시 생성해줘야 한다는 것입니다. 이러한점 때문에 `route:cache` 명령어는 프로젝트가 배포되고 나서 실행하는 것이 좋습니다. 
 
 캐시를 재생성하는것 말고 캐시를 제거하기 위해서는 `route:clear` 명령어를 실행하면 됩니다:
 

@@ -63,7 +63,7 @@
 
 라라벨은 어플리케이션에 의해서 관리되고 있는 각각의 사용자별 CSRF "토큰"을 자동으로 생성합니다. 이 토큰은 인증된 사용자가 실제로 어플리케이션에 요청을 보내고 있는지 식별하는 데 사용됩니다. 
 
-#### Form 에 CSRF 토큰 삽입하기
+#### Form에 CSRF 토큰 삽입하기
 
     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -94,14 +94,14 @@
 
 #### X-XSRF-TOKEN
 
-또한 라라벨은 CSRF 토큰을 `XSRF-TOKEN` 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 `X-XSRF-TOKEN`을 설정하는 데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다. 
+또한, 라라벨은 CSRF 토큰을 `XSRF-TOKEN` 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 `X-XSRF-TOKEN`을 설정하는 데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다. 
 
 > 참고: `X-CSRF-TOKEN`와 `X-XSRF-TOKEN`의 차이점은 전자는 일반적인 텍스트를 사용한다면 후자는 암호화된 값을 사용한다는 것인데, 이는 라라벨에서는 쿠키를 항상 암호화 된 값으로 사용하기 때문입니다. 여러분이 토큰 값을 제공하기 위해`csrf_token ()`함수를 사용하는 경우는, 아마 `X-CSRF-TOKEN` 헤더를 사용하게 되는 경우일것입니다. 
 
 <a name="method-spoofing"></a>
 ## 메소드 Spoofing-속이기
 
-HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습니다. 따라서 `PUT`, `PATCH` 이나 `DELETE` 로 지정된 라우트를 호출하는 HTML form을 정의한다면 `_method` 의 숨겨진 필드를 지정해야 합니다. 
+HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습니다. 따라서 `PUT`, `PATCH` 이나 `DELETE`로 지정된 라우트를 호출하는 HTML form을 정의한다면 `_method`의 숨겨진 필드를 지정해야 합니다. 
 
 `_method` 필드로 보내진 값은 HTTP 요청 메소드를 구분하는 데 사용됩니다. 다음 예를 참조하십시오:
 
@@ -162,7 +162,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 #### 글로벌 패턴 지정하기
 
-`pattern` 메소드를 사용하면 라우트 파리미터 변수를 지정한 정규 표현식에서 항상 제약을 할 수 있습니다. 이들은 `RouteServiceProvider` 의 `before` 메소드로 정의하는 것을 권장합니다:
+`pattern` 메소드를 사용하면 라우트 파리미터 변수를 지정한 정규 표현식에서 항상 제약을 할 수 있습니다. 이들은 `RouteServiceProvider`의 `before` 메소드로 정의하는 것을 권장합니다:
 
 	$router->pattern('id', '[0-9]+');
 
@@ -182,7 +182,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		//
 	}
 
-또한 `Illuminate\Http\Request` 인스턴스를 통해서 현재의 라우트 파라미터에 엑세스 할 수 있습니다. 현재 요청에 대한 인스턴스는 `Illuminate\Http\Request` 타입힌트를 하거나, `Request` 파사드를 사용하면 의존성 주입을 통해서 엑세스 할 수 있습니다:
+또한, `Illuminate\Http\Request` 인스턴스를 통해서 현재의 라우트 파라미터에 엑세스 할 수 있습니다. 현재 요청에 대한 인스턴스는 `Illuminate\Http\Request` 타입힌트를 하거나, `Request` 파사드를 사용하면 의존성 주입을 통해서 엑세스 할 수 있습니다:
 
 	use Illuminate\Http\Request;
 
@@ -261,7 +261,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		});
 	});
 
-> **참고:** 기본적으로 `RouteServiceProvider` 에서 포함하고 있는 `routes.php` 파일에는 라우트 컨트롤들을 위해서 네임스페이스가 지정되어 있습니다. 따라서 `App\Http\Controllers`의 전체 네임스페이스를 따로 지정할 필요는 없습니다. 
+> **참고:** 기본적으로 `RouteServiceProvider`에서 포함하고 있는 `routes.php` 파일에는 라우트 컨트롤들을 위해서 네임스페이스가 지정되어 있습니다. 따라서 `App\Http\Controllers`의 전체 네임스페이스를 따로 지정할 필요는 없습니다. 
 
 <a name="sub-domain-routing"></a>
 #### 서브 도메인 라우팅
@@ -293,7 +293,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		});
 	});
 
-또한 `prefix` 파라미터를 라우트들의 공통 파라미터로 지정할 수 있습니다:
+또한, `prefix` 파라미터를 라우트들의 공통 파라미터로 지정할 수 있습니다:
 
 #### 라우트 prefix 안에서 URL 파라미터 등록하기
 
@@ -305,7 +305,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		});
 	});
 
-또한 지정된 파라미터 변수의 제약 사항을 정의할 수도 있습니다:
+또한, 지정된 파라미터 변수의 제약 사항을 정의할 수도 있습니다:
 
 	Route::group([
 		'prefix' => 'accounts/{account_id}',
@@ -318,7 +318,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 <a name="route-model-binding"></a>
 ## 라우트 모델 바인딩
 
-라라벨의 모델 바인딩은 라우트에 클래스 인스턴스를 주입할 수 있는 편리한 방법을 제공합니다. 예를 들어 사용자의 ID를 넘기는 대신에 주어진 ID에 해당하는 User 클래스 인스턴스를 주입할 수 있습니다. 
+라라벨의 모델 바인딩은 라우트에 클래스 인스턴스를 주입할 수 있는 편리한 방법을 제공합니다. 예를 들어, 사용자의 ID를 넘기는 대신에 주어진 ID에 해당하는 User 클래스 인스턴스를 주입할 수 있습니다. 
 
 먼저 주어진 파라미터에 대한 클래스를 지정하기 위해서 라우트의 `model` 메소드를 사용하여야 합니다. 이 모델 바인딩은 `RouteServiceProvider::boot` 안에서 정의되어야 합니다. 
 
@@ -338,7 +338,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		//
 	});
 
-`{user}` 파라미터와 `App\User` 모델이 바인딩되어 있으므로 라우트에는 `User` 인스턴스가 주입 될것입니다. 예를 들어 `profile/`으로 요청이 들어오면 ID가 1인 `User`의 인스턴스가 주입됩니다. 
+`{user}` 파라미터와 `App\User` 모델이 바인딩되어 있으므로 라우트에는 `User` 인스턴스가 주입 될것입니다. 예를 들어, `profile/`으로 요청이 들어오면 ID가 1인 `User`의 인스턴스가 주입됩니다. 
 
 > **주의:** 만약 데이터베이스에서 일치하는 모델 인스턴스를 찾이 못하는 경우 404 에러가 발생합니다. 
 
@@ -363,7 +363,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 	abort(404);
 
-`abort` 헬퍼함수는 지정된 상태 코드와 함께 `Symfony\Component\HttpKernel\Exception\HttpException` 를 던집니다.
+`abort` 헬퍼함수는 지정된 상태 코드와 함께 `Symfony\Component\HttpKernel\Exception\HttpException`를 던집니다.
 
 두 번째로 직접으로 `Symfony\Component\HttpKernel\Exception\NotFoundHttpException`을 던지는 것입니다. 
 

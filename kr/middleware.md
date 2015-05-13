@@ -12,7 +12,7 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 물론, 미들웨어는 인증 이외에도 다양한 작업을 수행하도록 작성될 수 있습니다. CORS 미들웨어는 어플리케이션에서 내보내는 모든 응답에 적절한 헤더들을 추가하는 역할을 담당할 수도 있습니다. 로깅 미들웨어는 어플리케이션으로 들어오는 모든 요청을 기록할 수도 있습니다.
 
-라라벨 프레임워크에는 유지보수모드-공사중(maintenance), 인증(authentication), CSRF 보안 등을 위한 미들웨어들이 포함되어 있습니다. 그 미들웨어들은 모두 `app/Http/Middleware` 디렉토리 안에 위치하고 있습니다.
+라라벨 프레임워크에는 유지보수모드-공사중(maintenance), 인증(authentication), CSRF 보안 등을 위한 미들웨어들이 포함되어 있습니다. 그 미들웨어들은 모두 `app/Http/Middleware` 디렉토리 안에 있습니다.
 
 <a name="defining-middleware"></a>
 ## 미들웨어 정의하기
@@ -21,7 +21,7 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 	php artisan make:middleware OldMiddleware
 
-이 명령은 `OldMiddleware` 클래스를 생성하여 `app/Http/Middleware` 디렉토리에 위치시킬 것입니다. 이 미들웨어 에서 우리는 입력받은 `age`가 200보다 클 때에만 요청된 주소에 접근할 수 있도록 허용하려고 합니다. 그렇지 않으면 우리는 사용자를 "home"으로 리다이렉트할 것입니다.
+이 명령은 `OldMiddleware` 클래스를 생성하여 `app/Http/Middleware` 디렉토리에 위치시킬 것입니다. 이 미들웨어에서 우리는 입력받은 `age`가 200보다 클 때에만 요청된 주소에 접근할 수 있도록 허용하려고 합니다. 그렇지 않으면 우리는 사용자를 "home"으로 리다이렉트할 것입니다.
 
 	<?php namespace App\Http\Middleware;
 
