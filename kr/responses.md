@@ -53,11 +53,11 @@
 <a name="redirects"></a>
 ## 리다이렉트
 
-일반적으로 리다이렉트 Response 는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는데 필요한 적절한 헤더를 포함하고 있습니다. 
+일반적으로 리다이렉트 Response 는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는 데 필요한 적절한 헤더를 포함하고 있습니다. 
 
 #### 리다이렉트 반환하기 
 
-`RedirectResponse` 인스턴스를 생성하는데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼 함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼 함수를 사용하게 됩니다. 
+`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼 함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼 함수를 사용하게 됩니다. 
 
 	return redirect('user/login');
 
@@ -83,7 +83,7 @@
 
 #### 이름이 지정된 라우트로 파라미터와 함께 리다이렉트 하기
 
-라우트에 전달해야할 파라미터가 있다면 `route` 메소드의 두번째 인자로 전달하면 됩니다. 
+라우트에 전달해야 할 파라미터가 있다면 `route` 메소드의 두 번째 인자로 전달하면 됩니다. 
 
 	// For a route with the following URI: profile/{id}
 
@@ -170,6 +170,6 @@
 
 	}
 
-`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼 함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것 입니다. 
+`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼 함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다. 
 
 	return response()->caps('foo');

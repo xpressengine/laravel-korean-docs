@@ -16,7 +16,7 @@
 
 홈스테드는 Windows, Mac 그리고 Linux 시스템에서 실행할 수 있으며 Nginx 웹 서버, PHP5.6, MySQL, Postgres, Redis, Memcached 및 기타 라라벨 어플리케이션 개발에 필요한 멋진 도구들을 모두 포함하고 있습니다. .
 
-> **주의:** 만약 윈도우를 사용하는 경우, 하드웨어 가상화 (VT-x)를 활성화해야합니다. 이 설정은 일반적으로 BIOS에서 사용할 수 있습니다.
+> **주의:** 만약 윈도우를 사용하는 경우, 하드웨어 가상화 (VT-x)를 활성화해야 합니다. 이 설정은 일반적으로 BIOS에서 사용할 수 있습니다.
 
 홈스테디드는 현재 Vagrant1.7을 기반으로 구성되고 테스트되어 있습니다.
 
@@ -41,7 +41,7 @@
 
 ### VirtualBox / VMware와 Vagrant 설치
 
-라라벨 홈스테드를 구동하기 전에 여러분은 반드시 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 와 [Vagrant](http://www.vagrantup.com/downloads.html)를 설치해야 합니다. 두가지 소프트웨어 패키지는 모든 운영체제에서 손쉽게 설치할 수 있는 비주얼 프로그램을 제공합니다. 
+라라벨 홈스테드를 구동하기 전에 여러분은 반드시 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 와 [Vagrant](http://www.vagrantup.com/downloads.html)를 설치해야 합니다. 두 가지 소프트웨어 패키지는 모든 운영체제에서 손쉽게 설치할 수 있는 비주얼 프로그램을 제공합니다. 
 
 #### VMware
 
@@ -121,7 +121,7 @@ Bash 별칭을 Homestead box에 추가하려면 `~/.homestead` 디렉토리의 �
 
 Vagrant가 가상머신을 구동시키고 공유폴더와 Nginx 사이트를 자동으로 설정할 것입니다. 가상 머신을 파괴하기 위해서는 `vagrant destroy --force` 명령어를 사용하면 됩니다.  
 
-여러분이 Nginx 사이트에 설정한 “도메인”을 로컬 머신의 `hosts` 파일에 추가하는 것을 잊지 마십시오. `hosts` 파일은 로컬 도메인에 대한 여러분의 요청을 홈스테드 환경으로 리다이렉트 시킬 것 입니다. 맥과 리눅스에서는 `/etc/hosts`, 윈도우에서는 `C:\Windows\System32\drivers\etc\hosts`에 파일이 있습니다. 다음과 같이 도메인을 추가하십시오:
+여러분이 Nginx 사이트에 설정한 “도메인”을 로컬 머신의 `hosts` 파일에 추가하는 것을 잊지 마십시오. `hosts` 파일은 로컬 도메인에 대한 여러분의 요청을 홈스테드 환경으로 리다이렉트 시킬 것입니다. 맥과 리눅스에서는 `/etc/hosts`, 윈도우에서는 `C:\Windows\System32\drivers\etc\hosts`에 파일이 있습니다. 다음과 같이 도메인을 추가하십시오:
 
 	192.168.10.10  homestead.app
 
@@ -150,13 +150,13 @@ SSH를 통해서 홈스테드 환경에 접속하려면 홈스테드 디렉토�
 
 별다른 설정 없이도 `homestead` 데이터베이스는 MySQL과 Postgres 가 설정되어 있습니다. 보다 편리하게하기 위해 라라벨의 `local` 데이터베이스 설정이 기본적으로 이 데이터베이스를 사용하도록 설정되어 있습니다.
 
-Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 접속하려면 `127.0.0.1` 의 33060 (MySQL) 또는 54320 (Postgres) 포트에 연결하면 됩니다. 데이터베이스 사용자 이름과 암호는 모두 `homestead` / `secret` 입니다. 
+Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 접속하려면 `127.0.0.1` 의 33060 (MySQL) 또는 54320 (Postgres) 포트에 연결하면 됩니다. 데이터베이스 사용자 이름과 암호는 모두 `homestead` / `secret`입니다. 
 
-> **주의:** 데이터베이스에 접속할 때는 이러한 표준이 아닌 포트를 사용해야 합니다. 라라벨이 가상 머신 안에서 동작하고 있기 때문에 기본적인 3306 과 5432 포트는 라라벨 데이터베이스 설정 파일 안에서 사용할 수 있습니다.  
+> **주의:** 데이터베이스에 접속할 때는 이러한 표준이 아닌 포트를 사용해야 합니다. 라라벨이 가상 머신 안에서 동작하고 있으므로 기본적인 3306 과 5432 포트는 라라벨 데이터베이스 설정 파일 안에서 사용할 수 있습니다.  
 
 ### 추가적인 사이트 지정하기
 
-홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두가지 방법이 있습니다: 첫번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 홈스테드 디렉토리에서 `vagrant provision` 을 실행하는 것입니다. 
+홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두 가지 방법이 있습니다: 첫 번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 홈스테드 디렉토리에서 `vagrant provision` 을 실행하는 것입니다. 
 
 > **주의:** 이 명령어는 내부에 변경사항이 있습니다. `provision` 명령어가 실행되면 이미 존재하는 데이터베이스가 삭제되고 다시 생성됩니다. 
 
@@ -193,7 +193,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 
 SensioLabs 의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로 여러분의 코드 수행시간, RAM, CPU 소요시간 그리고 disk I/O와 같은 정보들을 수집해 줍니다. 홈스테드는 여러분의 어플리케이션에 이 프로파일러를 매우 쉽게 사용할 수 있습니다. 
 
-필요한 패키지는 이미 Homestead Box에 설치되어 있기 때문에, `Homestead.yaml` 파일에 Blackfire의 **서버** ID와 토큰을 설정하면 됩니다:
+필요한 패키지는 이미 Homestead Box에 설치되어 있으므로, `Homestead.yaml` 파일에 Blackfire의 **서버** ID와 토큰을 설정하면 됩니다:
 
 	blackfire:
 	    - id: your-server-id
