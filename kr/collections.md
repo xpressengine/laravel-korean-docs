@@ -6,7 +6,7 @@
 <a name="introduction"></a>
 ## 소개
 
-`Illuminate\Support\Collection` 클래스는 배열 데이터를 사용하기 위한 유연하고 편리한 래퍼(wrapper)를 제공합니다. 다음 사용예를 확인하십시오. 배열을 통해서 새로운 collection 인스턴스를 생성하기 위해서 `collect` 헬퍼 함수를 사용합니다:
+`Illuminate\Support\Collection` 클래스는 배열 데이터를 사용하기 위한 유연하고 편리한 래퍼(wrapper)를 제공합니다. 다음 사용 예를 확인하십시오. 배열을 통해서 새로운 collection 인스턴스를 생성하기 위해서 `collect` 헬퍼 함수를 사용합니다:
 
 	$collection = collect(['taylor', 'abigail', null])->map(function($name)
 	{
