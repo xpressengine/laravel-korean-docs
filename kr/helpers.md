@@ -61,7 +61,7 @@ The `array_fetch` method returns a flattened array containing the selected neste
 ### array_first
 
 The `array_first` method returns the first element of an array passing a given truth test.
-`array_first` 메소드는 넘겨진 배열 중 주어진 테스트(조건)를 만족하는 첫번째 요소를 반환합니다.
+`array_first` 메소드는 넘겨진 배열 중 주어진 테스트(조건)를 만족하는 첫 번째 요소를 반환합니다.
 
 	$array = [100, 200, 300];
 
@@ -71,7 +71,7 @@ The `array_first` method returns the first element of an array passing a given t
 	});
 
 A default value may also be passed as the third parameter:
-기본 값(Default)은 세번째 매개 변수를 통해 지정할 수 있습니다.
+기본 값(Default)은 세 번째 매개 변수를 통해 지정할 수 있습니다.
 
 	$value = array_first($array, $callback, $default);
 
@@ -90,7 +90,7 @@ The `array_last` method returns the last element of an array passing a given tru
 	// 500
 
 A default value may also be passed as the third parameter:
-기본 값(Default)은 세번째 매개 변수를 통해 지정할 수 있습니다.
+기본 값(Default)은 세 번째 매개 변수를 통해 지정할 수 있습니다.
 
 	$value = array_last($array, $callback, $default);
 
@@ -198,14 +198,14 @@ Filter the array using the given Closure.
 ### head
 
 Return the first element in the array. 
-배열의 첫번째 요소를 반환합니다.
+배열의 첫 번째 요소를 반환합니다.
 
 	$first = head($this->returnsArray('foo'));
 
 ### last
 
 Return the last element in the array. Useful for method chaining.
-배열의 마지막 요소를 반완합니다. 메소드 체인을 사용하는데 유용합니다.
+배열의 마지막 요소를 반완합니다. 메소드 체인을 사용하는 데 유용합니다.
 
 	$last = last($this->returnsArray('foo'));
 

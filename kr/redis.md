@@ -8,7 +8,7 @@
 <a name="introduction"></a>
 ## 소개
 
-[레디스](http://redis.io) 는 키-밸류 기반의 오픈소서 저장소 입니다. 레디스는 키에 [문자열](http://redis.io/topics/data-types#strings), [해쉬](http://redis.io/topics/data-types#hashes), [리스트](http://redis.io/topics/data-types#lists), [세트](http://redis.io/topics/data-types#sets), 그리고 [정렬 세트](http://redis.io/topics/data-types#sorted-sets)를 사용할 수 있기 때문에 데이터 구조 서버로 자주 거론되고 있습니다.
+[레디스](http://redis.io) 는 키-밸류 기반의 오픈소서 저장소입니다. 레디스는 키에 [문자열](http://redis.io/topics/data-types#strings), [해쉬](http://redis.io/topics/data-types#hashes), [리스트](http://redis.io/topics/data-types#lists), [세트](http://redis.io/topics/data-types#sets), 그리고 [정렬 세트](http://redis.io/topics/data-types#sorted-sets)를 사용할 수 있으므로 데이터 구조 서버로 자주 거론되고 있습니다.
 
 라라벨에서 레디스를 사용하기전에 컴포저로 `predis/predis` 패키지를 설치해주어야 합니다. 
 
@@ -29,7 +29,7 @@
 
 기본적으로 설정된 서버는 개발시에는 충분할 수 있습니다. 하지만 환경에 맞게 설정을 변경할 수도 있습니다. 간단하게 레디스 서버의 이름과 그에 맞는 호스트 및 포트번호를 설정하면 됩니다. 
 
-옵션은 라라벨 레디스 클라이언트에게 레디스 노드에 클라이언트 측 샤딩을 수행 할 수 있도록 하여 노드를 풀링하고 사용가능한 RAM 을 가능한 많이 생성할 수 있도록 합니다. 하지만 클라이언트 샤딩은 페일오버를 처리하지는 않기 때문에 다른 기본 저장소를 위해 사용할 캐시 데이터를 취급하는데 주로 적합합니다. 
+옵션은 라라벨 레디스 클라이언트에게 레디스 노드에 클라이언트 측 샤딩을 수행 할 수 있도록 하여 노드를 풀링하고 사용가능한 RAM 을 가능한 많이 생성할 수 있도록 합니다. 하지만 클라이언트 샤딩은 페일오버를 처리하지는 않기 때문에 다른 기본 저장소를 위해 사용할 캐시 데이터를 취급하는 데 주로 적합합니다. 
 
 만약 레디스 서버에 인증이 필요하다면 레디스 서버 설정 배열에 `password` 키/밸류 값을 추가하면 됩니다. 
 
