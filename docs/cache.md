@@ -171,7 +171,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 <a name="database-cache"></a>
 ## 데이터베이스 캐시
 
-`database` 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야합니다. 아래에서 테이블을 만드는 `Schema` 의 예를 확인 할 수 있습니다:
+`database` 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야 합니다. 아래에서 테이블을 만드는 `Schema` 의 예를 확인 할 수 있습니다:
 
 	Schema::create('cache', function($table)
 	{

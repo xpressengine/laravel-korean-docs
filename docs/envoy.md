@@ -31,7 +31,7 @@ permalink: /docs/5.0/envoy/
 
 `~/.composer/vendor/bin` 디렉토리를 여러분의 PATH에 추가하여 터미널에서 `envoy` 명령어를 실행할 때 `envoy`를 바로 찾을 수 있도록 설정하십시오. 
 
-그 다음 프로젝트 루트 디렉토리에 `Envoy.blade.php` 파일을 생성합니다. 다음은 간단한 예제 입니다:
+그 다음 프로젝트 루트 디렉토리에 `Envoy.blade.php` 파일을 생성합니다. 다음은 간단한 예제입니다:
 
 	@servers(['web' => '192.168.1.1'])
 

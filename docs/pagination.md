@@ -19,7 +19,7 @@ permalink: /docs/5.0/pagination/
 <a name="usage"></a>
 ## 사용법
 
-데이터들의 페이징을 처리 할 수 있는 몇가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model 에서 사용하는 것 입니다. 
+데이터들의 페이징을 처리 할 수 있는 몇가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model 에서 사용하는 것입니다. 
 
 #### 데이터베이스 결과에 페이징하기 
 
@@ -39,7 +39,7 @@ permalink: /docs/5.0/pagination/
 
 	$someUsers = User::where('votes', '>', 100)->paginate(15);
 
-`paginate` 메소드에 넘겨지는 인자는 여러분이 한 페이지 당 표시하고 싶어하는 항목들의 개수 입니다. 여러분은 결과들을 검색하고  `render` 메소드를 사용하여 데이터들을 view에 표시하고 페이지번호와 링크를 만들 수 있습니다:
+`paginate` 메소드에 넘겨지는 인자는 여러분이 한 페이지 당 표시하고 싶어하는 항목들의 개수입니다. 여러분은 결과들을 검색하고  `render` 메소드를 사용하여 데이터들을 view에 표시하고 페이지번호와 링크를 만들 수 있습니다:
 
 	<div class="container">
 		<?php foreach ($users as $user): ?>

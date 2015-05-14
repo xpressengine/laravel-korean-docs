@@ -123,7 +123,7 @@ While your command is executing, you will obviously need to access the values fo
 
 ### 다른 명령어 호출하기 
 
-때로는 해당 명령어가 다른 명령어를 호출해야할 때가 있습니다. 이 경우에 `call` 메소드를 사용하면 됩니다:
+때로는 해당 명령어가 다른 명령어를 호출해야 할 때가 있습니다. 이 경우에 `call` 메소드를 사용하면 됩니다:
 
 	$this->call('command:name', ['argument' => 'foo', '--option' => 'bar']);
 

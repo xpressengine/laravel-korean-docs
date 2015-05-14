@@ -26,7 +26,7 @@ permalink: /docs/5.0/migrations/
 
 마이그레이션 파일들은 `database/migrations` 폴더에 저장되고 프레임워크가 마이그레이션의 순서를 알 수 있도록 타임스탬프를 포함하고 있습니다. 
 
-`--table`과 `--create`옵션은 테이블의 이름과 마이그레이션하면서 새 테이블을 만들것인지를 결정하는데 사용할 수 있습니다.
+`--table`과 `--create`옵션은 테이블의 이름과 마이그레이션하면서 새 테이블을 만들것인지를 결정하는 데 사용할 수 있습니다.
 
 	php artisan make:migration add_votes_to_users_table --table=users
 

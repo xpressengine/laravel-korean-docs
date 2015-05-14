@@ -67,7 +67,7 @@ permalink: /docs/5.0/routing/
 
 라라벨에서는 크로스 사이트 요청 위조 [cross-site request forgeries](http://en.wikipedia.org/wiki/Cross-site_request_forgery)으로부터 응용 프로그램을 쉽게 보호할 수 있습니다. 크로스 사이트 요청 위조는 악의적인 공격의 하나이며 인증받은 사용자를 대신하여 허가 받지 않은 명령을 수행합니다. 
 
-라라벨은 어플리케이션에 의해서 관리되고 있는 각각의 사용자별 CSRF "토큰"을 자동으로 생성합니다. 이 토큰은 인증된 사용자가 실제로 어플리케이션에 요청을 보내고 있는지 식별하는데 사용됩니다. 
+라라벨은 어플리케이션에 의해서 관리되고 있는 각각의 사용자별 CSRF "토큰"을 자동으로 생성합니다. 이 토큰은 인증된 사용자가 실제로 어플리케이션에 요청을 보내고 있는지 식별하는 데 사용됩니다. 
 
 #### Form 에 CSRF 토큰 삽입하기
 
@@ -100,16 +100,16 @@ permalink: /docs/5.0/routing/
 
 #### X-XSRF-TOKEN
 
-또한 라라벨은 CSRF 토큰을 `XSRF-TOKEN` 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 `X-XSRF-TOKEN`을 설정하는데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다. 
+또한 라라벨은 CSRF 토큰을 `XSRF-TOKEN` 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 `X-XSRF-TOKEN`을 설정하는 데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다. 
 
 > 참고: `X-CSRF-TOKEN`와 `X-XSRF-TOKEN`의 차이점은 전자는 일반적인 텍스트를 사용한다면 후자는 암호화된 값을 사용한다는 것인데, 이는 라라벨에서는 쿠키를 항상 암호화 된 값으로 사용하기 때문입니다. 여러분이 토큰 값을 제공하기 위해`csrf_token ()`함수를 사용하는 경우는, 아마 `X-CSRF-TOKEN` 헤더를 사용하게 되는 경우일것입니다. 
 
 <a name="method-spoofing"></a>
 ## 메소드 Spoofing-속이기
 
-HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습니다. 따라서 `PUT`, `PATCH` 이나 `DELETE` 로 지정된 라우트를 호출하는 HTML form을 정의한다면 `_method` 의 숨겨진 필드를 지정해야합니다. 
+HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습니다. 따라서 `PUT`, `PATCH` 이나 `DELETE` 로 지정된 라우트를 호출하는 HTML form을 정의한다면 `_method` 의 숨겨진 필드를 지정해야 합니다. 
 
-`_method` 필드로 보내진 값은 HTTP 요청 메소드를 구분하는데 사용됩니다. 다음 예를 참조하십시오:
+`_method` 필드로 보내진 값은 HTTP 요청 메소드를 구분하는 데 사용됩니다. 다음 예를 참조하십시오:
 
 	<form action="/foo/bar" method="POST">
 		<input type="hidden" name="_method" value="PUT">
@@ -216,7 +216,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
         'as' => 'profile', 'uses' => 'UserController@showProfile'
 	]);
 
-이제 URL을 생성하거나 Redirect를 하는데 라우트 이름을 사용할 수 있습니다. 
+이제 URL을 생성하거나 Redirect를 하는 데 라우트 이름을 사용할 수 있습니다. 
 
 	$url = route('profile');
 
@@ -232,7 +232,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 때때로 많은 라우트들이 URL 세그먼트, 미들웨어, 네임스페이스 등과 같은 공통의 요구사항을 공유하고자 하는 경우가 있습니다. 이러한 옵션들을 모든 라우트에 개별로 각각 지정하는 대신에 라우트 그룹을 통해서 다수의 라우트에 속성을 지정할 수가 있습니다. 
 
-속성값들을 공유하는 것은 `Route::group` 메소드의 첫번째 인자로 배열을 지정하면 됩니다. 
+속성값들을 공유하는 것은 `Route::group` 메소드의 첫 번째 인자로 배열을 지정하면 됩니다. 
 
 <a name="route-group-middleware"></a>
 ### 미들웨어
@@ -344,11 +344,11 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		//
 	});
 
-`{user}` 파라미터와 `App\User` 모델이 바인딩되어 있기 때문에 라우트에는 `User` 인스턴스가 주입 될것입니다. 예를 들어 `profile/`으로 요청이 들어오면 ID가 1인 `User`의 인스턴스가 주입됩니다. 
+`{user}` 파라미터와 `App\User` 모델이 바인딩되어 있으므로 라우트에는 `User` 인스턴스가 주입 될것입니다. 예를 들어 `profile/`으로 요청이 들어오면 ID가 1인 `User`의 인스턴스가 주입됩니다. 
 
 > **주의:** 만약 데이터베이스에서 일치하는 모델 인스턴스를 찾이 못하는 경우 404 에러가 발생합니다. 
 
-만약 "찾지 못함"의 동작을 지정하고 싶다면 세번째 인자로 클로저를 전달하면 됩니다. 
+만약 "찾지 못함"의 동작을 지정하고 싶다면 세 번째 인자로 클로저를 전달하면 됩니다. 
 
 	Route::model('user', 'User', function()
 	{
@@ -365,12 +365,12 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 <a name="throwing-404-errors"></a>
 ## 404 에러 발생시키기
 
-라우트에서 404 에러를 발생시키는 방법은 2가지가 있습니다. 첫번째로 `abort` 헬퍼 함수를 사용하는 것입니다:
+라우트에서 404 에러를 발생시키는 방법은 2가지가 있습니다. 첫 번째로 `abort` 헬퍼 함수를 사용하는 것입니다:
 
 	abort(404);
 
 `abort` 헬퍼함수는 지정된 상태 코드와 함께 `Symfony\Component\HttpKernel\Exception\HttpException` 를 던집니다.
 
-두번째로 직접으로 `Symfony\Component\HttpKernel\Exception\NotFoundHttpException`을 던지는 것입니다. 
+두 번째로 직접으로 `Symfony\Component\HttpKernel\Exception\NotFoundHttpException`을 던지는 것입니다. 
 
 404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 [errors](/laravel-korean-docs/docs/5.0/errors#http-exceptions) 부분을 참조하십시오.

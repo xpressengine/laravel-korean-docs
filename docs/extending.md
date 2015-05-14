@@ -24,14 +24,14 @@ permalink: /docs/5.0/extending/
 <a name="cache"></a>
 ## 캐시
 
-라라벨의 캐시 기능을 확장하려면 `CacheManager`의 `extend` 메소드를 사용하면 됩니다. 이 메소드는 매니저에게 사용자 정의 드라이버 resolver 를 바인딩 하는데 사용되며 전체 매니저 클래스에서 공통적으로 사용할 수 있습니다. 예를 들어, "mongo"라는 새로운 캐시 드라이버를 등록하려면 다음과 같이하면 됩니다. 
+라라벨의 캐시 기능을 확장하려면 `CacheManager`의 `extend` 메소드를 사용하면 됩니다. 이 메소드는 매니저에게 사용자 정의 드라이버 resolver 를 바인딩 하는 데 사용되며 전체 매니저 클래스에서 공통적으로 사용할 수 있습니다. 예를 들어, "mongo"라는 새로운 캐시 드라이버를 등록하려면 다음과 같이하면 됩니다. 
 
 	Cache::extend('mongo', function($app)
 	{
 		return Cache::repository(new MongoStore);
 	});
 
-`extend` 메소드에 전달되는 첫번째 인자는 드라이버의 이름입니다. 이 이름은 `config/cache.php` 설정 파일의 `driver` 옵션에 해당합니다. 두번째 인자는 `Illuminate\Cache\Repository` 인스턴스를 반환하는 클로저가 됩니다. 클로저에는 `$app` 인스턴스가 전달되는데, 이 인자는 서비스 컨테이너 역활을 하는 `Illuminate\Foundation\Application`의 인스턴스입니다. 
+`extend` 메소드에 전달되는 첫 번째 인자는 드라이버의 이름입니다. 이 이름은 `config/cache.php` 설정 파일의 `driver` 옵션에 해당합니다. 두 번째 인자는 `Illuminate\Cache\Repository` 인스턴스를 반환하는 클로저가 됩니다. 클로저에는 `$app` 인스턴스가 전달되는데, 이 인자는 서비스 컨테이너 역할을 하는 `Illuminate\Foundation\Application`의 인스턴스입니다. 
 
 확장된 기능을 사용하기 위해서는 설치된 라라벨 어플리케이션에서 제공하는 `App\Providers\AppServiceProvider`의 `boot` 메소드 안에서 `Cache::extend`가 호출되어야만 합니다. 또는 별도의 서비스 프로바이더를 생성해야 합니다. - 이경우 프로바이더를 `config/app.php` 의 provider 배열에 추가하는 것을 잊지 마십시오. 
 
@@ -49,7 +49,7 @@ permalink: /docs/5.0/extending/
 
 	}
 
-각각의 메소드를 MongoDB 연결을 사용하여 구현해야합니다. 구현을 완료하면, 이제 사용자 정의 드라이버를 등록하면 됩니다. 
+각각의 메소드를 MongoDB 연결을 사용하여 구현해야 합니다. 구현을 완료하면, 이제 사용자 정의 드라이버를 등록하면 됩니다. 
 
 	Cache::extend('mongo', function($app)
 	{
@@ -87,12 +87,12 @@ permalink: /docs/5.0/extending/
 
 이 메소드들은 캐시의 `StoreInterface` 처럼 쉽게 이해 수 없기 때문에 각각의 메소드들에 대해서 간단하게 설명합니다. 
 
-- `open` 메소드는 일반적으로 파일 기반의 세션 저장 시스템에서 사용됩니다. 라라벨은 `file` 세션 드라이버를 제공하고 있기 때문에, 여러분은 거의 해당 메소드에 추가할 것이 없습니다. 이 메소드는 비어 있는 형태로 구성해도 됩니다. 이것은 좋지않은 인터페이스 디자인의 경우가 됩니다만 (나중에 설명합니다), PHP가 이 메소드를 구현하게끔 요구하고 있습니다. 
+- `open` 메소드는 일반적으로 파일 기반의 세션 저장 시스템에서 사용됩니다. 라라벨은 `file` 세션 드라이버를 제공하고 있으므로, 여러분은 거의 해당 메소드에 추가할 것이 없습니다. 이 메소드는 비어 있는 형태로 구성해도 됩니다. 이것은 좋지않은 인터페이스 디자인의 경우가 됩니다만 (나중에 설명합니다), PHP가 이 메소드를 구현하게끔 요구하고 있습니다. 
 -  `close` 메소드역시 `open` 메소드와 마찬가지로 무시할 수 있습니다. 대부분의 드라이버에서는 필요가 없습니다. 
--  `read`  메소드는 주어진 `$sessionId` 에 해당하는 문자열의 세션 데이터의 문자열 버전을 반환해야합니다. 라라벨이 시리얼라이즈(직렬화)를 수행해주기 때문에 여러분이 작성한 드라이버에서 세션 데이터를 탐삭해거나 저장하는데 시리얼라이즈나 다른 인코딩을 처리할 필요는 없습니다. 
+-  `read`  메소드는 주어진 `$sessionId` 에 해당하는 문자열의 세션 데이터의 문자열 버전을 반환해야 합니다. 라라벨이 시리얼라이즈(직렬화)를 수행해주기 때문에 여러분이 작성한 드라이버에서 세션 데이터를 탐삭해거나 저장하는 데 시리얼라이즈나 다른 인코딩을 처리할 필요는 없습니다. 
 - `write` 메소드는 `$sessionId` 에 해당하는 `$data` 문자열을 MongoDB, Dynamo 등과 같은 시스템에 저장해야 합니다. 
 - `destroy` 메소드는 저장소에서 주어진 `$sessionId` 에 해당하는 데이터를 삭제해야 합니다. 
-- `gc` 메소드는 UNIX 타임스탬프로 주어진 `$lifetime` 보다 오래된 모든 세션 데이터들을 제거해야합니다. Memcached와 Redis처럼 스스로 오래된 데이터를 삭제하는 시스템에서는, 이 메소드는 비워 둡니다. 
+- `gc` 메소드는 UNIX 타임스탬프로 주어진 `$lifetime` 보다 오래된 모든 세션 데이터들을 제거해야 합니다. Memcached와 Redis처럼 스스로 오래된 데이터를 삭제하는 시스템에서는, 이 메소드는 비워 둡니다. 
 
 `SessionHandlerInterface`의 구현을 마치면 이제 다음처럼 세션 매니저에 등록할 수 있습니다. 
 
@@ -115,7 +115,7 @@ permalink: /docs/5.0/extending/
 		// Return implementation of Illuminate\Contracts\Auth\UserProvider
 	});
 
-`UserProvider`의 구현체는 MySQL, Riak 등과 같은 저장소를 통해서 `Illuminate\Contracts\Auth\Authenticatable` 구현체를 확인하여 반환하는 역활을 수행합니다. 라라벨 인증 매카니즘은 이 두개의 인터페이스를 통해서 사용자 데이터가 어떻게 저장되어 있는가, 어떤 클래스가 사용자를 나타내고 있는지에 대해서는 관계없이 동작하게 됩니다. 
+`UserProvider`의 구현체는 MySQL, Riak 등과 같은 저장소를 통해서 `Illuminate\Contracts\Auth\Authenticatable` 구현체를 확인하여 반환하는 역할을 수행합니다. 라라벨 인증 매카니즘은 이 두개의 인터페이스를 통해서 사용자 데이터가 어떻게 저장되어 있는가, 어떤 클래스가 사용자를 나타내고 있는지에 대해서는 관계없이 동작하게 됩니다. 
 
 `UserProvider`contract 를 살펴봅시다. 
 
@@ -135,7 +135,7 @@ permalink: /docs/5.0/extending/
 
 `updateRememberToken` 메소드는 `$user` 의 `remember_token` 필드를 새로운 `$token` 으로 변경합니다. 새로운 토큰은 "Remember me"로 성공적으로 로그인했을 때 생성되는 새로운 토큰이거나, 또는 사용자가 로그아웃 할 때는 null일 수 있습니다.
 
-`retrieveByCredentials` 메소드는 어플리케이션에 로그인하기 위해 `Auth::attempt` 메소드에게 전달된 로그인 정보의 배열을 받습니다. 이 메소드는 전달받은 사용자 정보와 일치하는 사용자가  스토리지에 존재하는지 확인하기 위해서 “쿼리-질의”를 수행해야 합니다. 이 방법은 일반적으로 "where" 조건에 `$credentials['username’]` 쿼리를 실행하는 것입니다. 이 메소드는 UserInterface 의 구현을 반환해야합니다. 이 메소드 중에서 암호 검증과 인증을 시도해서는 안됩니다.
+`retrieveByCredentials` 메소드는 어플리케이션에 로그인하기 위해 `Auth::attempt` 메소드에게 전달된 로그인 정보의 배열을 받습니다. 이 메소드는 전달받은 사용자 정보와 일치하는 사용자가  스토리지에 존재하는지 확인하기 위해서 “쿼리-질의”를 수행해야 합니다. 이 방법은 일반적으로 "where" 조건에 `$credentials['username’]` 쿼리를 실행하는 것입니다. 이 메소드는 UserInterface 의 구현을 반환해야 합니다. 이 메소드 중에서 암호 검증과 인증을 시도해서는 안됩니다.
 
 `validateCredentials`메소드는 주어진 `$user` 와 인증하기 위한 `$credentials`를 비교해야 합니다. 예를 들어 이 메소드는 `$user->getAuthPassword()` 값과 `$credentials['password']`를 `Hash::make`한 값과 비교할 것입니다. 이 메소드는 사용자의 인증정보를 검증하여 boolean 값을 반환합니다. 
 
@@ -151,7 +151,7 @@ permalink: /docs/5.0/extending/
 
 	}
 
-인터페이스는 간단합니다. `getAuthIdentifier` 메소드는 사용자의 “primary key”를 반환 해야합니다. MySQL 를 벡엔드에서 사용하고 있다면, auto-incrementing primary key 가 될 것입니다. `getAuthPassword`메소드는 해쉬 처리된 사용자 패스워드를 반환해야합니다. 이 인터페이스는 어떤 ORM 및 스토리지 추상 클래스를 사용하고 있는지에 관계없이 인증 시스템이 사용자 클래스에 대해 작동하는 것을 가능하게 하고 있습니다. 기본적으로 라라벨은 이 인터페이스를 구현하고있는 `app` 디렉토리의 `User` 클래스를 포함하고 있습니다. 그래서 구현예제로 이 User 클래스를 살펴보십시오.
+인터페이스는 간단합니다. `getAuthIdentifier` 메소드는 사용자의 “primary key”를 반환 해야 합니다. MySQL 를 벡엔드에서 사용하고 있다면, auto-incrementing primary key 가 될 것입니다. `getAuthPassword`메소드는 해쉬 처리된 사용자 패스워드를 반환해야 합니다. 이 인터페이스는 어떤 ORM 및 스토리지 추상 클래스를 사용하고 있는지에 관계없이 인증 시스템이 사용자 클래스에 대해 작동하는 것을 가능하게 하고 있습니다. 기본적으로 라라벨은 이 인터페이스를 구현하고있는 `app` 디렉토리의 `User` 클래스를 포함하고 있습니다. 그래서 구현예제로 이 User 클래스를 살펴보십시오.
 
 `UserProvider`의 구현체를 완성하였다면, `Auth` 파사드를 통해서 등록하면 됩니다. 
 

@@ -16,7 +16,7 @@ permalink: /docs/5.0/errors/
 
 어플리케이션의 로그 기능은 `Illuminate\Foundation\Bootstrap\ConfigureLogging` 부트스트랩 클래스에서 설정됩니다. 이 클래스는 `config/app.php` 설정 파일의 `log` 옵션을 참조합니다. 
 
-기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 [Monolog](https://github.com/Seldaek/monolog) 로깅 라이브러리를 사용하고 있기 때문에, Monolog 가 제공하는 다양한 핸들러를 이용할 수 있습니다. 
+기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 [Monolog](https://github.com/Seldaek/monolog) 로깅 라이브러리를 사용하고 있으므로, Monolog 가 제공하는 다양한 핸들러를 이용할 수 있습니다. 
 
 예를들어 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 `config/app.php` 설정파일을 다음과 같이 변경하면 됩니다:
 

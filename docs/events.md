@@ -100,7 +100,7 @@ permalink: /docs/5.0/events/
 
 #### 이벤트 구독 클래스 정의하기 
 
-이벤트 구독 클래스는 많은 이벤트를 하나의 클래스 자체에서 구독하기 위한 클래스 입니다. 구독 클래스는 이벤트 디스패처 인스턴스가 전달되는 `subscribe` 메소드를 정의해야 합니다:
+이벤트 구독 클래스는 많은 이벤트를 하나의 클래스 자체에서 구독하기 위한 클래스입니다. 구독 클래스는 이벤트 디스패처 인스턴스가 전달되는 `subscribe` 메소드를 정의해야 합니다:
 
 	class UserEventHandler {
 
@@ -124,7 +124,7 @@ permalink: /docs/5.0/events/
 		 * Register the listeners for the subscriber.
 		 *
 		 * @param  Illuminate\Events\Dispatcher  $events
-		 * @return array
+		 * @return void
 		 */
 		public function subscribe($events)
 		{
