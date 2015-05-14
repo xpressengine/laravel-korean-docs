@@ -17,7 +17,7 @@ permalink: /docs/5.0/contributions/
 
 활발한 협력을 장려하기 위해, 라라벨은 버그 리포트가 아니라 PR을 권장하고 있습니다. "버그 리포트"는 실패한 단위 테스트를 포함한 PR로 보내져야 합니다. 
 
-버그 리포트를 작성하는 경우, 이슈는 제목과 이슈에 대한 명확한 설명을 포함해야합니다. 또한 해당 이슈에 대한 가능한 많은 관련 정보와 데모 코드 샘플을 포함해야 합니다. 버그 리포트의 목적은 여러분 자신과 그리고 다른 사람들도 쉽게 버그를 재현 할 수 있도록 하고 버그가 수정되도록 하는 것 입니다.
+버그 리포트를 작성하는 경우, 이슈는 제목과 이슈에 대한 명확한 설명을 포함해야 합니다. 또한 해당 이슈에 대한 가능한 많은 관련 정보와 데모 코드 샘플을 포함해야 합니다. 버그 리포트의 목적은 여러분 자신과 그리고 다른 사람들도 쉽게 버그를 재현 할 수 있도록 하고 버그가 수정되도록 하는 것입니다.
 
 명심할 것은 버그 리포트가 같은 문제에 있던 다른 사람들과 문제를 해결하기 위해 협력 할 수 있는 기회을 만든다는 것입니다. 버그 리포트를 통해 자동으로 뭔가가 일어나고, 다른 누군가가 문제를 해결하기를 기대하지 마십시오. 버그 리포트 제출은 여러분 자신과 다른 사람이 문제를 해결하는 길을 시작하는 계기가 되는 것입니다. 
 
@@ -25,7 +25,7 @@ permalink: /docs/5.0/contributions/
 
 - [Laravel Framework 라라벨 프레임워크](https://github.com/laravel/framework) 
 - [Laravel Application 라라벨 어플리케이션](https://github.com/laravel/laravel)
-- [Laravel Documentation 라라벨 메뉴얼](https://github.com/laravel/docs)
+- [Laravel Documentation 라라벨 매뉴얼](https://github.com/laravel/docs)
 - [Laravel Cashier 라라벨 캐셔](https://github.com/laravel/cashier)
 - [Laravel Envoy 라라벨 Envoy](https://github.com/laravel/envoy)
 - [Laravel Homestead 라라벨 Homestead](https://github.com/laravel/homestead)

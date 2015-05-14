@@ -26,7 +26,7 @@ permalink: /docs/5.0/requests/
 
 ### 의존성 주입을 통한 방법 
 
-현재의 의존성 주입을 통해서 HTTP request 을 획득하기 위해서는 여러분의 컨트롤러 생성자나 메소드에서 타입힌트를 지정해야 합니다. 현재의 request의 인스턴스는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 자동으로 주입될것 입니다:
+현재의 의존성 주입을 통해서 HTTP request 을 획득하기 위해서는 여러분의 컨트롤러 생성자나 메소드에서 타입힌트를 지정해야 합니다. 현재의 request의 인스턴스는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 자동으로 주입될것입니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -126,7 +126,7 @@ permalink: /docs/5.0/requests/
 
 #### 플래쉬 & 리다이렉트
 
-대부분 이전 페이지로 리다이렉트 하면서 입력값을 플래슁 하기를 원하는데, 이 경우 리다이렉트와 함께 입력값 플래싱을 메소드 체이닝으로 사용할 수 있습니다. 
+대부분 이전 페이지로 리다이렉트 하면서 입력값을 플래슁 하기를 원하는 데, 이 경우 리다이렉트와 함께 입력값 플래싱을 메소드 체이닝으로 사용할 수 있습니다. 
 
 	return redirect('form')->withInput();
 
@@ -230,6 +230,13 @@ _영원히는 실제로는 5년을 의미합니다._
 #### Request URI 가져오기
 
 	$uri = Request::path();
+
+#### Request 가 AJAX 요청인지 확인
+
+	if (Request::ajax())
+	{
+		//
+	}
 
 #### Request 메소드 확인하기
 

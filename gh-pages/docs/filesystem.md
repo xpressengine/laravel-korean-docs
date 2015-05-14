@@ -14,7 +14,7 @@ permalink: /docs/5.0/filesystem/
 <a name="introduction"></a>
 ## 소개
 
-라라벨은 Frank de Jonge가 만든 [Flysystem](https://github.com/thephpleague/flysystem) 패키지를 기반으로 하는 강력한 추상화된 파일 시스템을 제공합니다. 라라벨의 통합된 파일 시스템은 로컬, 아마존 S3 그리고 Rackspace 클라우드 스토리지를 드라이버들을 통해서 간단하게 사용할 수 있게 제공합니다. 더욱 놀라운 것은, 각각의 시스템에 대해 동일한 API를 사용하고 있기 때문에 스토리지를 매우 쉽게 변경할 수 있다는 것입니다!
+라라벨은 Frank de Jonge가 만든 [Flysystem](https://github.com/thephpleague/flysystem) 패키지를 기반으로 하는 강력한 추상화된 파일 시스템을 제공합니다. 라라벨의 통합된 파일 시스템은 로컬, 아마존 S3 그리고 Rackspace 클라우드 스토리지를 드라이버들을 통해서 간단하게 사용할 수 있게 제공합니다. 더욱 놀라운 것은, 각각의 시스템에 대해 동일한 API를 사용하고 있으므로 스토리지를 매우 쉽게 변경할 수 있다는 것입니다!
 
 <a name="configuration"></a>
 ## 설정
@@ -121,7 +121,7 @@ S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하�
 
 예를 들어 DropboxFilesystemServiceProvider 같은 만드는 사용자 정의 파일 시스템을 위해 서비스 제공자를 준비하십시오. 제공자의 boot 메소드 속으로, Illuminate \ Contracts \ Filesystem \ Factory 계약의 인스턴스를 주입하고 extend 메소드를 호출합니다. 혹은 Disk 외관 extend 메소드를 사용할 수 있습니다.
 
-`extens` 메소드의 첫번째 인자는 드라이버의 이름이고, 두번째는 `$app` 과 `$config` 변수를 전달 받는 클로저가 됩니다. 이 클로저는 `League\Flysystem\Filesystem` 에 대한 인스턴스를 반환해야 합니다. 
+`extens` 메소드의 첫 번째 인자는 드라이버의 이름이고, 두 번째는 `$app` 과 `$config` 변수를 전달 받는 클로저가 됩니다. 이 클로저는 `League\Flysystem\Filesystem` 에 대한 인스턴스를 반환해야 합니다. 
 
 > **참고** $config 변수는 지정된 디스크를 위한 `config/filesystems.php` 파일에 정의된 값을 포함할 것입니다. 
 

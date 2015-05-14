@@ -73,7 +73,7 @@ permalink: /docs/5.0/localization/
 
 	'welcome' => 'Welcome, :name',
 
-그런 뒤에 `Lang:get` 메소드의 두번째 인자로 교체할 문자열을 전달 할 수 있습니다:
+그런 뒤에 `Lang:get` 메소드의 두 번째 인자로 교체할 문자열을 전달 할 수 있습니다:
 
 	echo Lang::get('messages.welcome', ['name' => 'Dayle']);
 
@@ -99,7 +99,7 @@ permalink: /docs/5.0/localization/
 
 	echo Lang::choice('товар|товара|товаров', $count, [], 'ru');
 
-라라벨 Translator는 Symfony Translation 컴포넌트를 사용하고 있기 때문에, 편리하게 복수 표기 규칙을 만들 수 있습니다.
+라라벨 Translator는 Symfony Translation 컴포넌트를 사용하고 있으므로, 편리하게 복수 표기 규칙을 만들 수 있습니다.
 
 	'apples' => '{0} There are none|[1,19] There are some|[20,Inf] There are many',
 

@@ -22,7 +22,7 @@ permalink: /docs/5.0/controllers/
 <a name="basic-controllers"></a>
 ## 기본 컨트롤러
 
-다음은 기본적인 컨트롤러 클래스의 예제 입니다:
+다음은 기본적인 컨트롤러 클래스의 예제입니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -51,7 +51,7 @@ permalink: /docs/5.0/controllers/
 
 #### 컨트롤러 & 네임스페이스
 
-한가지 반드시 알고 있어야 할 부분은 컨트롤러의 네임스페이스를 지정할 때 전체 네임스페이스를 다 쓸 필요가 없다는 것입니다. 클래스의 이름은 `App\Http\Controllers` 네임스페이스를 “root”로 인식하게 됩니다. 기본적으로 `RouteServiceProvider` 가 `routes.php` 파일의 라우트들을 로드할 때 자동으로 이 “root” 네임스페이스를 포함하는 것으로 인식합니다. 
+한 가지 반드시 알고 있어야 할 부분은 컨트롤러의 네임스페이스를 지정할 때 전체 네임스페이스를 다 쓸 필요가 없다는 것입니다. 클래스의 이름은 `App\Http\Controllers` 네임스페이스를 “root”로 인식하게 됩니다. 기본적으로 `RouteServiceProvider` 가 `routes.php` 파일의 라우트들을 로드할 때 자동으로 이 “root” 네임스페이스를 포함하는 것으로 인식합니다. 
 
 만약 `App\Http\Controllers` 하위에 중첩된 디렉토리를 구성하여 네임스페이스를 부여할 경우에는 단순히 `App\Http\Controllers`를 루트 네임 스페이스를 기준으로 하여 특정 클래스 이름을 사용하면 됩니다. 따라서 만약 컨트롤러가 `App\Http\Controllers\Photos\AdminController` 처럼 구성되어 있다면 다음처럼 라우트를 구성하면 됩니다. 
 
@@ -114,7 +114,7 @@ permalink: /docs/5.0/controllers/
 
 	Route::controller('users', 'UserController');
 
-`controller` 메소드는 두개의 인자를 넘겨 받도록 되어 있습니다. 첫번째 인자는 컨트롤러로 제어할 URI이고, 두번째는 컨트롤러의 클래스명을 의미합니다. 이어서 해당하는 HTTP 메소드 이름을 접두어로 (get, post..) 사용하는 형태로 컨트롤러의 메소드를 추가합니다:
+`controller` 메소드는 두개의 인자를 넘겨 받도록 되어 있습니다. 첫 번째 인자는 컨트롤러로 제어할 URI이고, 두 번째는 컨트롤러의 클래스명을 의미합니다. 이어서 해당하는 HTTP 메소드 이름을 접두어로 (get, post..) 사용하는 형태로 컨트롤러의 메소드를 추가합니다:
 
 	class UserController extends BaseController {
 
@@ -143,7 +143,7 @@ permalink: /docs/5.0/controllers/
 
 #### 라우트에 이름 지정하기
 
-컨트롤러 라우트에 어떤 “이름”을 지정하고자 한다면 `controller` 메소드의 세번째 인자를 통해서 지정할 수 있습니다:
+컨트롤러 라우트에 어떤 “이름”을 지정하고자 한다면 `controller` 메소드의 세 번째 인자를 통해서 지정할 수 있습니다:
 
 	Route::controller('users', 'UserController', [
 		'anyLogin' => 'user.login',
@@ -215,7 +215,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 #### 리소스 컨트롤러에 추가적인 라우팅 구성하기 
 
-만약 리소스 컨트롤러에 추가적으로 라우팅을 구성해야할 필요가 있다면 `Route::resource`가 호출되기 전에 등록해야합니다:
+만약 리소스 컨트롤러에 추가적으로 라우팅을 구성해야 할 필요가 있다면 `Route::resource`가 호출되기 전에 등록해야 합니다:
 
 	Route::get('photos/popular', 'PhotoController@method');
 
@@ -313,7 +313,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	php artisan route:cache
 
-저게 전부입니다. 캐시된 라우트 파일이 `app/Http/routes.php` 파일 대신에 사용될것 입니다. 명심할 것은 새로운 라우트를 추가하면 라우트 캐시를 다시 생성해줘야 한다는 것입니다. 이러한점 때문에 `route:cache` 명령어는 프로젝트가 배포되고 나서 실행하는 것이 좋습니다. 
+저게 전부입니다. 캐시된 라우트 파일이 `app/Http/routes.php` 파일 대신에 사용될것입니다. 명심할 것은 새로운 라우트를 추가하면 라우트 캐시를 다시 생성해줘야 한다는 것입니다. 이러한점 때문에 `route:cache` 명령어는 프로젝트가 배포되고 나서 실행하는 것이 좋습니다. 
 
 캐시를 재생성하는것 말고 캐시를 제거하기 위해서는 `route:clear` 명령어를 실행하면 됩니다:
 

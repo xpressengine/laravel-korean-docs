@@ -23,7 +23,7 @@ permalink: /docs/5.0/upgrade/
 <a name="upgrade-5.0"></a>
 ## 4.2에서 5.0으로 업그레이드
 
-### 새로 설치후 마이그레이션 하기 
+### 새로 설치 후 마이그레이션 하기 
 
 업그레이드에 대한 권장사항은 새롭게 라라벨 `5.0` 버전을 인스톨하고 `4.2` 버전의 사이트의 고유한 어플리케이션 파일들을 새로운 어플리케이션에 복사하라는 것입니다. 여기에는 컨트롤러, 라우트, 엘로퀀트 모델들, 아티즌 명령어들, asset 파일들 그리고 어플리케이션에 지정된 기타 코드들을 포함합니다.
 
@@ -43,7 +43,7 @@ permalink: /docs/5.0/upgrade/
 
 #### 마이그레이션 환경 변수
 
-`.env.example` 파일을 복사하여 이전 버전에서 `.env.php` 파일과 동일한 역활을 하는 `5.0의 `.env` 파일을 생성합니다. `APP_ENV` 와 `APP_KEY` (암호화 키), 데이터 베이스 연결 정보, 캐시 그리고 세션 드라이버와 같은 어플리케이션에서 사용가능항 설정 값들을 지정할 수 있습니다. 
+`.env.example` 파일을 복사하여 이전 버전에서 `.env.php` 파일과 동일한 역할을 하는 `5.0의 `.env` 파일을 생성합니다. `APP_ENV` 와 `APP_KEY` (암호화 키), 데이터베이스 연결 정보, 캐시 그리고 세션 드라이버와 같은 어플리케이션에서 사용가능항 설정 값들을 지정할 수 있습니다. 
 
 추가적으로 이전버전의 `.env.php` 파일에 들어 있던 사용자가 지정한 값들을 `.env` 파일(실제 로컬 환경을 위한 값 설정) 과 `.env.example` 파일 (다른 팀 구성원들이 참고할 샘플 값)에 복사합니다.)에 복사해 넣습니다. 
 
@@ -53,11 +53,11 @@ permalink: /docs/5.0/upgrade/
 
 #### 설정 파일들
 
-라라벨 5.0은 더이상 `app/config/{구동환경의이름}/` 디렉토리를 주어진 구동 환경에 대한 설정파일로 사용하지 않습니다. 대신에  구동 환경에 의해 달라지는 설정 값들을 `.env` 파일로 이동 시켰습니다. 그리고 나서 설정 파일 안에서 `env(‘키’, ‘기본값’)` 의 형태로 해당 값들에 엑세스 합니다. `config/database.php` 설정 파일에서 이러한 사용예를 확인할 수 있습니다. 
+라라벨 5.0은 더 이상 `app/config/{구동환경의이름}/` 디렉토리를 주어진 구동 환경에 대한 설정파일로 사용하지 않습니다. 대신에  구동 환경에 의해 달라지는 설정 값들을 `.env` 파일로 이동 시켰습니다. 그리고 나서 설정 파일 안에서 `env(‘키’, ‘기본값’)` 의 형태로 해당 값들에 엑세스 합니다. `config/database.php` 설정 파일에서 이러한 사용 예를 확인할 수 있습니다. 
 
-구동환경과 관계 없이 변하지 않는 값들과 또는 `env()` 를 통해서 여러분의 로컬 환경에 의해서 변화하는 값 두가지들에 대한 설정 값들을 `config/` 디렉토리안에 들어 있는 설정 파일들에 지정합니다. 
+구동환경과 관계없이 변하지 않는 값들과 또는 `env()` 를 통해서 여러분의 로컬 환경에 의해서 변화하는 값 두 가지들에 대한 설정 값들을 `config/` 디렉토리안에 들어 있는 설정 파일들에 지정합니다. 
 
-기억하십시오 만약 여러분이 `.env` 파일에 추가적인 키들을 추가하였다면, 마찬가지로 `.env.exampl` 파일에도 추가합니다. 여러분의 팀 동료들이 이를 참고하여 손쉽게 자신의 `.env` 파일을 생성하는데 도움이 될 것입니다. 
+기억하십시오 만약 여러분이 `.env` 파일에 추가적인 키들을 추가하였다면, 마찬가지로 `.env.exampl` 파일에도 추가합니다. 여러분의 팀 동료들이 이를 참고하여 손쉽게 자신의 `.env` 파일을 생성하는 데 도움이 될 것입니다. 
 
 ### 라우트
 
@@ -97,7 +97,7 @@ Eloquent 모델을 모아두기 위한 `app/Models` 디렉토리를 생성합니
 
 #### Eloquent 캐싱
 
-Eloquent 는 더이상 쿼리 캐시를 위한 `remember` 메소드를 제공하지 않습니다. 여러분은 이제 `Cache::remember` 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 [해당 문서](/laravel-korean-docs/docs/5.0/cache)를 참고하십시오. 
+Eloquent 는 더 이상 쿼리 캐시를 위한 `remember` 메소드를 제공하지 않습니다. 여러분은 이제 `Cache::remember` 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 [해당 문서](/laravel-korean-docs/docs/5.0/cache)를 참고하십시오. 
 
 ### 사용자 인증 모델
 
@@ -153,7 +153,7 @@ use Authenticatable, CanResetPassword;
 
 ### 글로벌 IoC 바인딩
 
-만약 `start/global.php` 파일에 [IoC](/laravel-korean-docs/docs/5.0/container) 바인딩들을 가지고 있었다면, `app/Providers/AppServiceProvider.php`의 `register` 메소드로 옮깁니다. `App` 파사드를 사용해야할 것입니다. 
+만약 `start/global.php` 파일에 [IoC](/laravel-korean-docs/docs/5.0/container) 바인딩들을 가지고 있었다면, `app/Providers/AppServiceProvider.php`의 `register` 메소드로 옮깁니다. `App` 파사드를 사용해야 할 것입니다. 
 
 옵션으로, 바인딩들을 해당하는 개별 서비스 프로바이더에 나누어 옮길 수도있습니다. 
 
@@ -174,7 +174,7 @@ use Authenticatable, CanResetPassword;
 ```
 
 이렇게 하는 것이 편리한것만은 아니며 XSS 공격에 대해서 어플리케이션이 취약해질 수도 있습니다. 
-또한 코멘트와 `{% raw %}{{{% endraw %}--` 는 더이상 동작하지 않습니다. 
+또한 코멘트와 `{% raw %}{{{% endraw %}--` 는 더 이상 동작하지 않습니다. 
 
 ### 다국어 파일
 
@@ -196,7 +196,7 @@ Sass 나 Less, CoffeeScript 파일들을 원하는 위치로 이동합시다. `r
 
 ### Form & HTML 헬퍼
 
-만약 Form 이나 HTML 헬퍼를 사용중이었다면 `class 'Form' not found` 또는 `class 'Html' not found`와 같은 에러 메세지를 확인할 수 있을 것입니다. Form 과 HTML 헬퍼는 라라벨 5.0에서 더이상 제공하지 않습니다. 하지만 별도의 [Laravel Collective](http://laravelcollective.com/docs/5.0/html) 커뮤니티가 주관하는 대체 시스템이 있습니다. 
+만약 Form 이나 HTML 헬퍼를 사용중이었다면 `class 'Form' not found` 또는 `class 'Html' not found`와 같은 에러 메세지를 확인할 수 있을 것입니다. Form 과 HTML 헬퍼는 라라벨 5.0에서 더 이상 제공하지 않습니다. 하지만 별도의 [Laravel Collective](http://laravelcollective.com/docs/5.0/html) 커뮤니티가 주관하는 대체 시스템이 있습니다. 
 
 예를 들자면 `composer.json` 의 `require` 영역에 `"laravelcollective/html": "~5.0"`를 추가할 수도 있습니다 .
 
@@ -227,11 +227,11 @@ Sass 나 Less, CoffeeScript 파일들을 원하는 위치로 이동합시다. `r
 
 ### Remote
 
-Remote 컴포넌트는 더이상 제공하지 않습니다. 
+Remote 컴포넌트는 더 이상 제공하지 않습니다. 
 
 ### Workbench 
 
-Workbench 컴포넌트는 더이상 제공하지 않습니다. 
+Workbench 컴포넌트는 더 이상 제공하지 않습니다. 
 
 <a name="upgrade-4.2"></a>
 ## 4.1에서 4.2로 업그레이드 하기
@@ -291,7 +291,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 <a name="upgrade-4.1.29"></a>
 ## 4.1.X 이하에서 4.1.29로 업그레이드 하기
 
-라라벨 4.1.29에서는 모든 데이터베이스 드라이버에 대한 컬럼 인용 부분이 향상되었습니다. 모델에서 `fillable` 속성을 사용하지 않은 경우 여러가지 컬럼의 대량 할당에 관한(msass assignment) 취약점으로 부터 어플리케이션을 보호할 수 있습니다. 모델에서 `fillable` 속성을 사용하여 데이터를 할당하는 경우 어플리케이션이 보다 안전해 집니다. 그러나 여러분이 `guarded` 속성을 사용하고 있고 사용자로 부터 전달된 배열을 “update” 나 “save” 유형의 기능에 전달하는 경우라면 어플리케이션이 mass assignment 위험에 노출되어 있으므로 즉시 4.1.29로 업그레이드 해야 합니다. 
+라라벨 4.1.29에서는 모든 데이터베이스 드라이버에 대한 컬럼 인용 부분이 향상되었습니다. 모델에서 `fillable` 속성을 사용하지 않은 경우 여러 가지 컬럼의 대량 할당에 관한(msass assignment) 취약점으로 부터 어플리케이션을 보호할 수 있습니다. 모델에서 `fillable` 속성을 사용하여 데이터를 할당하는 경우 어플리케이션이 보다 안전해 집니다. 그러나 여러분이 `guarded` 속성을 사용하고 있고 사용자로 부터 전달된 배열을 “update” 나 “save” 유형의 기능에 전달하는 경우라면 어플리케이션이 mass assignment 위험에 노출되어 있으므로 즉시 4.1.29로 업그레이드 해야 합니다. 
 
 라라벨4.1.29로 업그레이드 하기 위해서는 `composer update` 를 실행하면 됩니다. 이 업데이트에서는 소스 수정이 필요한 사항들은 포함되어 있지 않습니다. 
 
@@ -354,7 +354,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 새로운 `app/config/remote.php` 설정 파일을 [저장소](https://github.com/laravel/laravel/blob/v4.1.0/app/config/remote.php)로 부터 추가합니다. 
 
-새로운 `app/config/session.php` 파일에서 새로운 `expire_on_close` 설정 옵션을 추가합니다. 기본값은 `false` 입니다. 
+새로운 `app/config/session.php` 파일에서 새로운 `expire_on_close` 설정 옵션을 추가합니다. 기본값은 `false`입니다. 
 
 `app/config/queue.php` 파일에서 새로운 `failed` 설정 섹션을 추가합니다. 이 섹션의 기본값은 다음과 같습니다. 
 
@@ -384,7 +384,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 ### Trailing Slash 리다이렉션 제거
 
-`bootstrap/start.php` 파일안에서 `$app->redirectIfTrailingSlash()` 호출을 제거 하십시오. 이 기능은 프레임워크에 포함되어 있는 `.htaccess` 파일에서 처리되어 더이상 메소드가 필요하지 않습니다. 
+`bootstrap/start.php` 파일안에서 `$app->redirectIfTrailingSlash()` 호출을 제거 하십시오. 이 기능은 프레임워크에 포함되어 있는 `.htaccess` 파일에서 처리되어 더 이상 메소드가 필요하지 않습니다. 
 
 다음으로 `public/.htaccess` 파일을 [새버전의 파일](https://github.com/laravel/laravel/blob/v4.1.0/public/.htaccess) 으로 교체합니다.
 
@@ -397,4 +397,4 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 ### 와일드카드 이벤트 리스너
 
-와일드 카드 이벤트 리스너는 더이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, `Event::firing()` 를 사용하십시오.
+와일드 카드 이벤트 리스너는 더 이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, `Event::firing()` 를 사용하십시오.
