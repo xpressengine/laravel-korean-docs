@@ -14,7 +14,10 @@ module.exports = function(grunt) {
       },
     },
     'gh-pages': {
-      options: { base: 'gh-pages' },
+      options: { 
+      	base: 'gh-pages',
+		repo: 'https://github.com/xpressengine/laravel-korean-docs.git'
+	  },
       src: ['**/*']
     },
     'build': {
