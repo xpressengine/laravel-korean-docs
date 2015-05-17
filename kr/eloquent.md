@@ -1073,13 +1073,13 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 	}
 
 <a name="collections"></a>
-## Collections
+## 컬렉션
 
-All multi-result sets returned by Eloquent, either via the `get` method or a `relationship`, will return a collection object. This object implements the `IteratorAggregate` PHP interface so it can be iterated over like an array. However, this object also has a variety of other helpful methods for working with result sets.
+`get` 메소드를 통해서 또는 하나의 `relationship-관계`를 통해서 Eloquent로 부터 반환되는 모든 멀티 레코드 결과가 반환되는 경우에는 하나의 컬렉션 객체가 반환됩니다. 이 객체는 `IteratorAggregate` PHP 인터페이스의 구현체이므로 배열과 같이 반복될수 있습니다. 그리고 이 객체는 결과를 조작할 수 있는 다양한 메소드들 또한 가지고 있습니다.
 
-#### Checking If A Collection Contains A Key
+#### 컬렉션이 키를 가지고 있는지 확인하기
 
-For example, we may determine if a result set contains a given primary key using the `contains` method:
+예를 들어 `contains` 메소드를 사용하여 지정된 primary 키가 결과에 포함되어 있는지 확인 할 수 있습니다. 
 
 	$roles = User::find(1)->roles;
 
@@ -1088,37 +1088,37 @@ For example, we may determine if a result set contains a given primary key using
 		//
 	}
 
-Collections may also be converted to an array or JSON:
+컬렉션은 배열이나 JSON으로 변환 될 수 있습니다:
 
 	$roles = User::find(1)->roles->toArray();
 
 	$roles = User::find(1)->roles->toJson();
 
-If a collection is cast to a string, it will be returned as JSON:
+컬렉션을 문자열로 변환하면 JSON이 반환됩니다:
 
 	$roles = (string) User::find(1)->roles;
 
-#### Iterating Collections
+#### 컬렉션의 반복
 
-Eloquent collections also contain a few helpful methods for looping and filtering the items they contain:
+Eloquent 컬렉션에 포함 된 항목을 반복하거나 필터링 할 수 있는 유용한 메소드들을 가지고 있습니다:
 
 	$roles = $user->roles->each(function($role)
 	{
 		//
 	});
 
-#### Filtering Collections
+#### 컬렉션의 필터링
 
-When filtering collections, the callback provided will be used as callback for [array_filter](http://php.net/manual/en/function.array-filter.php).
+컬렉션을 필터링하는 경우, 지정된 콜백은 [array_filter](http://php.net/manual/en/function.array-filter.php) 콜백으로 이용됩니다.
 
 	$users = $users->filter(function($user)
 	{
 		return $user->isAdmin();
 	});
 
-> **Note:** When filtering a collection and converting it to JSON, try calling the `values` function first to reset the array's keys.
+> **주의:** 컬렉션을 필터링하거나 JSON으로 변환하는 경우, `values` ​​메소드를 먼저 호출하여 배열의 키를 초기화 하십시오.
 
-#### Applying A Callback To Each Collection Object
+#### 컬렉션의 각 개체에 콜백을 적용하기
 
 	$roles = User::find(1)->roles;
 
@@ -1127,7 +1127,7 @@ When filtering collections, the callback provided will be used as callback for [
 		//
 	});
 
-#### Sorting A Collection By A Value
+#### 값을 기준으로 컬렉션 정렬하기
 
 	$roles = $roles->sortBy(function($role)
 	{
@@ -1139,15 +1139,15 @@ When filtering collections, the callback provided will be used as callback for [
 		return $role->created_at;
 	});
 
-#### Sorting A Collection By A Value
+#### 값을 기준으로 컬렉션 정렬하기
 
 	$roles = $roles->sortBy('created_at');
 
 	$roles = $roles->sortByDesc('created_at');
 
-#### Returning A Custom Collection Type
+#### 사용자 정의 컬렉션 타입 반환하기
 
-Sometimes, you may wish to return a custom Collection object with your own added methods. You may specify this on your Eloquent model by overriding the `newCollection` method:
+때로는, 여러분이 추가한 메소드와 함께 사용자 정의 컬렉션 객체를 반환하기를 원할 수도 있습니다. 이때는 `newCollection` 메소드를 재정의하여 이를 지정할 수 있습니다. 
 
 	class User extends Model {
 
