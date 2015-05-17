@@ -57,6 +57,8 @@ permalink: /docs/5.0/pagination/
 - `lastPage`
 - `perPage`
 - `hasMorePages`
+- `firstItem`
+- `lastItem`
 - `url`
 - `nextPageUrl`
 - `total`

@@ -7,7 +7,7 @@ permalink: /docs/5.0/contracts/
 # Contracts
 
 - [소개](#introduction)
-- [왜 Conracts인가?](#why-contracts)
+- [왜 Contracts인가?](#why-contracts)
 - [Contract 참조](#contract-reference)
 - [Contract 사용법](#how-to-use-contracts)
 
@@ -67,7 +67,7 @@ permalink: /docs/5.0/contracts/
 
 	}
 
-이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐스 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다. 
+이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐시 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다. 
 
 또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Redia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다. 
 
