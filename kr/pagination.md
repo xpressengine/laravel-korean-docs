@@ -51,6 +51,8 @@
 - `lastPage`
 - `perPage`
 - `hasMorePages`
+- `firstItem`
+- `lastItem`
 - `url`
 - `nextPageUrl`
 - `total`
