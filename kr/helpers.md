@@ -1,4 +1,4 @@
-# Helper Functions 헬퍼 함수
+# Helper Functions 헬퍼함수
 
 - [Arrays 배열](#arrays)
 - [Paths 경로](#paths)
