@@ -51,7 +51,7 @@
 
 때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇가지의 옵션이 있습니다. `view` 헬퍼 함수를 사용하거나 `Illuminate\Contracts\View\Factory` [contract](/docs/5.0/contracts)를 이용하는 법, 또는 와일드 카드의 [view composer](#view-composers)를 통하는 방법입니다. 
 
-`view` 헬퍼함수를 이용하는 예제입니다. 
+`view` 헬퍼 함수를 이용하는 예제입니다. 
 
 	view()->share('data', [1, 2, 3]);
 
@@ -168,13 +168,13 @@
 
 	}
 
-뷰가 렌더링되기 전에 뷰컴포저의 `composer` 메소드가 `Illuminate\Contracts\View\View` 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 `with` 메소드를 사용할 수 있습니다. 
+뷰가 렌더링되기 전에 뷰 컴포저의 `composer` 메소드가 `Illuminate\Contracts\View\View` 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 `with` 메소드를 사용할 수 있습니다. 
 
 > **참고:** 모든 뷰 컴포저의 의존성 주입은 [service container](/docs/5.0/container), 를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다. 
 
-#### 와일드카드 뷰컴포저
+#### 와일드카드 뷰 컴포저
 
-`composer` 메소드는 `*` 와일드 캐릭터로 인자를 받을 수 있는데 이렇게 하면 모든 뷰에 뷰컴포저를 지정하게 됩니다:
+`composer` 메소드는 `*` 와일드 캐릭터로 인자를 받을 수 있는데 이렇게 하면 모든 뷰에 뷰 컴포저를 지정하게 됩니다:
 
 	View::composer('*', function($view)
 	{
