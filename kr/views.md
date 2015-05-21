@@ -25,7 +25,7 @@
 		return view('greeting', ['name' => 'James']);
 	});
 
-보는바와 같이 `view` 헬퍼 함수에 전달하는 첫 번째 인자는 `resources/views` 디렉토리에 있는 파일의 이름이 됩니다. 두 번째 전달 인자는 뷰에서 사용하기위한 데이터의 배열입니다. 
+보는바와 같이 `view` 헬퍼함수에 전달하는 첫 번째 인자는 `resources/views` 디렉토리에 있는 파일의 이름이 됩니다. 두 번째 전달 인자는 뷰에서 사용하기위한 데이터의 배열입니다. 
 
 \당연하게도 뷰는 `resources/views` 디렉토리의 중첩된 서브 디렉토리를 구성할 수 있습니다. 예를들어 뷰파일이 `resources/views/admin/profile.php` 처럼 저장되었다면 다음처럼 호출해야 합니다:
 
@@ -41,7 +41,7 @@
 
 위 예제의 경우 뷰에서는 `$name` 변수에 `Victoria`라는 값을 확인할 수 있습니다.
 
-필요한 경우에 `view` 헬퍼 함수에 두 번째 인자로 데이터 배열을 전달할 수도 있습니다:
+필요한 경우에 `view` 헬퍼함수에 두 번째 인자로 데이터 배열을 전달할 수도 있습니다:
 
 	$view = view('greetings', $data);
 	
@@ -49,7 +49,7 @@
 
 #### 모든 뷰에서 데이터 공유하기
 
-때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇가지의 옵션이 있습니다. `view` 헬퍼 함수를 사용하거나 `Illuminate\Contracts\View\Factory` [contract](/docs/5.0/contracts)를 이용하는 법, 또는 와일드 카드의 [view composer](#view-composers)를 통하는 방법입니다. 
+때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇가지의 옵션이 있습니다. `view` 헬퍼함수를 사용하거나 `Illuminate\Contracts\View\Factory` [contract](/docs/5.0/contracts)를 이용하는 법, 또는 와일드 카드의 [view composer](#view-composers)를 통하는 방법입니다. 
 
 `view` 헬퍼함수를 이용하는 예제입니다. 
 
@@ -61,7 +61,7 @@
 
 일반적으로 `share` 메소드는 서비스 프로바이더의 `boot` 메소드 안에서 호출합니다.  `AppServiceProvider` 에서 편하게 추가할수도 있고, 다른 별도의 서비스 프로바이더를 생성하고 구성할 수도 있습니다. 
 
-> ** 참고:** `view` 헬퍼 함수를 전달 인자 없이 호출하는 경우에는 반환값은 `Illuminate\Contracts\View\Factory` contract의 구현체가 됩니다. 
+> ** 참고:** `view` 헬퍼함수를 전달 인자 없이 호출하는 경우에는 반환값은 `Illuminate\Contracts\View\Factory` contract의 구현체가 됩니다. 
 
 #### 뷰가 존재하는지 판단하기
 
@@ -168,13 +168,13 @@
 
 	}
 
-뷰가 렌더링되기 전에 뷰컴포저의 `composer` 메소드가 `Illuminate\Contracts\View\View` 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 `with` 메소드를 사용할 수 있습니다. 
+뷰가 렌더링되기 전에 뷰 컴포저의 `composer` 메소드가 `Illuminate\Contracts\View\View` 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 `with` 메소드를 사용할 수 있습니다. 
 
 > **참고:** 모든 뷰 컴포저의 의존성 주입은 [service container](/docs/5.0/container), 를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다. 
 
-#### 와일드카드 뷰컴포저
+#### 와일드카드 뷰 컴포저
 
-`composer` 메소드는 `*` 와일드 캐릭터로 인자를 받을 수 있는데 이렇게 하면 모든 뷰에 뷰컴포저를 지정하게 됩니다:
+`composer` 메소드는 `*` 와일드 캐릭터로 인자를 받을 수 있는데 이렇게 하면 모든 뷰에 뷰 컴포저를 지정하게 됩니다:
 
 	View::composer('*', function($view)
 	{

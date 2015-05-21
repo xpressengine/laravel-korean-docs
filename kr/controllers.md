@@ -59,7 +59,7 @@
 
 #### 컨트롤러 액션의 URL 구하기
 
-컨트롤러 액션에 대한 URL을 생성하기 위해서 `action` 헬퍼 함수를 사용합니다:
+컨트롤러 액션에 대한 URL을 생성하기 위해서 `action` 헬퍼함수를 사용합니다:
 
 	$url = action('App\Http\Controllers\FooController@method');
 
