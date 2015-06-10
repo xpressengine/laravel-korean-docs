@@ -23,7 +23,7 @@ permalink: /docs/5.0/hashing/
 
 	$password = Hash::make('secret');
 
-`bcrypt` 헬퍼 함수를 사용할 수도 있습니다:
+`bcrypt` 헬퍼함수를 사용할 수도 있습니다:
 
 	$password = bcrypt('secret');
 

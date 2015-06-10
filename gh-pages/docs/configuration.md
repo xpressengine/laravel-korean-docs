@@ -54,7 +54,7 @@ permalink: /docs/5.0/configuration/
 
 	Config::set('app.timezone', 'America/Chicago');
 
-또한 `config` 헬퍼 함수를 사용할 수도 있습니다:
+또한 `config` 헬퍼함수를 사용할 수도 있습니다:
 
 	$value = config('app.timezone');
 
@@ -65,7 +65,7 @@ permalink: /docs/5.0/configuration/
 
 보다 구분이 쉽게 하기 위해서 라라벨은 Vance Lucas가 만든 PHP 라이브러리 [DotEnv](https://github.com/vlucas/phpdotenv)을 이용합니다. 새롭게 라라벨을 인스톨 한 경우라면 어플리케이션의 루트 디렉토리에 `.env.example` 파일이 포함되어 있습니다. 컴포저를 통해서 사용한 경우에는 이 파일이 자동으로 `.env`파일로 변경됩니다. 컴포저를 사용하지 않는다면 직접 파일을 변경하십시오. 
 
-이 파일의 목록에 있는 모든 변수들은 어플리케이션이 요청을 받으면 `$_ENV` PHP 슈퍼 전역변수에 로드됩니다. `env` 헬퍼 함수를 통해서 이러한 변수값들을 검색 할수 있습니다. 만약 여러분이 라라벨 설정 파일들을 살펴보았다면 이미 여러 옵션 설정에 헬퍼 함수가 사용되었다는 것을 알 수 있을 것입니다!
+이 파일의 목록에 있는 모든 변수들은 어플리케이션이 요청을 받으면 `$_ENV` PHP 슈퍼 전역변수에 로드됩니다. `env` 헬퍼함수를 통해서 이러한 변수값들을 검색 할수 있습니다. 만약 여러분이 라라벨 설정 파일들을 살펴보았다면 이미 여러 옵션 설정에 헬퍼함수가 사용되었다는 것을 알 수 있을 것입니다!
 
 실제 제품 환경(production)과 마찬가지로 로컬 서버의 필요에 맞게 환경 변수를 변경하십시오. 하지만 여러분의 개발자 / 서버들이 각기 다르 른 개발환경 구성을 필요로 할 수도 있으므로, `.env` 파일을 어플리케이션의 소스에 커밋하지 마십시오. 
 
@@ -91,7 +91,7 @@ permalink: /docs/5.0/configuration/
 
 어플리케이션의 인스턴스를 획득하기 위해서 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)를 통해서 `Illuminate\Contracts\Foundation\Application` contract에 대한 의존 객체를 불러옵니다. 만약 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/providers)에서라면 어플리케이션의 인스턴스는 `$this->app` 변수를 통해서도 사용할 수 있습니다. 
 
-또한 어플리케이션의 인스턴스는 `app` 헬퍼 함수 또는 `App` 파사드를 통해서도 엑세스 할 수 있습니다:
+또한 어플리케이션의 인스턴스는 `app` 헬퍼함수 또는 `App` 파사드를 통해서도 엑세스 할 수 있습니다:
 
 	$environment = app()->environment();
 

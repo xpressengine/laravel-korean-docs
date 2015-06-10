@@ -60,7 +60,7 @@ permalink: /docs/5.0/requests/
 	class UserController extends Controller {
 
 		/**
-		 * Store a new user.
+		 * Update the specified user.
 		 *
 		 * @param  Request  $request
 		 * @param  int  $id
@@ -138,7 +138,7 @@ permalink: /docs/5.0/requests/
 
 	$username = Request::old('username');
 
-블레이드 템플릿 안에서 지난 입력값을 보여주려면 `old` 헬퍼 함수를 사용하는 것이 보다 편리합니다:
+블레이드 템플릿 안에서 지난 입력값을 보여주려면 `old` 헬퍼함수를 사용하는 것이 보다 편리합니다:
 
 	{% raw %}{{{% endraw %} old('username') {% raw %}}}{% endraw %}
 
@@ -153,7 +153,7 @@ permalink: /docs/5.0/requests/
 
 #### Response 에 새로운 쿠키 추가하기
 
-`cookie` 헬퍼 함수는 새로운 `Symfony\Component\HttpFoundation\Cookie` 인스턴스를 생성하기 위한 간단한 팩토리로 작동합니다. 쿠키를 `Response` 인스턴스에 추가하려면 `withCookie` 메소드를 사용하면 됩니다:
+`cookie` 헬퍼함수는 새로운 `Symfony\Component\HttpFoundation\Cookie` 인스턴스를 생성하기 위한 간단한 팩토리로 작동합니다. 쿠키를 `Response` 인스턴스에 추가하려면 `withCookie` 메소드를 사용하면 됩니다:
 
 	$response = new Illuminate\Http\Response('Hello World');
 

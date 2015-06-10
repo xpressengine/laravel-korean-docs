@@ -32,12 +32,12 @@ permalink: /docs/5.0/responses/
 	return (new Response($content, $status))
 	              ->header('Content-Type', $value);
 
-좀 더 쉬운 방법으로 `response` 헬퍼 함수를 사용할 수 있습니다. 
+좀 더 쉬운 방법으로 `response` 헬퍼함수를 사용할 수 있습니다. 
 
 	return response($content, $status)
 	              ->header('Content-Type', $value);
 
-> **참고:** `Response` 객체의 사용가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/master/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html) 를 참고하십시오. 
+> **참고:** `Response` 객체의 사용가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/{% raw %}{{{% endraw %}version{% raw %}}}{% endraw %}/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html) 를 참고하십시오. 
 
 #### Response 에서 뷰파일 내보내기
 
@@ -63,7 +63,7 @@ permalink: /docs/5.0/responses/
 
 #### 리다이렉트 반환하기 
 
-`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼 함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼 함수를 사용하게 됩니다. 
+`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼함수를 사용하게 됩니다. 
 
 	return redirect('user/login');
 
@@ -83,7 +83,7 @@ permalink: /docs/5.0/responses/
 
 #### 이름이 지정된 라우트로 리다이렉트 하기
 
-전달 인자 없이 `redirect` 헬퍼 함수를 호출할 때에는 `Illuminate\Routing\Redirector`의 인스턴스가 반환됩니다. 따라서 `Redirector` 인스턴스의 메소드를 사용할 수 있습니다. 예를 들어 이름지 지정된 라우트로 이동하는 `RedirectResponse`를 생성하고자 한다면 `route` 메소드를 사용할 수 있습니다:
+전달 인자 없이 `redirect` 헬퍼함수를 호출할 때에는 `Illuminate\Routing\Redirector`의 인스턴스가 반환됩니다. 따라서 `Redirector` 인스턴스의 메소드를 사용할 수 있습니다. 예를 들어 이름지 지정된 라우트로 이동하는 `RedirectResponse`를 생성하고자 한다면 `route` 메소드를 사용할 수 있습니다:
 
 	return redirect()->route('login');
 
@@ -124,7 +124,7 @@ permalink: /docs/5.0/responses/
 <a name="other-responses"></a>
 ## 기타 Response
 
-`response` 헬퍼 함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/laravel-korean-docs/docs/5.0/contracts) 를 반환합니다. 이 contract 는 response 를 생성하기 위한 다양한 메소드를 제공합니다. 
+`response` 헬퍼함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/laravel-korean-docs/docs/5.0/contracts) 를 반환합니다. 이 contract 는 response 를 생성하기 위한 다양한 메소드를 제공합니다. 
 
 #### JSON response 생성하기
 
@@ -176,6 +176,6 @@ permalink: /docs/5.0/responses/
 
 	}
 
-`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼 함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다. 
+`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다. 
 
 	return response()->caps('foo');

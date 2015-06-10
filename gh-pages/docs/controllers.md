@@ -65,7 +65,7 @@ permalink: /docs/5.0/controllers/
 
 #### 컨트롤러 액션의 URL 구하기
 
-컨트롤러 액션에 대한 URL을 생성하기 위해서 `action` 헬퍼 함수를 사용합니다:
+컨트롤러 액션에 대한 URL을 생성하기 위해서 `action` 헬퍼함수를 사용합니다:
 
 	$url = action('App\Http\Controllers\FooController@method');
 
@@ -116,7 +116,7 @@ permalink: /docs/5.0/controllers/
 
 `controller` 메소드는 두개의 인자를 넘겨 받도록 되어 있습니다. 첫 번째 인자는 컨트롤러로 제어할 URI이고, 두 번째는 컨트롤러의 클래스명을 의미합니다. 이어서 해당하는 HTTP 메소드 이름을 접두어로 (get, post..) 사용하는 형태로 컨트롤러의 메소드를 추가합니다:
 
-	class UserController extends BaseController {
+	class UserController extends Controller {
 
 		public function getIndex()
 		{
@@ -291,7 +291,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 	class UserController extends Controller {
 
 		/**
-		 * Store a new user.
+		 * Update the specified user.
 		 *
 		 * @param  Request  $request
 		 * @param  int  $id
