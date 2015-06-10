@@ -61,6 +61,8 @@ permalink: /docs/5.0/pagination/
 - `lastItem`
 - `url`
 - `nextPageUrl`
+- `firstItem`
+- `lastItem`
 - `total`
 - `count`
 

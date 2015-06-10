@@ -290,7 +290,7 @@ permalink: /docs/5.0/billing/
 
 	$invoices = $user->invoices();
 
-사용자의 청구서를 나열하는 경우, 청구서 관련 정보를 표시하기 위해서 헬퍼 함수를 사용할 수 있습니다:
+사용자의 청구서를 나열하는 경우, 청구서 관련 정보를 표시하기 위해서 헬퍼함수를 사용할 수 있습니다:
 
 	{% raw %}{{{% endraw %} $invoice->id {% raw %}}}{% endraw %}
 
