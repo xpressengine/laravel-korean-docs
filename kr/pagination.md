@@ -55,6 +55,8 @@
 - `lastItem`
 - `url`
 - `nextPageUrl`
+- `firstItem`
+- `lastItem`
 - `total`
 - `count`
 

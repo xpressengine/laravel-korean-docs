@@ -25,6 +25,8 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 	<?php namespace App\Http\Middleware;
 
+	use Closure;
+
 	class OldMiddleware {
 
 		/**
@@ -56,6 +58,8 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 	<?php namespace App\Http\Middleware;
 
+	use Closure;
+
 	class BeforeMiddleware implements Middleware {
 
 		public function handle($request, Closure $next)
@@ -69,6 +73,8 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 반대로, 아래의 경우에서 미들웨어는 요청이 어플리케이션에 의해 처리된 **후**에 실행될 것입니다:
 
 	<?php namespace App\Http\Middleware;
+
+	use Closure;
 
 	class AfterMiddleware implements Middleware {
 

@@ -151,6 +151,7 @@
 
 	<?php namespace App\Http\Controllers;
 
+    use Auth;
 	use Illuminate\Routing\Controller;
 
 	class ProfileController extends Controller {
