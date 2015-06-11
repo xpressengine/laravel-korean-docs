@@ -37,6 +37,7 @@
 
 	php artisan --version
 
+<!--chak-comment-아티즌CLI(ArtisanCLI)사용법-->
 <a name="calling-commands-outside-of-cli"></a>
 ## CLI 외부에서 명령어 호출하기
 
@@ -58,6 +59,7 @@
 		//
 	});
 
+<!--chak-comment-CLI 외부에서 명령어 호출하기-->
 <a name="scheduling-artisan-commands"></a>
 ## 아티즌 명령어 스케줄링
 
@@ -174,3 +176,5 @@
 `thenPing($url)`기능을 사용하려면 Guzzle HTTP 라이브러리가 필요합니다. `composer.json` 파일에 다음 라인을 추가하여 Guzzle 5 를 추가할 수 있습니다. 
 
 	"guzzlehttp/guzzle": "~5.0"
+
+<!--chak-comment-아티즌 명령어 스케줄링-->

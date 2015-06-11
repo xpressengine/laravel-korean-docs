@@ -44,6 +44,18 @@ header .btn_area .button:hover {color:#555; border-color:#aaa;}
 .body .content {float:right; width: 770px; min-height: 400px; padding: 60px 0 60px ; box-sizing: border-box}
 .body .content *:first-child {margin-top:0;}
 
+/* chak comment */
+.chak-comment-wrap { margin: 35px 0 50px; }
+.chak-comment-wrap.active { padding: 18px; background: rgba(248, 248, 248, 0.7); border-radius:4px;}
+.chak-comment-widget { padding:18px 10px; border: 1px solid rgb(210, 210, 210); text-align:center; border-radius: 4px; cursor: pointer; font-size: 15px; color: rgb(114, 114, 114);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); line-height: 20px; }
+.chak-comment-widget .xi-message {margin-right:2px; font-size:22px; vertical-align: bottom;}
+.chak-comment-widget:hover,
+.chak-comment-widget:focus {background: #f4645f; color:#fff; border-color: #f4645f;}
+.chak-comment-widget:hover .count,
+.chak-comment-widget:focus .count {background:#fff; color:#f4645f;}
+.chak-comment-widget .count  { display:inline-block; width:9px; padding: 0px 6px; margin:0 2px; background-color:#f4645f; color:#fff; border-radius: 4px; font-size:12px; font-weight:bold; line-height: 20px; vertical-align: middle; margin-top: -2px;}
+
 /* article style */
 
 h1 { font-size: 48px; font-weight: 200; }
