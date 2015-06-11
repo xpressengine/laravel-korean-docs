@@ -22,6 +22,8 @@ permalink: /docs/5.0/envoy/
 
 > **주의:** Envoy는 PHP 버전 5.4 이상의 Mac 또는 Linux 운영 체제에서 동작합니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="envoy-installation"></a>
 ## 설치
 
@@ -29,7 +31,7 @@ permalink: /docs/5.0/envoy/
 
 	composer global require "laravel/envoy=~1.0"
 
-`~/.composer/vendor/bin` 디렉토리를 여러분의 PATH에 추가하여 터미널에서 `envoy` 명령어를 실행할 때 `envoy`를 바로 찾을 수 있도록 설정하십시오. 
+`~/.composer/vendor/bin` 디렉토리를 여러분의 PATH에 추가하여 터미널에서 `envoy` 명령어를 실행할 때 `envoy`를 바로 찾을 수 있도록 설정하십시오.
 
 그 다음 프로젝트 루트 디렉토리에 `Envoy.blade.php` 파일을 생성합니다. 다음은 간단한 예제입니다:
 
@@ -39,11 +41,13 @@ permalink: /docs/5.0/envoy/
 		ls -la
 	@endtask
 
-보시다 시피 파일의 제일 윗 부분에 `@servers` 에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다. 
+보시다 시피 파일의 제일 윗 부분에 `@servers` 에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다.
 
 `init` 명령어를 사용하여 Envoy 파일의 스텁을 쉽게 만들 수 있습니다:
 
 	envoy init user@192.168.1.1
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-설치" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="envoy-running-tasks"></a>
 ## 작업 실행하기
@@ -91,6 +95,8 @@ PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있�
 		php artisan migrate
 	@endtask
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-작업 실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="envoy-multiple-servers"></a>
 ## 다수의 서버
 
@@ -106,6 +112,8 @@ PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있�
 
 By default, the task will be executed on each server serially. Meaning, the task will finish running on the first server before proceeding to execute on the next server. 기본적으로 작업은 각 서버에서 순차적으로 실행 됩니다. 즉, 첫 번째 서버에서 실행이 끝나면 다음 서버의 실행으로 이동합니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-다수의 서버" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="envoy-parallel-execution"></a>
 ## 병렬 실행
 
@@ -118,6 +126,8 @@ By default, the task will be executed on each server serially. Meaning, the task
 		git pull origin {% raw %}{{{% endraw %} $branch {% raw %}}}{% endraw %}
 		php artisan migrate
 	@endtask
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-병렬 실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="envoy-task-macros"></a>
 ## 작업 매크로
@@ -142,6 +152,8 @@ By default, the task will be executed on each server serially. Meaning, the task
 이제 `deploy` 매크로는 하나의 간단한 명령으로 실행됩니다:
 
 	envoy run deploy
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-작업 매크로" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="envoy-notifications"></a>
 <a name="envoy-hipchat-notifications"></a>
@@ -177,7 +189,7 @@ By default, the task will be executed on each server serially. Meaning, the task
 		@slack('hook', 'channel', 'message')
 	@endafter
 
-Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검색 할 수 있습니다. `hook` 인자는 수신되는 Webhooks Slack 통합에 의해서 제공되어지는 전체 webhook URL 이어야 합니다. 예를 들어 : 
+Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검색 할 수 있습니다. `hook` 인자는 수신되는 Webhooks Slack 통합에 의해서 제공되어지는 전체 webhook URL 이어야 합니다. 예를 들어 :
 
 `Incoming WebHooks`
 
@@ -190,7 +202,9 @@ Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검
 
 `channel` 인자가 없는 경우에 기본 채널이 사용되어 집니다.
 
-> Note의: Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다. 
+> Note의: Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-알림" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="envoy-updating-envoy"></a>
 ## Envoy 업데이트
@@ -198,4 +212,6 @@ Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검
 Envoy 를 업데이트 하려면 컴포저를 사용합니다:
 
 	composer global update
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-Envoy 업데이트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 

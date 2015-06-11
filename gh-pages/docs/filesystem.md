@@ -16,12 +16,14 @@ permalink: /docs/5.0/filesystem/
 
 라라벨은 Frank de Jonge가 만든 [Flysystem](https://github.com/thephpleague/flysystem) 패키지를 기반으로 하는 강력한 추상화된 파일 시스템을 제공합니다. 라라벨의 통합된 파일 시스템은 로컬, 아마존 S3 그리고 Rackspace 클라우드 스토리지를 드라이버들을 통해서 간단하게 사용할 수 있게 제공합니다. 더욱 놀라운 것은, 각각의 시스템에 대해 동일한 API를 사용하고 있으므로 스토리지를 매우 쉽게 변경할 수 있다는 것입니다!
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="configuration"></a>
 ## 설정
 
-파일시스템의 설정 파일은 `config/filesystems.php` 파일에 위치하고 있습니다. 이 파일 안에서 여러분은 여러분의 모든 “디스크”에 대해 설정할 수 있습니다. 각각의 디스크는 개별 스토리지 드라이버와 스토리지의 위치를 나타냅니다. 설정 파일에는 각각 지원하고 있는 드라이버에 대한 예제 설정이 들어 있습니다. 따라서 스토리지 구성 및 인증정보를 반영하도록 간단하게 설정을 수정할 수 있습니다. 
+파일시스템의 설정 파일은 `config/filesystems.php` 파일에 위치하고 있습니다. 이 파일 안에서 여러분은 여러분의 모든 “디스크”에 대해 설정할 수 있습니다. 각각의 디스크는 개별 스토리지 드라이버와 스토리지의 위치를 나타냅니다. 설정 파일에는 각각 지원하고 있는 드라이버에 대한 예제 설정이 들어 있습니다. 따라서 스토리지 구성 및 인증정보를 반영하도록 간단하게 설정을 수정할 수 있습니다.
 
-S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하는 패키지를 컴포저를 통해서 설치해야 합니다. 
+S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하는 패키지를 컴포저를 통해서 설치해야 합니다.
 
 - Amazon S3: `league/flysystem-aws-s3-v2 ~1.0`
 - Rackspace: `league/flysystem-rackspace ~1.0`
@@ -32,10 +34,12 @@ S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하�
 
 	Storage::disk('local')->put('file.txt', 'Contents');
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="basic-usage"></a>
 ## 기본적인 사용법
 
-`Storage` 파사드를 사용하여 설정된 디스크에 대한 작업을 처리할 수 있습니다. 또한 라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결될 수 있도록 `Illuminate\Contracts\Filesystem\Factory` contract를 타입힌트에 사용할 수도 있습니다. 
+`Storage` 파사드를 사용하여 설정된 디스크에 대한 작업을 처리할 수 있습니다. 또한 라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결될 수 있도록 `Illuminate\Contracts\Filesystem\Factory` contract를 타입힌트에 사용할 수도 있습니다.
 
 #### 지정된 디스크 객체 반환하기
 
@@ -114,16 +118,18 @@ S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하�
 
 	Storage::deleteDirectory($directory);
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)-기본적인 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="custom-filesystems"></a>
 ## 사용자 지정 파일 시스템
 
-라라벨의 통합 파일시스템은 처음부터 다양한 “드라이버”가 제공됩니다. 하지만 파일시스템은 이러한 드라이버에 제한적이지 않고, 다은 스토리지 시스템에도 적용할 수 있습니다. 여러분은 라라벨 어플리케이션에 적합한 스토리지 시스템에 대한 사용자 정의 드라이버를 생성할 수 있습니다. 걱정마십시오. 그렇게 어렵지 않습니다. 
+라라벨의 통합 파일시스템은 처음부터 다양한 “드라이버”가 제공됩니다. 하지만 파일시스템은 이러한 드라이버에 제한적이지 않고, 다은 스토리지 시스템에도 적용할 수 있습니다. 여러분은 라라벨 어플리케이션에 적합한 스토리지 시스템에 대한 사용자 정의 드라이버를 생성할 수 있습니다. 걱정마십시오. 그렇게 어렵지 않습니다.
 
 예를 들어 DropboxFilesystemServiceProvider 같은 만드는 사용자 정의 파일 시스템을 위해 서비스 제공자를 준비하십시오. 제공자의 boot 메소드 속으로, Illuminate \ Contracts \ Filesystem \ Factory 계약의 인스턴스를 주입하고 extend 메소드를 호출합니다. 혹은 Disk 외관 extend 메소드를 사용할 수 있습니다.
 
-`extens` 메소드의 첫 번째 인자는 드라이버의 이름이고, 두 번째는 `$app` 과 `$config` 변수를 전달 받는 클로저가 됩니다. 이 클로저는 `League\Flysystem\Filesystem` 에 대한 인스턴스를 반환해야 합니다. 
+`extens` 메소드의 첫 번째 인자는 드라이버의 이름이고, 두 번째는 `$app` 과 `$config` 변수를 전달 받는 클로저가 됩니다. 이 클로저는 `League\Flysystem\Filesystem` 에 대한 인스턴스를 반환해야 합니다.
 
-> **참고** $config 변수는 지정된 디스크를 위한 `config/filesystems.php` 파일에 정의된 값을 포함할 것입니다. 
+> **참고** $config 변수는 지정된 디스크를 위한 `config/filesystems.php` 파일에 정의된 값을 포함할 것입니다.
 
 #### 드랍박스 예제
 
@@ -153,3 +159,5 @@ S3 또는 Rackspace 드라이버를 사용하기 전에 여러분은 해당하�
 		}
 
 	}
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)-사용자 지정 파일 시스템" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

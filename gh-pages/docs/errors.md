@@ -31,6 +31,8 @@ permalink: /docs/5.0/errors/
 로컬 개발환경을 구성중이라면 `APP_DEBUG` 환경 변수를 `true`로 구성해야 할것입니다. 
 **실제 제품 구동 환경이라면, 이 값은 항상 `false`가 되어야 할것입니다. **
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="handling-errors"></a>
 ## 에러 처리
 
@@ -60,6 +62,8 @@ permalink: /docs/5.0/errors/
 
 예외-exception 처리 클래스의 `dontReport` 속성에 배열로 지정된 유형들은 로그를 남기지 않습니다. 기본적으로 404 에러는 로그파일에 기록되지 않습니다. 필요한 경우에 다른 예외-exception 유형들도 이 배열에 추가할 수 있습니다. 
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-에러 처리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="http-exceptions"></a>
 ## HTTP 예외-exceptions
 
@@ -76,6 +80,8 @@ permalink: /docs/5.0/errors/
 ### 404 에러의 사용자 정의 페이지
 
 모든 404에러들을 위한 사용자 정의 뷰를 반환하기 위해서는 `resources/views/errors/404.blade.php` 파일을 만들어야 합니다. 이 뷰파일은 어플리케이션에 의해 발생하는 모든 404 에러에 사용됩니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-HTTP 예외-exceptions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="logging"></a>
 ## 로깅
@@ -106,3 +112,5 @@ Monolog에는 로그에 사용할 수있는 기타 다양한 핸들러가 준비
 	{
 		//
 	});
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
