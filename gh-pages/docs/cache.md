@@ -190,8 +190,6 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 		$table->integer('expiration');
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-데이터베이스 캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="memcached-cache"></a>
 #### Memcached Cache
 
@@ -209,11 +207,9 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 		array('host' => '/var/run/memcached/memcached.sock', 'port' => 0, 'weight' => 100),
 	),
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-Memcached Cache" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="redis-cache"></a>
 #### Redis Cache
 
 [Redis 설정](/laravel-korean-docs/docs/redis#configuration)을 참고하십시오.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-Redis Cache" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-데이터베이스 캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

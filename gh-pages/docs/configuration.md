@@ -42,14 +42,12 @@ permalink: /docs/5.0/configuration/
 
 > **주의:** 실서버(production)에서 구동하는 경우에는 `app.debug` 설정을 `true`로 설정하지 마십시오.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설정(Configuration)-설치 후 할 일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="permissions"></a>
 ### 권한
 
 라라벨은 한 가지 권한설정을 필요로 합니다: `storage` 폴더와 `vendor` 폴더는 웹서버에서 쓰기접근이 가능해야 합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설정(Configuration)-권한" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설정(Configuration)-설치 후 할 일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="accessing-configuration-values"></a>
 ## 환경설정값 가져오기

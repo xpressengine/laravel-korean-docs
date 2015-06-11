@@ -494,8 +494,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 - [다형성 관계](#polymorphic-relations)
 - [다대다 다형성 관계](#many-to-many-polymorphic-relations)
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="one-to-one"></a>
 ### 일 대 일 관계
 
@@ -563,8 +561,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-일 대 일 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="one-to-many"></a>
 ### 일대다 관계
 
@@ -606,8 +602,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-일대다 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="many-to-many"></a>
 ### 다대다 관계
 
@@ -646,8 +640,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		}
 
 	}
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다대다 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="has-many-through"></a>
 ### 연결을 통한 다수를 가지는 관계
@@ -689,8 +681,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		}
 
 	}
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-연결을 통한 다수를 가지는 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="polymorphic-relations"></a>
 ### 다형성 관계
@@ -765,8 +755,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 주목해야할 핵심적인 필드는 `photos` 테이블의 `imageable_id` 와 `imageable_type` 입니다.  이 예제에서 ID는 직원 또는 주문 의 ID 를 나타내고, type은 소유하고 있는 모델 클래스의 이름을 나타냅니다. 이것은 `imageable` 관계를 엑세스 할 때 ORM 이 어떤 타입의 소유 모델을 반환해야 하는지 결정해줍니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다형성 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="many-to-many-polymorphic-relations"></a>
 ### 다대다 다형성 관계
 
@@ -818,7 +806,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다대다 다형성 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="querying-relations"></a>
 ## 관계 쿼리
@@ -844,8 +832,6 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		$q->where('content', 'like', 'foo%');
 
 	})->get();
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계 쿼리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="dynamic-properties"></a>
 ### 동적 속성
@@ -873,7 +859,7 @@ Eloquent는 동적 속성을 사용하여 지정된 관계들에 엑세스하는
 
 > **참고:** 여러 결과를 반환하는 관계는 `Illuminate\Database\Eloquent\Collection` 클래스의 인스턴스를 반환할 것입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-동적 속성" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계 쿼리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="eager-loading"></a>
 ## Eager 로딩
@@ -1432,8 +1418,6 @@ Alternatively, you may use the `visible` property to define a white-list:
 
 	protected $visible = ['first_name', 'last_name'];
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Converting To Arrays / JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="array-appends"></a>
 Occasionally, you may need to add array attributes that do not have a corresponding column in your database. To do so, simply define an accessor for the value:
 
@@ -1448,4 +1432,4 @@ Once you have created the accessor, just add the value to the `appends` property
 
 Once the attribute has been added to the `appends` list, it will be included in both the model's array and JSON forms. Attributes in the `appends` array respect the `visible` and `hidden` configuration on the model.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-array_appends" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Converting To Arrays / JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
