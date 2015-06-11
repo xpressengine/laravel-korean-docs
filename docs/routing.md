@@ -244,8 +244,6 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 속성값들을 공유하는 것은 `Route::group` 메소드의 첫 번째 인자로 배열을 지정하면 됩니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-Route Groups" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="route-group-middleware"></a>
 ### 미들웨어
 
@@ -264,8 +262,6 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		});
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="route-group-namespace"></a>
 ### 네임스페이스
 
@@ -283,8 +279,6 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 
 > **참고:** 기본적으로 `RouteServiceProvider` 에서 포함하고 있는 `routes.php` 파일에는 라우트 컨트롤들을 위해서 네임스페이스가 지정되어 있습니다. 따라서 `App\Http\Controllers`의 전체 네임스페이스를 따로 지정할 필요는 없습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-네임스페이스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <a name="sub-domain-routing"></a>
 #### 서브 도메인 라우팅
 
@@ -301,8 +295,6 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		});
 
 	});
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-서브 도메인 라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="route-prefixing"></a>
 ### 라우트 접두어 지정하기
@@ -339,7 +331,7 @@ HTML form은 실제로 `PUT`, `PATCH` 와 `DELETE` 액션을 지원하지 않습
 		// Define Routes Here
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-라우트 접두어 지정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-Route Groups" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="route-model-binding"></a>
 ## 라우트 모델 바인딩
