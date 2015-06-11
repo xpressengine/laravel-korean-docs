@@ -28,3 +28,5 @@
 	Crypt::setMode('ctr');
 
 	Crypt::setCipher($cipher);
+
+<!--chak-comment-암호화(Encryption)-기본 사용법-->

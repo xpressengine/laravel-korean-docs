@@ -19,8 +19,10 @@
 
 > **참고:** 라라벨의 쿼리 빌더는 PDO 파라미터 바인딩을 사용하여 SQL injection 공격을 방지합니다. 따라서 쿼리에 바인딩할 문자열들을 따로 정리하고 전달할 필요가 없습니다.
 
+<!--chak-comment-쿼리빌더(Query Builder)-소개-->
+
 <a name="selects"></a>
-## Selects 
+## Selects
 
 #### 한 테이블에서 모든 행들을 가져오기
 
@@ -141,6 +143,8 @@
 
 	$users = DB::table('users')->skip(10)->take(5)->get();
 
+<!--chak-comment-쿼리빌더(Query Builder)-Selects-->
+
 <a name="joins"></a>
 ## Joins
 
@@ -160,7 +164,7 @@
 		    ->leftJoin('posts', 'users.id', '=', 'posts.user_id')
 		    ->get();
 
-더 복잡한 join도 지정할 수 있습니다. 
+더 복잡한 join도 지정할 수 있습니다.
 
 	DB::table('users')
 	        ->join('contacts', function($join)
@@ -179,10 +183,12 @@
 	        })
 	        ->get();
 
+<!--chak-comment-쿼리빌더(Query Builder)-Joins-->
+
 <a name="advanced-wheres"></a>
 ## Advanced Wheres 더 복잡한 조건문
 
-#### Parameter Grouping 
+#### Parameter Grouping
 
 가끔은 “where exists”나 중첩된 파라미터 그루핑과 같이 복잡한 조건문을 사용해야 할 필요가 있습니다. 라라벨의 쿼리 빌더는 다음과 같이 사용할 수 있습니다:
 
@@ -217,10 +223,12 @@
 		select 1 from orders where orders.user_id = users.id
 	)
 
+<!--chak-comment-쿼리빌더(Query Builder)-Advanced Wheres 더 복잡한 조건문-->
+
 <a name="aggregates"></a>
 ## Aggregates 집계
 
-쿼리 빌더는 또한 `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다. 
+쿼리 빌더는 또한 `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다.
 
 #### 집계를 위한 메소드 사용하기
 
@@ -234,18 +242,22 @@
 
 	$total = DB::table('users')->sum('votes');
 
+<!--chak-comment-쿼리빌더(Query Builder)-Aggregates 집계-->
+
 <a name="raw-expressions"></a>
 ## 직접 질의구문
 
 때때로 직적쿼리를 생성하여 사용할 필요가 있을수도 있습니다. 이러한 구문은 문자열이 쿼리에 그대로 삽입되기 때문에 SQL 인젝션 공격에 주의해야 합니다. 직접 질의 구문을 생성하기 위해서는 `DB::raw` 메소드를 사용하면 됩니다:
 
-#### 직접 질의 구문 사용하기 
+#### 직접 질의 구문 사용하기
 
 	$users = DB::table('users')
 	                     ->select(DB::raw('count(*) as user_count, status'))
 	                     ->where('status', '<>', 1)
 	                     ->groupBy('status')
 	                     ->get();
+
+<!--chak-comment-쿼리빌더(Query Builder)-직접 질의구문-->
 
 <a name="inserts"></a>
 ## Inserts
@@ -273,6 +285,8 @@
 		['email' => 'dayle@example.com', 'votes' => 0]
 	]);
 
+<!--chak-comment-쿼리빌더(Query Builder)-Inserts-->
+
 <a name="updates"></a>
 ## Updates
 
@@ -296,6 +310,8 @@
 
 	DB::table('users')->increment('votes', 1, ['name' => 'John']);
 
+<!--chak-comment-쿼리빌더(Query Builder)-Updates-->
+
 <a name="deletes"></a>
 ## Deletes
 
@@ -303,13 +319,15 @@
 
 	DB::table('users')->where('votes', '<', 100)->delete();
 
-#### 테이블에서 전체 레코드 삭제하기 
+#### 테이블에서 전체 레코드 삭제하기
 
 	DB::table('users')->delete();
 
 #### 테이블 비우기
 
 	DB::table('users')->truncate();
+
+<!--chak-comment-쿼리빌더(Query Builder)-Deletes-->
 
 <a name="unions"></a>
 ## Unions
@@ -322,10 +340,12 @@
 
 `unionAll` 메소드도 사용가능하며 `union`과 동일하게 사용합니다.
 
+<!--chak-comment-쿼리빌더(Query Builder)-Unions-->
+
 <a name="pessimistic-locking"></a>
 ## Pessimistic Locking 배타적 잠금
 
-쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다. 
+쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다.
 
 “shared lock” 에서 SELECT 문을 실행하려면 `sharedLock` 메소드를 쿼리에 지정하십시오:
 
@@ -334,3 +354,5 @@
 SELECT문을 "lock for update" 하려면 `lockForUpdate` 메소드를 쿼리에 지정하십시오:
 
 	DB::table('users')->where('votes', '>', 100)->lockForUpdate()->get();
+
+<!--chak-comment-쿼리빌더(Query Builder)-Pessimistic Locking 배타적 잠금-->

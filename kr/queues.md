@@ -30,6 +30,8 @@
 - IronMQ: `iron-io/iron_mq`
 - Redis: `predis/predis ~1.0`
 
+<!--chak-comment-큐(Queues)-환경 설정-->
+
 <a name="basic-usage"></a>
 ## 기본 사용법
 
@@ -52,7 +54,7 @@
 		//
 	}
 
-만약 여러분의 커멘드가 분리된 핸들러(handler) 클래스를 가지기를 원한다면 `--handler` flag를 `make:command` 커멘드에 추가하면 됩니다. 
+만약 여러분의 커멘드가 분리된 핸들러(handler) 클래스를 가지기를 원한다면 `--handler` flag를 `make:command` 커멘드에 추가하면 됩니다.
 
 	php artisan make:command SendEmail --queued --handler
 
@@ -81,12 +83,12 @@
 이 예제에서는 우리가 할당하고자 하는 작업에 시간 지연을 설정하기 위해 [Carbon](https://github.com/briannesbitt/Carbon) 이라는 날짜 라이브러리를 사용했습니다. 또 라이브러리 없이 지연시키기를 원하는 만큼의 초에 대한 시간 값을 정수(integer) 형태로 전달할 수도 있습니다.
 
 > **참고** 아마존 SQS 서비스는 900초의 제한 시간을 가지고 있습니다. (15분)
- 
+
 #### 큐와 Eloquent Models
 
-만약 대기된 작업이 구조체 안에서 Eloquent 모델을 받아들인다면 모델에 대한 ID만 큐에 직렬화(serialized)를 통해 전달 됩니다. 
+만약 대기된 작업이 구조체 안에서 Eloquent 모델을 받아들인다면 모델에 대한 ID만 큐에 직렬화(serialized)를 통해 전달 됩니다.
 
-작업이 실제로 처리될때 큐 시스템은 전체 모델 인스턴스를 데이터베이스로부터 자동으로 다시 조회할 것입니다.  
+작업이 실제로 처리될때 큐 시스템은 전체 모델 인스턴스를 데이터베이스로부터 자동으로 다시 조회할 것입니다.
 
 이러한 방법은 여러분의 어플리케이션에 대해 완전히 알기쉽게 하고 전체 Eloquent 모델 인스턴스를 직렬화(serializing) 하는 데서 발생할 수 있는 이슈들을 방지합니다.
 
@@ -119,6 +121,8 @@
 
 > **주의** 이 메소드를 호출하기 위해 커맨드 / 핸들러는 `Illuminate\Queue\InteractsWithQueue` trait 를 반드시 사용해야만 합니다.
 
+<!--chak-comment-큐(Queues)-기본 사용법-->
+
 <a name="queueing-closures"></a>
 ## 클로져 큐
 
@@ -135,7 +139,9 @@
 
 > **주의** : 큐에 푸쉬하는 클로저에 객체를 사용하도록 전달하는 대신 `use`를 사용하여 기본 키를 전달하고 큐 작업 안에서 관련 모델을 다시 가져오도록 구성하십시오. 이렇게하면 직렬화에서 발생할 수 있는 예기치 않은 영향을 방지 할 수 있습니다.
 
-Iron.io [push queues](#push-queues)를 이용하는 경우,  큐로 푸쉬하는 클로저에 추가 예방 조치를 취해야 합니다. 큐 메세지를 받는 부분에서 요청이 실제로 Iron.io에서 왔는지 검증하는 토큰을 체크해야 합니다. 예를들어 푸쉬된 큐를 받는 URL은 `https://yourapp.com/queue/receive?token=SecretToken`와 같이 되어야 합니다.  그런 다음에는 큐 요청을 진행하기 전에 어플리케이션에서 비밀 토큰 값을 체크하도록 합니다. 
+Iron.io [push queues](#push-queues)를 이용하는 경우,  큐로 푸쉬하는 클로저에 추가 예방 조치를 취해야 합니다. 큐 메세지를 받는 부분에서 요청이 실제로 Iron.io에서 왔는지 검증하는 토큰을 체크해야 합니다. 예를들어 푸쉬된 큐를 받는 URL은 `https://yourapp.com/queue/receive?token=SecretToken`와 같이 되어야 합니다.  그런 다음에는 큐 요청을 진행하기 전에 어플리케이션에서 비밀 토큰 값을 체크하도록 합니다.
+
+<!--chak-comment-큐(Queues)-클로져 큐-->
 
 <a name="running-the-queue-listener"></a>
 ## 큐 리스너(Listener) 실행하기
@@ -170,7 +176,7 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 	php artisan queue:listen --sleep=5
 
-대기열에 작업이 없는 경우에만 큐가 일시적으로 “잠들어 있는” 것에 주의하십시오. 만약 작업이 존재한다면, 큐는 대기 않고 계속 작업을 처리합니다. 
+대기열에 작업이 없는 경우에만 큐가 일시적으로 “잠들어 있는” 것에 주의하십시오. 만약 작업이 존재한다면, 큐는 대기 않고 계속 작업을 처리합니다.
 
 #### 큐의 첫 번째 작업을 처리하기
 
@@ -178,10 +184,12 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 	php artisan queue:work
 
+<!--chak-comment-큐(Queues)-큐 리스너(Listener) 실행하기-->
+
 <a name="daemon-queue-worker"></a>
 ## 데몬 큐 작업자
 
-`queue:work` 명령에는 프레임워크의 재부팅 없이도 지속적으로 작업을 처리하도록 큐 실행을 강제하는 `--daemon` 옵션이 포함되어있습니다.  이를 통하면 `queue:listen` 명령과 비교하여 CPU 사용이 현저하게 줄일 수 있습니다.  하지만 현재 실행중인 실행중인 작업의 큐를 비우는 데에 복잡한 절차가 추가적으로 필요하게 됩니다. 
+`queue:work` 명령에는 프레임워크의 재부팅 없이도 지속적으로 작업을 처리하도록 큐 실행을 강제하는 `--daemon` 옵션이 포함되어있습니다.  이를 통하면 `queue:listen` 명령과 비교하여 CPU 사용이 현저하게 줄일 수 있습니다.  하지만 현재 실행중인 실행중인 작업의 큐를 비우는 데에 복잡한 절차가 추가적으로 필요하게 됩니다.
 
 큐 작업자(worker) 를 데몬에서 시작하기 위해 `--daemon` flag를 사용할 수 있습니다:
 
@@ -211,6 +219,8 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 비슷하게 데이터베이스 연결은 데몬이 장시간 동작할때 끊어질 수 있습니다. 여러분은 `DB::reconnect` 메소드를 사용하여 다시 커넥션을 가지도록 할 수 있습니다.
 
+<!--chak-comment-큐(Queues)-데몬 큐 작업자-->
+
 <a name="push-queues"></a>
 ## 큐 푸쉬하기
 
@@ -232,6 +242,8 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 	});
 
 `marshal` 메소드는 올바른 작업 핸들러 클래스가 작동되도록 할 것입니다. 푸쉬된 큐에서 작업들을 처리하려면 기존에 큐에서 사용한것과 같은 `Queue::push` 메소드를 사용하십시오.
+
+<!--chak-comment-큐(Queues)-큐 푸쉬하기-->
 
 <a name="failed-jobs"></a>
 ## 실패된 작업
@@ -277,3 +289,5 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 실패한 모든 작업들을 삭제하기 위해서는 `queue:flush` 명령을 사용할 수 있습니다:
 
 	php artisan queue:flush
+
+<!--chak-comment-큐(Queues)-실패된 작업-->
