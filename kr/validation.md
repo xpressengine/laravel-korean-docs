@@ -373,126 +373,90 @@
 - [Unique (Database)](#rule-unique)
 - [URL](#rule-url)
 
-<!--chak-comment-Validation-유효성 검사 룰-->
-
 <a name="rule-accepted"></a>
 #### accepted
 
 필드의 값이 _yes_, _on_, _1_, 또는 _true_이어야 합니다. 이 것은 "이용약관" 동의와 같은 필드의 검사에 유용합니다.
-
-<!--chak-comment-Validation-accepted-->
 
 <a name="rule-active-url"></a>
 #### active_url
 
 필드의 값이 PHP 함수 `checkdnsrr`에 기반하여 올바른 URL이어야 합니다.
 
-<!--chak-comment-Validation-active_url-->
-
 <a name="rule-after"></a>
 #### after:_date_
 
 필드의 값이 주어진 날짜 이후여야 합니다. 이때 날짜는 PHP 함수 `strtotime`을 통해 생성된 값입니다.
-
-<!--chak-comment-Validation-after:_date_-->
 
 <a name="rule-alpha"></a>
 #### alpha
 
 필드의 값이 완벽하게 알파벳 문자로 이루어져야 합니다.
 
-<!--chak-comment-Validation-alpha-->
-
 <a name="rule-alpha-dash"></a>
 #### alpha_dash
 
 필드의 값이 알파벳 및 숫자와 dash(-), underscore(_)로 이루어져야 합니다.
-
-<!--chak-comment-Validation-alpha_dash-->
 
 <a name="rule-alpha-num"></a>
 #### alpha_num
 
 필드의 값이 완벽하게 알파벳 및 숫자로 이루어져야 합니다.
 
-<!--chak-comment-Validation-alpha_num-->
-
 <a name="rule-array"></a>
 #### array
 
 필드의 값이 반드시 배열 형태이어야 합니다.
-
-<!--chak-comment-Validation-array-->
 
 <a name="rule-before"></a>
 #### before:_date_
 
 필드의 값이 반드시 주어진 날짜보다 앞서야 합니다. 날짜는 `strtotime` PHP 함수를 통해 비교됩니다.
 
-<!--chak-comment-Validation-before:_date_-->
-
 <a name="rule-between"></a>
 #### between:_min_,_max_
 
 필드의 값이 주어진 _min_ 과 _max_의 사이의 값이어야 합니다. 문자열, 숫자, 그리고 파일이 `size` 룰에 의해 같은 방식으로 평가될 수 있습니다.
-
-<!--chak-comment-Validation-between:_min_,_max_-->
 
 <a name="rule-boolean"></a>
 #### boolean
 
 필드의 값이 반드시 불리언으로 캐스팅될 수 있어야 합니다. 허용되는 값은 `true`, `false`, `1`, `0`, `"1"`, `"0"`입니다.
 
-<!--chak-comment-Validation-boolean-->
-
 <a name="rule-confirmed"></a>
 #### confirmed
 
 필드의 값이 `foo_confirmation`의 매칭되는 필드를 가져야 합니다. 예를 들어 만약 필드가 `password`이면, `password_confirmation` 필드가 입력 중에 있어야 합니다.
-
-<!--chak-comment-Validation-confirmed-->
 
 <a name="rule-date"></a>
 #### date
 
 필드의 값이 `strtotime` PHP 함수에 따라 올바른 날짜여야 합니다.
 
-<!--chak-comment-Validation-date-->
-
 <a name="rule-date-format"></a>
 #### date_format:_format_
 
 필드의 값이 반드시 정의된 _format_과 일지해야 합니다. `date_parse_from_format` PHP 함수에 따릅니다.
-
-<!--chak-comment-Validation-date_format:_format_-->
 
 <a name="rule-different"></a>
 #### different:_field_
 
 필드의 값이 주어진 _field_의 값과 달라야 합니다.
 
-<!--chak-comment-Validation-different:_field_-->
-
 <a name="rule-digits"></a>
 #### digits:_value_
 
 필드의 값이 반드시 _숫자_여야 하고, 길이가 _value_이어야 합니다.
-
-<!--chak-comment-Validation-digits:_value_-->
 
 <a name="rule-digits-between"></a>
 #### digits_between:_min_,_max_
 
 필드의 값이 주어진 _min_과 _max_ 사이의 길이를 갖는 숫자여야 합니다.
 
-<!--chak-comment-Validation-digits_between:_min_,_max_-->
-
 <a name="rule-email"></a>
 #### email
 
 필드의 값이 이메일 주소 형식이어야 합니다.
-
-<!--chak-comment-Validation-email-->
 
 <a name="rule-exists"></a>
 #### exists:_table_,_column_
@@ -515,42 +479,30 @@
 
 	'email' => 'exists:staff,email,deleted_at,NULL'
 
-<!--chak-comment-Validation-exists:_table_,_column_-->
-
 <a name="rule-image"></a>
 #### image
 
 이미지 파일(jpeg, png, bmp, gif, svg)이어야 합니다.
-
-<!--chak-comment-Validation-image-->
 
 <a name="rule-in"></a>
 #### in:_foo_,_bar_,...
 
 필드의 값이 주어진 목록에 포함돼 있어야 합니다.
 
-<!--chak-comment-Validation-in:_foo_,_bar_,...-->
-
 <a name="rule-integer"></a>
 #### integer
 
 필드의 값이 정수여야 합니다.
-
-<!--chak-comment-Validation-integer-->
 
 <a name="rule-ip"></a>
 #### ip
 
 필드의 값이 IP 주소 형식이어야 합니다.
 
-<!--chak-comment-Validation-ip-->
-
 <a name="rule-max"></a>
 #### max:_value_
 
 필드의 값이 반드시 _value_보다 작거나 같아야 합니다. 문자열, 숫자, 그리고 파일이 [`size`](#rule-size) 룰에 의해 같은 방식으로 평가될 수 있습니다.
-
-<!--chak-comment-Validation-max:_value_-->
 
 <a name="rule-mimes"></a>
 #### mimes:_foo_,_bar_,...
@@ -561,28 +513,20 @@
 
 	'photo' => 'mimes:jpeg,bmp,png'
 
-<!--chak-comment-Validation-mimes:_foo_,_bar_,...-->
-
 <a name="rule-min"></a>
 #### min:_value_
 
 필드의 값이 반드시 _value_ 보다 크거나 같아야 합니다. 문자열, 숫자, 그리고 파일이 [`size`](#rule-size) 룰에 의해 같은 방식으로 평가될 수 있습니다.
-
-<!--chak-comment-Validation-min:_value_-->
 
 <a name="rule-not-in"></a>
 #### not_in:_foo_,_bar_,...
 
 필드의 값이 주어진 목록에 존재하지 않아야 합니다.
 
-<!--chak-comment-Validation-not_in:_foo_,_bar_,...-->
-
 <a name="rule-numeric"></a>
 #### numeric
 
 필드의 값이 숫자여야 합니다.
-
-<!--chak-comment-Validation-numeric-->
 
 <a name="rule-regex"></a>
 #### regex:_pattern_
@@ -591,77 +535,55 @@
 
 **참고:** `regex` 패턴을 사용할 때, 특히 정규 표현식에 파이프 문자열이 있다면, 파이프 구분자를 사용하는 대신 배열 형식을 사용하여 룰을 지정할 필요가 있습니다.
 
-<!--chak-comment-Validation-regex:_pattern_-->
-
 <a name="rule-required"></a>
 #### required
 
 입력 값 중에 해당 필드가 존재해야 합니다.
-
-<!--chak-comment-Validation-required-->
 
 <a name="rule-required-if"></a>
 #### required_if:_field_,_value_,...
 
 만약 _filed_의 값이 _value_중의 하나와 일치한다면, 해당 필드가 반드시 존재해야 합니다.
 
-<!--chak-comment-Validation-required_if:_field_,_value_,...-->
-
 <a name="rule-required-with"></a>
 #### required_with:_foo_,_bar_,...
 
 다른 지정된 필드중 하나라도 존재한다면, 해당 필드가 반드시 존재해야 합니다.
-
-<!--chak-comment-Validation-required_with:_foo_,_bar_,...-->
 
 <a name="rule-required-with-all"></a>
 #### required_with_all:_foo_,_bar_,...
 
 다른 지정된 필드가 모두 존재한다면, 해당 필드가 반드시 존재해야 합니다.
 
-<!--chak-comment-Validation-required_with_all:_foo_,_bar_,...-->
-
 <a name="rule-required-without"></a>
 #### required_without:_foo_,_bar_,...
 
 다른 지정된 필드중 하나라도 존재하지 않으면, 해당 필드가 반드시 존재해야 합니다.
-
-<!--chak-comment-Validation-required_without:_foo_,_bar_,...-->
 
 <a name="rule-required-without-all"></a>
 #### required_without_all:_foo_,_bar_,...
 
 다른 지정된 필드가 모두 존재하지 않으면, 해당 필드가 존재해야 합니다.
 
-<!--chak-comment-Validation-required_without_all:_foo_,_bar_,...-->
-
 <a name="rule-same"></a>
 #### same:_field_
 
 필드의 값이 주어진 _field_의 값과 일치해야 합니다.
-
-<!--chak-comment-Validation-same:_field_-->
 
 <a name="rule-size"></a>
 #### size:_value_
 
 필드의 값이 주어진 _value_와 일치하는 크기를 가져야 합니다. 문자열 데이터에서는 문자의 개수가 _value_와 일치해야 합니다. 숫자형식의 데이터에서는 주어진 정수값이 _value_와 일치해야 합니다. 파일에서는 킬로바이트 형식의 파일 사이즈가 _size_와 일치해야 합니다.
 
-<!--chak-comment-Validation-size:_value_-->
-
 <a name="rule-string"></a>
 #### string
 
 필드의 값이 반드시 문자열 형식이어야 합니다.
 
-<!--chak-comment-Validation-string-->
-
 <a name="rule-timezone"></a>
 #### timezone
 
 필드의 값이 `timezone_identifiers_list` PHP 함수에 따라 유효한 timezone 식별자여야 합니다.
-
-<!--chak-comment-Validation-timezone-->
 
 <a name="rule-unique"></a>
 #### unique:_table_,_column_,_except_,_idColumn_
@@ -702,8 +624,6 @@
 
 앞서의 룰에서 오직 `account_id`가 `1`인 행만 unique 유효성 검사에 포함됩니다.
 
-<!--chak-comment-Validation-unique:_table_,_column_,_except_,_idColumn_-->
-
 <a name="rule-url"></a>
 #### url
 
@@ -711,7 +631,7 @@
 
 > **참고:** 이 기능은 PHP의 `filter_var` 함수를 사용합니다.
 
-<!--chak-comment-Validation-url-->
+<!--chak-comment-Validation-유효성 검사 룰-->
 
 <a name="conditionally-adding-rules"></a>
 ## 조건부 룰 추가하기
@@ -783,8 +703,6 @@
 		'email.required' => 'We need to know your e-mail address!',
 	];
 
-<!--chak-comment-Validation-사용자 정의 오류 메시지-->
-
 <a name="localization"></a>
 #### 언어 파일에 사용자 정의 메시지 지정하기
 
@@ -796,7 +714,7 @@
 		],
 	],
 
-<!--chak-comment-Validation-언어 파일에 사용자 정의 메시지 지정하기-->
+<!--chak-comment-Validation-사용자 정의 오류 메시지-->
 
 <a name="custom-validation-rules"></a>
 ## 사용자 정의 유효성 검사 룰

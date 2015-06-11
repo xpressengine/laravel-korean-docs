@@ -36,14 +36,12 @@
 
 > **주의:** 실서버(production)에서 구동하는 경우에는 `app.debug` 설정을 `true`로 설정하지 마십시오.
 
-<!--chak-comment-설정(Configuration)-설치 후 할 일-->
-
 <a name="permissions"></a>
 ### 권한
 
 라라벨은 한 가지 권한설정을 필요로 합니다: `storage` 폴더와 `vendor` 폴더는 웹서버에서 쓰기접근이 가능해야 합니다.
 
-<!--chak-comment-설정(Configuration)-권한-->
+<!--chak-comment-설정(Configuration)-설치 후 할 일-->
 
 <a name="accessing-configuration-values"></a>
 ## 환경설정값 가져오기

@@ -184,8 +184,6 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 		$table->integer('expiration');
 	});
 
-<!--chak-comment-캐시(Cache)-데이터베이스 캐시-->
-
 <a name="memcached-cache"></a>
 #### Memcached Cache
 
@@ -203,11 +201,9 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 		array('host' => '/var/run/memcached/memcached.sock', 'port' => 0, 'weight' => 100),
 	),
 
-<!--chak-comment-캐시(Cache)-Memcached Cache-->
-
 <a name="redis-cache"></a>
 #### Redis Cache
 
 [Redis 설정](/docs/redis#configuration)을 참고하십시오.
 
-<!--chak-comment-캐시(Cache)-Redis Cache-->
+<!--chak-comment-캐시(Cache)-데이터베이스 캐시-->
