@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>에러와 로깅(Errors & Logging)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/errors/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="에러와-로깅(errors-&amp;-logging)">에러와 로깅(Errors &amp; Logging)</h1>
+
+<ul>
+<li><a href="#configuration">설정</a></li>
+<li><a href="#handling-errors">에러 처리</a></li>
+<li><a href="#http-exceptions">HTTP 예외</a></li>
+<li><a href="#logging">로깅</a></li>
+</ul>
+
+<p><a name="configuration"></a></p>
+
+<h2 id="설정">설정</h2>
+
+<p>어플리케이션의 로그 기능은 <code>Illuminate\Foundation\Bootstrap\ConfigureLogging</code> 부트스트랩 클래스에서 설정됩니다. 이 클래스는 <code>config/app.php</code> 설정 파일의 <code>log</code> 옵션을 참조합니다. </p>
+
+<p>기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 <a href="https://github.com/Seldaek/monolog">Monolog</a> 로깅 라이브러리를 사용하고 있으므로, Monolog 가 제공하는 다양한 핸들러를 이용할 수 있습니다. </p>
+
+<p>예를들어 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 <code>config/app.php</code> 설정파일을 다음과 같이 변경하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;log&#39; =&gt; &#39;single&#39;
+</code></pre></div>
+<p>별다른 구성이 없이도 라라벨은 <code>single</code>, <code>daily</code>, <code>syslog</code> 그리고 <code>errorlog</code> 로깅 모드를 지원합니다. 그러나 응용 프로그램에 대한 로깅을 원하는대로 사용자 정의하고자 한다면, <code>ConfigureLogging</code> 부트스트랩 클래스를 재정의 하여 사용할 수도 있습니다. </p>
+
+<h3 id="오류의-상세정보">오류의 상세정보</h3>
+
+<p><code>config/app.php</code> 설정 파일의 <code>app.debug</code> 설정 옵션을 통해서 브라우저에 출력되는 어플리케이션의 오류 정보를 제어 할 수 있습니다. 기본적으로 이 옵션은 <code>.env</code> 파일에 설정되어있는 <code>APP_DEBUG</code> 환경 변수를 반영하도록 설정되어 있습니다.</p>
+
+<p>로컬 개발환경을 구성중이라면 <code>APP_DEBUG</code> 환경 변수를 <code>true</code>로 구성해야 할것입니다. 
+*<em>실제 제품 구동 환경이라면, 이 값은 항상 <code>false</code>가 되어야 할것입니다. *</em></p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="handling-errors"></a></p>
+
+<h2 id="에러-처리">에러 처리</h2>
+
+<p>모든 예외-exceptions은 <code>App\Exceptions\Handler</code> 클래스에 의해서 처리됩니다. 이 클래스는 <code>report</code>와 <code>render</code> 메소드로 구성되어 있습니다. </p>
+
+<p><code>report</code>메소드는 예외-exceptions를 로깅하거나 <a href="https://bugsnag.com">BugSnag</a>와 같은 별도의 외부 서비스로 보내는데 사용되어 집니다. 기본적으로 <code>report</code> 메소드는 예외-exception가 기록되는 경우 간단하게 부모 클래스의 기본 구현체에 예외-exception를 전달합니다. 그렇지만 예외-exceptions을 원하는대로 로깅해도 됩니다. 만약 각 예외-exception 유형을 각기 다른 방법으로 기록 할 필요가 있다면, PHP의 <code>instanceof</code> 비교 연산자를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Report or log an exception.
+ *
+ * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
+ *
+ * @param  \Exception  $e
+ * @return void
+ */
+public function report(Exception $e)
+{
+    if ($e instanceof CustomException)
+    {
+        //
+    }
+
+    return parent::report($e);
+}
+</code></pre></div>
+<p><code>render</code> 메소드는 예외-exception를 HTTP 응답으로 변환하고 브라우저에게 보내는 역할을 담당합니다. 기본적으로 예외-exception는 응답을 생성하는 기본 클래스로 전달됩니다. 하지만 예외-exception의 유형을 파악하고 사용자 지정된 응답을 반환 것도 자유롭습니다. </p>
+
+<p>예외-exception 처리 클래스의 <code>dontReport</code> 속성에 배열로 지정된 유형들은 로그를 남기지 않습니다. 기본적으로 404 에러는 로그파일에 기록되지 않습니다. 필요한 경우에 다른 예외-exception 유형들도 이 배열에 추가할 수 있습니다. </p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-에러 처리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="http-exceptions"></a></p>
+
+<h2 id="http-예외-exceptions">HTTP 예외-exceptions</h2>
+
+<p>어떤 예외들-exceptions은 서버에서 발생하는 HTTP 에러 코드를 나타냅니다. 예를 들어, &quot;페이지를 찾을 수 없습니다.&quot; 에러(404)나, 인증 오류 (401) 또는 개발자가 유발하는 500 오류 같은 것들입니다. 이 같은 응답을 반환하려면 다음과 같이 수행하십시오:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">abort(404);
+</code></pre></div>
+<p>선택적으로, 응답을 제공할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">abort(403, &#39;Unauthorized action.&#39;);
+</code></pre></div>
+<p>이 메소드는 요청의 라이프사이클 동안이면 언제든지 사용할 수 있습니다.</p>
+
+<h3 id="404-에러의-사용자-정의-페이지">404 에러의 사용자 정의 페이지</h3>
+
+<p>모든 404에러들을 위한 사용자 정의 뷰를 반환하기 위해서는 <code>resources/views/errors/404.blade.php</code> 파일을 만들어야 합니다. 이 뷰파일은 어플리케이션에 의해 발생하는 모든 404 에러에 사용됩니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-HTTP 예외-exceptions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="logging"></a></p>
+
+<h2 id="로깅">로깅</h2>
+
+<p>라라벨의 로그 기능은 강력한 <a href="http://github.com/seldaek/monolog">Monolog</a> 라이브러리위에 간단한 레이어를 제공합니다. 기본적으로 라라벨은 일별 로그 파일을 생성하도록 설정되어 있고, 로그 파일들은 <code>storage/logs</code> 에 저장됩니다. 다음과 같이 하여 로그에 정보를 기록할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Log::info(&#39;This is some useful information.&#39;);
+
+Log::warning(&#39;Something could be going wrong.&#39;);
+
+Log::error(&#39;Something is really going wrong.&#39;);
+</code></pre></div>
+<p>로그는 <a href="http://tools.ietf.org/html/rfc5424">RFC 5424</a> 에 정의되어있는 <strong>debug</strong>, <strong>info</strong>, <strong>notice</strong>, <strong>warning</strong>, <strong>error</strong>, <strong>critical</strong>, 그리고 <strong>alert</strong>의 7가지 로깅 레벨을 제공합니다.</p>
+
+<p>컨텍스트 데이터 배열도 로그 메소드에 전달할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Log::info(&#39;Log message&#39;, [&#39;context&#39; =&gt; &#39;Other helpful information&#39;]);
+</code></pre></div>
+<p>Monolog에는 로그에 사용할 수있는 기타 다양한 핸들러가 준비되어 있습니다. 필요하다면 라라벨이 내부에서 사용하는 Monolog 인스턴스에 액세스 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$monolog = Log::getMonolog();
+</code></pre></div>
+<p>로그에 전달되는 모든 메시지를 잡기 위해 이벤트를 등록 할 수도 있습니다:</p>
+
+<h4 id="로그-리스너-등록하기">로그 리스너 등록하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Log::listen(function($level, $message, $context)
+{
+    //
+});
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

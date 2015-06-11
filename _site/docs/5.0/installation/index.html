@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>설치하기(Installation)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/installation/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="설치하기(installation)">설치하기(Installation)</h1>
+
+<ul>
+<li><a href="#install-composer">컴포저 설치하기</a></li>
+<li><a href="#install-laravel">라라벨 설치하기</a></li>
+<li><a href="#server-requirements">서버 요구사항</a></li>
+</ul>
+
+<p><a name="install-composer"></a></p>
+
+<h2 id="컴포저-설치하기">컴포저 설치하기</h2>
+
+<p>라라벨은 의존성 관리를 위해 <a href="http://getcomposer.org">컴포저</a>를 활용합니다. 따라서 라라벨을 사용하기전 여러분은 라라벨을 설치할 서버(머신)에 Composer-컴포저를 설치할 필요가 있습니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-컴포저 설치하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="install-laravel"></a></p>
+
+<h2 id="라라벨-설치하기">라라벨 설치하기</h2>
+
+<h3 id="laravel-인스톨러로-설치하기">Laravel 인스톨러로 설치하기</h3>
+
+<p>먼저, 라라벨 인스톨러를 컴포저를 사용하여 다운로드 합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">composer global require &quot;laravel/installer=~1.1&quot;
+</code></pre></div>
+<p><code>laravel</code>이 여러분의 시스템에서 실행 가능하도록 <code>~/.composer/vendor/bin</code> 폴더를 여러분의 경로(PATH)에 추가 해야 합니다.</p>
+
+<p>라라벨 인스톨러가 설치 된 후, 간단하게 <code>laravel new</code> 명령어를 입력하면 여러분이 입력한 폴더안에 깨끗한(fresh) 상태의 라라벨 파일을 생성할 것입니다. 예를들어 <code>laravel new blog</code> 명령어는 <code>blog</code>라는 폴더를 생성하며 모든 의존 패키지들의 설치와 함께 깨끗한(fresh) 상태의 라라벨 파일들을 이 폴더에 설치합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">laravel new blog
+</code></pre></div>
+<h3 id="composer-create-project-통한-설치">Composer Create-Project 통한 설치</h3>
+
+<p>터미널에서 컴포저의 <code>create-project</code> 커멘드를 사용하여 라라벨을 설치할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">composer create-project laravel/laravel --prefer-dist
+</code></pre></div>
+<h3 id="스캐폴딩">스캐폴딩</h3>
+
+<p>라라벨은 회원가입과 인증을 위한 scaffolding(임시 가설물, 기본 세팅된 임시 프로그램)이 세팅(ship, 운반)되어 있습니다. 만약 이 스캐폴딩(임시 셋팅파일들)을 삭제하기 위해서는 <code>fresh</code> 아티즌 커멘드를 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan fresh
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-라라벨 설치하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="server-requirements"></a></p>
+
+<h2 id="서버-요구사항">서버 요구사항</h2>
+
+<p>라라벨 프레임워크는 다음과 같은 시스템 요구사항이 있습니다:</p>
+
+<ul>
+<li>PHP &gt;= 5.4</li>
+<li>Mcrypt PHP Extension</li>
+<li>OpenSSL PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+</ul>
+
+<p>일부 OS에서 PHP 5.5 버전부터 직접 수동으로 PHP JSON extension을 설치를 요구하기도 합니다. 여러분이 Ubuntu를 사용하신다면 <code>apt-get install php5-json</code> 명령어로 설치할 수 있습니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-서버 요구사항" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="configuration"></a></p>
+
+<h2 id="설정하기">설정하기</h2>
+
+<p>라라벨 설치 후 가장 먼저 해야 할 것은 여러분의 어플리케이션 키를 랜덤한 문자열로 세팅하는 것입니다. 만약 라라벨이 컴포저를 통해 설치되었다면 이 키는 <code>key:generate</code> 커멘드에 의해 자동적으로 세팅되어졌을 것입니다.</p>
+
+<p>일반적으로, 이 키는 32자로 긴 문자열입니다. 이 키는 <code>.env</code> 환경설정 파일에서 세팅할 수 있습니다.
+<strong>만약 어플리케이션 키가 세팅되어있지 않다면, 여러분의 사용자 세션과 그밖의 암호화된 데이터들이 안전하지 않습니다!</strong></p>
+
+<p>라라벨은 앞의 내용 이외의 다른 세팅은 필요 하지 않습니다. 이제 편하게 개발을 시작하면 됩니다! 그러나 가급적 <code>config/app.php</code> 파일의 내용을 살펴보길 권장합니다. <code>timezone</code>과 <code>locale</code>과 같이 여러분의 어플리케이션을 따라 바꾸기를 원하는 몇가지 옵션들을 포함하고 있습니다.</p>
+
+<p>라라벨이 설치하면 이 문서 <a href="/laravel-korean-docs/docs/5.0/configuration#environment-configuration">로컬 환경 설정하기</a>  역시 참고하시기 바랍니다.</p>
+
+<blockquote>
+<p><strong>주의</strong> 실제 운영중인 어플리케이션에서는 절대로 설정의 <code>app.debug</code> 옵션을 <code>true</code>로 설정하지 마시기 바랍니다.</p>
+</blockquote>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-설정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="permissions"></a></p>
+
+<h3 id="권한">권한</h3>
+
+<p>라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 <code>sotrage</code>와 <code>vendor</code> 폴더에 대한 쓰기권한 허용하십시오.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-권한" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="pretty-urls"></a></p>
+
+<h2 id="깔끔한-url">깔끔한 URL</h2>
+
+<h3 id="아파치">아파치</h3>
+
+<p>라라벨 프레임워크는 <code>index.php</code>없는 URLs를 허용하는 <code>public/.htaccess</code> 파일이 함께 설치됩니다. 만약 라라벨 어플리케이션을 구동하기 위해 아파치 서버를 사용한다면, <code>mod_rewrite</code> 모듈을 활성화 하도록 하시기 바랍니다.</p>
+
+<p>라라벨과 함께 설치된 <code>.htaccess</code> 파일이 여러분의 아파치에서 동작하지 않는다면 아래의 것을 시도해보시기 바랍니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</code></pre></div>
+<h3 id="nginx">Nginx</h3>
+
+<p>Nginx에서 여러분의 서버 설정이 아래의 지시를 따른다면 “pretty” URLs를 사용할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">location / {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+</code></pre></div>
+<p>물론 <a href="/laravel-korean-docs/docs/5.0/homestead">Homestead</a>를 사용하신다면 pretty URLs 는 자동으로 설정되어 있을 것입니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-설치하기(Installation)-깔끔한 URL" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

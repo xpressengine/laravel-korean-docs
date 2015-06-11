@@ -12,9 +12,9 @@ permalink: /docs/5.0/templates/
 <a name="blade-templating"></a>
 ## 블레이드 템플릿
 
-블레이드는 라라벨에서 제공하는 간단하지만 강력한 템플릿 엔진입니다. 컨트롤러 레이아웃과는 다르게 블레이드는 _템플릿 상속_과 _섹션_을 통해서 처리됩니다. 모든 블레이드 템플릿 파일은 `.blade.php` 확장자를 가져야 합니다. 
+블레이드는 라라벨에서 제공하는 간단하지만 강력한 템플릿 엔진입니다. 컨트롤러 레이아웃과는 다르게 블레이드는 _템플릿 상속_과 _섹션_을 통해서 처리됩니다. 모든 블레이드 템플릿 파일은 `.blade.php` 확장자를 가져야 합니다.
 
-#### 블레이드 레이아웃 정의하기 
+#### 블레이드 레이아웃 정의하기
 
 	<!-- Stored in resources/views/layouts/master.blade.php -->
 
@@ -33,10 +33,10 @@ permalink: /docs/5.0/templates/
 		</body>
 	</html>
 
-#### 블레이드 레이아웃 사용하기 
+#### 블레이드 레이아웃 사용하기
 
 	@extends('layouts.master')
-	
+
 	@section('title', 'Page Title')
 
 	@section('sidebar')
@@ -54,6 +54,8 @@ permalink: /docs/5.0/templates/
 때로는 섹션을 정의해야 할지 정확하게 판단하지 못할 수도 있는데, 이 경우에는 기본값을 `@yield`에 직접 지정할 수도 있습니다. 다음과 같이 두 번째 인자에 기본값을 지정하면 됩니다.
 
 	@yield('section', 'Default Content')
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-템플릿(Templates)-블레이드 템플릿" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="other-blade-control-structures"></a>
 ## 기타 블레이드 컨트롤 구조
@@ -128,7 +130,7 @@ permalink: /docs/5.0/templates/
 
 	@include('view.name', ['some' => 'data'])
 
-#### 섹션 재정의하기 
+#### 섹션 재정의하기
 
 섹션 전체를 다시 재정의하려면 `overwrite` 문을 사용하십시오:
 
@@ -147,3 +149,5 @@ permalink: /docs/5.0/templates/
 #### 주석
 
 	{% raw %}{{{% endraw %}-- This comment will not be in the rendered HTML --{% raw %}}}{% endraw %}
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-템플릿(Templates)-기타 블레이드 컨트롤 구조" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

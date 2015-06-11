@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>서비스 프로바이더(Service Providers)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/providers/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="서비스-프로바이더(service-providers)">서비스 프로바이더(Service Providers)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#basic-provider-example">기본적인 프로바이더 예제</a></li>
+<li><a href="#registering-providers">프로바이더 등록하기</a></li>
+<li><a href="#deferred-providers">지연 프로바이더</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>서비스 프로바이더는 라라벨 어플리케이션의 부팅(부트스트래핑)의 가장 핵심이라고 할 수 있습니다. 여러분의 어플리케이션과 마찬가지로 라라벨의 모든 코어 서비스는 서비스 프로바이더를 통해서 부트스트래핑 됩니다.</p>
+
+<p>그런데 “부트스트래핑&quot; 이란 과련 무엇을 의미하는 것일까요? 일반적으로는 서비스 컨테이너에 바인딩을 등록하는 것을 포함해서 이벤트 리스터, 필터 그리고 라우트등을 <strong>등록</strong> 하는 것을 의미합니다. 서비스 프로바이더는 어플리케이션 구성의 핵심입니다.</p>
+
+<p>라라벨에 포함되어 있는 <code>config/app.php</code> 파일을 열어 본다면 <code>providers</code> 배열을 볼 수 있을 것입니다. 배열 안에 있는 모든 서비스 프로바이더 클래스가 어플리케이션에 로드됩니다. 물론, 대부분의 프로바이더는 “지연된” 프로바이더입니다. 이 말은 모든 요청에 대해서 반드시 로드되지 않고 실제로 필요할 때에 로드 된다는 것을 의미합니다.</p>
+
+<p>여기에서는 서비스 프로바이더를 작성하는 방법과 라라벨 어플리케이션에 등록하는 방법을 배워봅시다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="basic-provider-example"></a></p>
+
+<h2 id="기본적인-프로바이더-예제">기본적인 프로바이더 예제</h2>
+
+<p>모든 서비스 프로바이더는 <code>Illuminate\Support\ServiceProvider</code> 클래스를 상속받습니다. 이 추상 클래스는 여러분의 프로바이더에 최소한 <code>register</code> 메소드가 정의되어야 한다는 것을 지정합니다. <code>register</code> 메소드에서는 <strong><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a>에 등록만을 하도록 합니다</strong> <code>register</code> 메소드안에서는 다른 이벤트 리스너나 라우트 또는 기타 기능의 일부등을 등록하지 않아야 합니다.</p>
+
+<p>아티즌 CLI에서는 <code>make:provider</code> 명령어를 통해서 손쉽게 새로운 프로바이더를 생성할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:provider RiakServiceProvider
+</code></pre></div>
+<h3 id="register-메소드">Register 메소드</h3>
+
+<p>이제 기본적인 서비스 프로바이더를 살펴봅시다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Providers;
+
+use Riak\Connection;
+use Illuminate\Support\ServiceProvider;
+
+class RiakServiceProvider extends ServiceProvider {
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this-&gt;app-&gt;singleton(&#39;Riak\Contracts\Connection&#39;, function($app)
+        {
+            return new Connection($app[&#39;config&#39;][&#39;riak&#39;]);
+        });
+    }
+
+}
+</code></pre></div>
+<p>이 서비스 프로바이더는 <code>register</code> 메소드만 정의되어 있습니다. 그리고 이 메소드를 통해서 서비스 컨테이너에 <code>Riak\Contracts\Connection</code> 구현 객체를 정의하고 있습니다. 서비스 컨테이너가 어떻게 작동하는지 이해하지 못하더라도 걱정하지 마십시오. <a href="/laravel-korean-docs/docs/5.0/container">곧바로 알 수 있습니다.</a></p>
+
+<p>이 클래스는 라라벨의 기본 설치 장소에 있으므로 <code>App\Providers</code> 네임스페이스를 가집니다. 그렇지만 원한다면 네임스페이스를 변경할 수도 있습니다. 여러분의 서비스 프로바이더는 컴포저가 오토로딩을 할 수 있는 곳이라면 어디에 위치하더라도 상관없습니다.</p>
+
+<h3 id="boot-메소드">Boot 메소드</h3>
+
+<p>그럼 이제 서비스 프로바이더 안에서 이벤트 리스너를 등록할 필요가 있다면 어떻게 해야 할까요? 그런 작업은 <code>boot</code> 메소드 안에서 해야 합니다. <strong>이 메소드는 모든 다른 서비스 프로바이더들이 등록된 이후에 호출됩니다</strong> 즉, 프레임 워크에 의해 등록된 다른 모든 서비스들에 액세스 할 수 있다는 것을 의미합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Providers;
+
+use Event;
+use Illuminate\Support\ServiceProvider;
+
+class EventServiceProvider extends ServiceProvider {
+
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Event::listen(&#39;SomeEvent&#39;, &#39;SomeEventHandler&#39;);
+    }
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p><code>boot</code> 메소드에서는 의존성 주입을 위해서 타입 힌트를 사용할 수 있습니다. 서비스 컨테이너는 자동으로 필요한 의존 객체를 주입할 것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">use Illuminate\Contracts\Events\Dispatcher;
+
+public function boot(Dispatcher $events)
+{
+    $events-&gt;listen(&#39;SomeEvent&#39;, &#39;SomeEventHandler&#39;);
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-기본적인 프로바이더 예제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="registering-providers"></a></p>
+
+<h2 id="프로바이더-등록하기">프로바이더 등록하기</h2>
+
+<p>모든 서비스 프로바이더들은 <code>config/app.php</code> 설정 파일에 등록되어 있습니다. 이 파일에는 서비스 프로바이더들의 이름을 나열하고 등록할 수 있는 <code>providers</code> 배열이 포함되어 있습니다. 기본적으로는 라라벨의 코어 서비스 프로바이더들이 배열에 나열되어 있습니다. 이 프로바이더들이 라라벨의 메일러, 큐, 캐시등과 같은 핵심적인 컴포넌트들을 부트스트랩핑 하게 됩니다.</p>
+
+<p>여러분의 프로바이더들을 등록하려면 이 배열에 추가만 하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;providers&#39; =&gt; [
+    // Other Service Providers
+
+    &#39;App\Providers\AppServiceProvider&#39;,
+],
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-프로바이더 등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="deferred-providers"></a></p>
+
+<h2 id="지연(deferred)-프로바이더">지연(deferred) 프로바이더</h2>
+
+<p>만약 여러분의 프로바이더가 <strong>단지</strong> <a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a>에 바인딩을 등록하기만 한다면, 등록된 바인딩이 실제로 필요할때까지 등록 자체를 지연(deferred) 시킬 수 있습니다. 이러한 프로바이더 로딩의 지연(deferred)은 모든 요청에 프로바이더를 파일 시스템에서 로드하지 않으므로 어플리케이션의 성능을 향상시킬 것입니다.</p>
+
+<p>프로바이더를 지연(defer) 로딩 하려면 프로바이더의 <code>defer</code> 프로퍼티를 <code>true</code>로 설정하고 <code>provides</code> 메소드를 정의하면 됩니다. The 메소드는 서비스 컨테이너에 프로바이더를 등록하는 바인딩을 리턴합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Providers;
+
+use Riak\Connection;
+use Illuminate\Support\ServiceProvider;
+
+class RiakServiceProvider extends ServiceProvider {
+
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = true;
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this-&gt;app-&gt;singleton(&#39;Riak\Contracts\Connection&#39;, function($app)
+        {
+            return new Connection($app[&#39;config&#39;][&#39;riak&#39;]);
+        });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [&#39;Riak\Contracts\Connection&#39;];
+    }
+
+}
+</code></pre></div>
+<p>라라벨은 지연된 서비스 프로바이더가 제공하는 모든 서비스들의 리스트를 서비스 프로바이더 클래스 이름과 함께 컴파일하고 저장합니다. 그러면 라라벨은 지연된 서비스 프로바이더들 중에 하나에 대한 의존성 해결이 필요할 때에만 프로바이더를 로드합니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-지연(deferred) 프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

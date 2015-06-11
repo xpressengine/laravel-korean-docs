@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>아티즌 CLI(Artisan CLI)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/artisan/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="아티즌-cli(artisan-cli)">아티즌 CLI(Artisan CLI)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#usage">사용법</a></li>
+<li><a href="#calling-commands-outside-of-cli">CLI 외부에서 명령어 호출하는 법</a></li>
+<li><a href="#scheduling-artisan-commands">아티즌 명령어 스케줄링</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>아티즌(Artisan)은 라라벨에 포함된 커맨드라인 인터페이스(CLI)의 이름입니다. 아티즌은 어플리케이션 개발에 도움을 주는 많은 명령어들을 제공합니다. 아티즌은 강력한 Symfony 콘솔 콤포넌트에서 동작합니다.</p>
+
+<p><a name="usage"></a></p>
+
+<h2 id="사용법">사용법</h2>
+
+<h4 id="사용가능한-전체-아티즌-명령어-목록-확인">사용가능한 전체 아티즌 명령어 목록 확인</h4>
+
+<p>사용가능한 아티즌의 전체 명령어들을 확인하려면 <code>list</code> 명령어를 입력하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan list
+</code></pre></div>
+<h4 id="명령어의-도움말-화면-보기">명령어의 도움말 화면 보기</h4>
+
+<p>모든 명령어는 각각의 설명과 사용 가능한 인수및 옵션을 보여주는 &quot;도움말&quot; 화면을 포함하고 있습니다. 도움말 화면을 표시하려면 명령어 앞에 <code>help</code>를 입력하십시오:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan help migrate
+</code></pre></div>
+<h4 id="명령어의-구동-환경-지정하기">명령어의 구동 환경 지정하기</h4>
+
+<p><code>--env</code> 스위치 옵션을 통해서 명령어가 구동되는 환경을 지정해 줄 수 있습니다: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan migrate --env=local
+</code></pre></div>
+<h4 id="설치된-현재-라라벨-버전-확인하기">설치된 현재 라라벨 버전 확인하기</h4>
+
+<p>설치되어 있는 라라벨의 버전을 확인하려면 <code>--version</code> 옵션을 입력하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan --version
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌CLI(ArtisanCLI)사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="calling-commands-outside-of-cli"></a></p>
+
+<h2 id="cli-외부에서-명령어-호출하기">CLI 외부에서 명령어 호출하기</h2>
+
+<p>때로는 CLI 외부에서 아티즌 명령어를 실행하기를 원할 수도 있습니다. 예를 들어 HTTP 라우트를 통해서 아티즘 명령어를 실행하기를 원할 수도 있습니다. 이럴 때에는 그냥 <code>Artisan</code> 파사드를 사용하면 됩니다. </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::get(&#39;/foo&#39;, function()
+{
+    $exitCode = Artisan::call(&#39;command:name&#39;, [&#39;--option&#39; =&gt; &#39;foo&#39;]);
+
+    //
+});
+</code></pre></div>
+<p><a href="/laravel-korean-docs/docs/5.0/queues">queue workers</a>를 통해서 아티즌 명령어가 큐를 통해서 백그라운드에서 동작하도록 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::get(&#39;/foo&#39;, function()
+{
+    Artisan::queue(&#39;command:name&#39;, [&#39;--option&#39; =&gt; &#39;foo&#39;]);
+
+    //
+});
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-CLI 외부에서 명령어 호출하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="scheduling-artisan-commands"></a></p>
+
+<h2 id="아티즌-명령어-스케줄링">아티즌 명령어 스케줄링</h2>
+
+<p>이전에는 개발자가 스케줄링을 위한 크론(Cron) 작업을 등록하기 위해서 매번 콘솔에 명령어를 입력해야 했습니다. 하지만 이런 작업은 골치 아픈일입니다. 콘솔 스케줄 작업은 소스가 관리되지도 않고 크론에 작업을 추가하기 위해서는 SSH 로 서버에 접속해야만 했습니다. 좀 더 쉬운 방법을 찾아 봅시다. 라라벨 명령 스케줄러를 사용하게되면 서버에 크론 항목을 단 하나 추가하는 것만으로도, 우아하고 좀 더 다양한 명령어 스케줄 실행 을 정의할 수 있게 해줍니다. </p>
+
+<p>여러분의 명령어 스케줄은 <code>app/Console/Kernel.php</code>파일에 위치하고 있습니다. 이 클래스에서 <code>schedule</code>메소드를 볼 수 있을 것입니다. 좀 더 쉽게 이해하기 위해서 메소드에는 간단한 예제가 포함되어 있습니다. 원하는 만큼 <code>Schedule</code> 오브젝트를 사용하여 스케줄링들을 추가하면 됩니다. 서버에서 크론에 추가해야 할 하나의 작업은 다음과 같습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">* * * * * php /path/to/artisan schedule:run 1&gt;&gt; /dev/null 2&gt;&amp;1
+</code></pre></div>
+<p>이 크론 작업은 매분마다 라라벨 명령 스케줄러를 호출합니다. 그러면 라라벨은 등록된 스케줄 작업들을 계산하여 실행하게 됩니다. 정말 참 쉽죠!</p>
+
+<h3 id="스케줄링-예제">스케줄링 예제</h3>
+
+<p>다음의 몇가지 스케줄링 예제를 살펴보겠습니다:</p>
+
+<h4 id="클로저를-통한-스케줄링">클로저를 통한 스케줄링</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;call(function()
+{
+    // Do some task...
+
+})-&gt;hourly();
+</code></pre></div>
+<h4 id="터미널을-실행하는-스케줄링">터미널을 실행하는 스케줄링</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;exec(&#39;composer self-update&#39;)-&gt;daily();
+</code></pre></div>
+<h4 id="직접-크론-표현식으로-등록하는-법">직접 크론 표현식으로 등록하는 법</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;cron(&#39;* * * * *&#39;);
+</code></pre></div>
+<h4 id="일정한-주기로-실행되는-작업">일정한 주기로 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;everyFiveMinutes();
+
+$schedule-&gt;command(&#39;foo&#39;)-&gt;everyTenMinutes();
+
+$schedule-&gt;command(&#39;foo&#39;)-&gt;everyThirtyMinutes();
+</code></pre></div>
+<h4 id="매일-실행되는-작업">매일 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;daily();
+</code></pre></div>
+<h4 id="특정-시작에-실행되는-작업(24시-기준)">특정 시작에 실행되는 작업(24시 기준)</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;dailyAt(&#39;15:00&#39;);
+</code></pre></div>
+<h4 id="매일-2번씩-실행되는-작업">매일 2번씩 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;twiceDaily();
+</code></pre></div>
+<h4 id="평일에-실행되는-작업">평일에 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;weekdays();
+</code></pre></div>
+<h4 id="매주-실행되는-작업">매주 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;weekly();
+
+// Schedule weekly job for specific day (0-6) and time...
+$schedule-&gt;command(&#39;foo&#39;)-&gt;weeklyOn(1, &#39;8:00&#39;);
+</code></pre></div>
+<h4 id="매월-실행되는-작업">매월 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;monthly();
+</code></pre></div>
+<h4 id="특정-요일에-실행되는-작업">특정 요일에 실행되는 작업</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;mondays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;tuesdays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;wednesdays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;thursdays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;fridays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;saturdays();
+$schedule-&gt;command(&#39;foo&#39;)-&gt;sundays();
+</code></pre></div>
+<h4 id="중복-작업-방지하기">중복 작업 방지하기</h4>
+
+<p>기본적으로 예약된 작업은 이전 인스턴스가 여전히 실행중이더라도 실행됩니다. 이를 방지하려면 <code>withoutOverlapping</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;withoutOverlapping();
+</code></pre></div>
+<p>이 예제에서 <code>foo</code> 명령어는 이미 실행되고 있지 않은 경우에 매분마다 실행됩니다. </p>
+
+<h4 id="구동-환경에-따라서-작업-실행해야-할-때">구동 환경에 따라서 작업 실행해야 할 때</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;monthly()-&gt;environments(&#39;production&#39;);
+</code></pre></div>
+<h4 id="공사중모드일때-실행되도록-지정하기">공사중모드일때 실행되도록 지정하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;monthly()-&gt;evenInMaintenanceMode();
+</code></pre></div>
+<h4 id="콜백-결과가-true-일때만-실행">콜백 결과가 True 일때만 실행</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;monthly()-&gt;when(function()
+{
+    return true;
+});
+</code></pre></div>
+<h4 id="스케줄-작업-결과를-이메일로-받아보기">스케줄 작업 결과를 이메일로 받아보기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;sendOutputTo($filePath)-&gt;emailOutputTo(&#39;foo@example.com&#39;);
+</code></pre></div>
+<blockquote>
+<p><strong>주의:</strong> 이메일을 보내기 전에 파일로 결과를 저장해야 합니다. </p>
+</blockquote>
+
+<h4 id="특정-파일로-스케줄-작업-결과-저장하기">특정 파일로 스케줄 작업 결과 저장하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;sendOutputTo($filePath);
+</code></pre></div>
+<h4 id="작업이-실행된-후에-특정-url-접속하기">작업이 실행된 후에 특정 URL 접속하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$schedule-&gt;command(&#39;foo&#39;)-&gt;thenPing($url);
+</code></pre></div>
+<p><code>thenPing($url)</code>기능을 사용하려면 Guzzle HTTP 라이브러리가 필요합니다. <code>composer.json</code> 파일에 다음 라인을 추가하여 Guzzle 5 를 추가할 수 있습니다. </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;guzzlehttp/guzzle&quot;: &quot;~5.0&quot;
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 스케줄링" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

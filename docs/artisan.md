@@ -43,6 +43,7 @@ permalink: /docs/5.0/artisan/
 
 	php artisan --version
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌CLI(ArtisanCLI)사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="calling-commands-outside-of-cli"></a>
 ## CLI 외부에서 명령어 호출하기
 
@@ -64,6 +65,7 @@ permalink: /docs/5.0/artisan/
 		//
 	});
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-CLI 외부에서 명령어 호출하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="scheduling-artisan-commands"></a>
 ## 아티즌 명령어 스케줄링
 
@@ -180,3 +182,5 @@ permalink: /docs/5.0/artisan/
 `thenPing($url)`기능을 사용하려면 Guzzle HTTP 라이브러리가 필요합니다. `composer.json` 파일에 다음 라인을 추가하여 Guzzle 5 를 추가할 수 있습니다. 
 
 	"guzzlehttp/guzzle": "~5.0"
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 스케줄링" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

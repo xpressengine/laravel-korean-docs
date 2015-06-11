@@ -25,23 +25,23 @@ permalink: /docs/5.0/responses/
 
 #### 사용자 지정 Response 생성하기
 
-대부분의 라우트나 컨트롤러 액션에서는 `Illuminate\Http\Response`의 인스턴스나 [뷰](/laravel-korean-docs/docs/5.0/views)를 반환합니다. `Response` 인스턴스를 반환하는 것은 여러분이 response 의 HTTP 상태 코드나 헤더를 변경할 수 있도록 지원합니다. `Response`는 `Symfony\Component\HttpFoundation\Response` 클래스를 상속받고 있으며 HTTP response 를 만들기 위한 다양한 메소드를 제공합니다. 
+대부분의 라우트나 컨트롤러 액션에서는 `Illuminate\Http\Response`의 인스턴스나 [뷰](/laravel-korean-docs/docs/5.0/views)를 반환합니다. `Response` 인스턴스를 반환하는 것은 여러분이 response 의 HTTP 상태 코드나 헤더를 변경할 수 있도록 지원합니다. `Response`는 `Symfony\Component\HttpFoundation\Response` 클래스를 상속받고 있으며 HTTP response 를 만들기 위한 다양한 메소드를 제공합니다.
 
 	use Illuminate\Http\Response;
 
 	return (new Response($content, $status))
 	              ->header('Content-Type', $value);
 
-좀 더 쉬운 방법으로 `response` 헬퍼함수를 사용할 수 있습니다. 
+좀 더 쉬운 방법으로 `response` 헬퍼함수를 사용할 수 있습니다.
 
 	return response($content, $status)
 	              ->header('Content-Type', $value);
 
-> **참고:** `Response` 객체의 사용가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/{% raw %}{{{% endraw %}version{% raw %}}}{% endraw %}/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html) 를 참고하십시오. 
+> **참고:** `Response` 객체의 사용가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/{% raw %}{{{% endraw %}version{% raw %}}}{% endraw %}/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html) 를 참고하십시오.
 
 #### Response 에서 뷰파일 내보내기
 
-`Response` 클래스 메서드에 액세스 할 필요가 있지만, Response 의 컨텐츠 내용으로 뷰를 반환하고 싶다면, `view` 메소드를 사용하면 됩니다. 
+`Response` 클래스 메서드에 액세스 할 필요가 있지만, Response 의 컨텐츠 내용으로 뷰를 반환하고 싶다면, `view` 메소드를 사용하면 됩니다.
 
 	return response()->view('hello')->header('Content-Type', $type);
 
@@ -56,14 +56,16 @@ permalink: /docs/5.0/responses/
 	return response()->view('hello')->header('Content-Type', $type)
                      ->withCookie(cookie('name', 'value'));
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP Responses-기본적인 Responses" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="redirects"></a>
 ## 리다이렉트
 
-일반적으로 리다이렉트 Response 는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는 데 필요한 적절한 헤더를 포함하고 있습니다. 
+일반적으로 리다이렉트 Response 는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는 데 필요한 적절한 헤더를 포함하고 있습니다.
 
-#### 리다이렉트 반환하기 
+#### 리다이렉트 반환하기
 
-`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼함수를 사용하게 됩니다. 
+`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼함수를 사용하게 됩니다.
 
 	return redirect('user/login');
 
@@ -89,7 +91,7 @@ permalink: /docs/5.0/responses/
 
 #### 이름이 지정된 라우트로 파라미터와 함께 리다이렉트 하기
 
-라우트에 전달해야 할 파라미터가 있다면 `route` 메소드의 두 번째 인자로 전달하면 됩니다. 
+라우트에 전달해야 할 파라미터가 있다면 `route` 메소드의 두 번째 인자로 전달하면 됩니다.
 
 	// For a route with the following URI: profile/{id}
 
@@ -107,24 +109,26 @@ permalink: /docs/5.0/responses/
 
 #### 컨트롤러 액션으로 리다이렉트 하기
 
-이름이 지정된 라우트로 이동하는 `RedirectResponse` 인스턴스를 생성하는것과 비슷하게 [컨트롤러 액션](/laravel-korean-docs/docs/5.0/controllers) 으로 리다이렉션 할 수 있습니다. 
+이름이 지정된 라우트로 이동하는 `RedirectResponse` 인스턴스를 생성하는것과 비슷하게 [컨트롤러 액션](/laravel-korean-docs/docs/5.0/controllers) 으로 리다이렉션 할 수 있습니다.
 
 	return redirect()->action('App\Http\Controllers\HomeController@index');
 
 > **주의:** `URL:setRootControllerNamespace` 를 통해서 컨트롤러의 루트 네임스페이스가 지정되었다면, 전체 네임 스페이스를 지정할 필요가 없습니다.
 
-#### 컨트롤러 액션으로 파라미터와 함께 리다이렉트 하기 
+#### 컨트롤러 액션으로 파라미터와 함께 리다이렉트 하기
 
 	return redirect()->action('App\Http\Controllers\UserController@profile', [1]);
 
-#### 컨트롤러 액션으로 파라미터 이름과 함께 리다이렉트 하기 
+#### 컨트롤러 액션으로 파라미터 이름과 함께 리다이렉트 하기
 
 	return redirect()->action('App\Http\Controllers\UserController@profile', ['user' => 1]);
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP Responses-리다이렉트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="other-responses"></a>
 ## 기타 Response
 
-`response` 헬퍼함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/laravel-korean-docs/docs/5.0/contracts) 를 반환합니다. 이 contract 는 response 를 생성하기 위한 다양한 메소드를 제공합니다. 
+`response` 헬퍼함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/laravel-korean-docs/docs/5.0/contracts) 를 반환합니다. 이 contract 는 response 를 생성하기 위한 다양한 메소드를 제공합니다.
 
 #### JSON response 생성하기
 
@@ -132,7 +136,7 @@ permalink: /docs/5.0/responses/
 
 	return response()->json(['name' => 'Abigail', 'state' => 'CA']);
 
-#### JSONP Response 생성하기 
+#### JSONP Response 생성하기
 
 	return response()->json(['name' => 'Abigail', 'state' => 'CA'])
 	                 ->setCallback($request->input('callback'));
@@ -146,6 +150,8 @@ permalink: /docs/5.0/responses/
 	return response()->download($pathToFile)->deleteFileAfterSend(true);
 
 > **참고:** 파일 다운로드를 관리하는 Symfony의 HttpFoundation에서 다운로드 할 파일의 이름이 ASCII 파일 이름임을 필요로 하고 있습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP Responses-기타 Response" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="response-macros"></a>
 ## Response 매크로
@@ -176,6 +182,8 @@ permalink: /docs/5.0/responses/
 
 	}
 
-`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다. 
+`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다.
 
 	return response()->caps('foo');
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP Responses-Response 매크로" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

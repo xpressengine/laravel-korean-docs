@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>라라벨 엘릭서(Laravel Elixir)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/elixir/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="라라벨-엘릭서(laravel-elixir)">라라벨 엘릭서(Laravel Elixir)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#installation">설치 및 준비</a></li>
+<li><a href="#usage">사용법</a></li>
+<li><a href="#gulp">Gulp</a></li>
+<li><a href="#extensions">Extensions</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>라라벨 Elixir(엘릭서)는 여러분의 라라벨 어플리케이션에 기본적인 <a href="http://gulpjs.com">Gulp</a> 작업들을 정의하기 위해 깔끔하고 편리한 API를 제공합니다. Elixir는 몇가지 공통적인 CSS와 JavaScript 전처리 작업, 또한 테스팅 툴까지 제공합니다.</p>
+
+<p>만약 여러분이 Gulp 과 asset compilation를 어떻게 시작해야 되는지 어려워한 적이 있다면 라라벨 Elixir 를 좋아하게 될 것입니다!</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="installation"></a></p>
+
+<h2 id="설치-및-준비">설치 및 준비</h2>
+
+<h3 id="node-설치하기">Node 설치하기</h3>
+
+<p>Elixir를 사용하기전 여러분의 작업환경에 Node.js가 설치되어있는지 확인하십시오.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">node -v
+</code></pre></div>
+<p>기본적으로 라라벨의 홈스테드는 여러분이 필요로하는 모든것을 포함하고 있습니다. 그러나 Vagrant를 사용하지 않으신다면 <a href="http://nodejs.org/download/">Node.js 다운로드 페이지</a>에서 관련 문서를 통해서 쉽게 설치할 수 있습니다. 걱정하지 마십시오! 설치는 간단하고 빠르게 진행됩니다.</p>
+
+<h3 id="gulp">Gulp</h3>
+
+<p>다음으로 아래와 같이 <a href="http://gulpjs.com">Gulp</a>을 글로벌 NPM 패키지로 설치합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install --global gulp
+</code></pre></div>
+<h3 id="라라벨-elixir">라라벨 Elixir</h3>
+
+<p>마지막으로 남은 과정은 Elixir를 설치하는 것 뿐입니다. 라라벨을 새로 설치하면 루트 폴더에 위치한 <code>package.json</code> 파일을 볼 수 있습니다. 이 파일은 PHP 대신 Node 의존 패키지를 정의 한다는것을 빼고는 여러분의 <code>composer.json</code>과 동일합니다. 아래의 명령어로 의존 패키지들을 설치할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-설치 및 준비" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="usage"></a></p>
+
+<h2 id="사용법">사용법</h2>
+
+<p>Elixir 설치를 완료했으므로 이제 바로 파일들을 컴파일하고 결합할 수 있습니다! 프로젝트 루트 폴더에 존재하는 <code>gulpfile.js</code> 파일은 모든 Elixir 작업들을 가지고 있습니다..</p>
+
+<h4 id="less-컴파일하기">Less 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">less</span><span class="p">(</span><span class="s2">&quot;app.less&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>위의 예제에서 Elixir는 Less 파일들이 <code>resources/assets/less</code> 안에 위치하다고 가정하고 있습니다.</p>
+
+<h4 id="여러개의-less-파일들-컴파일하기">여러개의 Less 파일들 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">less</span><span class="p">([</span>
+        <span class="s1">&#39;app.less&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;something-else.less&#39;</span>
+    <span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="sass-컴파일하기">Sass 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">sass</span><span class="p">(</span><span class="s2">&quot;app.scss&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이 때 Sass 파일들은 <code>resources/assets/sass</code>에 포함되어있다고 가정하고 있습니다.</p>
+
+<p>기본적으로, Elixir는 컴파일을 위해 LibSass 라이브러리를 사용하고 있습니다. 몇몇의 경우에는 비록 느리지만 기능이 풍부한 Ruby 버전을 사용하는 것이 더 유리할 수도 있습니다. Ruby와 Sass가 gem(<code>gem install sass</code>)으로 설치되었다면, 다음처럼 Ruby-mode를 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">rubySass</span><span class="p">(</span><span class="s2">&quot;app.sass&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="소스-맵없이-컴파일-하기">소스 맵없이 컴파일 하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">sourcemaps</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">sass</span><span class="p">(</span><span class="s2">&quot;app.scss&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>별다른 설정 없이도 소스 맵은 활성화 되어있습니다. 각 파일들이 컴파일 될때 <code>*.css.map</code> 파일이 같은 폴더 안에 생성되는것을 확인하실 수 있습니다. 이 매핑은 여러분이 디버깅을 할 때 컴파일된 스타일 시트 셀렉터에서 원래의 Sass 나 Less에서 정의된 부분을 찾을 수 있게 해줍니다. 하지만 이 기능을 비활성화 하길 원한다면 위와 같은 코드 샘플을 사용할 수 있습니다.</p>
+
+<h4 id="coffeescript-컴파일하기">CoffeeScript 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">coffee</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이 코드는 CoffeeScript 파일들이 <code>resources/assets/coffee</code>에 저장되어 있다고 가정합니다.</p>
+
+<h4 id="모든-less-와-coffeescript-컴파일하기">모든 Less 와 CoffeeScript 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">less</span><span class="p">()</span>
+       <span class="p">.</span><span class="nx">coffee</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="phpunit-테스트-시작">PHPUnit 테스트 시작</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">phpUnit</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="phpspec-테스트-시작">PHPSpec 테스트 시작</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">phpSpec</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="스타일-시트-결합하기">스타일 시트 결합하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">styles</span><span class="p">([</span>
+        <span class="s2">&quot;normalize.css&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;main.css&quot;</span>
+    <span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이 메소드에 전달된 경로는 <code>resources/assets/css</code> 폴더의 상대 경로입니다.</p>
+
+<h4 id="스타일-시트를-결합하고-사용자-정의-폴더에-저장하기">스타일 시트를 결합하고 사용자 정의 폴더에 저장하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">styles</span><span class="p">([</span>
+        <span class="s2">&quot;normalize.css&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;main.css&quot;</span>
+    <span class="p">],</span> <span class="s1">&#39;public/build/css/everything.css&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="사용자-정의된-폴더로부터-스타일-시트-결합하기">사용자 정의된 폴더로부터 스타일 시트 결합하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">styles</span><span class="p">([</span>
+        <span class="s2">&quot;normalize.css&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;main.css&quot;</span>
+    <span class="p">],</span> <span class="s1">&#39;public/build/css/everything.css&#39;</span><span class="p">,</span> <span class="s1">&#39;public/css&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><code>styles</code>와 <code>scripts</code> 메소드의 세번 째 인자는 메소드에 전달되는 모든 상대 경로에 적용되는 기본 디렉토리를 의미합니다.</p>
+
+<h4 id="폴더에-포함된-모든-스타일-시트-결합하기.">폴더에 포함된 모든 스타일 시트 결합하기.</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">stylesIn</span><span class="p">(</span><span class="s2">&quot;public/css&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="스크립트-파일-결합하기.">스크립트 파일 결합하기.</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">scripts</span><span class="p">([</span>
+        <span class="s2">&quot;jquery.js&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;app.js&quot;</span>
+    <span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이 경우에서도 전체 경로는 <code>resources/assets/js</code> 폴더의 상대 경로로 가정됩니다.</p>
+
+<h4 id="폴더내의-모든-스크립트-파일-결합하기">폴더내의 모든 스크립트 파일 결합하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">scriptsIn</span><span class="p">(</span><span class="s2">&quot;public/js/some/directory&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="여러-스크립트-파일-결합하기.">여러 스크립트 파일 결합하기.</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">scripts</span><span class="p">([</span><span class="s1">&#39;jquery.js&#39;</span><span class="p">,</span> <span class="s1">&#39;main.js&#39;</span><span class="p">],</span> <span class="s1">&#39;public/js/main.js&#39;</span><span class="p">)</span>
+       <span class="p">.</span><span class="nx">scripts</span><span class="p">([</span><span class="s1">&#39;forum.js&#39;</span><span class="p">,</span> <span class="s1">&#39;threads.js&#39;</span><span class="p">],</span> <span class="s1">&#39;public/js/forum.js&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="버전-/-해시-파일">버전 / 해시 파일</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">version</span><span class="p">(</span><span class="s2">&quot;css/all.css&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>위의 코드는 캐시-버스팅을 위해 고유한 해시값을를 파일 이름에 추가합니다. 예를들어 생성된 파일 이름은 <code>all-16d570a7.css</code>와 같이 생성될 것입니다.</p>
+
+<p>뷰 파일 안에서 해쉬된 asset를 로드하기 위해서 <code>elixir()</code> 함수를 사용할 수 있습니다. 다음은 그 예제입니다.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">css</span><span class="err">/</span><span class="na">all</span><span class="err">.</span><span class="na">css</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>어플리케이션 내부에서 <code>elixir()</code>함수는 로드(include) 해야하는 해시된 파일의 이름을 결정합니다. 벌써 무거운 짐을 내려놓은 것 같지 않으신가요?</p>
+
+<p>여러 파일들에 버전 지정을 위해 <code>version</code> 메소드에 배열을 전달할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">version</span><span class="p">([</span><span class="s2">&quot;css/all.css&quot;</span><span class="p">,</span> <span class="s2">&quot;js/app.js&quot;</span><span class="p">]);</span>
+<span class="p">});</span>
+</code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">css</span><span class="err">/</span><span class="na">all</span><span class="err">.</span><span class="na">css</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;{{ elixir(&quot;</span><span class="na">js</span><span class="err">/</span><span class="na">app</span><span class="err">.</span><span class="na">js</span><span class="err">&quot;)</span> <span class="err">}}&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h4 id="새로운-경로에-파일-복사하기">새로운 경로에 파일 복사하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">&#39;vendor/foo/bar.css&#39;</span><span class="p">,</span> <span class="s1">&#39;public/css/bar.css&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="새로운-경로에-폴더-전체를-복사하기">새로운 경로에 폴더 전체를 복사하기</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">&#39;vendor/package/views&#39;</span><span class="p">,</span> <span class="s1">&#39;resources/views&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="browserify-트리거">Browserify 트리거</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">browserify</span><span class="p">(</span><span class="s1">&#39;index.js&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>브라우저에 모듈들을 포함하고 싶으신가요? EcmaScript 6를 좀더 일찍 사용 하고 싶으신가요? 빌트인 JSX 변환기가 필요하신가요? 그렇다면, <a href="http://browserify.org/">Browserify</a>, browserify Elixir 태스크와 함께 작업을 멋지게 처리하세요.</p>
+
+<p>이 태스크는 여러분의 스크립트가 <code>resources/assets/js</code> 저장되어 있다고 가정하지만, 기본 디렉토리를 재정의 할 수도 있습니다.</p>
+
+<h4 id="메소드-체인-(method-chaining)">메소드 체인 (Method Chaining)</h4>
+
+<p>당연하게도, 여러분의 거의 모든 Elixir의 메소드를 체이닝(chain)하여 사용할 수 도 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">less</span><span class="p">(</span><span class="s2">&quot;app.less&quot;</span><span class="p">)</span>
+       <span class="p">.</span><span class="nx">coffee</span><span class="p">()</span>
+       <span class="p">.</span><span class="nx">phpUnit</span><span class="p">()</span>
+       <span class="p">.</span><span class="nx">version</span><span class="p">(</span><span class="s2">&quot;css/bootstrap.css&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="gulp"></a></p>
+
+<h2 id="gulp">Gulp</h2>
+
+<p>이제 작업을 수행하기 위해 커맨드 라인에서 Gulp을 실행만 하면 됩니다.</p>
+
+<h4 id="한번에-모든-등록된-작업을-수행하기">한번에 모든 등록된 작업을 수행하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gulp
+</code></pre></div>
+<h4 id="assets-변경-감시하기">Assets 변경 감시하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gulp watch
+</code></pre></div>
+<h4 id="스크립트-파일만-컴파일하기">스크립트 파일만 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gulp scripts
+</code></pre></div>
+<h4 id="스타일시트-파일만-컴파일하기">스타일시트 파일만 컴파일하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gulp styles
+</code></pre></div>
+<h4 id="테스트와-php-클래스의-변경-감시하기">테스트와 PHP 클래스의 변경 감시하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gulp tdd
+</code></pre></div>
+<blockquote>
+<p><strong>참고</strong> 모든 작업은 개발환경에서 진행된다고 가정하고 있으므로 압축되지 않을 것입니다. 실서버용(production)으로 작업 하기 위해서는 <code>gulp --production</code>을 사용하십시오.</p>
+</blockquote>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-Gulp" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="extensions"></a></p>
+
+<h2 id="커스텀-작업과-확장">커스텀 작업과 확장</h2>
+
+<p>때때로, 여러분의 고유한 Glup 작업들을 엘릭서 안으로 처리하기를(hook) 원할 수도 있습니다. 아마도 여러분은 엘릭서가 합치고 감시하는 특별한 기능이 필요할 수도 있습니다. 문제 없습니다.</p>
+
+<p>아래의 예제와 같이 작업이 호출되었을때 단순히 텍스트를 출력하는 일반적인 작업이 있다고 가정해봅시다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s2">&quot;speak&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;Tea...Earl Grey...Hot&quot;</span><span class="p">;</span>
+
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">shell</span><span class="p">(</span><span class="s2">&quot;say &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>충분히 쉽습니다. 물론 커맨드 라인에서도 작업을 시작하기 위해 <code>gulp speak</code>를 호출할 수 있습니다. 그러나 이것을 Elixir에 추가하기 위해서 <code>mix.task()</code>메소드를 사용하면됩니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;speak&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이게 다입니다! 이제 Gulp을 실행할때마다 여러분이 지정한 &quot;speak&quot;라는 작업은 여러분이 혼합(mix)한 다른 Elixir 작업들과 함께 실행될것입니다. 덧붙여 하나 혹은 여러개의 파일들이 수정될 때마다 사용자 정의 작업이 다시 실행될 수 있도록 감시자(watcher)를 추가로 등록하기 위해 정규 표현식을 두 번째 인수로 전달할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;speak&#39;</span><span class="p">,</span> <span class="s1">&#39;app/**/*.php&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>두 번째 인수를 추가하여 ”app/&quot; 폴더 안의 PHP 파일이 저장될때마다 &quot;speak&quot; 작업을 다시 실행(re-trigger) 하도록 지시 할 수 있습니다.</p>
+
+<p>더 유연하게 사용하기 위해 여러분은 엘릭서(Elixir) extension들을 만들 수 있습니다. 아래와 같이 이전에 사용하던 &quot;speak&quot; 예제로 extension을 작성할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;gulp&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">shell</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;gulp-shell&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">elixir</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;laravel-elixir&quot;</span><span class="p">);</span>
+
+<span class="nx">elixir</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;speak&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s2">&quot;speak&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">shell</span><span class="p">(</span><span class="s2">&quot;say &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">));</span>
+    <span class="p">});</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">queueTask</span><span class="p">(</span><span class="s2">&quot;speak&quot;</span><span class="p">);</span>
+
+ <span class="p">});</span>
+</code></pre></div>
+<p>Gulp 파일 안에서 참조할 이름을 전달하여 엘릭서의 API를 <code>확장</code> 한것과, 콜백 함수를 통해서 Gulp 작업을 생성한것을 주목하십시오.</p>
+
+<p>이전처럼 여러분의 사용자 정의(custom) 작업이 모니터링 되기 원한다면 감시자(watcher)를 등록하십시오.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">registerWatcher</span><span class="p">(</span><span class="s2">&quot;speak&quot;</span><span class="p">,</span> <span class="s2">&quot;app/**/*.php&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>이 명령은  <code>app/**/*.php</code>와 같은 정규식을 일치하는 어떤 파일이 수정되었을때 <code>speak</code>작업이 실행되기를 원한다는 것을 나타냅니다.</p>
+
+<p>이것이 끝입니다! 이것을 Gulpfile 상단에 위치시키거나 사용자 정의 작업 파일로 추출(extract)할 수 있습니다. 후자를 선택할경우 Gulpfile 안에 해당 파일을 아래와 같이 로드(require) 하십시오.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./custom-tasks&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>끝났습니다! 이제 이것을 혼합(mix)하여 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elixir</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mix</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">mix</span><span class="p">.</span><span class="nx">speak</span><span class="p">(</span><span class="s2">&quot;Tea, Earl Grey, Hot&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>이렇게 추가하면 Picard는 Gulp이 시행될 때마다 약간의 차(Tea)를 요구할 것입니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-커스텀 작업과 확장" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>서비스 컨테이너(Service Container)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/container/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="서비스-컨테이너(service-container)">서비스 컨테이너(Service Container)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#basic-usage">기본 사용법</a></li>
+<li><a href="#binding-interfaces-to-implementations">구현 객체에 인터페이스를 바인딩 하는 법</a></li>
+<li><a href="#contextual-binding">상황에 맞는 바인딩</a></li>
+<li><a href="#tagging">태깅</a></li>
+<li><a href="#practical-applications">실제 어플리케이션</a></li>
+<li><a href="#container-events">컨테이너 이벤트</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>라라벨의 서비스 컨테이너는 클래스의 의존성을 관리하는 강력한 도구입니다. 의존성 주입이라는 멋진 말의 의미는 다음과 같습니다: 클래스간의 의존성은 클래스 생성될 때 또는 경우에 따라 &quot;setter&quot; 메소드에 의해서 &quot;주입&quot; 된다는 의미입니다:</p>
+
+<p>간단한 예제를 들어 봅시다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Handlers\Commands;
+
+use App\User;
+use App\Commands\PurchasePodcastCommand;
+use Illuminate\Contracts\Mail\Mailer;
+
+class PurchasePodcastHandler {
+
+    /**
+     * The mailer implementation.
+     */
+    protected $mailer;
+
+    /**
+     * Create a new instance.
+     *
+     * @param  Mailer  $mailer
+     * @return void
+     */
+    public function __construct(Mailer $mailer)
+    {
+        $this-&gt;mailer = $mailer;
+    }
+
+    /**
+     * Purchase a podcast.
+     *
+     * @param  PurchasePodcastCommand  $command
+     * @return void
+     */
+    public function handle(PurchasePodcastCommand $command)
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p>위의 예제에서 <code>PurchasePodcast</code> 명령어는 podcast 가 주문이 되면 이메일을 보내야 할 필요가 있습니다. 그래서 우리는 이메일을 보내기 위한 서비스를 <strong>주입</strong> 시킬것입니다. 서비스가 주입되었기 때문에 원하는 경우 쉽게 다른 구현 객체로 바꿀 수 있습니다. 또한 어플리케이션을 테스팅 할 때 손쉽게 &quot;목킹&quot; 할수 있고 메일러의 더미 구현클래스를 만들수 있습니다.</p>
+
+<p>라라벨 서비스 컨테이너를 깊이 이해하는 것은 강력하고 큰 애플리케이션을 구축 할 때나 라라벨 코어에 공헌하기 위해서  중요한 부분입니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="basic-usage"></a></p>
+
+<h2 id="기본-사용법">기본 사용법</h2>
+
+<h3 id="바인딩">바인딩</h3>
+
+<p>대부분의 서비스 컨테이너 바인딩들은 <a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a> 내에서 등록됩니다. 따라서 이러한 모든 예제들은 해당 컨텍스트에서 컨테이너를 사용하는 데모가 될것입니다. 하지만 만약 팩토리와 같이 어플리케이션의 다른 곳에서 컨테이너의 인스턴스가 필요하다면 컨테이너의 인스턴스가 주입되도록 <code>Illuminate\Contracts\Container\Container</code> contract 를 타입힌트로 지정하면 됩니다. 다른 방법으로는 컨테이너에 액세스하기 위해<code>App</code> 파사드를 사용할 수 있습니다.</p>
+
+<h4 id="기본적인-의존성-해결-등록하기">기본적인 의존성 해결 등록하기</h4>
+
+<p>서비스 프로바이더 내에서는 항상 <code>$this-&gt;app</code> 을 통해서 컨테이너 인스턴스에 엑세스 할 수 있습니다.</p>
+
+<p>서비스 컨테이너에 의존성을 등록하는 방법은 클로저 콜백과 구현클래스에 인터페이스를 바인딩 하는것을 포함하여 몇가지 방법이 있습니다. 클로저를 통해서 의존성을 등록할 때에는 컨테이너에 어떤 특정 키(주로 클래스의 이름)와 함께 특정 값을 반환하는 클로저가 등록됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;bind(&#39;FooBar&#39;, function($app)
+{
+    return new FooBar($app[&#39;SomethingElse&#39;]);
+});
+</code></pre></div>
+<h4 id="싱글톤으로-등록하기">싱글톤으로 등록하기</h4>
+
+<p>때로는 컨테이너에 바인딩할 대상이 한번만 수행되고 컨테이너가 여러번 호출해도 동일한 인스턴스가 반환되기를 원할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;singleton(&#39;FooBar&#39;, function($app)
+{
+    return new FooBar($app[&#39;SomethingElse&#39;]);
+});
+</code></pre></div>
+<h4 id="존재하는-인스턴스를-컨테이너에-바인딩하기">존재하는 인스턴스를 컨테이너에 바인딩하기</h4>
+
+<p><code>instance</code> 메소드를 사용하여 이미 존재하는 객체의 인스턴스를 컨테이너에 바인딩 할 수 있습니다. 이후 컨테이너에서 호출이 될때는 매번 주어진 인스턴스가 반환됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$fooBar = new FooBar(new SomethingElse);
+
+$this-&gt;app-&gt;instance(&#39;FooBar&#39;, $fooBar);
+</code></pre></div>
+<h3 id="의존성-해결">의존성 해결</h3>
+
+<p>컨테이너 밖에서 의존성 해결(바인딩한 대상을 호출하여 값을 반환받는것)을 하는 데는 몇가지 방법이 있습니다. 먼저 <code>make</code> 메소드를 사용하는 것입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$fooBar = $this-&gt;app-&gt;make(&#39;FooBar&#39;);
+</code></pre></div>
+<p>두 번째로는 컨테이너가 PHP의 <code>ArrayAccess</code> 를 구현하고 있으므로  “배열 엑세스”를 통해서 사용하는 방법입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$fooBar = $this-&gt;app[&#39;FooBar&#39;];
+</code></pre></div>
+<p>마지막으로 가장 중요한 방법은 컨트롤러, 이벤트 리스너, 큐 잡, 필터 그리고 다른 곳에서도 클래스의 생성자에 &quot;타입-힌트”를 함으로써 컨테이너가 의존성을 해결할 수 있도록 하는 것입니다. 컨테이너는 자동으로 의존 객체를 주입해 줄것입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+use App\Users\Repository as UserRepository;
+
+class UserController extends Controller {
+
+    /**
+     * The user repository instance.
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Show the user with the given ID.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="binding-interfaces-to-implementations"></a></p>
+
+<h2 id="구현-객체에-인터페이스-바인딩하기">구현 객체에 인터페이스 바인딩하기</h2>
+
+<h3 id="구현된-의존객체를-주입하기">구현된 의존객체를 주입하기</h3>
+
+<p>서비스 컨테이너의 강력한 기능중 하나는 주어진 구현 객체에 인터페이스를 바인딩 할 수 있다는 것입니다. 예를 들어, 어떤 어플리케이션이 실시간 이벤트를 주고 받는 <a href="https://pusher.com">Pusher</a> 웹서비스와 연결되어 있다고 해봅시다. 만약 Pusher의 PHP SDK를 사용하고 있다면, Pusher 클라이언트의 인스턴스를 클래스로 주입 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Handlers\Commands;
+
+use App\Commands\CreateOrder;
+use Pusher\Client as PusherClient;
+
+class CreateOrderHandler {
+
+    /**
+     * The Pusher SDK client instance.
+     */
+    protected $pusher;
+
+    /**
+     * Create a new order handler instance.
+     *
+     * @param  PusherClient  $pusher
+     * @return void
+     */
+    public function __construct(PusherClient $pusher)
+    {
+        $this-&gt;pusher = $pusher;
+    }
+
+    /**
+     * Execute the given command.
+     *
+     * @param  CreateOrder  $command
+     * @return void
+     */
+    public function execute(CreateOrder $command)
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p>이 예제에서, 클래스 의존성을 주입하는 것은 좋습니만, Pusher SDK와 완전히 커플링이 되었습니다. 만약 Pusher SDK 메소드가 변경되거나, 새로운 이벤트 서비스로 교체하기로 한다면 <code>CreateOrderHandler</code> 코드를 변경해야만 합니다.</p>
+
+<h3 id="인터페이스에-대한-프로그래밍">인터페이스에 대한 프로그래밍</h3>
+
+<p>이벤트 푸시의 변경에 대해 <code>CreateOrderHandler</code>를 &quot;분리&quot; 시키기 위해서는, <code>EventPusher</code> 인터페이스와 <code>PusherEventPusher</code> 구현 객체를 따로 정의 하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Contracts;
+
+interface EventPusher {
+
+    /**
+     * Push a new event to all clients.
+     *
+     * @param  string  $event
+     * @param  array  $data
+     * @return void
+     */
+    public function push($event, array $data);
+
+}
+</code></pre></div>
+<p>위의 인터페이스에 대한 <code>PusherEventPusher</code> 구현 객체를 생성한 뒤에는 다음과 같이 서비스 컨테이너에 등록하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;bind(&#39;App\Contracts\EventPusher&#39;, &#39;App\Services\PusherEventPusher&#39;);
+</code></pre></div>
+<p>이것은 컨테이너에게 <code>EventPusher</code> 의 구현 객체가 필요하게되면, <code>PusherEventPusher</code> 를 주입하도록 알려주는 것입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    /**
+     * Create a new order handler instance.
+     *
+     * @param  EventPusher  $pusher
+     * @return void
+     */
+    public function __construct(EventPusher $pusher)
+    {
+        $this-&gt;pusher = $pusher;
+    }
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-구현 객체에 인터페이스 바인딩하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="contextual-binding"></a></p>
+
+<h2 id="문맥에-알맞은-바인딩">문맥에 알맞은 바인딩</h2>
+
+<p>때때로 동일한 인터페이스에 대한 2가지 구현 객체가 있고, 각각의 클래스마다 다른 구현 객체를 전달하고자 할 수도 있습니다. 예를 들어 시스템이 새로운 주문을 받을 때에는 Pusher 대신에 <a href="http://www.pubnub.com/">PubNub</a>를 통해서 이벤트를 전송하고자 할 수도 있습니다. 라라벨에서는 이 같은 행동을 정의 할 수 있는 간단하고 유연한 인터페이스를 제공합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;when(&#39;App\Handlers\Commands\CreateOrderHandler&#39;)
+          -&gt;needs(&#39;App\Contracts\EventPusher&#39;)
+          -&gt;give(&#39;App\Services\PubNubEventPusher&#39;);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-문맥에 알맞은 바인딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="tagging"></a></p>
+
+<h2 id="태깅">태깅</h2>
+
+<p>가끔은, 바인딩의 특정 “카테고리” 전체에 대한 의존성 해결을 해야 할 때도 있습니다. 예를 들어, 서로 다른 <code>Report</code> 인터페이스의 구현 객체를 포함하는 배열을 전달 받는 보고서 수집기를 개발하고 있다고 해봅시다. <code>Report</code> 구현 객체를 등록한 뒤에, <code>tag</code> 메소드를 사용하여 태그를 달 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;bind(&#39;SpeedReport&#39;, function()
+{
+    //
+});
+
+$this-&gt;app-&gt;bind(&#39;MemoryReport&#39;, function()
+{
+    //
+});
+
+$this-&gt;app-&gt;tag([&#39;SpeedReport&#39;, &#39;MemoryReport&#39;], &#39;reports&#39;);
+</code></pre></div>
+<p>서비스가 태그가 붙으면 <code>tagged</code> 메소드를 사용하여 손쉽게 의존성을 해결할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;bind(&#39;ReportAggregator&#39;, function($app)
+{
+    return new ReportAggregator($app-&gt;tagged(&#39;reports&#39;));
+});
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-태깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="practical-applications"></a></p>
+
+<h2 id="실용적-어플리케이션">실용적 어플리케이션</h2>
+
+<p>라라벨은 어플리케이션의 유연함과 테스트의 용이함을 높이기 위해서 서비스 컨테이너를 사용 할 수 있는 여러 가지 기회를 제공합니다. 주요한 한 가지 예제는 컨트롤러에서의 의존성 해결입니다. 모든 컨트롤러는 서비스 컨테이너에 의해서 의존성 해결이 가능합니다. 이것은 여러분이 컨트롤러의 생성자 안에서 타입힌트를 작성했다면 그에 해당하는 의존 객체들이 자동으로 주입된다는 것을 의미합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+use App\Repositories\OrderRepository;
+
+class OrdersController extends Controller {
+
+    /**
+     * The order repository instance.
+     */
+    protected $orders;
+
+    /**
+     * Create a controller instance.
+     *
+     * @param  OrderRepository  $orders
+     * @return void
+     */
+    public function __construct(OrderRepository $orders)
+    {
+        $this-&gt;orders = $orders;
+    }
+
+    /**
+     * Show all of the orders.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $orders = $this-&gt;orders-&gt;all();
+
+        return view(&#39;orders&#39;, [&#39;orders&#39; =&gt; $orders]);
+    }
+
+}
+</code></pre></div>
+<p>위의 예제에서 <code>OrderRepository</code> 클래스는 자동으로 컨트롤러에 주입되었습니다. 이것은  <a href="/laravel-korean-docs/docs/5.0/testing">단위 테스트</a>를 할때, 데이터베이스 레이어에 관계없이 “목업” <code>OrderRepository</code>가 컨테이너에 바인딩 될 수 있음을 의미합니다.</p>
+
+<h4 id="컨테이너를-사용하는-다른-예제">컨테이너를 사용하는 다른 예제</h4>
+
+<p>물론, 위에서 말한바와 같이, 서비스 컨테이너를 통해서 라라벨이 의존성을 해결하는 곳이 컨트롤러 뿐만은 아닙니다. 여러분은 라우트 클로저, 필터, 큐 잡, 이벤트 리스너등에서 타입 힌트를 통한 의존성 주입을 할 수 있습니다. 서비스 컨테이너를 사용하는 이러한 경우의 예제는 각각의 문서를 참고하십시오.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-실용적 어플리케이션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="container-events"></a></p>
+
+<h2 id="컨테이너-이벤트">컨테이너 이벤트</h2>
+
+<h4 id="의존성-해결-리스너-등록하기">의존성 해결 리스너 등록하기</h4>
+
+<p>컨테이너는 객체의 의존성 해결을 수행할 때 마다 이벤트를 발생시킵니다. <code>resolving</code> 메소드를 사용하여 이 이벤트들에 대응할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;app-&gt;resolving(function($object, $app)
+{
+    // Called when container resolves object of any type...
+});
+
+$this-&gt;app-&gt;resolving(function(FooBar $fooBar, $app)
+{
+    // Called when container resolves objects of type &quot;FooBar&quot;...
+});
+</code></pre></div>
+<p>의존성이 해결된 객체가 콜백에 전달됩니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 컨테이너(Service Container)-컨테이너 이벤트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

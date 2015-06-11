@@ -18,7 +18,7 @@ permalink: /docs/5.0/helpers/
 
 ### array_add
 
-The `array_add` function adds a given key / value pair to the array if the given key doesn't already exist in the array. `array_add` 함수는 배열 내에 키가 존재하지 않는 경우 주어진 key/value 쌍을 배열에 추가합니다. 
+The `array_add` function adds a given key / value pair to the array if the given key doesn't already exist in the array. `array_add` 함수는 배열 내에 키가 존재하지 않는 경우 주어진 key/value 쌍을 배열에 추가합니다.
 
 	$array = ['foo' => 'bar'];
 
@@ -26,7 +26,7 @@ The `array_add` function adds a given key / value pair to the array if the given
 
 ### array_divide
 
-The `array_divide` function returns two arrays, one containing the keys, and the other containing the values of the original array. `array_divide` 원래의 배열에서 키들을 담고 있는 배열과 값들을 담고 있는 배열, 총 2개의 배열들을 반환합니다. 
+The `array_divide` function returns two arrays, one containing the keys, and the other containing the values of the original array. `array_divide` 원래의 배열에서 키들을 담고 있는 배열과 값들을 담고 있는 배열, 총 2개의 배열들을 반환합니다.
 
 	$array = ['foo' => 'bar'];
 
@@ -34,7 +34,7 @@ The `array_divide` function returns two arrays, one containing the keys, and the
 
 ### array_dot
 
-The `array_dot` function flattens a multi-dimensional array into a single level array that uses "dot" notation to indicate depth. 
+The `array_dot` function flattens a multi-dimensional array into a single level array that uses "dot" notation to indicate depth.
 `array_dot` 함수는 다차원 배열을 ‘점(.)’으로 배열 깊이를 표기하면서 단일 레벨 배열로 만듭니다.
 
 	$array = ['foo' => ['bar' => 'baz']];
@@ -203,7 +203,7 @@ Filter the array using the given Closure.
 
 ### head
 
-Return the first element in the array. 
+Return the first element in the array.
 배열의 첫 번째 요소를 반환합니다.
 
 	$first = head($this->returnsArray('foo'));
@@ -214,6 +214,8 @@ Return the last element in the array. Useful for method chaining.
 배열의 마지막 요소를 반완합니다. 메소드 체인을 사용하는 데 유용합니다.
 
 	$last = last($this->returnsArray('foo'));
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-Arrays 배열" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="paths"></a>
 ## Paths
@@ -233,7 +235,7 @@ Get the fully qualified path to the root of the application install.
 ### config_path
 
 Get the fully qualitifed path to the `config` directory.
-`config` 디렉토리의 완전한 경로를 얻습니다. 
+`config` 디렉토리의 완전한 경로를 얻습니다.
 
 ### public_path
 
@@ -244,6 +246,8 @@ Get the fully qualified path to the `public` directory.
 
 Get the fully qualified path to the `storage` directory.
 `storage` 폴더의 완전한 경로를 얻습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-Paths" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="routing"></a>
 ## Routing
@@ -282,13 +286,15 @@ Register a new DELETE route with the router.
 새로운 DELETE 라우트를 등록합니다.
 
 	delete('foo/bar', 'FooController@action');
-	
+
 ### resource
 
 Register a new RESTful resource route with the router.
 새로운 RESTful 라우트를 등록합니다.
 
 	resource('foo', 'FooController');
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-Routing" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="strings"></a>
 ## Strings
@@ -433,6 +439,8 @@ Translate a given language line with inflection. Alias of `Lang::choice`.
 
 	$value = trans_choice('foo.bar', $count);
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-Strings" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="urls"></a>
 ## URLs
 
@@ -477,6 +485,8 @@ Generate a fully qualified URL to the given path.
 주어진 경로에 대한 완전한 URL을 생성합니다.
 
 	echo url('foo/bar', $parameters = [], $secure = null);
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-URLs" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="miscellaneous"></a>
 ## Miscellaneous
@@ -536,3 +546,5 @@ Return the given object.
 주어진 object를 반환합니다.
 
 	$value = with(new Foo)->doWork();
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Helper Functions 헬퍼함수-Miscellaneous" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

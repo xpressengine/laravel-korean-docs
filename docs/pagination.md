@@ -16,12 +16,14 @@ permalink: /docs/5.0/pagination/
 
 다른 프레임 워크에서는 페이지 출력 처리를 하는것은 굉장히 성가신 일입니다. 하지만 라라벨에서 페이징 처리는 식은 죽 먹기입니다. 라라벨에서는 현재 페이지를 기준으로 페이지 링크들의 “범위”를 손쉽게 생성할 수 있습니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-페이지네이션(Pagination)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="usage"></a>
 ## 사용법
 
-데이터들의 페이징을 처리 할 수 있는 몇가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model 에서 사용하는 것입니다. 
+데이터들의 페이징을 처리 할 수 있는 몇가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model 에서 사용하는 것입니다.
 
-#### 데이터베이스 결과에 페이징하기 
+#### 데이터베이스 결과에 페이징하기
 
 	$users = DB::table('users')->paginate(15);
 
@@ -82,6 +84,8 @@ paginator 에서 제공하는 `setPath` 메소드를 통해 URI를 변경 할 �
 
 위의 예제는 다음과 같은 URLs를 만듭니다: http://example.com/custom/url?page=2
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-페이지네이션(Pagination)-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="appending-to-pagination-links"></a>
 ## 페이지 링크에 추가하기
 
@@ -101,7 +105,11 @@ Paginator의 `appends` 메소드를 사용하면 페이지 링크에 쿼리 스�
 
 	http://example.com/something?page=2#foo
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-페이지네이션(Pagination)-페이지 링크에 추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="converting-to-json"></a>
-## JSON으로 변환하기.
+## JSON으로 변환하기
 
 `Paginator` 클래스는 `Illuminate\Contracts\Support\JsonableInterface` contract을 구현하고`toJson` 메소드를 제공합니다. 따라서 라우트로부터 `Paginator` 객체를  JSON으로 변환할 수 있습니다. 변환된 JSON의 형태는 `total`, `current_page`, 그리고 `last_page`와 같은 메타정보를 포함하고 있습니다. 인스턴스의 데이터는 JSON 배열의 `data` 키를 통해 사용할 수 있습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-페이지네이션(Pagination)-JSON으로 변환하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

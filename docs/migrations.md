@@ -17,6 +17,8 @@ permalink: /docs/5.0/migrations/
 
 마이그레이션은 데이터베이스용 버전 컨트롤러의 일종입니다. 마이그레이션은 여러분의 팀이 데이터베이스 스키마를 수정하고 현재의 스키마 상태를 유지할 수 있도록 해줍니다. 마이그레이션은 일반적으로 어플리케이션의 스키마를 쉽게 관리할 수 있는 [스키마 빌더](/laravel-korean-docs/docs/5.0/schema) 와 함께 사용되어 집니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="creating-migrations"></a>
 ## 마이그레이션 생성하기
 
@@ -24,13 +26,15 @@ permalink: /docs/5.0/migrations/
 
 	php artisan make:migration create_users_table
 
-마이그레이션 파일들은 `database/migrations` 폴더에 저장되고 프레임워크가 마이그레이션의 순서를 알 수 있도록 타임스탬프를 포함하고 있습니다. 
+마이그레이션 파일들은 `database/migrations` 폴더에 저장되고 프레임워크가 마이그레이션의 순서를 알 수 있도록 타임스탬프를 포함하고 있습니다.
 
 `--table`과 `--create`옵션은 테이블의 이름과 마이그레이션하면서 새 테이블을 만들것인지를 결정하는 데 사용할 수 있습니다.
 
 	php artisan make:migration add_votes_to_users_table --table=users
 
 	php artisan make:migration create_users_table --create=users
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="running-migrations"></a>
 ## 마이그레이션 실행하기
@@ -39,13 +43,15 @@ permalink: /docs/5.0/migrations/
 
 	php artisan migrate
 
-> **참고 :** 마이그레이션 실행시 "class not found" 에러 메세지가 출력된다면 `composer dump-autoload` 명령어를 실행해보십시오. 
+> **참고 :** 마이그레이션 실행시 "class not found" 에러 메세지가 출력된다면 `composer dump-autoload` 명령어를 실행해보십시오.
 
 ### 실제 제품 서버에서 강제로 마이그레이션 실행하기
 
 일부의 마이그레이션 작업은 구조 변경이 있을 수 있으며 이로 인해 데이터를 잃을 수도 있습니다. 이러한 위험들로 부터 실제 제품 서버의 데이터베이스를 보호하기 위해 마이그레이션 명령어를 실행하기 전에 확인 메시지가 출력됩니다. 확인 메시지 없이 명령어을 실행시키기 위해서는 `--force` 플래그를 사용하면 됩니다:
 
 	php artisan migrate --force
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="rolling-back-migrations"></a>
 ## 마이그레이션 롤백하기
@@ -64,12 +70,14 @@ permalink: /docs/5.0/migrations/
 
 	php artisan migrate:refresh --seed
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 롤백하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="database-seeding"></a>
 ## 데이터베이스 시딩
 
 라라벨에서는 시드(seed) 클래스를 사용해서 테스트 데이터를 데이터베이스에 설정하는 간단한 방법을 제공합니다. 모든 시드(Seed) 클래스는 `database/seeds` 폴더에 저장됩니다. 시드(Seed)클래스의 이름은 아무렇게나 작성할 수 있지만 가급적 `UserTableSeeder`등과 같이 직관적인 이름 규칙을 따르는 것이 좋습니다. 기본값으로 `DatabaseSeeder`클래스가 정의 되어 있습니다. 이 클래스에서 `call` 메소드로 다른 시드(seed) 클래스를  호출해서 시딩(seeding) 순서를 조정 할 수 있습니다.
 
-#### 데이터베이스 시드(seed) 클래스 예제 
+#### 데이터베이스 시드(seed) 클래스 예제
 
 	class DatabaseSeeder extends Seeder {
 
@@ -104,3 +112,5 @@ permalink: /docs/5.0/migrations/
 `migrate:refresh`명령어를 사용하면 데이터베이스 초기값을 설정할 때 모든 마이그레이션들을 롤백한 다음 다시 실행 할 것입니다:
 
 	php artisan migrate:refresh --seed
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-데이터베이스 시딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

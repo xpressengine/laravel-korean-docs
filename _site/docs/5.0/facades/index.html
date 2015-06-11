@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>파사드(Facades)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/facades/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="파사드(facades)">파사드(Facades)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#explanation">설명 </a></li>
+<li><a href="#practical-usage">실제 사용법</a></li>
+<li><a href="#creating-facades">파사드 생성하기</a></li>
+<li><a href="#mocking-facades">파사드 Mocking</a></li>
+<li><a href="#facade-class-reference">파사드 참조 목록</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>파사드는 어플리케이션의 <a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a>에서 사용가능한 클래스들에 대한 &quot;정적&quot; 인터페이스를 제공합니다. 라라벨은 많은 파사드를 가지고 있으며 여러분이 알지 못하는 사이에도 이미 사용하고 있을 것입니다. 라라벨 “파사드” 는 서비스 컨테이너에 등록된 클래스들에 대한 일종의 “정적 프록시” 역할을 수행하는 데, 이를 통해서 전통적인 정적 메소드 보다 간결한 문법과 테스트의 용이성 그리고 코드의 유연성을 유지하는 이점을 제공합니다.</p>
+
+<p>때로는 여러분의 어플리케이션이나 패키지에서도  파사드를 만들고 싶어질 것입니다. 따라서 파사드의 개념과 개발 방법, 이러한 클래스들의 사용방법에 대해서 알아보겠습니다.</p>
+
+<blockquote>
+<p><strong>주의</strong> 파사드에 대해서 알아보기 전에 라라벨의 <a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a>에 익숙질 것을 적극 권장합니다.</p>
+</blockquote>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="explanation"></a></p>
+
+<h2 id="설명">설명</h2>
+
+<p>라라벨 어플리케이션에의 전체 맥락에서 보자면 파사드는 컨테이너의 객체에 엑세스하는 방법을 제공하는 클래스라고 할 수 있습니다. 이 작업을 수행하는 주요 매커니즘이 파사드 클래스안에 있습니다. 라라벨의 파사드들과 여러분이 작성한 파사드들은 기본 <code>Facade</code> 클래스를 상속받습니다.</p>
+
+<p>여러분이 만드는 파사드 클래스는 <code>getFacadeAccessor</code>라는 하나의 메소드를 구현해야 합니다. <code>getFacadeAccessor</code>메소드의 역할은 컨테이너로 부터 어떤 의존성을 해결하는지에 대해서 정의하는 것입니다. <code>Facade</code> 기본 클래스는 <code>__callStatic()</code> 매직 매소드를 사용하여 여러분이 작성한 파사드에 대한 호출을 의존성이 해결된 객체로 전달합니다.</p>
+
+<p>따라서 여러분이 <code>Cache::get</code> 과 같이 파사드를 호출할 때, 라라벨은 서비스 컨테이너로 부터 의존성을 해결하여 캐시 매니저 획득하고 이 캐시 매니저의 <code>get</code> 메소드를 호출해줍니다. 기술적으로 라라벨의 파사드는 라라벨의 서비스 컨테이너를 하나의 서비스로서 사용하기 위한 편리한 기법입니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-설명" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="practical-usage"></a></p>
+
+<h2 id="실제-사용법">실제 사용법</h2>
+
+<p>다음의 예제에서 라라벨 캐시 시스템을 호출합니다. 이 코드를 보자면, 아마 <code>Cache</code> 클래스의 <code>get</code> static 메소드를 호출한다고 생각할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::get(&#39;key&#39;);
+</code></pre></div>
+<p>그러나 실제로 <code>Illuminate\Support\Facades\Cache</code>를 살펴보면 <code>get</code>이라는 static 메소드는 찾을 수가 없습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Cache extends Facade {
+
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor() { return &#39;cache&#39;; }
+
+}
+</code></pre></div>
+<p>캐시 클래스는 기존 <code>Facade</code> 클래스를 상속하고 <code>getFacadeAccessor()</code> 메소드를 정의하고 있습니다. 유념할 것은 이 메소드의 역할은 컨테이너에 등록된 서비스의 이름을 반환한다는 것입니다.</p>
+
+<p>사용자가 <code>Cache</code> 파사드의 어떤 static 메소드를 사용할 때 라라벨은 서비스 컨테이너에 <code>cache</code> 로 바인딩된 객체의 인스턴스에게 요청된 메소드(여기에서는 <code>get</code>)을 수행합니다.</p>
+
+<p>따라서 <code>Cache::get</code> 호출은 다음처럼 다시 쓸 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = $app-&gt;make(&#39;cache&#39;)-&gt;get(&#39;key&#39;);
+</code></pre></div>
+<h4 id="파사드-가져오기">파사드 가져오기</h4>
+
+<p>네임스페이스가 지정된 컨트롤러 안에서 파사드를 사용할 경우 파사드를 use 하도록 해야한다는 것을 기억하십시오. 모든 파사드는 글로벌 네임스페이스에 지정되어 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Http\Controllers;
+
+use Cache;
+
+class PhotosController extends Controller {
+
+    /**
+     * Get all of the application photos.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $photos = Cache::get(&#39;photos&#39;);
+
+        //
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-실제 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="creating-facades"></a></p>
+
+<h2 id="파사드-생성하기">파사드 생성하기</h2>
+
+<p>어플리케이션이나 패키지에 파사드를 생성하는 것은 어렵지 않습니다. 3가지만 기억하십시오.</p>
+
+<ul>
+<li>서비스 컨테이너 바인딩</li>
+<li>파사드 클래스</li>
+<li>파사드 별칭 설정</li>
+</ul>
+
+<p>다음의 예제를 살펴보겠습니다. <code>PaymentGateway\Payment</code>라는 클래스를 정의하고 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">namespace PaymentGateway;
+
+class Payment {
+
+    public function process()
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p>이 클래스를 서비스 컨테이너에 의해서 의존성이 해결될 수 있도록 해야 합니다. 따라서 서비스 프로바이더에 바인딩을 추가합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">App::bind(&#39;payment&#39;, function()
+{
+    return new \PaymentGateway\Payment;
+});
+</code></pre></div>
+<p>바인딩을 추가하는 좋은 방법은 <code>PaymentServiceProvider</code>라는 <a href="/laravel-korean-docs/docs/5.0/container#service-providers">서비스 프로바이더</a>를 생성하고 <code>register</code> 메소드에서 바인딩을 추가하는 것입니다.  그 다음에 <code>config/app.php</code> 설정 파일에서 라라벨에서 로딩하는 서비스 프로바이더 항목을 설정합니다.</p>
+
+<p>이제 파사드 클래스를 생성합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">use Illuminate\Support\Facades\Facade;
+
+class Payment extends Facade {
+
+    protected static function getFacadeAccessor() { return &#39;payment&#39;; }
+
+}
+</code></pre></div>
+<p>마지막으로 원할 경우, <code>config/app.php</code> 설정 파일의 <code>aliases</code> 배열을 통해서 파사드의 별칭을 지정 할 수 있습니다. 이제 <code>Payment</code> 클래스 인스턴스의 <code>process</code> 메소드를 호출 할 수 있게 되었습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Payment::process();
+</code></pre></div>
+<h3 id="오토로딩-별칭에-대한-주의사항">오토로딩 별칭에 대한 주의사항</h3>
+
+<p><a href="https://bugs.php.net/bug.php?id=39003">PHP는 타입힌트가 정의되지 않은 유형의 클래스들에 대한 오토로드를 시도 하지 않으므로</a> <code>aliases</code> 배열 안에 클래스가 몇몇 인스턴스들 안에서는 사용 가능하지 않습니다. 만약 <code>\ServiceWrapper\ApiTimeoutException</code>이 <code>ApiTimeoutException</code> 라는 별칭으로 지정되었고, <code>\ServiceWrapper</code> 외부 네임 스페이스에서 <code>catch (ApiTimeoutException $e)</code>를 하려 해도 던져진 예외는 포착되지 않습니다. 별칭으로 타입힌트가 설정된 클래스들 사이에서도 비슷한 문제는 발생됩니다. 이에대한 유일한 해결책은 타입힌트를 사용하려는 클래스들 제일 앞부분에 <code>use</code> 를 사용해서 미리 지정해두는 방법입니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="mocking-facades"></a></p>
+
+<h2 id="파사드-mocking">파사드 Mocking</h2>
+
+<p>단위 테스트는 왜 파사드가 저렇게 동작하는지에 대한 매우 중요한 이유입니다. 사실 테스트의 용이성은 파사드가 존재하는 주요한 이유입니다. 보다 자세한 내용에 대해서는 문서의 <a href="/laravel-korean-docs/docs/testing#mocking-facades">mocking facades</a> 섹션을 참고하십시오.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 Mocking" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="facade-class-reference"></a></p>
+
+<h2 id="파사드-참조-목록">파사드 참조 목록</h2>
+
+<p>다음은 모든 파사드 와 실제 클래스에 대한 목록입니다. 여러분이 특정한 파사드를 기준으로 API 문서를 빠르게 찾고자 하는 경우에 도움이 될것입니다. 응용이 가능하도록 <a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너 바인딩</a>도 포함되어 있습니다.</p>
+
+<table><thead>
+<tr>
+<th>Facade</th>
+<th>Class</th>
+<th>Service Container Binding</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>App</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Foundation/Application.html">Illuminate\Foundation\Application</a></td>
+<td><code>app</code></td>
+</tr>
+<tr>
+<td>Artisan</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Console/Application.html">Illuminate\Console\Application</a></td>
+<td><code>artisan</code></td>
+</tr>
+<tr>
+<td>Auth</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Auth/AuthManager.html">Illuminate\Auth\AuthManager</a></td>
+<td><code>auth</code></td>
+</tr>
+<tr>
+<td>Auth (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Auth/Guard.html">Illuminate\Auth\Guard</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Blade</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/View/Compilers/BladeCompiler.html">Illuminate\View\Compilers\BladeCompiler</a></td>
+<td><code>blade.compiler</code></td>
+</tr>
+<tr>
+<td>Bus</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Contracts/Bus/Dispatcher.html">Illuminate\Contracts\Bus\Dispatcher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Cache</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Cache/Repository.html">Illuminate\Cache\CacheManager</a></td>
+<td><code>cache</code></td>
+</tr>
+<tr>
+<td>Config</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Config/Repository.html">Illuminate\Config\Repository</a></td>
+<td><code>config</code></td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Cookie/CookieJar.html">Illuminate\Cookie\CookieJar</a></td>
+<td><code>cookie</code></td>
+</tr>
+<tr>
+<td>Crypt</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Encryption/Encrypter.html">Illuminate\Encryption\Encrypter</a></td>
+<td><code>encrypter</code></td>
+</tr>
+<tr>
+<td>DB</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Database/DatabaseManager.html">Illuminate\Database\DatabaseManager</a></td>
+<td><code>db</code></td>
+</tr>
+<tr>
+<td>DB (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Database/Connection.html">Illuminate\Database\Connection</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Event</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Events/Dispatcher.html">Illuminate\Events\Dispatcher</a></td>
+<td><code>events</code></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Filesystem/Filesystem.html">Illuminate\Filesystem\Filesystem</a></td>
+<td><code>files</code></td>
+</tr>
+<tr>
+<td>Hash</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Contracts/Hashing/Hasher.html">Illuminate\Contracts\Hashing\Hasher</a></td>
+<td><code>hash</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Http/Request.html">Illuminate\Http\Request</a></td>
+<td><code>request</code></td>
+</tr>
+<tr>
+<td>Lang</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Translation/Translator.html">Illuminate\Translation\Translator</a></td>
+<td><code>translator</code></td>
+</tr>
+<tr>
+<td>Log</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Log/Writer.html">Illuminate\Log\Writer</a></td>
+<td><code>log</code></td>
+</tr>
+<tr>
+<td>Mail</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Mail/Mailer.html">Illuminate\Mail\Mailer</a></td>
+<td><code>mailer</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Auth/Passwords/PasswordBroker.html">Illuminate\Auth\Passwords\PasswordBroker</a></td>
+<td><code>auth.password</code></td>
+</tr>
+<tr>
+<td>Queue</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Queue/QueueManager.html">Illuminate\Queue\QueueManager</a></td>
+<td><code>queue</code></td>
+</tr>
+<tr>
+<td>Queue (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Queue/QueueInterface.html">Illuminate\Queue\QueueInterface</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Queue (Base Class)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Queue/Queue.html">Illuminate\Queue\Queue</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Routing/Redirector.html">Illuminate\Routing\Redirector</a></td>
+<td><code>redirect</code></td>
+</tr>
+<tr>
+<td>Redis</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Redis/Database.html">Illuminate\Redis\Database</a></td>
+<td><code>redis</code></td>
+</tr>
+<tr>
+<td>Request</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Http/Request.html">Illuminate\Http\Request</a></td>
+<td><code>request</code></td>
+</tr>
+<tr>
+<td>Response</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Contracts/Routing/ResponseFactory.html">Illuminate\Contracts\Routing\ResponseFactory</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Route</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Routing/Router.html">Illuminate\Routing\Router</a></td>
+<td><code>router</code></td>
+</tr>
+<tr>
+<td>Schema</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Database/Schema/Blueprint.html">Illuminate\Database\Schema\Blueprint</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Session</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Session/SessionManager.html">Illuminate\Session\SessionManager</a></td>
+<td><code>session</code></td>
+</tr>
+<tr>
+<td>Session (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Session/Store.html">Illuminate\Session\Store</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Storage</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Contracts/Filesystem/Factory.html">Illuminate\Contracts\Filesystem\Factory</a></td>
+<td><code>filesystem</code></td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Routing/UrlGenerator.html">Illuminate\Routing\UrlGenerator</a></td>
+<td><code>url</code></td>
+</tr>
+<tr>
+<td>Validator</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Validation/Factory.html">Illuminate\Validation\Factory</a></td>
+<td><code>validator</code></td>
+</tr>
+<tr>
+<td>Validator (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/Validation/Validator.html">Illuminate\Validation\Validator</a></td>
+<td></td>
+</tr>
+<tr>
+<td>View</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/View/Factory.html">Illuminate\View\Factory</a></td>
+<td><code>view</code></td>
+</tr>
+<tr>
+<td>View (Instance)</td>
+<td><a href="http://laravel.com/api/5.0/Illuminate/View/View.html">Illuminate\View\View</a></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 참조 목록" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

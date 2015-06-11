@@ -25,8 +25,10 @@ permalink: /docs/5.0/queries/
 
 > **참고:** 라라벨의 쿼리 빌더는 PDO 파라미터 바인딩을 사용하여 SQL injection 공격을 방지합니다. 따라서 쿼리에 바인딩할 문자열들을 따로 정리하고 전달할 필요가 없습니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="selects"></a>
-## Selects 
+## Selects
 
 #### 한 테이블에서 모든 행들을 가져오기
 
@@ -147,6 +149,8 @@ permalink: /docs/5.0/queries/
 
 	$users = DB::table('users')->skip(10)->take(5)->get();
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Selects" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="joins"></a>
 ## Joins
 
@@ -166,7 +170,7 @@ permalink: /docs/5.0/queries/
 		    ->leftJoin('posts', 'users.id', '=', 'posts.user_id')
 		    ->get();
 
-더 복잡한 join도 지정할 수 있습니다. 
+더 복잡한 join도 지정할 수 있습니다.
 
 	DB::table('users')
 	        ->join('contacts', function($join)
@@ -185,10 +189,12 @@ permalink: /docs/5.0/queries/
 	        })
 	        ->get();
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Joins" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="advanced-wheres"></a>
 ## Advanced Wheres 더 복잡한 조건문
 
-#### Parameter Grouping 
+#### Parameter Grouping
 
 가끔은 “where exists”나 중첩된 파라미터 그루핑과 같이 복잡한 조건문을 사용해야 할 필요가 있습니다. 라라벨의 쿼리 빌더는 다음과 같이 사용할 수 있습니다:
 
@@ -223,10 +229,12 @@ permalink: /docs/5.0/queries/
 		select 1 from orders where orders.user_id = users.id
 	)
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Advanced Wheres 더 복잡한 조건문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="aggregates"></a>
 ## Aggregates 집계
 
-쿼리 빌더는 또한 `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다. 
+쿼리 빌더는 또한 `count`, `max`, `min`, `avg`, 그리고`sum`과 같은 집계를 위한 메소드들을 제공하고 있습니다.
 
 #### 집계를 위한 메소드 사용하기
 
@@ -240,18 +248,22 @@ permalink: /docs/5.0/queries/
 
 	$total = DB::table('users')->sum('votes');
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Aggregates 집계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="raw-expressions"></a>
 ## 직접 질의구문
 
 때때로 직적쿼리를 생성하여 사용할 필요가 있을수도 있습니다. 이러한 구문은 문자열이 쿼리에 그대로 삽입되기 때문에 SQL 인젝션 공격에 주의해야 합니다. 직접 질의 구문을 생성하기 위해서는 `DB::raw` 메소드를 사용하면 됩니다:
 
-#### 직접 질의 구문 사용하기 
+#### 직접 질의 구문 사용하기
 
 	$users = DB::table('users')
 	                     ->select(DB::raw('count(*) as user_count, status'))
 	                     ->where('status', '<>', 1)
 	                     ->groupBy('status')
 	                     ->get();
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-직접 질의구문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="inserts"></a>
 ## Inserts
@@ -279,6 +291,8 @@ permalink: /docs/5.0/queries/
 		['email' => 'dayle@example.com', 'votes' => 0]
 	]);
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Inserts" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="updates"></a>
 ## Updates
 
@@ -302,6 +316,8 @@ permalink: /docs/5.0/queries/
 
 	DB::table('users')->increment('votes', 1, ['name' => 'John']);
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Updates" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="deletes"></a>
 ## Deletes
 
@@ -309,13 +325,15 @@ permalink: /docs/5.0/queries/
 
 	DB::table('users')->where('votes', '<', 100)->delete();
 
-#### 테이블에서 전체 레코드 삭제하기 
+#### 테이블에서 전체 레코드 삭제하기
 
 	DB::table('users')->delete();
 
 #### 테이블 비우기
 
 	DB::table('users')->truncate();
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Deletes" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="unions"></a>
 ## Unions
@@ -328,10 +346,12 @@ permalink: /docs/5.0/queries/
 
 `unionAll` 메소드도 사용가능하며 `union`과 동일하게 사용합니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Unions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="pessimistic-locking"></a>
 ## Pessimistic Locking 배타적 잠금
 
-쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다. 
+쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다.
 
 “shared lock” 에서 SELECT 문을 실행하려면 `sharedLock` 메소드를 쿼리에 지정하십시오:
 
@@ -340,3 +360,5 @@ permalink: /docs/5.0/queries/
 SELECT문을 "lock for update" 하려면 `lockForUpdate` 메소드를 쿼리에 지정하십시오:
 
 	DB::table('users')->where('votes', '>', 100)->lockForUpdate()->get();
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Pessimistic Locking 배타적 잠금" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
