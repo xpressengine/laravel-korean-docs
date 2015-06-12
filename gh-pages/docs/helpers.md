@@ -428,7 +428,7 @@ Convert the given string to `StudlyCase`.
 ### trans
 
 Translate a given language line. Alias of `Lang::get`.
-주어진 언어 문장을 번역합니다. `Lang::get` 의 별칭입니다.
+주어진 언어 문장을 번역합니다. `Lang::get`의 별칭입니다.
 
 	$value = trans('validation.required'):
 
@@ -501,7 +501,7 @@ Get the value of the current CSRF token.
 ### dd
 
 Dump the given variable and end execution of the script.
-주어진 변수와 end execution of the script 를 Dump 합니다.
+주어진 변수와 end execution of the script를 Dump 합니다.
 
 	dd($value);
 

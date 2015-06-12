@@ -33,7 +33,7 @@ permalink: /docs/5.0/views/
 
 보는바와 같이 `view` 헬퍼함수에 전달하는 첫 번째 인자는 `resources/views` 디렉토리에 있는 파일의 이름이 됩니다. 두 번째 전달 인자는 뷰에서 사용하기위한 데이터의 배열입니다.
 
-\당연하게도 뷰는 `resources/views` 디렉토리의 중첩된 서브 디렉토리를 구성할 수 있습니다. 예를들어 뷰파일이 `resources/views/admin/profile.php` 처럼 저장되었다면 다음처럼 호출해야 합니다:
+\당연하게도 뷰는 `resources/views` 디렉토리의 중첩된 서브 디렉토리를 구성할 수 있습니다. 예를 들어, 뷰파일이 `resources/views/admin/profile.php`처럼 저장되었다면 다음처럼 호출해야 합니다:
 
     return view('admin.profile', $data);
 
@@ -49,13 +49,13 @@ permalink: /docs/5.0/views/
 
 필요한 경우에 `view` 헬퍼함수에 두 번째 인자로 데이터 배열을 전달할 수도 있습니다:
 
-    $view = view('greetings', $data);
+	$view = view('greetings', $data);
 
-이러한 방식으로 정보를 전달할 때,`$data`는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 `{% raw %}{{{% endraw %} $key {% raw %}}}{% endraw %}` 와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (`$data['key']`는 존재한다고 가정합니다. )
+이러한 방식으로 정보를 전달할 때,`$data`는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 `{% raw %}{{{% endraw %} $key {% raw %}}}{% endraw %}`와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (`$data['$key']`는 존재한다고 가정합니다. )
 
 #### 모든 뷰에서 데이터 공유하기
 
-때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇가지의 옵션이 있습니다. `view` 헬퍼함수를 사용하거나 `Illuminate\Contracts\View\Factory` [contract](/laravel-korean-docs/docs/5.0/contracts)를 이용하는 법, 또는 와일드 카드의 [view composer](#view-composers)를 통하는 방법입니다.
+때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇 가지의 옵션이 있습니다. `view` 헬퍼 함수를 사용하거나 `Illuminate\Contracts\View\Factory` [contract](/laravel-korean-docs/docs/5.0/contracts)를 이용하는 법, 또는 와일드 카드의 [view composer](#view-composers)를 통하는 방법입니다.
 
 `view` 헬퍼함수를 이용하는 예제입니다.
 
@@ -65,7 +65,7 @@ permalink: /docs/5.0/views/
 
     View::share('data', [1, 2, 3]);
 
-일반적으로 `share` 메소드는 서비스 프로바이더의 `boot` 메소드 안에서 호출합니다.  `AppServiceProvider` 에서 편하게 추가할수도 있고, 다른 별도의 서비스 프로바이더를 생성하고 구성할 수도 있습니다.
+일반적으로 `share` 메소드는 서비스 프로바이더의 `boot` 메소드 안에서 호출합니다.  `AppServiceProvider`에서 편하게 추가할수도 있고, 다른 별도의 서비스 프로바이더를 생성하고 구성할 수도 있습니다.
 
 > ** 참고:** `view` 헬퍼함수를 전달 인자 없이 호출하는 경우에는 반환값은 `Illuminate\Contracts\View\Factory` contract의 구현체가 됩니다.
 
@@ -78,7 +78,7 @@ permalink: /docs/5.0/views/
         //
     }
 
-#### 파일 패스로 부터 view 반환
+#### 파일 패스로부터 view 반환
 
 필요하다면 절대경로를 기반으로 뷰를 생성할 수도 있습니다:
 
@@ -131,7 +131,7 @@ permalink: /docs/5.0/views/
 
     }
 
-> **참고:** 라라벨은 뷰 컴포저를 위한 디렉토리를 기본적으로 포함하고 있지는 않습니다. 여러분이 원하시는대로 편하게 구성하면 됩니다. 예를 들어 `App\Http\ViewComposers` 디렉토리를 새롭게 생성할 수 있습니다.
+> **참고:** 라라벨은 뷰 컴포저를 위한 디렉토리를 기본적으로 포함하고 있지는 않습니다. 여러분이 원하시는대로 편하게 구성하면 됩니다. 예를 들어, `App\Http\ViewComposers` 디렉토리를 새롭게 생성할 수 있습니다.
 
 기억해야 될 부분은 생성한 서비스 프로바이더를 `config/app.php` 설정 파일의 `providers` 배열에 추가해야한다는 것입니다.
 
@@ -178,7 +178,7 @@ permalink: /docs/5.0/views/
 
 뷰가 렌더링되기 전에 뷰 컴포저의 `composer` 메소드가 `Illuminate\Contracts\View\View` 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 `with` 메소드를 사용할 수 있습니다.
 
-> **참고:** 모든 뷰 컴포저의 의존성 주입은 [service container](/laravel-korean-docs/docs/5.0/container), 를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다.
+> **참고:** 모든 뷰 컴포저의 의존성 주입은 [service container](/laravel-korean-docs/docs/5.0/container),를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다.
 
 #### 와일드카드 뷰 컴포저
 

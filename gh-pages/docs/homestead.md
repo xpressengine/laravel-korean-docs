@@ -51,15 +51,15 @@ permalink: /docs/5.0/homestead/
 
 ### VirtualBox / VMware와 Vagrant 설치
 
-라라벨 홈스테드를 구동하기 전에 여러분은 반드시 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 와 [Vagrant](http://www.vagrantup.com/downloads.html)를 설치해야 합니다. 두 가지 소프트웨어 패키지는 모든 운영체제에서 손쉽게 설치할 수 있는 비주얼 프로그램을 제공합니다.
+라라벨 홈스테드를 구동하기 전에 여러분은 반드시 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)와 [Vagrant](http://www.vagrantup.com/downloads.html)를 설치해야 합니다. 두 가지 소프트웨어 패키지는 모든 운영체제에서 손쉽게 설치할 수 있는 비주얼 프로그램을 제공합니다.
 
 #### VMware
 
-VirtualBox 에 더하여, 홈스테드는 VMware 도 지원하고 있습니다. VMware 프로바이더를 사용하려면 VMware Fusion / Desktop 과 [VMware Vagrant plug-in](http://www.vagrantup.com/vmware)을 구매해야 합니다. VMware 는 별다른 설정없이도 더 빠른 공유폴더 퍼포먼스를 제공합니다.
+VirtualBox에 더하여, 홈스테드는 VMware 도 지원하고 있습니다. VMware 프로바이더를 사용하려면 VMware Fusion / Desktop과 [VMware Vagrant plug-in](http://www.vagrantup.com/vmware)을 구매해야 합니다. VMware는 별다른 설정없이도 더 빠른 공유폴더 퍼포먼스를 제공합니다.
 
 ### Vagrant Box 추가하기
 
-VirtualBox / VMware 그리고 Vagrant 가 설치되었다면, 터미널에서 다음의 명령어를 통해서 인스톨된 Vagrant에 `laravel/homestead` box 를 추가해야 합니다. box를 다운로드 하는 것은 인터넨 연결 속도에 따라 몇분 정도 소요됩니다:
+VirtualBox / VMware 그리고 Vagrant가 설치되었다면, 터미널에서 다음의 명령어를 통해서 인스톨된 Vagrant에 `laravel/homestead` box를 추가해야 합니다. box를 다운로드 하는 것은 인터넨 연결 속도에 따라 몇분 정도 소요됩니다:
 
 	vagrant box add laravel/homestead
 
@@ -81,19 +81,19 @@ Git 저장소를 복제하여 수동으로 홈스테드를 설치할 수 있습�
 
 ### 프로바이더 설정하기
 
-`Homestead.yaml` 파일의 `provider` 키는 `virtualbox`, `vmware_fusion`(Max OS X) 와 `vmware_workstation` (Windows) 중 어느 것을 사용할 것인지를 알려줍니다. 여러분이 원하는대로 프로바이더를 설정할 수 있습니다.
+`Homestead.yaml` 파일의 `provider` 키는 `virtualbox`, `vmware_fusion`(Max OS X)와 `vmware_workstation` (Windows) 중 어느 것을 사용할 것인지를 알려줍니다. 여러분이 원하는대로 프로바이더를 설정할 수 있습니다.
 
 	provider: virtualbox
 
 ### SSH 키 설정하기
 
-다음으로 `Homestead.yaml`파일을 편집해야 합니다. 이 파일에서 SSH 공개 키의 경로를 설정할 수 있으며, 또한 메인 머신과 홈스테드 가상 머신 사이에서 공유할 폴더를 지정할 수 있습니다.
+다음으로 `Homestead.yaml`파일을 편집해야 합니다. 이 파일에서 SSH 공개 키의 경로를 설정할 수 있으며, 또한, 메인 머신과 홈스테드 가상 머신 사이에서 공유할 폴더를 지정할 수 있습니다.
 
-SSH 키가 없습니까? 맥 과 리눅스에서는 일반적으로 다음의 명령어를 통해서 SSH 키 페어를 생성할 수 있습니다.
+SSH 키가 없습니까? 맥과 리눅스에서는 일반적으로 다음의 명령어를 통해서 SSH 키 페어를 생성할 수 있습니다.
 
 	ssh-keygen -t rsa -C "you@homestead"
 
-Windows에서는 [Git](http://git-scm.com/) 를 설치하고 Git 명령을 실행하기위한 `Git Bash` 쉘을 사용합니다. 다른 방법으로 [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) 와[PuTTYgen](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) 을 사용할 수 있습니다.
+Windows에서는 [Git](http://git-scm.com/)를 설치하고 Git 명령을 실행하기위한 `Git Bash` 쉘을 사용합니다. 다른 방법으로 [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) 와[PuTTYgen](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)을 사용할 수 있습니다.
 
 SSH 키가 생성되었다면 `Homestead.yaml`파일의 `authorize` 속성에 키의 경로를 지정하십시오.
 
@@ -101,7 +101,7 @@ SSH 키가 생성되었다면 `Homestead.yaml`파일의 `authorize` 속성에 �
 
 `Homestead.yaml` 파일의 `folders` 속성은 홈스테드 환경과 공유하고자 하는 모든 폴더가 나열되어 있습니다. 여러분의 로컬 머신과 홈스테드 환경사이에서 동기화된 이 폴더 안의 파일들이 변경되면  변경사항이 서로 유지됩니다. 필요한 만큼 공유 폴더를 설정하십시오!
 
-[NFS](http://docs.vagrantup.com/v2/synced-folders/nfs.html) 를 사용하려면 동기화 폴더에 플래그를 지정하면 됩니다:
+[NFS](http://docs.vagrantup.com/v2/synced-folders/nfs.html)를 사용하려면 동기화 폴더에 플래그를 지정하면 됩니다:
 
 	folders:
 	    - map: ~/Code
@@ -112,7 +112,7 @@ SSH 키가 생성되었다면 `Homestead.yaml`파일의 `authorize` 속성에 �
 
 `sites` 속성을 통해 홈스테드  환경의 폴더와 "도메인"을 쉽게 매핑 할 수 있습니다. 사이트 샘플이 `Homestead.yaml` 파일에 포함되어 있습니다. 여기에서도 여러분의 홈스테드 환경에 필요한만큼 사이트를 추가할 수 있습니다. 홈스테드는 편리하게, 여러분이 작업을 수행하는 모든 라라벨 프로젝트를 위한 가상 환경을 제공합니다!
 
-`hhvm` 옵션을 `true` 로 설정하면 홈스테드 사이트가 [HHVM](http://hhvm.com)를 사용하게 할 수 있습니다.
+`hhvm` 옵션을 `true`로 설정하면 홈스테드 사이트가 [HHVM](http://hhvm.com)를 사용하게 할 수 있습니다.
 
 	sites:
 	    - map: homestead.app
@@ -156,19 +156,19 @@ SSH를 통해서 홈스테드 환경에 접속하려면 홈스테드 디렉토�
 
 위와 같이 별칭을 생성하고 나면, 시스템의 어느곳에서도 “vm” 명령어를 통해서 홈스테드 머신에 SSH로 접속할 수 있습니다.
 
-또한 홈스테드 디렉토리에서 `vagrant ssh` 명령어를 사용할 수도 있습니다.
+또한, 홈스테드 디렉토리에서 `vagrant ssh` 명령어를 사용할 수도 있습니다.
 
 ### 데이터베이스에 접속하기
 
-별다른 설정 없이도 `homestead` 데이터베이스는 MySQL과 Postgres 가 설정되어 있습니다. 보다 편리하게하기 위해 라라벨의 `local` 데이터베이스 설정이 기본적으로 이 데이터베이스를 사용하도록 설정되어 있습니다.
+별다른 설정 없이도 `homestead` 데이터베이스는 MySQL과 Postgres가 설정되어 있습니다. 보다 편리하게하기 위해 라라벨의 `local` 데이터베이스 설정이 기본적으로 이 데이터베이스를 사용하도록 설정되어 있습니다.
 
-Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 접속하려면 `127.0.0.1` 의 33060 (MySQL) 또는 54320 (Postgres) 포트에 연결하면 됩니다. 데이터베이스 사용자 이름과 암호는 모두 `homestead` / `secret`입니다.
+Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 접속하려면 `127.0.0.1`의 33060 (MySQL) 또는 54320 (Postgres) 포트에 연결하면 됩니다. 데이터베이스 사용자 이름과 암호는 모두 `homestead` / `secret`입니다.
 
-> **주의:** 데이터베이스에 접속할 때는 이러한 표준이 아닌 포트를 사용해야 합니다. 라라벨이 가상 머신 안에서 동작하고 있으므로 기본적인 3306 과 5432 포트는 라라벨 데이터베이스 설정 파일 안에서 사용할 수 있습니다.
+> **주의:** 데이터베이스에 접속할 때는 이러한 표준이 아닌 포트를 사용해야 합니다. 라라벨이 가상 머신 안에서 동작하고 있으므로 기본적인 3306과 5432 포트는 라라벨 데이터베이스 설정 파일 안에서 사용할 수 있습니다.
 
 ### 추가적인 사이트 지정하기
 
-홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두 가지 방법이 있습니다: 첫 번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 홈스테드 디렉토리에서 `vagrant provision` 을 실행하는 것입니다.
+홈스테드 환경이 준비되어 구성되고 난 뒤에 라라벨 어플리케이션에 추가적인 Nginx 사이트를 구성하기를 원할 수도 있습니다. 하나의 홈스테드 환경 안에서 여러개의 라라벨을 설치하여 작동 시킬수도 있습니다. 여기에는 두 가지 방법이 있습니다: 첫 번째 방법은 간단하게 `Homestead.yaml` 파일에 사이트를 추가하고 홈스테드 디렉토리에서 `vagrant provision`을 실행하는 것입니다.
 
 > **주의:** 이 명령어는 내부에 변경사항이 있습니다. `provision` 명령어가 실행되면 이미 존재하는 데이터베이스가 삭제되고 다시 생성됩니다.
 
@@ -207,7 +207,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 <a name="blackfire-profiler"></a>
 ## Blackfire 프로파일러
 
-SensioLabs 의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로 여러분의 코드 수행시간, RAM, CPU 소요시간 그리고 disk I/O와 같은 정보들을 수집해 줍니다. 홈스테드는 여러분의 어플리케이션에 이 프로파일러를 매우 쉽게 사용할 수 있습니다.
+SensioLabs의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로 여러분의 코드 수행시간, RAM, CPU 소요시간 그리고 disk I/O와 같은 정보들을 수집해 줍니다. 홈스테드는 여러분의 어플리케이션에 이 프로파일러를 매우 쉽게 사용할 수 있습니다.
 
 필요한 패키지는 이미 Homestead Box에 설치되어 있으므로, `Homestead.yaml` 파일에 Blackfire의 **서버** ID와 토큰을 설정하면 됩니다:
 
@@ -217,6 +217,6 @@ SensioLabs 의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로
 	      client-id: your-client-id
 	      client-token: your-client-token
 
-Blackfire 인증정보를 설정하고 난 뒤에, 여러분의 홈스테드 디렉토리에서 `vagrant provision`을 사용하여 Box 를 다시 실행하십시오. 또한 Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오.
+Blackfire 인증정보를 설정하고 난 뒤에, 여러분의 홈스테드 디렉토리에서 `vagrant provision`을 사용하여 Box를 다시 실행하십시오. 또한, Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-Blackfire 프로파일러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
