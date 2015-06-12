@@ -25,7 +25,7 @@ permalink: /docs/5.0/database/
 <a name="read-write-connections"></a>
 ## 읽기용 / 쓰기용 커넥션
 
-SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELETE문을 사용하는 데이터베이스에 다른 연결을 사용할고 싶은 경우도 있습니다. Raw 쿼리를 사용하든, 쿼리 빌더 또는 Eloquent ORM 을 사용하든 적절한 연결들을 사용할 수 있습니다.
+SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELETE문을 사용하는 데이터베이스에 다른 연결을 사용할고 싶은 경우도 있습니다. Raw 쿼리를 사용하든, 쿼리 빌더 또는 Eloquent ORM을 사용하든 적절한 연결들을 사용할 수 있습니다. 
 
 다음은 어떻게 read / write 커넥션을 설정하는지에 대한 예제입니다:
 
@@ -45,7 +45,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 		'prefix'    => '',
 	],
 
-설정 배열에 `read` 와 `write` 두개의 키가 추가 된것을 참고하십시오. 이 키들은 `host`라는 싱글 키를 포함하는 배열 값을 갖는다: `read`와 `write` 연결에대한 나머지 데이터베이스 옵션들은 기본 `mysql` 배열에서 합쳐(merge)집니다. 따라서 메인 배열값들 중에서 재정의하고자하는 것들만 `read`와 `write` 배열에서 입력하면 됩니다. 위의 경우에서는 `192.168.1.1` 호스트는 “read” 커넥션에서 사용되고, `192.168.1.2` 호스트는 “write” 커넥션에서 사용되어 집니다. 메인 `mysql`설정 배열에 포함된 데이터베이스 연결정보, 프리픽스, 캐릭터 셋 등 다른 모든 옵션들은 양쪽연결에서 모두 공유합니다 .
+설정 배열에 `read`와 `write` 두 개의 키가 추가 된것을 참고하십시오. 이 키들은 `host`라는 싱글 키를 포함하는 배열 값을 갖는다: `read`와 `write` 연결에대한 나머지 데이터베이스 옵션들은 기본 `mysql` 배열에서 합쳐(merge)집니다. 따라서 메인 배열값들 중에서 재정의하고자하는 것들만 `read`와 `write` 배열에서 입력하면 됩니다. 위의 경우에서는 `192.168.1.1` 호스트는 “read” 커넥션에서 사용되고, `192.168.1.2` 호스트는 “write” 커넥션에서 사용되어 집니다. 메인 `mysql`설정 배열에 포함된 데이터베이스 연결정보, 프리픽스, 캐릭터 셋 등 다른 모든 옵션들은 양쪽연결에서 모두 공유합니다 .
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-읽기용 / 쓰기용 커넥션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
@@ -60,7 +60,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 `select` 메소드는 항상 결과를 `배열`로 반환합니다.
 
-또한 named 바인딩을 사용한 쿼리를 실행할 수도 있습니다:
+또한, named 바인딩을 사용한 쿼리를 실행할 수도 있습니다:
 
 	$results = DB::select('select * from users where id = :id', ['id' => 1]);
 
@@ -128,7 +128,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 	$users = DB::connection('foo')->select(...);
 
-또한 PDO 인스턴스로 액세스 할 수 있습니다:
+또한, PDO 인스턴스로 액세스 할 수 있습니다:
 
 	$pdo = DB::connection()->getPdo();
 

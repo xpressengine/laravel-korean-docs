@@ -16,7 +16,7 @@ permalink: /docs/5.0/schema/
 - [인덱스 추가](#adding-indexes)
 - [외래키](#foreign-keys)
 - [인덱스 삭제](#dropping-indexes)
-- [Timestamps 와 Soft Deletes 컬럼 삭제](#dropping-timestamps)
+- [Timestamps와 Soft Deletes 컬럼 삭제](#dropping-timestamps)
 - [스토리지 엔진](#storage-engines)
 
 <a name="introduction"></a>
@@ -36,7 +36,7 @@ permalink: /docs/5.0/schema/
 		$table->increments('id');
 	});
 
-`create` 메소드의 첫 번째 인자는 테이블 이름을 나타내고 두 번째 인자는 새로운 테이블을 정의하는 데 사용되는 `Blueprint` 객체를 받는 `Closure`입니다.
+`create` 메소드의 첫 번째 인자는 테이블 이름을 나타내고 두 번째 인자는 새로운 테이블을 정의하는 데 사용되는 `Blueprint` 객체를받는 `Closure`입니다.
 
 존재하는 데이터베이스 테이블 이름을 바꾸기 위해서는 `rename` 메소드를 사용하면 됩니다:
 
@@ -71,7 +71,7 @@ permalink: /docs/5.0/schema/
 
 명령어 |  설명
 ------------- | -------------
-`$table->bigIncrements('id');`  |   증가 ID 를 “big integer” 로 하는것
+`$table->bigIncrements('id');`  |   증가 ID를 “big integer”로 하는것
 `$table->bigInteger('votes');`  |  테이블에 BIGINT 컬럼을 지정하는것
 `$table->binary('data');`  |  테이블에 BLOB 컬럼 지정
 `$table->boolean('confirmed');`  |  테이블에 BOOLEAN 컬럼 지정
@@ -89,8 +89,8 @@ permalink: /docs/5.0/schema/
 `$table->longText('description');`  |  테이블에 LONGTEXT 타입 지정
 `$table->mediumInteger('numbers');`  |  테이블에  MEDIUMINT 타입 지정
 `$table->mediumText('description');`  |  테이블에 MEDIUMTEXT 타입 지정
-`$table->morphs('taggable');`  |  INTERGER의 `taggable_id` 와 문자열 `taggable_type`타입 추가
-`$table->nullableTimestamps();`  |  NULL값을 허용하는것 이외에 `timestamps()` 와 동일합니다
+`$table->morphs('taggable');`  |  INTERGER의 `taggable_id`와 문자열 `taggable_type`타입 추가
+`$table->nullableTimestamps();`  |  NULL값을 허용하는것 이외에 `timestamps()`와 동일합니다
 `$table->smallInteger('votes');`  |  테이블에 SMALLINT 지정
 `$table->tinyInteger('numbers');`  |  테이블에 TINYINT 지정
 `$table->softDeletes();`  |  soft deletes을 위한 **deleted_at** 컬럼 추가
@@ -99,13 +99,13 @@ permalink: /docs/5.0/schema/
 `$table->text('description');`  |  테이블에 TEXT 타입 지정
 `$table->time('sunrise');`  |  테이블에 TIME 타입 지정
 `$table->timestamp('added_on');`  |  테이블에 TIMESTAMP 타입 지정
-`$table->timestamps();`  |  **created_at** 과 **updated_at** 컬럼 추가
+`$table->timestamps();`  |  **created_at**과 **updated_at** 컬럼 추가
 `$table->rememberToken();`  |  VARCHAR(100) NULL의 `remember_token` 추가
 `->nullable()`  |   컬럼에 NULL 허용
 `->default($value)`  |  컬럼의 기본값 설정
-`->unsigned()`  |  INTEGER 를 UNSIGNED 로 지정
+`->unsigned()`  |  INTEGER를 UNSIGNED로 지정
 
-#### Mysql 에서 After 사용하기
+#### Mysql에서 After 사용하기
 
 만약 MySQL 데이터베이스를 사용하고 있다면 컬럼의 순서지정을 위해서 `after` 메소드를 사용할 수 있습니다:
 
@@ -116,16 +116,16 @@ permalink: /docs/5.0/schema/
 <a name="changing-columns"></a>
 ## 컬럼 변경
 
-** 주의:** 컬럼을 변경하기 전에 `composer.json` 에 `doctrine/dbal` 의존 패키지를 추가했는지 확인하십시오.
+** 주의:** 컬럼을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존 패키지를 추가했는지 확인하십시오.
 
-때로는 이미 생성된 컬럼을 수정해야 할 필요가 있습니다. 예를들어 문자열 컬럼의 사이즈를 늘리고자 할 경우가 그렇습니다. `change` 메소드가 이 역할을 수행합니다! 예를들어 다음 예제는 `name` 컬럼의 사이즈를 25에서 50으로 늘려줍니다:
+때로는 이미 생성된 컬럼을 수정해야 할 필요가 있습니다. 예를 들어, 문자열 컬럼의 사이즈를 늘리고자 할 경우가 그렇습니다. `change` 메소드가 이 역할을 수행합니다! 예를 들어, 다음 예제는 `name` 컬럼의 사이즈를 25에서 50으로 늘려줍니다:
 
 	Schema::table('users', function($table)
 	{
 		$table->string('name', 50)->change();
 	});
 
-또한 다음처럼 컬럼에 Null 값이 가능하게 변경할 수도 있습니다:
+또한, 다음처럼 컬럼에 Null 값이 가능하게 변경할 수도 있습니다:
 
 	Schema::table('users', function($table)
 	{
@@ -137,9 +137,9 @@ permalink: /docs/5.0/schema/
 <a name="renaming-columns"></a>
 ## 컬럼 이름 변경
 
-컬럼의 이름을 변경하기 위해서는 스키마 빌더에서 `renameColumn` 메소드를 사용하면 됩니다. 컬럼이름을 변경하기 전에 `composer.json` 에 `doctrine/dbal` 의존성을 추가했는지 확인하십시오.
+컬럼의 이름을 변경하기 위해서는 스키마 빌더에서 `renameColumn` 메소드를 사용하면 됩니다. 컬럼이름을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가했는지 확인하십시오.
 
-(역자주 컬럼 이름 변경을 사용하기 위해서는 composer.json 의 require 에 doctrine/dbal 을 추가해서 composer 를 업데이트 해준 상태여야 합니다.)
+(역자주 컬럼 이름 변경을 사용하기 위해서는 composer.json의 require에 doctrine/dbal을 추가해서 composer를 업데이트 해준 상태여야 합니다.)
 
 	Schema::table('users', function($table)
 	{
@@ -153,7 +153,7 @@ permalink: /docs/5.0/schema/
 <a name="dropping-columns"></a>
 ## 컬럼 삭제
 
-컬럼을 삭제하고자 한다면 스키마 빌더에서 `dropColumn` 메소드를 사용하면 됩니다. 앞서 컬럼 이름 변경과 마찬가지로 컬럼 삭제 작업을 수행하기 전에 `composer.json` 에 `doctrine/dbal` 의존성을 추가해주어야 합니다.
+컬럼을 삭제하고자 한다면 스키마 빌더에서 `dropColumn` 메소드를 사용하면 됩니다. 앞서 컬럼 이름 변경과 마찬가지로 컬럼 삭제 작업을 수행하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가해주어야 합니다.
 
 #### 데이터베이스 테이블에서 컬럼 삭제하기
 
@@ -176,7 +176,7 @@ permalink: /docs/5.0/schema/
 
 #### 테이블이 존재하는지 확인하기
 
-테이블이나 컬럼이 존재하는지 확인하는 것은 `hasTable` 과 `hasColumn` 메소드르 사용하여 쉽게 확인할 수 있습니다:
+테이블이나 컬럼이 존재하는지 확인하는 것은 `hasTable`과 `hasColumn` 메소드르 사용하여 쉽게 확인할 수 있습니다:
 
 	if (Schema::hasTable('users'))
 	{
@@ -219,7 +219,7 @@ permalink: /docs/5.0/schema/
 
 이 예에서 `user_id` 컬럼이`users`테이블에 `id`컬럼을 참조한다는 것을 선언 하고 있습니다. 외래키 컬럼을 먼저 생성하는것을 잊지 마십시오!
 
-또한 외래키 옵션인 "on delete”와 "on update" 에 대한 처리를 지정할 수 있습니다:
+또한, 외래키 옵션인 "on delete”와 "on update"에 대한 처리를 지정할 수 있습니다:
 
 	$table->foreign('user_id')
           ->references('id')->on('users')
@@ -236,7 +236,7 @@ permalink: /docs/5.0/schema/
 <a name="dropping-indexes"></a>
 ## 인덱스 삭제하기
 
-인덱스를 삭제하려면 인덱스 이름을 지정해야 합니다. 라라벨은 기본적으로 인덱스에 자체적인 의미가 있는 이름을 할당한다. 간단하게 테이블 이름, 인덱스가 있는 컬럼의 이름, 인데스 타입을 연결한 것입니다. 몇가지 예제입니다:
+인덱스를 삭제하려면 인덱스 이름을 지정해야 합니다. 라라벨은 기본적으로 인덱스에 자체적인 의미가 있는 이름을 할당한다. 간단하게 테이블 이름, 인덱스가 있는 컬럼의 이름, 인데스 타입을 연결한 것입니다. 몇 가지 예제입니다:
 
 명령어 | 설명
 ------------- | -------------
@@ -253,7 +253,7 @@ permalink: /docs/5.0/schema/
 
 명령어| 설명
 ------------- | -------------
-`$table->dropTimestamps();`  |  테이블에서 **created\_at** 와 **updated\_at** 컬럼을 삭제
+`$table->dropTimestamps();`  |  테이블에서 **created\_at**와 **updated\_at** 컬럼을 삭제
 `$table->dropSoftDeletes();`  |  테이블에서 **deleted\_at** 컬럼을 삭제
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-Timestamps와 softDeletes 컬럼 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

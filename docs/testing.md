@@ -42,14 +42,14 @@ permalink: /docs/5.0/testing/
 
 터미널에서 `phpunit` 명령어를 실행함으로써 어플리케이션의 모든 테스트를 실행할 수 있습니다.
 
-> **참고** 여러분이 `setUp` 메소드를 정의했다면 `parent::setUp` 을 호출하는 것을 확인하십시오.
+> **참고** 여러분이 `setUp` 메소드를 정의했다면 `parent::setUp`을 호출하는 것을 확인하십시오.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-테스팅(Testing)-테스트 정의 & 실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="test-environment"></a>
 ## 테스트 환경
 
-단위 테스트를 실행할 때 라라벨은 자동으로 설정 환경을 `testing`에 구성해 놓습니다. 또한 라라벨은 테스트 환경에서의 `session` 과 `cache`을 위한 설정 파일들을 포함하고 있습니다. 이 두개의 드라이버는 테스트 환경에서 `array` 로 설정되며 세션 또는 캐시 데이터는 테스팅이 진행되는 동안에만 존재한다는 것을 의미합니다. 여러분은 필요한 경우에 자유롭게 테스트 환경 설정을 만들 수 있습니다.
+단위 테스트를 실행할 때 라라벨은 자동으로 설정 환경을 `testing`에 구성해 놓습니다. 또한, 라라벨은 테스트 환경에서의 `session`과 `cache`을 위한 설정 파일들을 포함하고 있습니다. 이 두 개의 드라이버는 테스트 환경에서 `array`로 설정되며 세션 또는 캐시 데이터는 테스팅이 진행되는 동안에만 존재한다는 것을 의미합니다. 여러분은 필요한 경우에 자유롭게 테스트 환경 설정을 만들 수 있습니다.
 
 `testing` 환경 변수는 `phpunit.xml` 파일에 설정되어 있습니다.
 
@@ -72,7 +72,7 @@ permalink: /docs/5.0/testing/
 
 #### 테스트에서 컨트롤러 호출하기
 
-또한 테스트에서 컨트롤러를 호출할 수도 있습니다:
+또한, 테스트에서 컨트롤러를 호출할 수도 있습니다:
 
 	$response = $this->action('GET', 'HomeController@index');
 
@@ -95,7 +95,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 <a name="mocking-facades"></a>
 ## 파사드 Mocking
 
-테스트를 진행할 때 여러분은 종종 라라벨의 static 파사드를 Mock 하기를 원할 수도 있습니다. 예를 들어 다음의 컨트롤러 액션의 경우를 생각해 보겠습니다.
+테스트를 진행할 때 여러분은 종종 라라벨의 static 파사드를 Mock 하기를 원할 수도 있습니다. 예를 들어, 다음의 컨트롤러 액션의 경우를 생각해 보겠습니다.
 
 	public function getIndex()
 	{
@@ -194,7 +194,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 <a name="helper-methods"></a>
 ## 헬퍼 메소드
 
-`TestCase` 클래스는 어플리케이션의 테스팅을 돕기 위한 몇가지의 헬퍼 메소드를 포함하고 있습니다.
+`TestCase` 클래스는 어플리케이션의 테스팅을 돕기 위한 몇 가지의 헬퍼 메소드를 포함하고 있습니다.
 
 #### 테스트에서 세션을 설정하고 비우기
 
@@ -218,13 +218,13 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 	$this->seed($connection);
 
-시드를 생성하는 데에 대한 보다 자세한 정보는 공식 문서의 [마이그레이션 과 시딩](/laravel-korean-docs/docs/migrations#database-seeding) 섹션을 참고하십시오.
+시드를 생성하는 데에 대한 보다 자세한 정보는 공식 문서의 [마이그레이션과 시딩](/laravel-korean-docs/docs/migrations#database-seeding) 섹션을 참고하십시오.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-테스팅(Testing)-헬퍼 메소드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="refreshing-the-application"></a>
 ## 어플리케이션 새로 고침
 
-이미 알고 있다 시피 여러분은 테스트 메소드에서 `$this->app` 을 통해서 어플리케이션([서비스 컨테이너](/laravel-korean-docs/docs/5.0/container))에 엑세스 할 수 있습니다. 이 서비스 컨테이너 인스턴스는 각각의 테스트 클래스 마다 새로 고침됩니다. 만약 여러분이 수동으로 어플리케이션을 새로고침 하고 싶은 경우에는 테스트 메소드에서 `refreshApplication` 메소드를 사용하면 됩니다. 이렇게 하면 테스트 케이스가 실행을 시작한 이후 IoC 컨테이너에 등록된 mock 객체와 추가적인 바인딩을 재설정 할것입니다.
+이미 알고 있다 시피 여러분은 테스트 메소드에서 `$this->app`을 통해서 어플리케이션([서비스 컨테이너](/laravel-korean-docs/docs/5.0/container))에 엑세스 할 수 있습니다. 이 서비스 컨테이너 인스턴스는 각각의 테스트 클래스 마다 새로 고침됩니다. 만약 여러분이 수동으로 어플리케이션을 새로고침 하고 싶은 경우에는 테스트 메소드에서 `refreshApplication` 메소드를 사용하면 됩니다. 이렇게 하면 테스트 케이스가 실행을 시작한 이후 IoC 컨테이너에 등록된 mock 객체와 추가적인 바인딩을 재설정 할것입니다.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-테스팅(Testing)-어플리케이션 새로 고침" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

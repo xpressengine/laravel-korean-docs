@@ -41,7 +41,7 @@ permalink: /docs/5.0/envoy/
 		ls -la
 	@endtask
 
-보시다 시피 파일의 제일 윗 부분에 `@servers` 에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다.
+보시다 시피 파일의 제일 윗 부분에 `@servers`에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 `on` 옵션을 통해서 이 서버들을 참조할 수 있습니다. `@task` 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다.
 
 `init` 명령어를 사용하여 Envoy 파일의 스텁을 쉽게 만들 수 있습니다:
 
@@ -73,7 +73,7 @@ Blade 표기법으로 지정한 옵션을 사용할 수 있습니다:
 #### 부트스트래핑
 
 
-```@setup``` 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행시킬 수 있습니다:
+```@setup``` 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행 시킬 수 있습니다:
 
 	@setup
 		$now = new DateTime();
@@ -100,7 +100,7 @@ PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있�
 <a name="envoy-multiple-servers"></a>
 ## 다수의 서버
 
-손쉽게 여러서버에서 작업을 실행시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다:
+손쉽게 여러서버에서 작업을 실행 시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다:
 
 	@servers(['web-1' => '192.168.1.1', 'web-2' => '192.168.1.2'])
 
@@ -173,7 +173,7 @@ By default, the task will be executed on each server serially. Meaning, the task
 		@hipchat('token', 'room', 'Envoy')
 	@endafter
 
-또한 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. ```@setup``` 또는 ```@include```를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다:
+또한, 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. ```@setup``` 또는 ```@include```를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다:
 
 	@after
 		@hipchat('token', 'room', 'Envoy', "$task ran on [$environment]")
@@ -209,7 +209,7 @@ Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검
 <a name="envoy-updating-envoy"></a>
 ## Envoy 업데이트
 
-Envoy 를 업데이트 하려면 컴포저를 사용합니다:
+Envoy를 업데이트 하려면 컴포저를 사용합니다:
 
 	composer global update
 

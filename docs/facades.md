@@ -16,7 +16,7 @@ permalink: /docs/5.0/facades/
 <a name="introduction"></a>
 ## 소개
 
-파사드는 어플리케이션의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에서 사용가능한 클래스들에 대한 "정적" 인터페이스를 제공합니다. 라라벨은 많은 파사드를 가지고 있으며 여러분이 알지 못하는 사이에도 이미 사용하고 있을 것입니다. 라라벨 “파사드” 는 서비스 컨테이너에 등록된 클래스들에 대한 일종의 “정적 프록시” 역할을 수행하는 데, 이를 통해서 전통적인 정적 메소드 보다 간결한 문법과 테스트의 용이성 그리고 코드의 유연성을 유지하는 이점을 제공합니다.
+파사드는 어플리케이션의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에서 사용 가능한 클래스들에 대한 "정적" 인터페이스를 제공합니다. 라라벨은 많은 파사드를 가지고 있으며 여러분이 알지 못하는 사이에도 이미 사용하고 있을 것입니다. 라라벨 “파사드”는 서비스 컨테이너에 등록된 클래스들에 대한 일종의 “정적 프록시” 역할을 수행하는 데, 이를 통해서 전통적인 정적 메소드 보다 간결한 문법과 테스트의 용이성 그리고 코드의 유연성을 유지하는 이점을 제공합니다.
 
 때로는 여러분의 어플리케이션이나 패키지에서도  파사드를 만들고 싶어질 것입니다. 따라서 파사드의 개념과 개발 방법, 이러한 클래스들의 사용방법에 대해서 알아보겠습니다.
 
@@ -29,9 +29,9 @@ permalink: /docs/5.0/facades/
 
 라라벨 어플리케이션에의 전체 맥락에서 보자면 파사드는 컨테이너의 객체에 엑세스하는 방법을 제공하는 클래스라고 할 수 있습니다. 이 작업을 수행하는 주요 매커니즘이 파사드 클래스안에 있습니다. 라라벨의 파사드들과 여러분이 작성한 파사드들은 기본 `Facade` 클래스를 상속받습니다.
 
-여러분이 만드는 파사드 클래스는 `getFacadeAccessor`라는 하나의 메소드를 구현해야 합니다. `getFacadeAccessor`메소드의 역할은 컨테이너로 부터 어떤 의존성을 해결하는지에 대해서 정의하는 것입니다. `Facade` 기본 클래스는 `__callStatic()` 매직 매소드를 사용하여 여러분이 작성한 파사드에 대한 호출을 의존성이 해결된 객체로 전달합니다.
+여러분이 만드는 파사드 클래스는 `getFacadeAccessor`라는 하나의 메소드를 구현해야 합니다. `getFacadeAccessor`메소드의 역할은 컨테이너로부터 어떤 의존성을 해결하는지에 대해서 정의하는 것입니다. `Facade` 기본 클래스는 `__callStatic()` 매직 메소드를 사용하여 여러분이 작성한 파사드에 대한 호출을 의존성이 해결된 객체로 전달합니다.
 
-따라서 여러분이 `Cache::get` 과 같이 파사드를 호출할 때, 라라벨은 서비스 컨테이너로 부터 의존성을 해결하여 캐시 매니저 획득하고 이 캐시 매니저의 `get` 메소드를 호출해줍니다. 기술적으로 라라벨의 파사드는 라라벨의 서비스 컨테이너를 하나의 서비스로서 사용하기 위한 편리한 기법입니다.
+따라서 여러분이 `Cache::get`과 같이 파사드를 호출할 때, 라라벨은 서비스 컨테이너로부터 의존성을 해결하여 캐시 매니저 획득하고 이 캐시 매니저의 `get` 메소드를 호출해줍니다. 기술적으로 라라벨의 파사드는 라라벨의 서비스 컨테이너를 하나의 서비스로서 사용하기 위한 편리한 기법입니다.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-설명" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
@@ -57,7 +57,7 @@ permalink: /docs/5.0/facades/
 
 캐시 클래스는 기존 `Facade` 클래스를 상속하고 `getFacadeAccessor()` 메소드를 정의하고 있습니다. 유념할 것은 이 메소드의 역할은 컨테이너에 등록된 서비스의 이름을 반환한다는 것입니다.
 
-사용자가 `Cache` 파사드의 어떤 static 메소드를 사용할 때 라라벨은 서비스 컨테이너에 `cache` 로 바인딩된 객체의 인스턴스에게 요청된 메소드(여기에서는 `get`)을 수행합니다.
+사용자가 `Cache` 파사드의 어떤 static 메소드를 사용할 때 라라벨은 서비스 컨테이너에 `cache`로 바인딩된 객체의 인스턴스에게 요청된 메소드(여기에서는 `get`)을 수행합니다.
 
 따라서 `Cache::get` 호출은 다음처럼 다시 쓸 수 있습니다.
 
@@ -136,7 +136,7 @@ permalink: /docs/5.0/facades/
 
 ### 오토로딩 별칭에 대한 주의사항
 
-[PHP는 타입힌트가 정의되지 않은 유형의 클래스들에 대한 오토로드를 시도 하지 않으므로](https://bugs.php.net/bug.php?id=39003) `aliases` 배열 안에 클래스가 몇몇 인스턴스들 안에서는 사용 가능하지 않습니다. 만약 `\ServiceWrapper\ApiTimeoutException`이 `ApiTimeoutException` 라는 별칭으로 지정되었고, `\ServiceWrapper` 외부 네임 스페이스에서 `catch (ApiTimeoutException $e)`를 하려 해도 던져진 예외는 포착되지 않습니다. 별칭으로 타입힌트가 설정된 클래스들 사이에서도 비슷한 문제는 발생됩니다. 이에대한 유일한 해결책은 타입힌트를 사용하려는 클래스들 제일 앞부분에 `use` 를 사용해서 미리 지정해두는 방법입니다.
+[PHP는 타입힌트가 정의되지 않은 유형의 클래스들에 대한 오토로드를 시도 하지 않으므로](https://bugs.php.net/bug.php?id=39003) `aliases` 배열 안에 클래스가 몇몇 인스턴스들 안에서는 사용 가능하지 않습니다. 만약 `\ServiceWrapper\ApiTimeoutException`이 `ApiTimeoutException` 라는 별칭으로 지정되었고, `\ServiceWrapper` 외부 네임 스페이스에서 `catch (ApiTimeoutException $e)`를 하려 해도 던져진 예외는 포착되지 않습니다. 별칭으로 타입힌트가 설정된 클래스들 사이에서도 비슷한 문제는 발생됩니다. 이에대한 유일한 해결책은 타입힌트를 사용하려는 클래스들 제일 앞부분에 `use`를 사용해서 미리 지정해두는 방법입니다.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
@@ -150,7 +150,7 @@ permalink: /docs/5.0/facades/
 <a name="facade-class-reference"></a>
 ## 파사드 참조 목록
 
-다음은 모든 파사드 와 실제 클래스에 대한 목록입니다. 여러분이 특정한 파사드를 기준으로 API 문서를 빠르게 찾고자 하는 경우에 도움이 될것입니다. 응용이 가능하도록 [서비스 컨테이너 바인딩](/laravel-korean-docs/docs/5.0/container)도 포함되어 있습니다.
+다음은 모든 파사드와 실제 클래스에 대한 목록입니다. 여러분이 특정한 파사드를 기준으로 API 문서를 빠르게 찾고자 하는 경우에 도움이 될것입니다. 응용이 가능하도록 [서비스 컨테이너 바인딩](/laravel-korean-docs/docs/5.0/container)도 포함되어 있습니다.
 
 Facade  |  Class  |  Service Container Binding
 ------------- | ------------- | -------------

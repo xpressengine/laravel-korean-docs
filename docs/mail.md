@@ -15,11 +15,11 @@ permalink: /docs/5.0/mail/
 <a name="configuration"></a>
 ## 설정
 
-라라벨은 인기있는 [SwiftMailer](http://swiftmailer.org)를 통해서 깔끔하고 단순한 API 를 제공합니다. 메일에 대한 설정 파일은 `app/config/mail.php` 파일로 SMTP 호스트, 포트, 인증 및 라이브러리를 통해 송신되는 메세지들의 글로벌 `form` 주소를 설정할 수 있는 옵션들을 제공합니다. 원하는 경우 어떤 SMTP 서버라도 사용가능합니다. 메일을 보낼 때 PHP 의 `mail` 함수를 사용하려 한다면 설정 파일에서 `driver` 를 `mail`로 변경하면 됩니다. 또한 `sendmail` 드라이버도 사용가능합니다.
+라라벨은 인기있는 [SwiftMailer](http://swiftmailer.org)를 통해서 깔끔하고 단순한 API를 제공합니다. 메일에 대한 설정 파일은 `app/config/mail.php` 파일로 SMTP 호스트, 포트, 인증 및 라이브러리를 통해 송신되는 메세지들의 글로벌 `form` 주소를 설정할 수 있는 옵션들을 제공합니다. 원하는 경우 어떤 SMTP 서버라도 사용가능합니다. 메일을 보낼 때 PHP의 `mail` 함수를 사용하려 한다면 설정 파일에서 `driver`를 `mail`로 변경하면 됩니다. 또한, `sendmail` 드라이버도 사용가능합니다.
 
 ### API 드라이버
 
-라라벨은 또한 Mailgun 과 Mandrill의 HTTP API 드라이버들을 제공하고 있습니다. 이러한 API들은 대부분 SMTP 보다 간결하고 빠릅니다. 두 가지의 드라이버를 사용하기 위해서는 어플리케이션에 Guzzle 5 HTTP 라이브러리를  설치해야 합니다. 다음과 같은 라인을 `composer.json` 파일에 추가하여 Guzzle 5 를 프로젝트에 추가할 수 있습니다:
+라라벨은 또한, Mailgun과 Mandrill의 HTTP API 드라이버들을 제공하고 있습니다. 이러한 API들은 대부분 SMTP 보다 간결하고 빠릅니다. 두 가지의 드라이버를 사용하기 위해서는 어플리케이션에 Guzzle 5 HTTP 라이브러리를  설치해야 합니다. 다음과 같은 라인을 `composer.json` 파일에 추가하여 Guzzle 5를 프로젝트에 추가할 수 있습니다:
 
 	"guzzlehttp/guzzle": "~5.0"
 
@@ -109,7 +109,7 @@ HTML 뷰에 추가로 플레인 텍스트 뷰를 지정할 수도 있습니다:
 		<img src="<?php echo $message->embed($pathToFile); ?>">
 	</body>
 
-#### 이메일 뷰에서 Raw 데이타를 첨부하는 방법
+#### 이메일 뷰에서 Raw 데이터를 첨부하는 방법
 
 	<body>
 		Here is an image from raw data:
@@ -126,7 +126,7 @@ HTML 뷰에 추가로 플레인 텍스트 뷰를 지정할 수도 있습니다:
 
 #### 이메일 메세지 큐잉 하기
 
-메일을 송신하는 것은 어플리케이션의 응답 시간을 크게 저하시키기 때문에 많은 개발자들은 이메일 메세지를 백그라운드 에서 보낼 수 있도록 큐-대기행열에 두도록 합니다. 라라벨에서는 내장된 [일관된 큐 API](/laravel-korean-docs/docs/5.0/queues)를 통해서 이러한 작업을 손쉽게 수행할 수 있게 합니다. 이메일 메세지를 대기 큐에 넣기 위해서는 간단하게 `Mail` 파사드의 `queue` 메소드를 호출하도록 하면 됩니다:
+메일을 송신하는 것은 어플리케이션의 응답 시간을 크게 저하시키기 때문에 많은 개발자들은 이메일 메세지를 백그라운드에서 보낼 수 있도록 큐-대기행열에 두도록 합니다. 라라벨에서는 내장된 [일관된 큐 API](/laravel-korean-docs/docs/5.0/queues)를 통해서 이러한 작업을 손쉽게 수행할 수 있게 합니다. 이메일 메세지를 대기 큐에 넣기 위해서는 간단하게 `Mail` 파사드의 `queue` 메소드를 호출하도록 하면 됩니다:
 
 	Mail::queue('emails.welcome', $data, function($message)
 	{
