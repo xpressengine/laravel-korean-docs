@@ -13,9 +13,9 @@ Laravel provides a clean, simple API over the popular [SwiftMailer](http://swift
 
 ### API Drivers
 
-Laravel also includes drivers for the Mailgun and Mandrill HTTP APIs. These APIs are often simpler and quicker than the SMTP servers. Both of these drivers require that the Guzzle 4 HTTP library be installed into your application. You can add Guzzle 4 to your project by adding the following line to your `composer.json` file:
+Laravel also includes drivers for the Mailgun and Mandrill HTTP APIs. These APIs are often simpler and quicker than the SMTP servers. Both of these drivers require that the Guzzle 5 HTTP library be installed into your application. You can add Guzzle 5 to your project by adding the following line to your `composer.json` file:
 
-	"guzzlehttp/guzzle": "~4.0"
+	"guzzlehttp/guzzle": "~5.0"
 
 #### Mailgun Driver
 
@@ -114,7 +114,7 @@ Note that the `$message` variable is always passed to e-mail views by the `Mail`
 
 #### Queueing A Mail Message
 
-Since sending e-mail messages can drastically lengthen the response time of your application, many developers choose to queue e-mail messages for background sending. Laravel makes this easy using its built-in [unified queue API](/docs/5.0/queues). To queue a mail message, simply use the `queue` method on the `Mail` facade:
+Since sending e-mail messages can drastically lengthen the response time of your application, many developers choose to queue e-mail messages for background sending. Laravel makes this easy using its built-in [unified queue API](/docs/{{version}}/queues). To queue a mail message, simply use the `queue` method on the `Mail` facade:
 
 	Mail::queue('emails.welcome', $data, function($message)
 	{

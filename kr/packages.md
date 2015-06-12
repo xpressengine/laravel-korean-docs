@@ -11,13 +11,15 @@
 <a name="introduction"></a>
 ## 소개
 
-패키지를 개발하는 것은 라라벨에 기능을 추가하는 주요한 방법입니다. 패키지는 예를 들어, 날짜 라이브러리인 [Carbon](https://github.com/briannesbitt/Carbon)이나 BDD(행위 주도 개발) 테스트 프레임워크인 [Behat](https://github.com/Behat/Behat)과 같이 어느 것이든 될 수 있습니다. 
+패키지를 개발하는 것은 라라벨에 기능을 추가하는 주요한 방법입니다. 패키지는 예를 들어, 날짜 라이브러리인 [Carbon](https://github.com/briannesbitt/Carbon)이나 BDD(행위 주도 개발) 테스트 프레임워크인 [Behat](https://github.com/Behat/Behat)과 같이 어느 것이든 될 수 있습니다.
 
-물론 다양한 종류의 패키지가 존재합니다. 라라벨 뿐만 아니라 다른 어떤 프레임워크와도 작동할 수 있는 독립적인 패키지도 있습니다. Carbon과 Behat 은 이런 독립적으로 동작하는 패키지들의 예입니다. 이러한 패키지들을 라라벨과 사용하려면 `composer.json`파일에 추가하면 됩니다. 
+물론 다양한 종류의 패키지가 존재합니다. 라라벨 뿐만 아니라 다른 어떤 프레임워크와도 작동할 수 있는 독립적인 패키지도 있습니다. Carbon과 Behat 은 이런 독립적으로 동작하는 패키지들의 예입니다. 이러한 패키지들을 라라벨과 사용하려면 `composer.json`파일에 추가하면 됩니다.
 
 반대로, 라라벨 프레임워크에만 사용할 수 있는 패키지들도 있습니다. 이러한 패키지들은 라라벨 응용 프로그램의 기능을 사용하는 라우트, 컨트롤러, 뷰, 설정들을 가질 것입니다. 이 가이드는 라라벨에 특화된 패키지의 개발을 주로 설명합니다.
 
-모든 라라벨 패키지는 [Packagist](http://packagist.org)와 [Composer](http://getcomposer.org)를 통해서 배포되기 때문에 PHP 패키지 배포 도구에 대해 알고 있는 것이 중요합니다. 
+모든 라라벨 패키지는 [Packagist](http://packagist.org)와 [Composer](http://getcomposer.org)를 통해서 배포되기 때문에 PHP 패키지 배포 도구에 대해 알고 있는 것이 중요합니다.
+
+<!--chak-comment-패키지 개발(Package Development)-소개-->
 
 <a name="views"></a>
 ## 뷰
@@ -30,7 +32,7 @@
 
 	return view('package::view.name');
 
-여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 뷰 파일들이 어디에 있는지 라라벨에 알려주는 것입니다. 예를 들어, 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 `boot` 메소드에 다음과 같이 뷰 파일의 위치를 설정할 수 있습니다. 
+여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 뷰 파일들이 어디에 있는지 라라벨에 알려주는 것입니다. 예를 들어, 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 `boot` 메소드에 다음과 같이 뷰 파일의 위치를 설정할 수 있습니다.
 
 	public function boot()
 	{
@@ -41,7 +43,7 @@
 
 	return view('courier::view.name');
 
-여러분이 `loadViewsFrom` 메소드를 사용할 때, 라라벨은 실제로 뷰을 위한 **두 개의** 위치를 등록합니다. 하나는 어플리케이션의 `resources/views/vendor` 디렉토리 이고, 다른 하나는 여러분이 지정한 디렉토리입니다. 앞의 `courier` 예제를 생각해 보면, 패키지의 뷰가 요청될 때 라라벨은 먼저 `resources/views/vendor/courier` 디렉토리에 파일이 준비되어 있는지 확인합니다. 이때 뷰를 확인하지 못하면 여러분이 `loadViewsFrom`를 통해서 지정한 디렉토리에서 패키지 뷰를 찾게 될 것입니다. 이러한 방법은 사용자가 여러분의 패키지 뷰를 수정하거나, 재정의 하기 쉽게 해줍니다. 
+여러분이 `loadViewsFrom` 메소드를 사용할 때, 라라벨은 실제로 뷰을 위한 **두 개의** 위치를 등록합니다. 하나는 어플리케이션의 `resources/views/vendor` 디렉토리 이고, 다른 하나는 여러분이 지정한 디렉토리입니다. 앞의 `courier` 예제를 생각해 보면, 패키지의 뷰가 요청될 때 라라벨은 먼저 `resources/views/vendor/courier` 디렉토리에 파일이 준비되어 있는지 확인합니다. 이때 뷰를 확인하지 못하면 여러분이 `loadViewsFrom`를 통해서 지정한 디렉토리에서 패키지 뷰를 찾게 될 것입니다. 이러한 방법은 사용자가 여러분의 패키지 뷰를 수정하거나, 재정의 하기 쉽게 해줍니다.
 
 #### 뷰 퍼블리싱
 
@@ -64,6 +66,8 @@
 
 > **참고 :** `publishes` 메소드는 **어떤** 유형의 파일이라도 원하는 위치로 파일을 퍼블리싱 할 수 있습니다.
 
+<!--chak-comment-패키지 개발(Package Development)-뷰-->
+
 <a name="translations"></a>
 ## 언어파일
 
@@ -84,10 +88,12 @@
 
 	return trans('courier::file.line');
 
+<!--chak-comment-패키지 개발(Package Development)-언어파일-->
+
 <a name="configuration"></a>
 ## 설정
 
-일반적으로 여러분은 패키지의 설정 파일을 어플리케이션의 `config` 디렉토리에 퍼블리싱 하기를 원할 것입니다. 이것은 여러분의 패키지의 사용자가 패키지 설정 파일의 기본 옵션들을 손쉽게 수정할 수 있도록 해줍니다. 
+일반적으로 여러분은 패키지의 설정 파일을 어플리케이션의 `config` 디렉토리에 퍼블리싱 하기를 원할 것입니다. 이것은 여러분의 패키지의 사용자가 패키지 설정 파일의 기본 옵션들을 손쉽게 수정할 수 있도록 해줍니다.
 
 설정 파일들을 퍼블리싱 하기 위해서는 서비스 프로바이더의 `boot` 메소드에서 `publishes` 메소드를 사용하면 됩니다:
 
@@ -105,8 +111,10 @@
 		__DIR__.'/path/to/config/courier.php', 'courier'
 	);
 
+<!--chak-comment-패키지 개발(Package Development)-설정-->
+
 <a name="public-assets"></a>
-## Public의 Asset 파일들. 
+## Public의 Asset 파일들
 
 여러분의 패키지가 JavaScript, CSS 그리고 이미지 파일들처럼 asset 파일들을 가지고 있을 수 있습니다. 이 파일들을 퍼블리싱 하기 위해서는 서비스 프로바이더의 `boot` 메소드에서 `publishes` 메소드를 사용하면 됩니다. 다음 예제에서는 "public" asset 그룹 태그를 추가로 지정하고 있습니다.
 
@@ -118,7 +126,9 @@
 
 	php artisan vendor:publish --tag=public --force
 
-Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명령어를 `composer.json` 파일의 `post-update-cmd` 목록에 추가하는 것이 좋습니다. 
+Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명령어를 `composer.json` 파일의 `post-update-cmd` 목록에 추가하는 것이 좋습니다.
+
+<!--chak-comment-패키지 개발(Package Development)-Public 의 Asset 파일들-->
 
 <a name="publishing-file-groups"></a>
 ## 파일 그룹 퍼블리싱하기
@@ -139,10 +149,12 @@ Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명�
 
 	php artisan vendor:publish --provider="Vendor\Providers\PackageServiceProvider" --tag="config"
 
+<!--chak-comment-패키지 개발(Package Development)-파일 그룹 퍼블리싱하기-->
+
 <a name="routing"></a>
 ## 라우팅
 
-패키지에서 라우트 파일을 로딩 하기 위해서는 서비스 프로바이더의 `boot` 메소드 안에서 간단하게 `include`를 사용하면 됩니다. 
+패키지에서 라우트 파일을 로딩 하기 위해서는 서비스 프로바이더의 `boot` 메소드 안에서 간단하게 `include`를 사용하면 됩니다.
 
 #### 서비스 프로바이더에서 라우트 파일 로드하기
 
@@ -151,4 +163,6 @@ Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명�
 		include __DIR__.'/../../routes.php';
 	}
 
-> **주의:** 여러분의 패키지가 컨트롤러를 사용하고 있다면 `composer.json` 파일의 설정을 통해서 오토로드가 될 수 있어야 합니다. 
+> **주의:** 여러분의 패키지가 컨트롤러를 사용하고 있다면 `composer.json` 파일의 설정을 통해서 오토로드가 될 수 있어야 합니다.
+
+<!--chak-comment-패키지 개발(Package Development)-라우팅-->

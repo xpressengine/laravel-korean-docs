@@ -6,9 +6,9 @@
 <a name="blade-templating"></a>
 ## 블레이드 템플릿
 
-블레이드는 라라벨에서 제공하는 간단하지만 강력한 템플릿 엔진입니다. 컨트롤러 레이아웃과는 다르게 블레이드는 _템플릿 상속_과 _섹션_을 통해서 처리됩니다. 모든 블레이드 템플릿 파일은 `.blade.php` 확장자를 가져야 합니다. 
+블레이드는 라라벨에서 제공하는 간단하지만 강력한 템플릿 엔진입니다. 컨트롤러 레이아웃과는 다르게 블레이드는 _템플릿 상속_과 _섹션_을 통해서 처리됩니다. 모든 블레이드 템플릿 파일은 `.blade.php` 확장자를 가져야 합니다.
 
-#### 블레이드 레이아웃 정의하기 
+#### 블레이드 레이아웃 정의하기
 
 	<!-- Stored in resources/views/layouts/master.blade.php -->
 
@@ -27,10 +27,10 @@
 		</body>
 	</html>
 
-#### 블레이드 레이아웃 사용하기 
+#### 블레이드 레이아웃 사용하기
 
 	@extends('layouts.master')
-	
+
 	@section('title', 'Page Title')
 
 	@section('sidebar')
@@ -48,6 +48,8 @@
 때로는 섹션을 정의해야 할지 정확하게 판단하지 못할 수도 있는데, 이 경우에는 기본값을 `@yield`에 직접 지정할 수도 있습니다. 다음과 같이 두 번째 인자에 기본값을 지정하면 됩니다.
 
 	@yield('section', 'Default Content')
+
+<!--chak-comment-템플릿(Templates)-블레이드 템플릿-->
 
 <a name="other-blade-control-structures"></a>
 ## 기타 블레이드 컨트롤 구조
@@ -122,7 +124,7 @@
 
 	@include('view.name', ['some' => 'data'])
 
-#### 섹션 재정의하기 
+#### 섹션 재정의하기
 
 섹션 전체를 다시 재정의하려면 `overwrite` 문을 사용하십시오:
 
@@ -141,3 +143,5 @@
 #### 주석
 
 	{{-- This comment will not be in the rendered HTML --}}
+
+<!--chak-comment-템플릿(Templates)-기타 블레이드 컨트롤 구조-->

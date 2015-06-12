@@ -13,7 +13,7 @@ permalink: /docs/5.0/events/
 <a name="basic-usage"></a>
 ## 기본적인 사용법
 
-라라벨 이벤트 기능은 어플리케이션의 이벤트를 구독하고 수신 대기 할 수 있는 관찰자(옵저버) 구현을 제공합니다. 일반적으로 이벤트 클래스는 `app/Events` 디렉토리에, 이벤트 핸들러는 `app/Handlers/Events` 디렉토리에 저장됩니다. 
+라라벨 이벤트 기능은 어플리케이션의 이벤트를 구독하고 수신 대기 할 수 있는 관찰자(옵저버) 구현을 제공합니다. 일반적으로 이벤트 클래스는 `app/Events` 디렉토리에, 이벤트 핸들러는 `app/Handlers/Events` 디렉토리에 저장됩니다.
 
 아티즌 CLI 툴을 사용해서 새로운 이벤트 클래스를 생성할 수 있습니다:
 
@@ -42,7 +42,7 @@ permalink: /docs/5.0/events/
 
 	php artisan event:generate
 
-#### 이벤트 발생시키기 
+#### 이벤트 발생시키기
 
 이제 `Event` 파사드를 사용해서 이벤트를 발생시킬 수 있습니다:
 
@@ -74,6 +74,8 @@ permalink: /docs/5.0/events/
 		return false;
 	});
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-이벤트(Events)-기본적인 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="queued-event-handlers"></a>
 ## 큐에 저장된 이벤트 핸들러
 
@@ -81,7 +83,7 @@ permalink: /docs/5.0/events/
 
 	php artisan handler:event SendPurchaseConfirmation --event=PodcastWasPurchased --queued
 
-이렇게 하면 핸들러 클래스는 `Illuminate\Contracts\Queue\ShouldBeQueued` 인터페이스의 구현 클래스가 됩니다. 이걸로 끝입니다! 이제 핸들러가 이벤트에 의해서 호출될 때 이벤트 디스패처에 의해서 자동으로 큐에 지정됩니다. 
+이렇게 하면 핸들러 클래스는 `Illuminate\Contracts\Queue\ShouldBeQueued` 인터페이스의 구현 클래스가 됩니다. 이걸로 끝입니다! 이제 핸들러가 이벤트에 의해서 호출될 때 이벤트 디스패처에 의해서 자동으로 큐에 지정됩니다.
 
 큐에 의해서 실행되는 핸들러가 아무런 예외도 발생하지 않는다면 큐로 지정된 작업은 수행후 자동으로 삭제 됩니다. 수동으로 큐로 지정된 작업의 `delete` 와 `release` 메소드에 액세스 해야되는 경우, 여러분은 그렇게 할 수도 있습니다. 큐로 지정된 핸들러에  기본적으로 포함된 `Illuminate\Queue\InteractsWithQueue` trait 이 다음의 메소드에 엑세스 할 수 있게 해줍니다:
 
@@ -93,14 +95,16 @@ permalink: /docs/5.0/events/
 		}
 	}
 
-이미 생성된 핸들러를 큐로 지정된 핸들러로 변경해야 된다면 클래스에 수동으로 `ShouldBeQueued` 인터페이스 를 추가해주시면 됩니다. 
+이미 생성된 핸들러를 큐로 지정된 핸들러로 변경해야 된다면 클래스에 수동으로 `ShouldBeQueued` 인터페이스 를 추가해주시면 됩니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-이벤트(Events)-큐에 저장된 이벤트 핸들러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="event-subscribers"></a>
-## 이벤트 구독 클래스 
+## 이벤트 구독 클래스
 
-#### 이벤트 구독 클래스 정의하기 
+#### 이벤트 구독 클래스 정의하기
 
-이벤트 구독 클래스는 많은 이벤트를 하나의 클래스 자체에서 구독하기 위한 클래스 입니다. 구독 클래스는 이벤트 디스패처 인스턴스가 전달되는 `subscribe` 메소드를 정의해야 합니다:
+이벤트 구독 클래스는 많은 이벤트를 하나의 클래스 자체에서 구독하기 위한 클래스입니다. 구독 클래스는 이벤트 디스패처 인스턴스가 전달되는 `subscribe` 메소드를 정의해야 합니다:
 
 	class UserEventHandler {
 
@@ -124,7 +128,7 @@ permalink: /docs/5.0/events/
 		 * Register the listeners for the subscriber.
 		 *
 		 * @param  Illuminate\Events\Dispatcher  $events
-		 * @return array
+		 * @return void
 		 */
 		public function subscribe($events)
 		{
@@ -137,7 +141,7 @@ permalink: /docs/5.0/events/
 
 #### 이벤트 구독 클래스 등록하기
 
-이벤트 구독 클래스를 정의하고 나면, `Event` 클래스에 등록하면 됩니다. 
+이벤트 구독 클래스를 정의하고 나면, `Event` 클래스에 등록하면 됩니다.
 
 	$subscriber = new UserEventHandler;
 
@@ -147,3 +151,4 @@ permalink: /docs/5.0/events/
 
 	Event::subscribe('UserEventHandler');
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-이벤트(Events)-이벤트 구독 클래스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

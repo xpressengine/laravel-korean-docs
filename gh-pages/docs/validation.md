@@ -8,8 +8,8 @@ permalink: /docs/5.0/validation/
 
 - [기본적인 사용법](#basic-usage)
 - [컨트롤러 단위 유효성 검사 ](#controller-validation)
-- [폼 요청 유효성 검사](#form-request-validation) 
-- [오류 메시지 사용하기](#working-with-error-messages) 
+- [폼 요청 유효성 검사](#form-request-validation)
+- [오류 메시지 사용하기](#working-with-error-messages)
 - [오류 메시지 & 뷰](#error-messages-and-views)
 - [유효성 검사 룰](#available-validation-rules)
 - [조건부 룰 추가하기](#conditionally-adding-rules)
@@ -19,7 +19,7 @@ permalink: /docs/5.0/validation/
 <a name="basic-usage"></a>
 ## 기본적인 사용법
 
-라라벨은 `Validation` 클래스를 통해 데이터의 유효성을 검사하고, 유효성 검사 실패시 출력될 오류 메시지를 구성할 수 있는 간단하고, 편리한 기능을 제공합니다.
+라라벨은 `Validator` 클래스를 통해 데이터의 유효성을 검사하고, 유효성 검사 실패시 출력될 오류 메시지를 구성할 수 있는 간단하고, 편리한 기능을 제공합니다.
 
 #### 기본적인 유효성 검사의 예
 
@@ -28,7 +28,7 @@ permalink: /docs/5.0/validation/
 		['name' => 'required|min:5']
 	);
 
-`make` 메소드는 첫번째 인자로 유효성 검사를 할 데이터를 받습니다. 두번째 인자로는 그 데이터에 적용되어야 하는 유효성 검사 룰을 전달 받습니다.
+`make` 메소드는 첫 번째 인자로 유효성 검사를 할 데이터를 받습니다. 두 번째 인자로는 그 데이터에 적용되어야 하는 유효성 검사 룰을 전달 받습니다.
 
 #### 배열을 사용하여 룰 지정하기
 
@@ -92,10 +92,12 @@ permalink: /docs/5.0/validation/
 		//
 	}
 
-필요한 경우 `after` 콜백에 validator에 추가할 수도 있습니다. 
+필요한 경우 `after` 콜백에 validator에 추가할 수도 있습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-기본적인 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="controller-validation"></a>
-## 컨트롤러 단위 유효성 검사 
+## 컨트롤러 단위 유효성 검사
 
 유효성 검사를 실행할 때마다 수동으로 `Validator` 인스턴스를 생성하고 체크한다면 정말 번거로울 것입니다. 하지만 걱정하지 마십시오. 방법이 있습니다. 라라벨에 포함된 `App\Http\Controllers\Controller` 기본 클래스는 `ValidatesRequests` trait을 사용합니다. 이 trait은 들어오는 HTTP 요청의 유효성 검사를 위하여 편리한 하나의 메소드를 제공합니다. 그 메소드는 아래와 같습니다:
 
@@ -153,6 +155,8 @@ permalink: /docs/5.0/validation/
 	{
 		return $validator->errors()->all();
 	}
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-컨트롤러 단위 유효성 검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="form-request-validation"></a>
 ## 폼 요청 유효성 검사
@@ -240,12 +244,14 @@ permalink: /docs/5.0/validation/
 		return $validator->errors()->all();
 	}
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-폼 요청 유효성 검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="working-with-error-messages"></a>
 ## 오류 메시지 사용하기
 
 `Validator` 인스턴스의 `messages` 메소드를 실행하면, 오류 메시지를 편하게 사용할 수 있는 다양한 메소드를 가진 `MessageBag` 인스턴스를 받을 수 있습니다.
 
-#### 하나의 필드에 대한 첫번째 오류 메시지 조회하기
+#### 하나의 필드에 대한 첫 번째 오류 메시지 조회하기
 
 	echo $messages->first('email');
 
@@ -283,6 +289,8 @@ permalink: /docs/5.0/validation/
 		//
 	}
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-오류 메시지 사용하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="error-messages-and-views"></a>
 ## 오류 메시지 & 뷰
 
@@ -315,13 +323,15 @@ permalink: /docs/5.0/validation/
 
 ### 이름이 지정된 오류 메시지 백
 
-만약 여러개의 폼을 단일 페이지에서 사용한다면, 여러분은 오류의 `MessageBag`에 이름을 지정하고 싶을지도 모릅니다. 이는 여러분이 특정 폼에 대한 오류 메시지를 조회할 수 있도록 해줍니다. `withErrors` 메소드의 두번째 파라메터로 이름을 전달하기만 하면 됩니다.
+만약 여러개의 폼을 단일 페이지에서 사용한다면, 여러분은 오류의 `MessageBag`에 이름을 지정하고 싶을지도 모릅니다. 이는 여러분이 특정 폼에 대한 오류 메시지를 조회할 수 있도록 해줍니다. `withErrors` 메소드의 두 번째 파라메터로 이름을 전달하기만 하면 됩니다.
 
 	return redirect('register')->withErrors($validator, 'login');
 
 그 다음 `$errors` 변수로부터 이름이 지정된 `MessageBag` 인스턴스에 접근할 수 있습니다.
 
 	<?php echo $errors->login->first('email'); ?>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-오류 메시지 & 뷰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="available-validation-rules"></a>
 ## 유효성 검사 룰
@@ -417,7 +427,7 @@ permalink: /docs/5.0/validation/
 <a name="rule-boolean"></a>
 #### boolean
 
-필드의 값이 반드시 불리언으로 캐스팅될 수 있어야 합니다. 허용되는 값은 `true`, `false`, `1`, `0`, `"1"`, `"0"` 입니다.
+필드의 값이 반드시 불리언으로 캐스팅될 수 있어야 합니다. 허용되는 값은 `true`, `false`, `1`, `0`, `"1"`, `"0"`입니다.
 
 <a name="rule-confirmed"></a>
 #### confirmed
@@ -572,7 +582,7 @@ permalink: /docs/5.0/validation/
 필드의 값이 주어진 _value_와 일치하는 크기를 가져야 합니다. 문자열 데이터에서는 문자의 개수가 _value_와 일치해야 합니다. 숫자형식의 데이터에서는 주어진 정수값이 _value_와 일치해야 합니다. 파일에서는 킬로바이트 형식의 파일 사이즈가 _size_와 일치해야 합니다.
 
 <a name="rule-string"></a>
-#### string:_value_
+#### string
 
 필드의 값이 반드시 문자열 형식이어야 합니다.
 
@@ -586,7 +596,7 @@ permalink: /docs/5.0/validation/
 
 필드의 값이 주어진 데이터베이스 테이블에서 고유한 값이어야 합니다. 만약 `column` 지정돼 있지 않다면 필드의 이름이 사용됩니다.
 
-때때로, 여러분은 Validator에 의해서 생성되는 데이터베이스 쿼리에 사용자가 지정한 커넥션을 필요로 할지도 모릅니다. 위에서의 검증 규칙 `unique:users` 에서는 쿼리에 대해서 기본 데이터 베이스 커넥션이 사용됩니다. 이를 재지정하려면 다음과 같이 하면 됩니다:
+때때로, 여러분은 Validator에 의해서 생성되는 데이터베이스 쿼리에 사용자가 지정한 커넥션을 필요로 할지도 모릅니다. 위에서의 검증 규칙 `unique:users` 에서는 쿼리에 대해서 기본 데이터베이스 커넥션이 사용됩니다. 이를 재지정하려면 다음과 같이 하면 됩니다:
 
 	$verifier = App::make('validation.presence');
 
@@ -618,7 +628,7 @@ permalink: /docs/5.0/validation/
 
 	'email' => 'unique:users,email_address,NULL,id,account_id,1'
 
-앞서의 룰에서 오직 `account_id`가 `1`인 행만 unique 유효성 검사에 포함됩니다. 
+앞서의 룰에서 오직 `account_id`가 `1`인 행만 unique 유효성 검사에 포함됩니다.
 
 <a name="rule-url"></a>
 #### url
@@ -626,6 +636,8 @@ permalink: /docs/5.0/validation/
 필드의 값이 URL 형식이어야 합니다.
 
 > **참고:** 이 기능은 PHP의 `filter_var` 함수를 사용합니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-유효성 검사 룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="conditionally-adding-rules"></a>
 ## 조건부 룰 추가하기
@@ -654,7 +666,7 @@ permalink: /docs/5.0/validation/
 		return $input->games >= 100;
 	});
 
-`sometimes` 메소드의 첫번째 인자는 필드의 이름입니다. 두번째 인자는 추가하려는 룰입니다. 만약 세번째 파라메터로 전달된 `Closure`가 `true`를 리턴한다면 그 룰은 유효성 검사에 추가될 것입니다. 이 메소드는 복잡한 조건부 유효성 검사의 구성을 손쉽게 만들어 주며, 한번에 여러개의 필드에 대한 조건부 유효성 검사를 추가할 수도 있습니다.
+`sometimes` 메소드의 첫 번째 인자는 필드의 이름입니다. 두 번째 인자는 추가하려는 룰입니다. 만약 세 번째 파라메터로 전달된 `Closure`가 `true`를 리턴한다면 그 룰은 유효성 검사에 추가될 것입니다. 이 메소드는 복잡한 조건부 유효성 검사의 구성을 손쉽게 만들어 주며, 한번에 여러개의 필드에 대한 조건부 유효성 검사를 추가할 수도 있습니다.
 
 	$v->sometimes(['reason', 'cost'], 'required', function($input)
 	{
@@ -662,6 +674,8 @@ permalink: /docs/5.0/validation/
 	});
 
 > **참고:** `Closure`로 전달된 `$input` 파라메터는 `Illuminate\Support\Fluent`의 인스턴스입니다. 그리고 입력된 데이터와 파일에 접근하기 위해 이 오브젝트는 사용할 수 있습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-조건부 룰 추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="custom-error-messages"></a>
 ## 사용자 정의 오류 메시지
@@ -706,6 +720,8 @@ permalink: /docs/5.0/validation/
 		],
 	],
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-사용자 정의 오류 메시지" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="custom-validation-rules"></a>
 ## 사용자 정의 유효성 검사 룰
 
@@ -718,7 +734,7 @@ permalink: /docs/5.0/validation/
 		return $value == 'foo';
 	});
 
-커스텀 유효성 검사 클로저는 3개의 인자를 받습니다: 유효성 검사를 할 필드(`$attribute`)의 이름, 필드의 값(`$value`), 그리고 룰에 전달될 파라미터들(`$parameters`)의 배열입니다. 
+커스텀 유효성 검사 클로저는 3개의 인자를 받습니다: 유효성 검사를 할 필드(`$attribute`)의 이름, 필드의 값(`$value`), 그리고 룰에 전달될 파라미터들(`$parameters`)의 배열입니다.
 
 또한 클로저 대신 클래스명과 메소드명을 `extend` 메소드로 전달할 수도 있습니다.
 
@@ -763,3 +779,5 @@ Validator를 확장하기 위해 클로저를 사용하는 대신에 Validator �
 	{
 		//
 	});
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-사용자 정의 유효성 검사 룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

@@ -16,7 +16,9 @@
 <a name="introduction"></a>
 ## 소개
 
-라라벨의 `Schema` 클래스는 데이터베이스에 의존하지 않는 테이블 조작 방법을 제공합니다. 이 기능은 라라벨이 지원하는 모든 데이터베이스에서 잘 동작하며 공통의 API를 가지고 있다는 것을 의미합니다. 
+라라벨의 `Schema` 클래스는 데이터베이스에 의존하지 않는 테이블 조작 방법을 제공합니다. 이 기능은 라라벨이 지원하는 모든 데이터베이스에서 잘 동작하며 공통의 API를 가지고 있다는 것을 의미합니다.
+
+<!--chak-comment-스키마 빌더(Schema Builder)-소개-->
 
 <a name="creating-and-dropping-tables"></a>
 ## 테이블 생성 & 삭제
@@ -28,7 +30,7 @@
 		$table->increments('id');
 	});
 
-`create` 메소드의 첫 번째 인자는 테이블 이름을 나타내고 두 번째 인자는 새로운 테이블을 정의하는 데 사용되는 `Blueprint` 객체를받는 `Closure`입니다. 
+`create` 메소드의 첫 번째 인자는 테이블 이름을 나타내고 두 번째 인자는 새로운 테이블을 정의하는 데 사용되는 `Blueprint` 객체를받는 `Closure`입니다.
 
 존재하는 데이터베이스 테이블 이름을 바꾸기 위해서는 `rename` 메소드를 사용하면 됩니다:
 
@@ -47,6 +49,8 @@
 
 	Schema::dropIfExists('users');
 
+<!--chak-comment-스키마 빌더(Schema Builder)-테이블 생성 & 삭제-->
+
 <a name="adding-columns"></a>
 ## 컬럼 추가하기
 
@@ -61,14 +65,14 @@
 
 명령어 |  설명
 ------------- | -------------
-`$table->bigIncrements('id');`  |   증가 ID를 “big integer”로 하는것 
+`$table->bigIncrements('id');`  |   증가 ID를 “big integer”로 하는것
 `$table->bigInteger('votes');`  |  테이블에 BIGINT 컬럼을 지정하는것
 `$table->binary('data');`  |  테이블에 BLOB 컬럼 지정
 `$table->boolean('confirmed');`  |  테이블에 BOOLEAN 컬럼 지정
 `$table->char('name', 4);`  |  길이를 지정한 CHAR 타입을 지정
 `$table->date('created_at');`  |  테이블에 DATE 타입 지정
 `$table->dateTime('created_at');`  |  테이블에 DATETIME 타입 지정
-`$table->decimal('amount', 5, 2);`  |  유효성과 크기 지정한 DECIMAL 타입 지정 
+`$table->decimal('amount', 5, 2);`  |  유효성과 크기 지정한 DECIMAL 타입 지정
 `$table->double('column', 15, 8);`  |  전체 15자리에 소수점 8자리까지 허용가능한 DOUBLE 타입 지정
 `$table->enum('choices', ['foo', 'bar']);` | 테이블에 ENUM 타입 지정
 `$table->float('amount');`  |  테이블에 FLOAT 타입 지정
@@ -101,10 +105,12 @@
 
 	$table->string('name')->after('email');
 
+<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 추가하기-->
+
 <a name="changing-columns"></a>
 ## 컬럼 변경
 
-** 주의:** 컬럼을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존 패키지를 추가했는지 확인하십시오. 
+** 주의:** 컬럼을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존 패키지를 추가했는지 확인하십시오.
 
 때로는 이미 생성된 컬럼을 수정해야 할 필요가 있습니다. 예를 들어, 문자열 컬럼의 사이즈를 늘리고자 할 경우가 그렇습니다. `change` 메소드가 이 역할을 수행합니다! 예를 들어, 다음 예제는 `name` 컬럼의 사이즈를 25에서 50으로 늘려줍니다:
 
@@ -120,10 +126,12 @@
 		$table->string('name', 50)->nullable()->change();
 	});
 
+<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 변경-->
+
 <a name="renaming-columns"></a>
 ## 컬럼 이름 변경
 
-컬럼의 이름을 변경하기 위해서는 스키마 빌더에서 `renameColumn` 메소드를 사용하면 됩니다. 컬럼이름을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가했는지 확인하십시오. 
+컬럼의 이름을 변경하기 위해서는 스키마 빌더에서 `renameColumn` 메소드를 사용하면 됩니다. 컬럼이름을 변경하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가했는지 확인하십시오.
 
 (역자주 컬럼 이름 변경을 사용하기 위해서는 composer.json의 require에 doctrine/dbal을 추가해서 composer를 업데이트 해준 상태여야 합니다.)
 
@@ -132,12 +140,14 @@
 		$table->renameColumn('from', 'to');
 	});
 
-> **주의 :** 현재 `enum` 컬럼 타입의 이름을 변경하는 것은 지원되지 않습니다. 
+> **주의 :** 현재 `enum` 컬럼 타입의 이름을 변경하는 것은 지원되지 않습니다.
+
+<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 이름 변경-->
 
 <a name="dropping-columns"></a>
-## 컬럼 삭제 
+## 컬럼 삭제
 
-컬럼을 삭제하고자 한다면 스키마 빌더에서 `dropColumn` 메소드를 사용하면 됩니다. 앞서 컬럼 이름 변경과 마찬가지로 컬럼 삭제 작업을 수행하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가해주어야 합니다. 
+컬럼을 삭제하고자 한다면 스키마 빌더에서 `dropColumn` 메소드를 사용하면 됩니다. 앞서 컬럼 이름 변경과 마찬가지로 컬럼 삭제 작업을 수행하기 전에 `composer.json`에 `doctrine/dbal` 의존성을 추가해주어야 합니다.
 
 #### 데이터베이스 테이블에서 컬럼 삭제하기
 
@@ -153,8 +163,10 @@
 		$table->dropColumn(['votes', 'avatar', 'location']);
 	});
 
+<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 삭제-->
+
 <a name="checking-existence"></a>
-## 존재 유무 확인 
+## 존재 유무 확인
 
 #### 테이블이 존재하는지 확인하기
 
@@ -172,6 +184,8 @@
 		//
 	}
 
+<!--chak-comment-스키마 빌더(Schema Builder)-존재 유무 확인-->
+
 <a name="adding-indexes"></a>
 ## 인덱스 추가하기
 
@@ -186,6 +200,8 @@
 `$table->primary(['first', 'last']);`  |  복합키 추가
 `$table->unique('email');`  |  유니크 인덱스 추가
 `$table->index('state');`  |  기본 인덱스 추가
+
+<!--chak-comment-스키마 빌더(Schema Builder)-인덱스 추가하기-->
 
 <a name="foreign-keys"></a>
 ## 외래키
@@ -209,6 +225,8 @@
 
 > **주의:** 정수형 증분되는 값(incrementing integer)을 참조하여 외래키를 만들때 외래키 컬럼을 항상 `unsigned`로 만드는 것을 유의해야 합니다.
 
+<!--chak-comment-스키마 빌더(Schema Builder)-외래키-->
+
 <a name="dropping-indexes"></a>
 ## 인덱스 삭제하기
 
@@ -220,6 +238,8 @@
 `$table->dropUnique('users_email_unique');`  |  “users” 테이블에서 유니크 인덱스 삭제
 `$table->dropIndex('geo_state_index');`  |  “geo” 테이블에서 기본 인덱스 삭제
 
+<!--chak-comment-스키마 빌더(Schema Builder)-인덱스 삭제하기-->
+
 <a name="dropping-timestamps"></a>
 ## Timestamps와 softDeletes 컬럼 삭제
 
@@ -229,6 +249,8 @@
 ------------- | -------------
 `$table->dropTimestamps();`  |  테이블에서 **created\_at**와 **updated\_at** 컬럼을 삭제
 `$table->dropSoftDeletes();`  |  테이블에서 **deleted\_at** 컬럼을 삭제
+
+<!--chak-comment-스키마 빌더(Schema Builder)-Timestamps와 softDeletes 컬럼 삭제-->
 
 <a name="storage-engines"></a>
 ## 스토리지 엔진
@@ -241,3 +263,5 @@
 
         $table->string('email');
     });
+
+<!--chak-comment-스키마 빌더(Schema Builder)-스토리지 엔진-->

@@ -21,14 +21,15 @@ permalink: /docs/5.0/authentication/
 
 기본적으로 라라벨은 `app` 디렉토리에 `App\User` 모델을 포함하고 있습니다. 이 모델은 기본적인 Eloquent 인증 드라이버와 함께 사용하게 됩니다. 
 
-유념할 것은 이 모델에 대한 데이터베이스 스키마를 작성 할 때, 패스워드 컬럼이 최소 60 자가 되어야 된다는 것입니다. 또한 사용하기 전에 빈 문자열을 허용하는 (NULLABLE) 100자리 문자열의 `remember_token` 컬럼이 `users` (또는 동일한) 테이블에 포함되어 있는지 확인하십시오. 이 컬럼은 어플리케이션에서 관리하는 “remember me“ 세션의 토큰을 저장하는데 사용됩니다. 마이그레이션에서 `$table->rememberToken();`를 사용하면 추가 할 수 있습니다. 물론 라라벨 5는 이러한 컬럼에 대한 마이그레이션이 별도의 설정 없이도 구성되어 있습니다!
+유념할 것은 이 모델에 대한 데이터베이스 스키마를 작성 할 때, 패스워드 컬럼이 최소 60 자가 되어야 된다는 것입니다. 또한 사용하기 전에 빈 문자열을 허용하는 (NULLABLE) 100자리 문자열의 `remember_token` 컬럼이 `users` (또는 동일한) 테이블에 포함되어 있는지 확인하십시오. 이 컬럼은 어플리케이션에서 관리하는 “remember me“ 세션의 토큰을 저장하는 데 사용됩니다. 마이그레이션에서 `$table->rememberToken();`를 사용하면 추가 할 수 있습니다. 물론 라라벨 5는 이러한 컬럼에 대한 마이그레이션이 별도의 설정 없이도 구성되어 있습니다!
 
 만약 어플리케이션이 Eloquent 를 사용하지 않는다면 라라벨 쿼리 빌더를 사용하는 `database` 인증 드라이버를 사용 할 수도 있습니다.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="authenticating-users"></a>
 ## 사용자 인증
 
-라라벨은 별도의 설정 없이도 컨트롤러와 연동된 두가지 인증을 제공하고 있습니다. `AuthController` 는 새로운 사용자의 등록과 로그인을 처리하고 `PasswordController`는 암호 분실시에 사용자 암호 재설정을 처리합니다. 
+라라벨은 별도의 설정 없이도 컨트롤러와 연동된 두 가지 인증을 제공하고 있습니다. `AuthController` 는 새로운 사용자의 등록과 로그인을 처리하고 `PasswordController`는 암호 분실시에 사용자 암호 재설정을 처리합니다. 
 
 각각의 컨트롤러는 필요한 메서드를 포함하기 위해 trait를 사용합니다. 많은 어플리케이션에서 여러분은 이 컨트롤러들을 한번에 수정할 필요가 없을 것입니다. 이 컨트롤러들이 렌더링하는 뷰파일들은 `resources/views/auth` 디렉토리에 있습니다. 원한다면 자유롭게 이 뷰 파일들을 수정할 수 있습니다. 
 
@@ -64,7 +65,7 @@ permalink: /docs/5.0/authentication/
 
 	}
 
-`attempt` 메소드는 키 / 값의 쌍으로 이루어진 배열을 첫번째 인자로 전달 받습니다. `password` 값은 [해시처리](/laravel-korean-docs/docs/5.0/hashing)될 것입니다. 배열의 다른 값들은 데이터베이스 테이블에서 사용자를 찾는데 사용될것입니다. 따라서 위의 예제에서는, `email` 컬럼을 통해서 사용자를 찾게됩니다. 사용자를 찾았다면, 해시처리되어 데이터베이스에 저장된 패스워드와 매소드에 전달받은 배열의 해시처리된 `password` 값을 비교할 것입니다. 두개의 해시처리된 패스워드가 일치한다면 해당 사용자의 새로운 인증 세션이 시작됩니다. 
+`attempt` 메소드는 키 / 값의 쌍으로 이루어진 배열을 첫 번째 인자로 전달 받습니다. `password` 값은 [해시처리](/laravel-korean-docs/docs/5.0/hashing)될 것입니다. 배열의 다른 값들은 데이터베이스 테이블에서 사용자를 찾는데 사용될것입니다. 따라서 위의 예제에서는, `email` 컬럼을 통해서 사용자를 찾게됩니다. 사용자를 찾았다면, 해시처리되어 데이터베이스에 저장된 패스워드와 매소드에 전달받은 배열의 해시처리된 `password` 값을 비교할 것입니다. 두개의 해시처리된 패스워드가 일치한다면 해당 사용자의 새로운 인증 세션이 시작됩니다. 
 
 `attempt` 메소드는 인증이 성공하면 `true` 를 반환합니다. 실패시 `false` 를 반환합니다.
 
@@ -92,7 +93,7 @@ permalink: /docs/5.0/authentication/
 
 #### 사용자를 인증하고 "기억 하기"
 
-여러분의 어플리케이션에 “기억하기” 기능을 제공하고자 한다면, `attempt` 메소드의 두번째 인자로 사용자의 인증을 무기한 계속 유지할지, 아니면 수동으로 로그아웃 할때까지 유지할지 결정하는 boolean 값을 전달하면 됩니다. 이를 위해서는 `users` 테이블은 “기억하기” 토근을 저장하는데 사용되는 `remember_token` 컬럼을 가지고 있어야만 합니다. 
+여러분의 어플리케이션에 “기억하기” 기능을 제공하고자 한다면, `attempt` 메소드의 두 번째 인자로 사용자의 인증을 무기한 계속 유지할지, 아니면 수동으로 로그아웃 할때까지 유지할지 결정하는 boolean 값을 전달하면 됩니다. 이를 위해서는 `users` 테이블은 “기억하기” 토근을 저장하는 데 사용되는 `remember_token` 컬럼을 가지고 있어야만 합니다. 
 
 	if (Auth::attempt(['email' => $email, 'password' => $password], $remember))
 	{
@@ -148,15 +149,17 @@ permalink: /docs/5.0/authentication/
 
 `attempt` 메소드가 호출될 때에는 `auth.attempt` [이벤트](/laravel-korean-docs/docs/5.0/events)가 발생합니다. 사용자 인증이 성공적이고 사용자가 로그인되었다면, 마찬가지로 `auth.login` 이벤트가 발생합니다. 
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-사용자 인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="retrieving-the-authenticated-user"></a>
 ## 인증된 사용자 조회하기
 
-사용자가 인증이 되고 나면, 사용자의 인스턴스를 얻는 방법에는 여러가지가 있습니다.
+사용자가 인증이 되고 나면, 사용자의 인스턴스를 얻는 방법에는 여러 가지가 있습니다.
 
-첫번째로, `Auth` 파사드를 사용하여 사용자를 액세스 할 수 있습니다.
+첫 번째로, `Auth` 파사드를 사용하여 사용자를 액세스 할 수 있습니다.
 
 	<?php namespace App\Http\Controllers;
 
+    use Auth;
 	use Illuminate\Routing\Controller;
 
 	class ProfileController extends Controller {
@@ -176,7 +179,7 @@ permalink: /docs/5.0/authentication/
 
 	}
 
-두번째로는, `Illuminate\Http\Request` 인스턴스를 사용하여 인증된 사용자를 액세스 할 수 있습니다:
+두 번째로는, `Illuminate\Http\Request` 인스턴스를 사용하여 인증된 사용자를 액세스 할 수 있습니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -200,7 +203,7 @@ permalink: /docs/5.0/authentication/
 
 	}
 
-세번째로는, `Illuminate\Contracts\Auth\Authenticatable` contract를 타입힌트로 지정하는 것입니다.  이 타입힌트는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결되는 컨트롤러의 생성자, 컨트롤러 메소드 또는 다른 어떤 클래스의 생성자에서 추가될 수 있습니다:
+세 번째로는, `Illuminate\Contracts\Auth\Authenticatable` contract를 타입힌트로 지정하는 것입니다.  이 타입힌트는 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 의해서 의존성이 해결되는 컨트롤러의 생성자, 컨트롤러 메소드 또는 다른 어떤 클래스의 생성자에서 추가될 수 있습니다:
 
 	<?php namespace App\Http\Controllers;
 
@@ -220,7 +223,7 @@ permalink: /docs/5.0/authentication/
 		}
 
 	}
-
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-인증된 사용자 조회하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="protecting-routes"></a>
 ## 라우트 제한하기
 
@@ -237,6 +240,7 @@ permalink: /docs/5.0/authentication/
 
 	Route::get('profile', ['middleware' => 'auth', 'uses' => 'ProfileController@show']);
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-라우트 제한하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="http-basic-authentication"></a>
 ## HTTP 기본 인증
 
@@ -265,6 +269,7 @@ PHP FastCGI를 사용하는 경우 HTTP 기본 인증이 제대로 작동하지 
 	RewriteCond %{HTTP:Authorization} ^(.+)$
 	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-HTTP 기본 인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="password-reminders-and-reset"></a>
 ## 패스워드 알림 & 재설정
 
@@ -276,13 +281,13 @@ PHP FastCGI를 사용하는 경우 HTTP 기본 인증이 제대로 작동하지 
 
 #### 알림 테이블 마이그레이션 생성하기
 
-다음으로 패스워드 리셋 토큰을 저장하기 위한 테이블을 생성해야합니다. 이 테이블의 마이그레이션은 별다른 설정 없이도 라라벨에 기본적으로 포함되어 있으며 `database/migrations` 디렉토리에 존재합니다. 따라서 다음처럼 마이그레이션을 실행하면 됩니다. 
+다음으로 패스워드 리셋 토큰을 저장하기 위한 테이블을 생성해야 합니다. 이 테이블의 마이그레이션은 별다른 설정 없이도 라라벨에 기본적으로 포함되어 있으며 `database/migrations` 디렉토리에 존재합니다. 따라서 다음처럼 마이그레이션을 실행하면 됩니다. 
 
 	php artisan migrate
 
 ### 패스워드알림 컨트롤러
 
-라라벨은 사용자 패스워드를 재설정 하는데 필요한 로직을 포함하는 `Auth\PasswordController`을 가지고 있습니다. 이 뷰 파일들은 `resources/views/auth` 디렉토리에 있습니다. 어플리케이션의 디자인에 맞게 자유롭게 변경해도 됩니다. 
+라라벨은 사용자 패스워드를 재설정 하는 데 필요한 로직을 포함하는 `Auth\PasswordController`을 가지고 있습니다. 이 뷰 파일들은 `resources/views/auth` 디렉토리에 있습니다. 어플리케이션의 디자인에 맞게 자유롭게 변경해도 됩니다. 
 
 사용자는 `PasswordController`의 `getReset` 메소드에 해당하는 링크가 포함된 이메일을 수신할 수 있습니다. 이 메소드는 패스워드를 재설정하는 폼을 표시하고, 사용자가 패스워드를 재설정 할 수 있도록 합니다. 패스워드가 재설정되면 사용자는 자동으로 어플리케이션에 로그인 처리되고 `/home` 으로 리다이렉트 됩니다. 여러분은 `PasswordController`의 `redirectTo` 속성을 정의하여 사용자의 패스워드가 재설정 된 이후에 리다이렉트할 경로를 변경할 수 있습니다:
 
@@ -290,6 +295,7 @@ PHP FastCGI를 사용하는 경우 HTTP 기본 인증이 제대로 작동하지 
 
 > **참고:** 기본적으로 패스워드 재설정 토큰은 1시간 동안만 유효합니다. `config/auth.php` 파일의 `reminder.expire` 옵션에서 변경할 수 있습니다. 
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-패스워드 알림 & 재설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="social-authentication"></a>
 
 ## 소셜 인증
@@ -312,7 +318,7 @@ Socialite 를 시작하기 위해서는 `composer.json` 파일에 다음 패키�
 		'redirect' => 'http://your-callback-url',
 	],
 
-이제 사용자 인증을 위한 준비가 되었습니다! 이제 두가지의 라우트가 필요로 합니다: 하나는 OAuth를 사용하기 위한 리다이렉트와 다른 하나는 인증 후 결과를 콜백으로 받기 위한 라우트입니다. 다음은 `Socialize` 파사드를 사용하는 예제 입니다: 
+이제 사용자 인증을 위한 준비가 되었습니다! 이제 두 가지의 라우트가 필요로 합니다: 하나는 OAuth를 사용하기 위한 리다이렉트와 다른 하나는 인증 후 결과를 콜백으로 받기 위한 라우트입니다. 다음은 `Socialize` 파사드를 사용하는 예제입니다: 
 
 	public function redirectToProvider()
 	{
@@ -349,3 +355,5 @@ Socialite 를 시작하기 위해서는 `composer.json` 파일에 다음 패키�
 	$user->getName();
 	$user->getEmail();
 	$user->getAvatar();
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-소셜인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

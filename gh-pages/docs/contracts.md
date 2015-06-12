@@ -7,7 +7,7 @@ permalink: /docs/5.0/contracts/
 # Contracts
 
 - [소개](#introduction)
-- [왜 Conracts인가?](#why-contracts)
+- [왜 Contracts인가?](#why-contracts)
 - [Contract 참조](#contract-reference)
 - [Contract 사용법](#how-to-use-contracts)
 
@@ -18,7 +18,9 @@ permalink: /docs/5.0/contracts/
 
 라라벨 프레임워크에는 각각의 Contract에 상응하는 구현체(구현 클래스)가 있습니다. 예를 들어, 라라벨은 다양한 드라이버로 구현된 `Queue`의 구현체를 가지고 있고, `Mailer`의 구현체는 [SwiftMailer](http://swiftmailer.org/)를 통해 가지고 있습니다.
 
-라라벨의 모든 Contract는 [별도 Github 저장소](https://github.com/illuminate/contracts)를 가지고 있습니다. 이것은 별도의 패키지에 의존하지 않는 하나의 단일 패키지로 다른 패키지 개발자들에 의해서 사용될 수 있도록 하는 모든 사용가능한 contract를 위한 하나의 레퍼런스를 제공합니다.  
+라라벨의 모든 Contract는 [별도 Github 저장소](https://github.com/illuminate/contracts)를 가지고 있습니다. 이것은 별도의 패키지에 의존하지 않는 하나의 단일 패키지로 다른 패키지 개발자들에 의해서 사용될 수 있도록 하는 모든 사용가능한 contract를 위한 하나의 레퍼런스를 제공합니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="why-contracts"></a>
 ## 왜 Contract인가?
@@ -67,9 +69,9 @@ permalink: /docs/5.0/contracts/
 
 	}
 
-이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐스 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다. 
+이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐시 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다.
 
-또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Redia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다. 
+또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Redia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다.
 
 **이렇게 접근하는 대신, 특정 벤더에 구속되지 않고 단순한 인터페이스에 의존하도록 하여 코드를 개선할 수 있습니다:**
 
@@ -92,13 +94,15 @@ permalink: /docs/5.0/contracts/
 
 	}
 
-이제 코드는 어떤 특정 벤더, 심지어 라라벨과도 결합되지 않습니다. Contract는 구현체를 가지지 않고, 의존성도 없기 때문에, 주어진  Contract의 다른 구현체를 쉽게 작성할 수 있습니다. 캐시를 사용하는 코드를 수정하지 않고도 캐시 구현체를 대체할 수 있습니다. 
+이제 코드는 어떤 특정 벤더, 심지어 라라벨과도 결합되지 않습니다. Contract는 구현체를 가지지 않고, 의존성도 없기 때문에, 주어진  Contract의 다른 구현체를 쉽게 작성할 수 있습니다. 캐시를 사용하는 코드를 수정하지 않고도 캐시 구현체를 대체할 수 있습니다.
 
 ### 단순성
 
-라라벨의 모든 서비스들이 단순한 인터페이스로 보기좋게 정의돼 있기 때문에, 그 서비스들에 의해 제공되는 기능을 알아내는 것이 매우 쉽습니다. **Contract들이 프레임워크의 기능들에 대한 간결한 도큐먼트의 역할을 하는 것입니다.**
+라라벨의 모든 서비스들이 단순한 인터페이스로 보기좋게 정의돼 있으므로, 그 서비스들에 의해 제공되는 기능을 알아내는 것이 매우 쉽습니다. **Contract들이 프레임워크의 기능들에 대한 간결한 도큐먼트의 역할을 하는 것입니다.**
 
 또한, 여러분이 간단한 인터페이스에 의존하게 되면, 여러분의 코드는 이해하거나 유지보수하기가 더 쉽워집니다. 크고 복잡한 클래스에서 사용할 수 있는 메소드들을 훑어보는 대신, 단순하고 깨끗한 인터페이스를 참고할 수 있습니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-왜 Contract인가?" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="contract-reference"></a>
 ## Contract 레퍼런스
@@ -139,6 +143,8 @@ Contract  |  Laravel 5.x Facade
 [Illuminate\Contracts\Validation\Validator](https://github.com/illuminate/contracts/blob/master/Validation/Validator.php) | &nbsp;
 [Illuminate\Contracts\View\Factory](https://github.com/illuminate/contracts/blob/master/View/Factory.php) | View::make()
 [Illuminate\Contracts\View\View](https://github.com/illuminate/contracts/blob/master/View/View.php) | &nbsp;
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-Contract 레퍼런스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="how-to-use-contracts"></a>
 ## Contract 사용법
@@ -183,3 +189,5 @@ Contract  |  Laravel 5.x Facade
 	}
 
 이벤트리스너가 의존성 해결될 때, 서비스 컨테이너는 클래스의 생성자에 있는 타입힌트를 읽고, 그에 적합한 값을 주입해 줍니다. 서비스 컨테이너에 무언가를 등록하는 것에 대하여 더 알고싶다면, [이 문서](/laravel-korean-docs/docs/5.0/container)를 보시기 바랍니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-Contract 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

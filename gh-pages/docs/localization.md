@@ -14,14 +14,16 @@ permalink: /docs/5.0/localization/
 - [패키지 언어 파일 재정의하기](#overriding-package-language-files)
 
 <a name="introduction"></a>
-## 소개 
+## 소개
 
 라라벨의 `Lang` 파사드는 어플리케이션이 다국어에 대응하게 할 수 있도록 다양한 언어로 번역 된 문자열을 검색하는 방법을 제공합니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="language-files"></a>
 ## 언어 파일들
 
-언어 문자열은 `resources/lang` 디렉토리에 저장되어 있습니다. 이 디렉토리 안에서 어플리케이션이 지원하는 언어의 디렉토리가 지정되어야 합니다. 
+언어 문자열은 `resources/lang` 디렉토리에 저장되어 있습니다. 이 디렉토리 안에서 어플리케이션이 지원하는 언어의 디렉토리가 지정되어야 합니다.
 
 	/resources
 		/lang
@@ -52,6 +54,8 @@ permalink: /docs/5.0/localization/
 
 	'fallback_locale' => 'en',
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-언어 파일들" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="basic-usage"></a>
 ## 기본적인 사용법
 
@@ -61,9 +65,9 @@ permalink: /docs/5.0/localization/
 
 `get` 메소드에 전달 되는 문자열의 첫 번째 부분은 언어 파일의 이름이고, 두 번째 부분은 검색하고자 하는 문자열 행의 이름입니다.
 
-> **주의:** 찾고자 하는 언어파일이 존재하지 않는 경우, `get` 메소드는 키 값을 반환합니다. 
+> **주의:** 찾고자 하는 언어파일이 존재하지 않는 경우, `get` 메소드는 키 값을 반환합니다.
 
-`trans` 헬퍼 함수를 `Lang::get` 메소드의 별칭으로 사용할 수 있습니다. 
+`trans` 헬퍼함수를 `Lang::get` 메소드의 별칭으로 사용할 수 있습니다.
 
 	echo trans('messages.welcome');
 
@@ -73,7 +77,7 @@ permalink: /docs/5.0/localization/
 
 	'welcome' => 'Welcome, :name',
 
-그런 뒤에 `Lang:get` 메소드의 두번째 인자로 교체할 문자열을 전달 할 수 있습니다:
+그런 뒤에 `Lang:get` 메소드의 두 번째 인자로 교체할 문자열을 전달 할 수 있습니다:
 
 	echo Lang::get('messages.welcome', ['name' => 'Dayle']);
 
@@ -84,6 +88,8 @@ permalink: /docs/5.0/localization/
 		//
 	}
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-기본적인 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="pluralization"></a>
 ## 복수 표기
 
@@ -91,7 +97,7 @@ permalink: /docs/5.0/localization/
 
 	'apples' => 'There is one apple|There are many apples',
 
-이 형식의 라인을 검색하려면 `Lang::choice` 메소드를 사용하면 됩니다. 
+이 형식의 라인을 검색하려면 `Lang::choice` 메소드를 사용하면 됩니다.
 
 	echo Lang::choice('messages.apples', 10);
 
@@ -99,17 +105,23 @@ permalink: /docs/5.0/localization/
 
 	echo Lang::choice('товар|товара|товаров', $count, [], 'ru');
 
-라라벨 Translator는 Symfony Translation 컴포넌트를 사용하고 있기 때문에, 편리하게 복수 표기 규칙을 만들 수 있습니다.
+라라벨 Translator는 Symfony Translation 컴포넌트를 사용하고 있으므로, 편리하게 복수 표기 규칙을 만들 수 있습니다.
 
 	'apples' => '{0} There are none|[1,19] There are some|[20,Inf] There are many',
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-복수 표기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 
 <a name="validation"></a>
 ## 검증 메세지 지역화하기
 
-검증 오류와 메세지에 대한 다국어 지역화는 <a href="/docs/5.0/validation#localization">검증 문서</a>를 참고하십시오. 
+검증 오류와 메세지에 대한 다국어 지역화는 <a href="/docs/5.0/validation#localization">검증 문서</a>를 참고하십시오.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-검증 메세지 지역화하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="overriding-package-language-files"></a>
 ## 패키지 언어 파일 재정의하기
 
-많은 패키지들이 고유한 언어 라인들을 제공하고 있습니다. 출력되는 문구를 수정하기 위해 패키지의 소스를 수정하는 대신 `resources/lang/packages/{locale}/{package}` 디렉토리에 파일을 추가하여 재정의 할 수 있습니다. 예를 들어, `skyrim/hearthfire` 패키지의 영어 라인을 대체 할 필요가 있다면, `resources/lang/packages/en/hearthfire/messages.php`에 언어 파일을 추가 하면 됩니다. 이 파일에서 여러분이 재정의하고자 하는 언어 라인을 지정하면 됩니다. 재정의하지 않은 언어 라인들은 패키지의 언어 파일의 정의를 그대로 따릅니다. 
+많은 패키지들이 고유한 언어 라인들을 제공하고 있습니다. 출력되는 문구를 수정하기 위해 패키지의 소스를 수정하는 대신 `resources/lang/packages/{locale}/{package}` 디렉토리에 파일을 추가하여 재정의 할 수 있습니다. 예를 들어, `skyrim/hearthfire` 패키지의 영어 라인을 대체 할 필요가 있다면, `resources/lang/packages/en/hearthfire/messages.php`에 언어 파일을 추가 하면 됩니다. 이 파일에서 여러분이 재정의하고자 하는 언어 라인을 지정하면 됩니다. 재정의하지 않은 언어 라인들은 패키지의 언어 파일의 정의를 그대로 따릅니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-지역화 (다국어-Localization)-패키지 언어 파일 재정의하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

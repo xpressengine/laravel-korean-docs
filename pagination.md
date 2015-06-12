@@ -27,7 +27,7 @@ Sometimes you may wish to create a pagination instance manually, passing it an a
 
 #### Paginating An Eloquent Model
 
-You may also paginate [Eloquent](/docs/5.0/eloquent) models:
+You may also paginate [Eloquent](/docs/{{version}}/eloquent) models:
 
 	$allUsers = User::paginate(15);
 
@@ -53,6 +53,8 @@ You may also access additional pagination information via the following methods:
 - `hasMorePages`
 - `url`
 - `nextPageUrl`
+- `firstItem`
+- `lastItem`
 - `total`
 - `count`
 

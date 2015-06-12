@@ -19,11 +19,13 @@ permalink: /docs/5.0/cache/
 <a name="configuration"></a>
 ## 설정
 
-라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org) 나 [Redis](http://redis.io) 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다. 
+라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org) 나 [Redis](http://redis.io) 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다.
 
-캐시 설정 파일은 다양한 여러 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 시리얼라이즈된 데이타를 파일 시스템에 저장하는 `file` 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached 나 APC 와 같은 in-memory 캐시를 사용하기를 권장합니다. 
+캐시 설정 파일은 다양한 여러 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 시리얼라이즈된 데이타를 파일 시스템에 저장하는 `file` 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached 나 APC 와 같은 in-memory 캐시를 사용하기를 권장합니다.
 
-Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를 설치해야 합니다. 
+Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를 설치해야 합니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="cache-usage"></a>
 ## 캐시 사용법
@@ -42,7 +44,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	Cache::add('key', 'value', $minutes);
 
-`add` 메소드는 항목이 실제로 캐시에 **추가된** 경우에만 true 를 반환합니다. 그렇지 않다면 `false`를 반환합니다. 
+`add` 메소드는 항목이 실제로 캐시에 **추가된** 경우에만 true 를 반환합니다. 그렇지 않다면 `false`를 반환합니다.
 
 #### 캐시에 존재하는지 확인하기
 
@@ -79,7 +81,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 		return DB::table('users')->get();
 	});
 
-캐시에 저장되는 모든 항목들은 직렬화-시리얼라이즈 되고, 따라서 어떤 유형의 데이터도 자유롭게 저장할 수 있습니다. 
+캐시에 저장되는 모든 항목들은 직렬화-시리얼라이즈 되고, 따라서 어떤 유형의 데이터도 자유롭게 저장할 수 있습니다.
 
 #### 캐시에 저장된 아이템 가져오기
 
@@ -97,6 +99,8 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	$value = Cache::store('foo')->get('key');
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="increments-and-decrements"></a>
 ## 증감 조작하기
 
@@ -113,6 +117,8 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 	Cache::decrement('key');
 
 	Cache::decrement('key', $amount);
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-증감 조작하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="cache-tags"></a>
 ## 캐시 태그
@@ -147,6 +153,8 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	Cache::tags('authors')->flush();
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 태그" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="cache-events"></a>
 ## 캐시 이벤트
 
@@ -168,10 +176,12 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 		//
 	});
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 이벤트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="database-cache"></a>
 ## 데이터베이스 캐시
 
-`database` 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야합니다. 아래에서 테이블을 만드는 `Schema` 의 예를 확인 할 수 있습니다:
+`database` 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야 합니다. 아래에서 테이블을 만드는 `Schema` 의 예를 확인 할 수 있습니다:
 
 	Schema::create('cache', function($table)
 	{
@@ -179,11 +189,11 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 		$table->text('value');
 		$table->integer('expiration');
 	});
-	
+
 <a name="memcached-cache"></a>
 #### Memcached Cache
 
-Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pecl.php.net/package/memcached)가 설치되어 있어야 합니다. 
+Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pecl.php.net/package/memcached)가 설치되어 있어야 합니다.
 
 기본 [설정](#configuration)은 TCP/IP 기반의 [Memcached::addServer](http://php.net/manual/en/memcached.addserver.php)을 사용합니다:
 
@@ -200,5 +210,6 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 <a name="redis-cache"></a>
 #### Redis Cache
 
-[Redis 설정](/laravel-korean-docs/docs/redis#configuration)을 참고하십시오. 
+[Redis 설정](/laravel-korean-docs/docs/redis#configuration)을 참고하십시오.
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-데이터베이스 캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

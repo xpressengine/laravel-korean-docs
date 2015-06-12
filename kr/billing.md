@@ -19,6 +19,8 @@
 
 라라벨 캐셔는 [Stripe's](https://stripe.com)에 의해서 제공되는 손쉽고 편리한 구독(정기 과금) 서비스를 위한 인터페이스를 제공합니다. 라라벨 캐셔는 여러분이 작성하는 데 어려움을 겪는 구독을 위한 청구서에서 필요한 거의 모든 관용구문들을 다룹니다.  기본적인 구독 관리 외에도, 캐셔를 통해서 쿠폰 관리, 구독 변경, 구매 수량 변경, 취소 유예 기간 그리고 청구서를 PDF로 생성할 수도 있습니다. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-소개-->
+
 <a name="configuration"></a>
 ## 설정
 
@@ -68,6 +70,8 @@
 
 	User::setStripeKey('stripe-key');
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-설정-->
+
 <a name="subscribing-to-a-plan"></a>
 ## 플랜 구독하기
 
@@ -101,6 +105,8 @@
 
 추가적인 필드에 대한 Stripe의 지원정보를 확인하려면 Stripe의 [고객 생성에 관한 문서](https://stripe.com/docs/api#create_customer)를 참고하십시오. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-플랜 구독하기-->
+
 <a name="single-charges"></a>
 ## 한번만 결제하기
 
@@ -126,6 +132,8 @@
 
 청구가 성공적으로 완료되었다면 메소드에서는 Stripe 응답 객체가 반환됩니다. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-한번만 결제하기-->
+
 <a name="no-card-up-front"></a>
 ## 신용카드 정보 없이 가입
 
@@ -139,6 +147,8 @@
 
 	$user->save();
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-신용카드 정보 없이 가입-->
+
 <a name="swapping-subscriptions"></a>
 ## 구독 변경
 
@@ -147,6 +157,8 @@
 	$user->subscription('premium')->swap();
 
 사용자가 평가기간(trial)중이라면, 평가 기간은 정상적으로 유지됩니다. 또한, 구독의 “수량”이 존재하는 경우에도 이 수량은 유지됩니다. 
+
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독 변경-->
 
 <a name="subscription-quantity"></a>
 ## 구독 수량
@@ -165,6 +177,8 @@
 	// Subtract five to the subscription's current quantity...
 	$user->subscription()->decrement(5);
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독 수량-->
+
 <a name="subscription-tax"></a>
 ## 구독에 대한 세금처리
 
@@ -177,6 +191,8 @@
 
 이렇게 하면 여러분이 다양한 국가에 있는 사용자들을 위한 모델별 세율을 적용할 수 있습니다. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독에 대한 세금처리-->
+
 <a name="cancelling-a-subscription"></a>
 ## 구독 취소하기
 
@@ -186,6 +202,8 @@
 
 구독이 취소되면 캐셔는 자동으로 데이터베이스의 `subscription_ends_at` 컬럼을 설정합니다. 이 컬럼은 언제 `subscribed` 메소드가 `false`를 반환해야 하는지 알기 위해서 사용되어 집니다. 예를 들어, 사용자가 구독을 3월 1일에 취소했지만, 정기 구독이 3월 5일에 종료하도록 예정되어 있다면 `subscribed` 메소드는 3월 5일까지 `true`를 반환할 것입니다. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독 취소하기-->
+
 <a name="resuming-a-subscription"></a>
 ## 구독 다시 시작하기
 
@@ -194,6 +212,8 @@
 	$user->subscription('monthly')->resume($creditCardToken);
 
 만약 사용자가 구독을 취소하고 다음 정기 구독을 재개하는 경우 그 등록의 만료일이 되기 전까지는 비용이 바로 부과되지는 않습니다. 사용자의 정기 구독은 간단하게 다시 활성화되며, 원래의 주기에 따라 과금됩니다.
+
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독 다시 시작하기-->
 
 <a name="checking-subscription-status"></a>
 ## 가입 상태 확인
@@ -252,6 +272,8 @@
 		//
 	}
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-가입 상태 확인-->
+
 <a name="handling-failed-subscriptions"></a>
 ## 구독 실패 처리
 
@@ -260,6 +282,8 @@
 	Route::post('stripe/webhook', 'Laravel\Cashier\WebhookController@handleWebhook');
 
 끝입니다! 실패한 결제는 컨트롤러에 의해 확인되어 처리됩니다. 컨트롤러는 Stripe가 결제에 실패하였다고 결정되면(보통 3번의 결제 시도가 실패하면) 사용자의 구독을 취소시킬 것입니다. 이 예제에서 `stripe/webhook` URI는 단순한 예제일 뿐입니다. 여러분은 Stripe 설정에서 URI를 설정해야 합니다.
+
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-구독 실패 처리-->
 
 <a name="handling-other-stripe-webhooks"></a>
 ## 기타 Stripe Webhook(웹 후킹) 처리하기
@@ -277,6 +301,8 @@
 
 > **주의** 추가로 데이터베이스에서 구독정보를 업데이트하면, Webhook 컨트롤러는 또한, Stripe API를 통해서 구독을 취소할 것입니다. 
 
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-기타 Stripe Webhook(웹 후킹) 처리하기-->
+
 <a name="invoices"></a>
 ## 청구서
 
@@ -284,7 +310,7 @@
 
 	$invoices = $user->invoices();
 
-사용자의 청구서를 나열하는 경우, 청구서 관련 정보를 표시하기 위해서 헬퍼 함수를 사용할 수 있습니다:
+사용자의 청구서를 나열하는 경우, 청구서 관련 정보를 표시하기 위해서 헬퍼함수를 사용할 수 있습니다:
 
 	{{ $invoice->id }}
 
@@ -298,3 +324,5 @@
 		'vendor'  => 'Your Company',
 		'product' => 'Your Product',
 	]);
+
+<!--chak-comment-라라벨 캐셔(Laravel Cashier)-청구서-->

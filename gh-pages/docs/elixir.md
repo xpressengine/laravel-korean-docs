@@ -13,11 +13,13 @@ permalink: /docs/5.0/elixir/
 - [Extensions](#extensions)
 
 <a name="introduction"></a>
-## 소개 
+## 소개
 
 라라벨 Elixir(엘릭서)는 여러분의 라라벨 어플리케이션에 기본적인 [Gulp](http://gulpjs.com) 작업들을 정의하기 위해 깔끔하고 편리한 API를 제공합니다. Elixir는 몇가지 공통적인 CSS와 JavaScript 전처리 작업, 또한 테스팅 툴까지 제공합니다.
 
 만약 여러분이 Gulp 과 asset compilation를 어떻게 시작해야 되는지 어려워한 적이 있다면 라라벨 Elixir 를 좋아하게 될 것입니다!
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="installation"></a>
 ## 설치 및 준비
@@ -41,6 +43,8 @@ Elixir를 사용하기전 여러분의 작업환경에 Node.js가 설치되어�
 마지막으로 남은 과정은 Elixir를 설치하는 것 뿐입니다. 라라벨을 새로 설치하면 루트 폴더에 위치한 `package.json` 파일을 볼 수 있습니다. 이 파일은 PHP 대신 Node 의존 패키지를 정의 한다는것을 빼고는 여러분의 `composer.json`과 동일합니다. 아래의 명령어로 의존 패키지들을 설치할 수 있습니다.
 
 	npm install
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-설치 및 준비" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="usage"></a>
 ## 사용법
@@ -72,13 +76,13 @@ elixir(function(mix) {
 
 ```javascript
 elixir(function(mix) {
-	mix.sass("app.sass");
+	mix.sass("app.scss");
 });
 ```
 
 이 때 Sass 파일들은 `resources/assets/sass`에 포함되어있다고 가정하고 있습니다.
 
-기본적으로, Elixir는 컴파일을 위해 LibSass 라이브러리를 사용하고 있습니다. 몇몇의 경우에는 비록 느리지만 기능이 풍부한 Ruby 버전을 사용하는 것이 더 유리할 수도 있습니다. Ruby와 Sass가 gem(`gem install sass`)으로 설치되었다면, 다음처럼 Ruby-mode를 사용할 수 있습니다. 
+기본적으로, Elixir는 컴파일을 위해 LibSass 라이브러리를 사용하고 있습니다. 몇몇의 경우에는 비록 느리지만 기능이 풍부한 Ruby 버전을 사용하는 것이 더 유리할 수도 있습니다. Ruby와 Sass가 gem(`gem install sass`)으로 설치되었다면, 다음처럼 Ruby-mode를 사용할 수 있습니다.
 
 ```javascript
 elixir(function(mix) {
@@ -219,7 +223,7 @@ elixir(function(mix) {
 
 위의 코드는 캐시-버스팅을 위해 고유한 해시값을를 파일 이름에 추가합니다. 예를들어 생성된 파일 이름은 `all-16d570a7.css`와 같이 생성될 것입니다.
 
-뷰 파일 안에서 해쉬된 asset를 로드하기 위해서 `elixir()` 함수를 사용할 수 있습니다. 다음은 그 예제 입니다. 
+뷰 파일 안에서 해쉬된 asset를 로드하기 위해서 `elixir()` 함수를 사용할 수 있습니다. 다음은 그 예제입니다.
 
 ```html
 <link rel="stylesheet" href="{% raw %}{{{% endraw %} elixir("css/all.css") {% raw %}}}{% endraw %}">
@@ -281,6 +285,8 @@ elixir(function(mix) {
 });
 ```
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
 <a name="gulp"></a>
 ## Gulp
 
@@ -306,12 +312,14 @@ elixir(function(mix) {
 
 	gulp tdd
 
-> **참고** 모든 작업은 개발환경에서 진행된다고 가정하고 있기 때문에 압축되지 않을 것입니다. 실서버용(production)으로 작업 하기 위해서는 `gulp --production`을 사용하십시오.
+> **참고** 모든 작업은 개발환경에서 진행된다고 가정하고 있으므로 압축되지 않을 것입니다. 실서버용(production)으로 작업 하기 위해서는 `gulp --production`을 사용하십시오.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-Gulp" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="extensions"></a>
 ## 커스텀 작업과 확장
 
-때때로, 여러분의 고유한 Glup 작업들을 엘릭서 안으로 처리하기를(hook) 원할 수도 있습니다. 아마도 여러분은 엘릭서가 합치고 감시하는 특별한 기능이 필요할 수도 있습니다. 문제 없습니다. 
+때때로, 여러분의 고유한 Glup 작업들을 엘릭서 안으로 처리하기를(hook) 원할 수도 있습니다. 아마도 여러분은 엘릭서가 합치고 감시하는 특별한 기능이 필요할 수도 있습니다. 문제 없습니다.
 
 아래의 예제와 같이 작업이 호출되었을때 단순히 텍스트를 출력하는 일반적인 작업이 있다고 가정해봅시다.
 
@@ -332,7 +340,7 @@ elixir(function(mix) {
 });
 ```
 
-이게 다입니다! 이제 Gulp을 실행할때마다 여러분이 지정한 "speak"라는 작업은 여러분이 혼합(mix)한 다른 Elixir 작업들과 함께 실행될것입니다. 덧붙여 하나 혹은 여러개의 파일들이 수정될 때마다 사용자 정의 작업이 다시 실행될 수 있도록 감시자(watcher)를 추가로 등록하기 위해 정규 표현식을 두번째 인수로 전달할 수 있습니다.
+이게 다입니다! 이제 Gulp을 실행할때마다 여러분이 지정한 "speak"라는 작업은 여러분이 혼합(mix)한 다른 Elixir 작업들과 함께 실행될것입니다. 덧붙여 하나 혹은 여러개의 파일들이 수정될 때마다 사용자 정의 작업이 다시 실행될 수 있도록 감시자(watcher)를 추가로 등록하기 위해 정규 표현식을 두 번째 인수로 전달할 수 있습니다.
 
 ```javascript
 elixir(function(mix) {
@@ -360,7 +368,7 @@ elixir.extend("speak", function(message) {
  });
 ```
 
-Gulp 파일 안에서 참조할 이름을 전달하여 엘릭서의 API를 `확장` 한것과, 콜백 함수를 통해서 Gulp 작업을 생성한것을 주목하십시오. 
+Gulp 파일 안에서 참조할 이름을 전달하여 엘릭서의 API를 `확장` 한것과, 콜백 함수를 통해서 Gulp 작업을 생성한것을 주목하십시오.
 
 이전처럼 여러분의 사용자 정의(custom) 작업이 모니터링 되기 원한다면 감시자(watcher)를 등록하십시오.
 
@@ -385,3 +393,5 @@ elixir(function(mix) {
 ```
 
 이렇게 추가하면 Picard는 Gulp이 시행될 때마다 약간의 차(Tea)를 요구할 것입니다.
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 엘릭서(Laravel Elixir)-커스텀 작업과 확장" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

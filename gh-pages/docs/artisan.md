@@ -43,6 +43,7 @@ permalink: /docs/5.0/artisan/
 
 	php artisan --version
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌CLI(ArtisanCLI)사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="calling-commands-outside-of-cli"></a>
 ## CLI 외부에서 명령어 호출하기
 
@@ -64,12 +65,13 @@ permalink: /docs/5.0/artisan/
 		//
 	});
 
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-CLI 외부에서 명령어 호출하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="scheduling-artisan-commands"></a>
 ## 아티즌 명령어 스케줄링
 
 이전에는 개발자가 스케줄링을 위한 크론(Cron) 작업을 등록하기 위해서 매번 콘솔에 명령어를 입력해야 했습니다. 하지만 이런 작업은 골치 아픈일입니다. 콘솔 스케줄 작업은 소스가 관리되지도 않고 크론에 작업을 추가하기 위해서는 SSH 로 서버에 접속해야만 했습니다. 좀 더 쉬운 방법을 찾아 봅시다. 라라벨 명령 스케줄러를 사용하게되면 서버에 크론 항목을 단 하나 추가하는 것만으로도, 우아하고 좀 더 다양한 명령어 스케줄 실행 을 정의할 수 있게 해줍니다. 
 
-여러분의 명령어 스케줄은 `app/Console/Kernel.php`파일에 위치하고 있습니다. 이 클래스에서 `schedule`메소드를 볼 수 있을 것입니다. 좀 더 쉽게 이해하기 위해서 메소드에는 간단한 예제가 포함되어 있습니다. 원하는 만큼 `Schedule` 오브젝트를 사용하여 스케줄링들을 추가하면 됩니다. 서버에서 크론에 추가해야할 하나의 작업은 다음과 같습니다:
+여러분의 명령어 스케줄은 `app/Console/Kernel.php`파일에 위치하고 있습니다. 이 클래스에서 `schedule`메소드를 볼 수 있을 것입니다. 좀 더 쉽게 이해하기 위해서 메소드에는 간단한 예제가 포함되어 있습니다. 원하는 만큼 `Schedule` 오브젝트를 사용하여 스케줄링들을 추가하면 됩니다. 서버에서 크론에 추가해야 할 하나의 작업은 다음과 같습니다:
 
 	* * * * * php /path/to/artisan schedule:run 1>> /dev/null 2>&1
 
@@ -180,3 +182,5 @@ permalink: /docs/5.0/artisan/
 `thenPing($url)`기능을 사용하려면 Guzzle HTTP 라이브러리가 필요합니다. `composer.json` 파일에 다음 라인을 추가하여 Guzzle 5 를 추가할 수 있습니다. 
 
 	"guzzlehttp/guzzle": "~5.0"
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 스케줄링" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

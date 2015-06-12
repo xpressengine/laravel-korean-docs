@@ -76,7 +76,7 @@ You may access the name of the controller action being run using the `currentRou
 <a name="controller-middleware"></a>
 ## Controller Middleware
 
-[Middleware](/docs/5.0/middleware) may be specified on controller routes like so:
+[Middleware](/docs/{{version}}/middleware) may be specified on controller routes like so:
 
 	Route::get('profile', [
 		'middleware' => 'auth',
@@ -110,7 +110,7 @@ Laravel allows you to easily define a single route to handle every action in a c
 
 The `controller` method accepts two arguments. The first is the base URI the controller handles, while the second is the class name of the controller. Next, just add methods to your controller, prefixed with the HTTP verb they respond to:
 
-	class UserController extends BaseController {
+	class UserController extends Controller {
 
 		public function getIndex()
 		{
@@ -220,7 +220,7 @@ If it becomes necessary to add additional routes to a resource controller beyond
 
 #### Constructor Injection
 
-The Laravel [service container](/docs/5.0/container) is used to resolve all Laravel controllers. As a result, you are able to type-hint any dependencies your controller may need in its constructor:
+The Laravel [service container](/docs/{{version}}/container) is used to resolve all Laravel controllers. As a result, you are able to type-hint any dependencies your controller may need in its constructor:
 
 	<?php namespace App\Http\Controllers;
 
@@ -247,7 +247,7 @@ The Laravel [service container](/docs/5.0/container) is used to resolve all Lara
 
 	}
 
-Of course, you may also type-hint any [Laravel contract](/docs/5.0/contracts). If the container can resolve it, you can type-hint it.
+Of course, you may also type-hint any [Laravel contract](/docs/{{version}}/contracts). If the container can resolve it, you can type-hint it.
 
 #### Method Injection
 
@@ -285,7 +285,7 @@ If your controller method is also expecting input from a route parameter, simply
 	class UserController extends Controller {
 
 		/**
-		 * Store a new user.
+		 * Update the specified user.
 		 *
 		 * @param  Request  $request
 		 * @param  int  $id
@@ -298,7 +298,7 @@ If your controller method is also expecting input from a route parameter, simply
 
 	}
 
-> **Note:** Method injection is fully compatible with [model binding](/docs/5.0/routing#route-model-binding). The container will intelligently determine which arguments are model bound and which arguments should be injected.
+> **Note:** Method injection is fully compatible with [model binding](/docs/{{version}}/routing#route-model-binding). The container will intelligently determine which arguments are model bound and which arguments should be injected.
 
 <a name="route-caching"></a>
 ## Route Caching

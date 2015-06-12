@@ -17,6 +17,8 @@
 
 컨트롤러에 이러한 로직을 넣는 것 대신, `PurchasePodcast` 커맨드와 같은 “명령어” 객체 안에 캡슐화하는 방법을 선택할 수 있습니다. 
 
+<!--chak-comment-커맨드 버스(Command Bus)-소개-->
+
 <a name="creating-commands"></a>
 ## 커맨드 생성하기
 
@@ -67,6 +69,8 @@
 			// Handle the logic to purchase the podcast...
 		}
 
+<!--chak-comment-커맨드 버스(Command Bus)-커맨드 생성하기-->
+
 <a name="dispatching-commands"></a>
 ## 커맨드 디스패치
 
@@ -103,6 +107,8 @@
 		'firstName' => 'Taylor',
 	]);
 
+<!--chak-comment-커맨드 버스(Command Bus)-커맨드 디스패치-->
+
 <a name="queued-commands"></a>
 ## 큐 커맨드
 
@@ -117,6 +123,8 @@
 그다음에는, 정상적으로 커맨드를 작성하면 됩니다. 커맨드가 처리될 때 버스가 자동으로 해당 커맨드를 백그라운드 처리를 위해 큐에 추가합니다. 이보다 더 쉬울 순 없습니다.
 
 큐 커맨드의 상호 작용에 대한 보다 자세한 내용은 [큐 문서](/docs/5.0/queues)를 참고하십시오. 
+
+<!--chak-comment-커맨드 버스(Command Bus)-큐 커맨드-->
 
 <a name="command-pipeline"></a>
 ## 커맨드 파이프라인
@@ -152,3 +160,5 @@
 			return $next($command);
 		});
 	}]);
+
+<!--chak-comment-커맨드 버스(Command Bus)-커맨드 파이프라인-->

@@ -14,7 +14,10 @@ module.exports = function(grunt) {
       },
     },
     'gh-pages': {
-      options: { base: 'gh-pages' },
+      options: { 
+      	base: 'gh-pages',
+		repo: 'https://github.com/xpressengine/laravel-korean-docs.git'
+	  },
       src: ['**/*']
     },
     'build': {
@@ -54,6 +57,8 @@ module.exports = function(grunt) {
                 // replace regex
                 content = content.replace(/([\{|\}]{2,})/g, '{% raw %}$1{% endraw %}');
                 content = content.replace(/\((\/docs\/)/g, '(' + gh_pages.config.baseurl + '$1');
+
+                content = content.replace(/<!--chak-comment-(.+)-->/g, '<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-$1" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>');
                 
                 // save file
                 grunt.file.write( file, [prepend, content, append].join('') );

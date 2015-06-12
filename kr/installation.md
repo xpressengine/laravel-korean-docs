@@ -9,6 +9,8 @@
 
 라라벨은 의존성 관리를 위해 [컴포저](http://getcomposer.org)를 활용합니다. 따라서 라라벨을 사용하기전 여러분은 라라벨을 설치할 서버(머신)에 Composer-컴포저를 설치할 필요가 있습니다.
 
+<!--chak-comment-설치하기(Installation)-컴포저 설치하기-->
+
 <a name="install-laravel"></a>
 ## 라라벨 설치하기
 
@@ -18,7 +20,7 @@
 
 	composer global require "laravel/installer=~1.1"
 
-`laravel`이 여러분의 시스템에서 실행 가능하도록 `~/.composer/vendor/bin` 폴더를 여러분의 경로(PATH)에 추가 해야 합니다. 
+`laravel`이 여러분의 시스템에서 실행 가능하도록 `~/.composer/vendor/bin` 폴더를 여러분의 경로(PATH)에 추가 해야 합니다.
 
 라라벨 인스톨러가 설치 된 후, 간단하게 `larval new` 명령어를 입력하면 여러분이 입력한 폴더안에 깨끗한(fresh) 상태의 라라벨 파일을 생성할 것입니다. 예를 들어, `laravel new blog` 명령어는 `blog`라는 폴더를 생성하며 모든 의존 패키지들의 설치와 함께 깨끗한(fresh) 상태의 라라벨 파일들을 이 폴더에 설치합니다.
 
@@ -36,6 +38,8 @@
 
 	php artisan fresh
 
+<!--chak-comment-설치하기(Installation)-라라벨 설치하기-->
+
 <a name="server-requirements"></a>
 ## 서버 요구사항
 
@@ -49,10 +53,12 @@
 
 일부 OS에서 PHP 5.5 버전부터 직접 수동으로 PHP JSON extension을 설치를 요구하기도 합니다. 여러분이 Ubuntu를 사용하신다면 `apt-get install php5-json` 명령어로 설치할 수 있습니다.
 
+<!--chak-comment-설치하기(Installation)-서버 요구사항-->
+
 <a name="configuration"></a>
 ## 설정하기
 
-라라벨 설치 후 가장 먼저 해야 할 것은 여러분의 어플리케이션 키를 랜덤한 문자열로 세팅하는 것입니다. 만약 라라벨이 컴포저를 통해 설치되었다면 이 키는 `key:generate` 커멘드에 의해 자동적으로 세팅되어졌을 것입니다. 
+라라벨 설치 후 가장 먼저 해야 할 것은 여러분의 어플리케이션 키를 랜덤한 문자열로 세팅하는 것입니다. 만약 라라벨이 컴포저를 통해 설치되었다면 이 키는 `key:generate` 커멘드에 의해 자동적으로 세팅되어졌을 것입니다.
 
 일반적으로, 이 키는 32자로 긴 문자열입니다. 이 키는 `.env` 환경설정 파일에서 세팅할 수 있습니다.
 **만약 어플리케이션 키가 세팅되어있지 않다면, 여러분의 사용자 세션과 그밖의 암호화된 데이터들이 안전하지 않습니다!**
@@ -61,12 +67,16 @@
 
 라라벨이 설치하면 이 문서 [로컬 환경 설정하기](/docs/5.0/configuration#environment-configuration)  역시 참고하시기 바랍니다.
 
-> **주의** 실제 운영중인 어플리케이션에서는 절대로 설정의 `app.debug` 옵션을 `true`로 설정하지 마시기 바랍니다. 
+> **주의** 실제 운영중인 어플리케이션에서는 절대로 설정의 `app.debug` 옵션을 `true`로 설정하지 마시기 바랍니다.
+
+<!--chak-comment-설치하기(Installation)-설정하기-->
 
 <a name="permissions"></a>
 ### 권한
 
 라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 `sotrage`와 `vendor` 폴더에 대한 쓰기권한 허용하십시오.
+
+<!--chak-comment-설치하기(Installation)-권한-->
 
 <a name="pretty-urls"></a>
 ## 깔끔한 URL
@@ -93,3 +103,5 @@ Nginx에서 여러분의 서버 설정이 아래의 지시를 따른다면 “pr
     }
 
 물론 [Homestead](/docs/5.0/homestead)를 사용하신다면 pretty URLs는 자동으로 설정되어 있을 것입니다.
+
+<!--chak-comment-설치하기(Installation)-깔끔한 URL-->

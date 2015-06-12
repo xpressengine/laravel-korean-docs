@@ -24,6 +24,8 @@ To create a new middleware, use the `make:middleware` Artisan command:
 This command will place a new `OldMiddleware` class within your `app/Http/Middleware` directory. In this middleware, we will only allow access to the route if the supplied `age` is greater than 200. Otherwise, we will redirect the users back to the "home" URI.
 
 	<?php namespace App\Http\Middleware;
+	
+	use Closure;
 
 	class OldMiddleware {
 
@@ -55,6 +57,8 @@ It's best to envision middleware as a series of "layers" HTTP requests must pass
 Whether a middleware runs before or after a request depends on the middleware itself. This middleware would perform some task **before** the request is handled by the application:
 
 	<?php namespace App\Http\Middleware;
+	
+	use Closure;
 
 	class BeforeMiddleware implements Middleware {
 
@@ -69,6 +73,8 @@ Whether a middleware runs before or after a request depends on the middleware it
 However, this middleware would perform its task **after** the request is handled by the application:
 
 	<?php namespace App\Http\Middleware;
+	
+	use Closure;
 
 	class AfterMiddleware implements Middleware {
 
@@ -105,11 +111,12 @@ Once the middleware has been defined in the HTTP kernel, you may use the `middle
 
 Sometimes a middleware may need to do some work after the HTTP response has already been sent to the browser. For example, the "session" middleware included with Laravel writes the session data to storage _after_ the response has been sent to the browser. To accomplish this, you may define the middleware as "terminable".
 
+	use Closure;
 	use Illuminate\Contracts\Routing\TerminableMiddleware;
 
 	class StartSession implements TerminableMiddleware {
 
-		public function handle($request, $next)
+		public function handle($request, Closure $next)
 		{
 			return $next($request);
 		}
