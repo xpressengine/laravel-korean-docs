@@ -9,9 +9,9 @@
 <a name="introduction"></a>
 ## 소개
 
-라라벨 Elixir(엘릭서)는 여러분의 라라벨 어플리케이션에 기본적인 [Gulp](http://gulpjs.com) 작업들을 정의하기 위해 깔끔하고 편리한 API를 제공합니다. Elixir는 몇가지 공통적인 CSS와 JavaScript 전처리 작업, 또한 테스팅 툴까지 제공합니다.
+라라벨 Elixir(엘릭서)는 여러분의 라라벨 어플리케이션에 기본적인 [Gulp](http://gulpjs.com) 작업들을 정의하기 위해 깔끔하고 편리한 API를 제공합니다. Elixir는 몇 가지 공통적인 CSS와 JavaScript 전처리 작업, 또한, 테스팅 툴까지 제공합니다.
 
-만약 여러분이 Gulp 과 asset compilation를 어떻게 시작해야 되는지 어려워한 적이 있다면 라라벨 Elixir 를 좋아하게 될 것입니다!
+만약 여러분이 Gulp과 asset compilation를 어떻게 시작해야 되는지 어려워한 적이 있다면 라라벨 Elixir를 좋아하게 될 것입니다!
 
 <!--chak-comment-라라벨 엘릭서(Laravel Elixir)-소개-->
 
@@ -106,7 +106,7 @@ elixir(function(mix) {
 
 이 코드는 CoffeeScript 파일들이 `resources/assets/coffee`에 저장되어 있다고 가정합니다.
 
-#### 모든 Less 와 CoffeeScript 컴파일하기
+#### 모든 Less와 CoffeeScript 컴파일하기
 
 ```javascript
 elixir(function(mix) {
@@ -215,7 +215,7 @@ elixir(function(mix) {
 });
 ```
 
-위의 코드는 캐시-버스팅을 위해 고유한 해시값을를 파일 이름에 추가합니다. 예를들어 생성된 파일 이름은 `all-16d570a7.css`와 같이 생성될 것입니다.
+위의 코드는 캐시-버스팅을 위해 고유한 해시값을를 파일 이름에 추가합니다. 예를 들어, 생성된 파일 이름은 `all-16d570a7.css`와 같이 생성될 것입니다.
 
 뷰 파일 안에서 해쉬된 asset를 로드하기 위해서 `elixir()` 함수를 사용할 수 있습니다. 다음은 그 예제입니다.
 

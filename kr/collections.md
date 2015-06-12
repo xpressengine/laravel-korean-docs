@@ -18,7 +18,7 @@
 	});
 
 
-보시는 바와 같이 `Collection` 클래스는 map 매소드와 reject메소드를 체이닝 방식으로 사용할 수 있게 해줍니다. 다시말해서 모든 `Collection`의 메소드는 `Collection`의 인스턴스를 반환합니다. 더 자세한 내용을 원하면 다음을 읽어보세요!
+보시는 바와 같이 `Collection` 클래스는 map 메소드와 reject메소드를 체이닝 방식으로 사용할 수 있게 해줍니다. 다시 말해서 모든 `Collection`의 메소드는 `Collection`의 인스턴스를 반환합니다. 더 자세한 내용을 원하면 다음을 읽어보세요!
 
 <!--chak-comment-컬렉션(Collections)-소개-->
 
@@ -27,7 +27,7 @@
 
 #### 컬렉션 생성하기
 
-앞서 설명한대로 `collect` 헬퍼함수는 주어진 배열 대신 새로운 `Illuminate\Support\Collection` 인스턴스를 반환합니다. 또는 `Collection` 클래스의 `make` 를 사용할 수도 있습니다:
+앞서 설명한대로 `collect` 헬퍼 함수는 주어진 배열 대신 새로운 `Illuminate\Support\Collection` 인스턴스를 반환합니다. 또는, `Collection` 클래스의 `make`를 사용할 수도 있습니다:
 
 	$collection = collect([1, 2, 3]);
 
@@ -37,6 +37,6 @@
 
 #### 컬렉션 둘러보기
 
-컬렉션에서 사용가능한 메소드를 여기에 모두 나열하는 것 보다 (상당히 많으므로) [API 문서](http://laravel.com/api/master/Illuminate/Support/Collection.html)를 살펴보시기 바랍니다!
+컬렉션에서 사용 가능한 메소드를 여기에 모두 나열하는 것보다(상당히 많으므로) [API 문서](http://laravel.com/api/master/Illuminate/Support/Collection.html)를 살펴보시기 바랍니다!
 
 <!--chak-comment-컬렉션(Collections)-기본 사용법-->

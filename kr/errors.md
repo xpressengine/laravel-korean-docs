@@ -10,9 +10,9 @@
 
 어플리케이션의 로그 기능은 `Illuminate\Foundation\Bootstrap\ConfigureLogging` 부트스트랩 클래스에서 설정됩니다. 이 클래스는 `config/app.php` 설정 파일의 `log` 옵션을 참조합니다. 
 
-기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 [Monolog](https://github.com/Seldaek/monolog) 로깅 라이브러리를 사용하고 있으므로, Monolog 가 제공하는 다양한 핸들러를 이용할 수 있습니다. 
+기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 [Monolog](https://github.com/Seldaek/monolog) 로깅 라이브러리를 사용하고 있으므로, Monolog가 제공하는 다양한 핸들러를 이용할 수 있습니다. 
 
-예를들어 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 `config/app.php` 설정파일을 다음과 같이 변경하면 됩니다:
+예를 들어, 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 `config/app.php` 설정파일을 다음과 같이 변경하면 됩니다:
 
 	'log' => 'single'
 
@@ -80,7 +80,7 @@
 <a name="logging"></a>
 ## 로깅
 
-라라벨의 로그 기능은 강력한 [Monolog](http://github.com/seldaek/monolog) 라이브러리위에 간단한 레이어를 제공합니다. 기본적으로 라라벨은 일별 로그 파일을 생성하도록 설정되어 있고, 로그 파일들은 `storage/logs` 에 저장됩니다. 다음과 같이 하여 로그에 정보를 기록할 수도 있습니다:
+라라벨의 로그 기능은 강력한 [Monolog](http://github.com/seldaek/monolog) 라이브러리위에 간단한 레이어를 제공합니다. 기본적으로 라라벨은 일별 로그 파일을 생성하도록 설정되어 있고, 로그 파일들은 `storage/logs`에 저장됩니다. 다음과 같이 하여 로그에 정보를 기록할 수도 있습니다:
 
 	Log::info('This is some useful information.');
 
@@ -88,7 +88,7 @@
 
 	Log::error('Something is really going wrong.');
 
-로그는 [RFC 5424](http://tools.ietf.org/html/rfc5424) 에 정의되어있는 **debug**, **info**, **notice**, **warning**, **error**, **critical**, 그리고 **alert**의 7가지 로깅 레벨을 제공합니다.
+로그는 [RFC 5424](http://tools.ietf.org/html/rfc5424)에 정의되어있는 **debug**, **info**, **notice**, **warning**, **error**, **critical**, 그리고 **alert**의 7가지 로깅 레벨을 제공합니다.
 
 컨텍스트 데이터 배열도 로그 메소드에 전달할 수 있습니다.
 

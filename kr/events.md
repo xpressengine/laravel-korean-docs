@@ -15,7 +15,7 @@
 
 #### 이벤트 구독하기
 
-라라벨 어플리케이션에 포함되어 있는 `EventServiceProvider` 는 모든 이벤트 핸들러를 등록하는 편리한 방법을 제공합니다. `listen` 프로퍼티는 이벤트(키)와 핸들러(값)으로 구성된 배열을 가지고 있습니다. 여러분의 어플리케이션에서 필요로 하는 많은 이벤트들을 이 배열에 추가할 수 있습니다. 예를 들어 `PodcastWasPurchased` 이벤트를 추가한다고 가정해 봅시다:
+라라벨 어플리케이션에 포함되어 있는 `EventServiceProvider`는 모든 이벤트 핸들러를 등록하는 편리한 방법을 제공합니다. `listen` 프로퍼티는 이벤트(키)와 핸들러(값)으로 구성된 배열을 가지고 있습니다. 여러분의 어플리케이션에서 필요로 하는 많은 이벤트들을 이 배열에 추가할 수 있습니다. 예를 들어, `PodcastWasPurchased` 이벤트를 추가한다고 가정해 봅시다:
 
 	/**
 	 * The event handler mappings for the application.
@@ -32,7 +32,7 @@
 
 	php artisan handler:event EmailPurchaseConfirmation --event=PodcastWasPurchased
 
-매번 핸들러나 이벤트가 필요할 때 직접 `make:event` 와 `handler:event` 명령어를 나누어 실행하는 것은 번거로운 일입니다. 대신에 `EventServiceProvider`클래스에 핸들러와 이벤트를 추가하고 `event:generate` 명령어를 사용할 수도 있습니다. 이 명령어는 여러분의 `EventServiceProvider`에 나열된 이벤트와 핸들러를 생성해줄 것입니다:
+매번 핸들러나 이벤트가 필요할 때 직접 `make:event`와 `handler:event` 명령어를 나누어 실행하는 것은 번거로운 일입니다. 대신에 `EventServiceProvider`클래스에 핸들러와 이벤트를 추가하고 `event:generate` 명령어를 사용할 수도 있습니다. 이 명령어는 여러분의 `EventServiceProvider`에 나열된 이벤트와 핸들러를 생성해줄 것입니다:
 
 	php artisan event:generate
 
@@ -50,7 +50,7 @@
 
 #### 클로저 리스너
 
-이벤트를 처리하기 위해서 항상 별도의 핸들러 클래스를 생성할 필요는 없습니다. 예를 들어 `EventServiceProvider`의 `boot` 메소드에서 다음처럼 지정 할 수도 있습니다:
+이벤트를 처리하기 위해서 항상 별도의 핸들러 클래스를 생성할 필요는 없습니다. 예를 들어, `EventServiceProvider`의 `boot` 메소드에서 다음처럼 지정 할 수도 있습니다:
 
 	Event::listen('App\Events\PodcastWasPurchased', function($event)
 	{
@@ -59,7 +59,7 @@
 
 #### 이벤트 전달 중단하기
 
-경우에 따라서 이벤트가 다른 리스너에게 전달되는 것을 중지하기를 원할 수도 있습니다. 이러한 경우에는 핸들러에서 `false` 를 리턴하면 됩니다:
+경우에 따라서 이벤트가 다른 리스너에게 전달되는 것을 중지하기를 원할 수도 있습니다. 이러한 경우에는 핸들러에서 `false`를 리턴하면 됩니다:
 
 	Event::listen('App\Events\PodcastWasPurchased', function($event)
 	{
@@ -79,7 +79,7 @@
 
 이렇게 하면 핸들러 클래스는 `Illuminate\Contracts\Queue\ShouldBeQueued` 인터페이스의 구현 클래스가 됩니다. 이걸로 끝입니다! 이제 핸들러가 이벤트에 의해서 호출될 때 이벤트 디스패처에 의해서 자동으로 큐에 지정됩니다.
 
-큐에 의해서 실행되는 핸들러가 아무런 예외도 발생하지 않는다면 큐로 지정된 작업은 수행후 자동으로 삭제 됩니다. 수동으로 큐로 지정된 작업의 `delete` 와 `release` 메소드에 액세스 해야되는 경우, 여러분은 그렇게 할 수도 있습니다. 큐로 지정된 핸들러에  기본적으로 포함된 `Illuminate\Queue\InteractsWithQueue` trait 이 다음의 메소드에 엑세스 할 수 있게 해줍니다:
+큐에 의해서 실행되는 핸들러가 아무런 예외도 발생하지 않는다면 큐로 지정된 작업은 수행후 자동으로 삭제 됩니다. 수동으로 큐로 지정된 작업의 `delete`와 `release` 메소드에 액세스 해야되는 경우, 여러분은 그렇게 할 수도 있습니다. 큐로 지정된 핸들러에  기본적으로 포함된 `Illuminate\Queue\InteractsWithQueue` trait 이 다음의 메소드에 엑세스 할 수 있게 해줍니다:
 
 	public function handle(PodcastWasPurchased $event)
 	{
@@ -89,7 +89,7 @@
 		}
 	}
 
-이미 생성된 핸들러를 큐로 지정된 핸들러로 변경해야 된다면 클래스에 수동으로 `ShouldBeQueued` 인터페이스 를 추가해주시면 됩니다.
+이미 생성된 핸들러를 큐로 지정된 핸들러로 변경해야 된다면 클래스에 수동으로 `ShouldBeQueued` 인터페이스를 추가해주시면 됩니다.
 
 <!--chak-comment-이벤트(Events)-큐에 저장된 이벤트 핸들러-->
 

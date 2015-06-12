@@ -15,7 +15,7 @@
 <a name="basic-usage"></a>
 ## 기본 사용법
 
-#### Bcrypt 를 사용해서 패스워드를 해시하기
+#### Bcrypt를 사용해서 패스워드를 해시하기
 
 	$password = Hash::make('secret');
 

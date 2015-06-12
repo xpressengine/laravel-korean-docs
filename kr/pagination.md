@@ -15,7 +15,7 @@
 <a name="usage"></a>
 ## 사용법
 
-데이터들의 페이징을 처리 할 수 있는 몇가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model 에서 사용하는 것입니다.
+데이터들의 페이징을 처리 할 수 있는 몇 가지 방법이 있습니다. 가장 쉬운 방법은 `paginate` 메소드를 쿼리빌더 혹은 Eloquent model에서 사용하는 것입니다.
 
 #### 데이터베이스 결과에 페이징하기
 
@@ -25,11 +25,11 @@
 
 #### 직접 Paginator 만들기
 
-때때로 여러분은 항목들의 배열을 전달하는 pagination 인스턴스를 직접 만들고자 할 수도 있습니다. 이러한 요구사항에 따라 `Illuminate\Pagination\Paginator` 혹은 `Illuminate\Pagination\LengthAwarePaginator` 의 인스턴스를 직접 생성하여 paginator를 수동으로 만들 수도 있습니다.
+때때로 여러분은 항목들의 배열을 전달하는 pagination 인스턴스를 직접 만들고자 할 수도 있습니다. 이러한 요구사항에 따라 `Illuminate\Pagination\Paginator` 혹은 `Illuminate\Pagination\LengthAwarePaginator`의 인스턴스를 직접 생성하여 paginator를 수동으로 만들 수도 있습니다.
 
-#### Eloquent Model 에서의 페이징
+#### Eloquent Model에서의 페이징
 
-또한 여러분은 [Eloquent](/docs/5.0/eloquent) models 에서도 페이징 처리를 할 수 있습니다:
+또한, 여러분은 [Eloquent](/docs/5.0/eloquent) models에서도 페이징 처리를 할 수 있습니다:
 
 	$allUsers = User::paginate(15);
 
@@ -64,13 +64,13 @@
 
 #### “간단한 Pagination"
 
-만약 페이지 번호 없이 “다음” 과 “이전” 링크 만을 pagination view에서 보여준다면, 더 효율적으로 쿼리를  수행하는 옵션인`simplePaginate` 메소드를 사용할 수 있습니다:
+만약 페이지 번호 없이 “다음”과 “이전” 링크 만을 pagination view에서 보여준다면, 더 효율적으로 쿼리를  수행하는 옵션인`simplePaginate` 메소드를 사용할 수 있습니다:
 
 	$someUsers = User::where('votes', '>', 100)->simplePaginate(15);
 
 #### Paginator URI 커스터마이징
 
-paginator 에서 제공하는 `setPath` 메소드를 통해 URI를 변경 할 수 있습니다:
+paginator에서 제공하는 `setPath` 메소드를 통해 URI를 변경 할 수 있습니다:
 
 	$users = User::paginate();
 

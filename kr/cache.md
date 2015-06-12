@@ -13,11 +13,11 @@
 <a name="configuration"></a>
 ## 설정
 
-라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org) 나 [Redis](http://redis.io) 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다.
+라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 `config/cache.php` 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 [Memcached](http://memcached.org)나 [Redis](http://redis.io)와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다.
 
-캐시 설정 파일은 다양한 여러 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 시리얼라이즈된 데이타를 파일 시스템에 저장하는 `file` 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached 나 APC 와 같은 in-memory 캐시를 사용하기를 권장합니다.
+캐시 설정 파일은 다양한 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 직렬화(serialize)된 데이터를 파일 시스템에 저장하는 `file` 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached나 APC와 같은 in-memory 캐시를 사용하기를 권장합니다.
 
-Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를 설치해야 합니다.
+Redis 캐시를 사용하려면 컴포저로 `predis/predis`(~1.0) 패키지를 설치해야 합니다.
 
 <!--chak-comment-캐시(Cache)-설정-->
 
@@ -38,7 +38,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	Cache::add('key', 'value', $minutes);
 
-`add` 메소드는 항목이 실제로 캐시에 **추가된** 경우에만 true 를 반환합니다. 그렇지 않다면 `false`를 반환합니다.
+`add` 메소드는 항목이 실제로 캐시에 **추가된** 경우에만 true를 반환합니다. 그렇지 않다면 `false`를 반환합니다.
 
 #### 캐시에 존재하는지 확인하기
 
@@ -61,21 +61,21 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	Cache::forever('key', 'value');
 
-간혹 캐시에서 항목을 조회할때 뿐만 아니라, 값이 없을 경우 기본 값을 캐시에 저장하고 싶은 경우가 있습니다. 이럴 경우 `Cache::remember` 메소드를 사용하면 됩니다:
+간혹 캐시에서 항목을 조회할 때뿐만 아니라, 값이 없으면 기본값을 캐시에 저장하고 싶은 경우가 있습니다. 이럴 때 `Cache::remember` 메소드를 사용하면 됩니다:
 
 	$value = Cache::remember('users', $minutes, function()
 	{
 		return DB::table('users')->get();
 	});
 
-`remember` 와 `forever`를 결합하여 사용할 수도 있습니다:
+`remember`와 `forever`를 결합하여 사용할 수도 있습니다:
 
 	$value = Cache::rememberForever('users', function()
 	{
 		return DB::table('users')->get();
 	});
 
-캐시에 저장되는 모든 항목들은 직렬화-시리얼라이즈 되고, 따라서 어떤 유형의 데이터도 자유롭게 저장할 수 있습니다.
+캐시에 저장되는 모든 항목은 직렬화되고, 따라서 어떤 유형의 데이터도 자유롭게 저장할 수 있습니다.
 
 #### 캐시에 저장된 아이템 가져오기
 
@@ -117,7 +117,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 <a name="cache-tags"></a>
 ## 캐시 태그
 
-> **참고:** 캐시 태그는 `file`과 `database` 드라이버를 사용하는 경우 지원되지 않습니다. 또한 "forever"로 저장되는 캐시에 많은 태그를 사용하면 기존 레코드를 자동으로 삭제하는 memcached 와 같은 드라이버에서 최상의 성능을 낼 것입니다.
+> **참고:** 캐시 태그(cache tags)는 `file`과 `database` 드라이버를 사용하는 경우 지원되지 않습니다. 또한, "forever"로 저장되는 캐시에 많은 태그를 사용하면 기존 레코드를 자동으로 삭제하는 memcached와 같은 드라이버에서 최상의 성능을 낼 것입니다.
 
 #### 태그된 캐시에 엑세스하기
 
@@ -129,21 +129,21 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 
 	Cache::tags(['people', 'artists'])->put('Anne', $anne, $minutes);
 
-`remember` , `forever` , `rememberForever` 및 이들의 을 포함한 모든 캐시 저장 방법 및 태그를 조합하여 사용할 수 있습니다. 또한 increment 및 decrement 같은 다른 캐시 메소드도 마찬가지로 태그를 캐시 항목에 액세스 할 수 있습니다.
+`remember`, `forever`, `rememberForever` 및 이들을 포함한 모든 캐시 저장 방법 및 태그를 조합하여 사용할 수 있습니다. 또한, increment 및 decrement 같은 다른 캐시 메소드도 마찬가지로 태그를 캐시 항목에 액세스 할 수 있습니다.
 
 #### 태그된 캐시에 있는 아이템에 접근하기
 
-태그가 지정된 캐쉬에 액세스하려면 저장된 것과 동일한 순서로 태그의 목록을 전달합니다.
+태그가 지정된 캐쉬에 액세스하려면 저장된 것과 같은 순서로 태그의 목록을 전달합니다.
 
 	$anne = Cache::tags('people', 'artists')->get('Anne');
 
 	$john = Cache::tags(['people', 'authors'])->get('John');
 
-이름 또는 이름의 목록을 지정하고 태그 된 항목을 모두 지울 수 있습니다. 예를 들어 다음 코드는 `people` 또는 `authors` 또는 둘 모두에 태그 된 모든 캐시 된 항목이 삭제됩니다. 그러므로 "Anne"과 "John"두 아이템은 캐시에서 제거됩니다:
+이름 또는 이름의 목록을 지정하고 태그된 항목을 모두 지울 수 있습니다. 예를 들어, 다음 코드는 `people` 또는 `authors` 또는 둘 모두에 태그 된 모든 캐시 된 항목이 삭제됩니다. 그러므로 "Anne"과 "John"두 아이템은 캐시에서 제거됩니다:
 
 	Cache::tags('people', 'authors')->flush();
 
-한편, 다음 코드에서는 `authors` 태그 된 캐시 만 삭제되기 때문에 "John"은 삭제되지만 "Anne"는 남아 있습니다.
+한편, 다음 코드에서는 `authors` 태그된 캐시만 삭제하기 때문에 "John"은 삭제되지만 "Anne"는 남아 있습니다.
 
 	Cache::tags('authors')->flush();
 
@@ -152,7 +152,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 <a name="cache-events"></a>
 ## 캐시 이벤트
 
-캐시가 동작할 때에 특정한 코드를 실행하기 위해서는 캐시에 의해서 실행되는 이벤트 리스너를 등록해야 합니다:
+캐시가 동작할 때 특정한 코드를 실행하기 위해서는 캐시에 의해서 실행되는 이벤트 리스너를 등록해야 합니다:
 
 	Event::listen('cache.hit', function($key, $value) {
 		//
@@ -175,7 +175,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis` (~1.0) 패키지를
 <a name="database-cache"></a>
 ## 데이터베이스 캐시
 
-`database` 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야 합니다. 아래에서 테이블을 만드는 `Schema` 의 예를 확인 할 수 있습니다:
+`database` 캐시 드라이버를 사용할 때는 캐시 항목을 저장할 테이블을 준비해야 합니다. 아래에서 테이블을 만드는 `Schema`의 예를 확인할 수 있습니다:
 
 	Schema::create('cache', function($table)
 	{
@@ -195,7 +195,7 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 		array('host' => '127.0.0.1', 'port' => 11211, 'weight' => 100),
 	),
 
-`host` 옵션을 UNIX 소켓을 사용하도록 설정할 수 있으며 이 경우 `port` 는 `0` 으로 설정되어 있어야 합니다:
+`host` 옵션에 UNIX 소켓을 사용하도록 설정할 수 있으며 이 경우 `port`는 `0`으로 설정되어 있어야 합니다:
 
 	'memcached' => array(
 		array('host' => '/var/run/memcached/memcached.sock', 'port' => 0, 'weight' => 100),

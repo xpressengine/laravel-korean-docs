@@ -8,9 +8,9 @@
 <a name="basic-responses"></a>
 ## 기본적인 Responses
 
-#### 라우트로 부터 문자열 반환
+#### 라우트로부터 문자열 반환
 
-가장 기본적인 Response 는 라우트로 부터 반환되는 문자열입니다:
+가장 기본적인 Response는 라우트로부터 반환되는 문자열입니다:
 
 	Route::get('/', function()
 	{
@@ -19,7 +19,7 @@
 
 #### 사용자 지정 Response 생성하기
 
-대부분의 라우트나 컨트롤러 액션에서는 `Illuminate\Http\Response`의 인스턴스나 [뷰](/docs/5.0/views)를 반환합니다. `Response` 인스턴스를 반환하는 것은 여러분이 response 의 HTTP 상태 코드나 헤더를 변경할 수 있도록 지원합니다. `Response`는 `Symfony\Component\HttpFoundation\Response` 클래스를 상속받고 있으며 HTTP response 를 만들기 위한 다양한 메소드를 제공합니다.
+대부분의 라우트나 컨트롤러 액션에서는 `Illuminate\Http\Response`의 인스턴스나 [뷰](/docs/5.0/views)를 반환합니다. `Response` 인스턴스를 반환하는 것은 여러분이 response의 HTTP 상태 코드나 헤더를 변경할 수 있도록 지원합니다. `Response`는 `Symfony\Component\HttpFoundation\Response` 클래스를 상속받고 있으며 HTTP response를 만들기 위한 다양한 메소드를 제공합니다.
 
 	use Illuminate\Http\Response;
 
@@ -31,11 +31,11 @@
 	return response($content, $status)
 	              ->header('Content-Type', $value);
 
-> **참고:** `Response` 객체의 사용가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/{{version}}/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html) 를 참고하십시오.
+> **참고:** `Response` 객체의 사용 가능한 전체 메소드 목록은 [API 문서](http://laravel.com/api/master/Illuminate/Http/Response.html)와 [Symfony API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html)를 참고하십시오.
 
-#### Response 에서 뷰파일 내보내기
+#### Response에서 뷰파일 내보내기
 
-`Response` 클래스 메서드에 액세스 할 필요가 있지만, Response 의 컨텐츠 내용으로 뷰를 반환하고 싶다면, `view` 메소드를 사용하면 됩니다.
+`Response` 클래스 메소드에 액세스 할 필요가 있지만, Response의 컨텐츠 내용으로 뷰를 반환하고 싶다면, `view` 메소드를 사용하면 됩니다.
 
 	return response()->view('hello')->header('Content-Type', $type);
 
@@ -45,7 +45,7 @@
 
 #### 메소드 체이닝
 
-대부분의 `Response` 메소드는 유연하게 response 를 만들 수 있도록 체이닝이 가능합니다:
+대부분의 `Response` 메소드는 유연하게 response를 만들 수 있도록 체이닝이 가능합니다:
 
 	return response()->view('hello')->header('Content-Type', $type)
                      ->withCookie(cookie('name', 'value'));
@@ -55,11 +55,11 @@
 <a name="redirects"></a>
 ## 리다이렉트
 
-일반적으로 리다이렉트 Response 는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는 데 필요한 적절한 헤더를 포함하고 있습니다.
+일반적으로 리다이렉트 Response는 `Illuminate\Http\RedirectResponse` 클래스의 인스턴스이며, 사용자를 다른 URL로 리다이렉트하는 데 필요한 적절한 헤더를 포함하고 있습니다.
 
 #### 리다이렉트 반환하기
 
-`RedirectResponse` 인스턴스를 생성하는 데는 몇가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼함수를 사용하게 됩니다.
+`RedirectResponse` 인스턴스를 생성하는 데는 몇 가지 방법이 있습니다. 가장 간단한 방법은 `redirect` 헬퍼 함수를 사용하는 것입니다. 테스트를 진행할 때 리다이렉트 Response를 생성하는 모킹(Mock)은 일반적으로 잘 하지 않기 때문에, 대부분의 경우에 헬퍼 함수를 사용하게 됩니다.
 
 	return redirect('user/login');
 
@@ -71,7 +71,7 @@
 
 #### 이전 URL로 리다이렉트
 
-예를 들어 폼 전송 후에, 사용자를 이전 URL로 리다이렉트 시키고자 하는 경우가 있을 수 있습니다. 이런 경우에는 `back` 메소드를 사용하면 됩니다:
+예를 들어, 폼 전송 후에, 사용자를 이전 URL로 리다이렉트 시키고자 하는 경우가 있을 수 있습니다. 이런 경우에는 `back` 메소드를 사용하면 됩니다:
 
 	return redirect()->back();
 
@@ -79,7 +79,7 @@
 
 #### 이름이 지정된 라우트로 리다이렉트 하기
 
-전달 인자 없이 `redirect` 헬퍼함수를 호출할 때에는 `Illuminate\Routing\Redirector`의 인스턴스가 반환됩니다. 따라서 `Redirector` 인스턴스의 메소드를 사용할 수 있습니다. 예를 들어 이름지 지정된 라우트로 이동하는 `RedirectResponse`를 생성하고자 한다면 `route` 메소드를 사용할 수 있습니다:
+전달 인자 없이 `redirect` 헬퍼 함수를 호출할 때에는 `Illuminate\Routing\Redirector`의 인스턴스가 반환됩니다. 따라서 `Redirector` 인스턴스의 메소드를 사용할 수 있습니다. 예를 들어, 이름지 지정된 라우트로 이동하는 `RedirectResponse`를 생성하고자 한다면 `route` 메소드를 사용할 수 있습니다:
 
 	return redirect()->route('login');
 
@@ -103,11 +103,11 @@
 
 #### 컨트롤러 액션으로 리다이렉트 하기
 
-이름이 지정된 라우트로 이동하는 `RedirectResponse` 인스턴스를 생성하는것과 비슷하게 [컨트롤러 액션](/docs/5.0/controllers) 으로 리다이렉션 할 수 있습니다.
+이름이 지정된 라우트로 이동하는 `RedirectResponse` 인스턴스를 생성하는것과 비슷하게 [컨트롤러 액션](/docs/5.0/controllers)으로 리다이렉션 할 수 있습니다.
 
 	return redirect()->action('App\Http\Controllers\HomeController@index');
 
-> **주의:** `URL:setRootControllerNamespace` 를 통해서 컨트롤러의 루트 네임스페이스가 지정되었다면, 전체 네임 스페이스를 지정할 필요가 없습니다.
+> **주의:** `URL:setRootControllerNamespace`를 통해서 컨트롤러의 루트 네임스페이스가 지정되었다면, 전체 네임 스페이스를 지정할 필요가 없습니다.
 
 #### 컨트롤러 액션으로 파라미터와 함께 리다이렉트 하기
 
@@ -122,11 +122,11 @@
 <a name="other-responses"></a>
 ## 기타 Response
 
-`response` 헬퍼함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/docs/5.0/contracts) 를 반환합니다. 이 contract 는 response 를 생성하기 위한 다양한 메소드를 제공합니다.
+`response` 헬퍼 함수를 사용하여 편리하게 다른 타입의 response 인스턴스를 생성할 수도 있습니다. `response` 헬퍼함수를 인자없이 호출하게 되면 `Illuminate\Contracts\Routing\ResponseFactory` [contract](/docs/5.0/contracts)를 반환합니다. 이 contract는 response를 생성하기 위한 다양한 메소드를 제공합니다.
 
 #### JSON response 생성하기
 
-`json` 메소드는 헤더의 `Content-Type` 을 자동으로 `application/json` 으로 지정합니다:
+`json` 메소드는 헤더의 `Content-Type`을 자동으로 `application/json`으로 지정합니다:
 
 	return response()->json(['name' => 'Abigail', 'state' => 'CA']);
 
@@ -176,7 +176,7 @@
 
 	}
 
-`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달 받습니다. 매크로로 등록된 클로저는 `response` 헬퍼함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다.
+`macro` 메소드는 매크로로 지정할 이름을 첫 번째 인자로, 클로저를 두 번째 인자로 전달받습니다. 매크로로 등록된 클로저는 `response` 헬퍼 함수를 통해서 `ResponseFactory` 구현 객체에서 호출될것입니다.
 
 	return response()->caps('foo');
 
