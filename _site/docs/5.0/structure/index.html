@@ -135,7 +135,7 @@
 
 <p>기본적인 라라벨 어플리케이션의 구조는 어플리케이션이 크건, 작건 좋은 시작점이 되는것을 의도하고 있습니다. 당연히 어플리케이션을 원하는대로 구성해도 됩니다. 컴포저가 클래스를 오토로딩할 수 있는 한 클래스를 어디에 위치시키는가에 대한 제약사항은 없습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-어플리케이션 구조(Application Structure)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-어플리케이션-구조(Application-Structure)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="the-root-directory"></a></p>
 
@@ -161,40 +161,40 @@
 
 <p><code>vendor</code> 디렉토리는 컴포저의 의존성 폴더입니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-어플리케이션 구조(Application Structure)-루트 디렉토리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-어플리케이션-구조(Application-Structure)-루트-디렉토리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="the-app-directory"></a></p>
 
 <h2 id="app-디렉토리">App 디렉토리</h2>
 
-<p>어플리케이션의 가장 핵심적인 부분은 <code>app</code> 디렉토리에 있습니다. 기본적으로 이 디렉토리의 네임스페이스는 컴포저가 <a href="http://www.php-fig.org/psr/psr-4/">PSR-4 autoloading standard</a>방식으로 오토로딩될 수 있게 설정된 <code>App</code> 으로 설정되어 있습니다. ** <code>app:name</code> 아티즌 명령어를 통해서 네임스페이스를 변경할 수 있습니다**.</p>
+<p>어플리케이션의 가장 핵심적인 부분은 <code>app</code> 디렉토리에 있습니다. 기본적으로 이 디렉토리의 네임스페이스는 컴포저가 <a href="http://www.php-fig.org/psr/psr-4/">PSR-4 autoloading standard</a>방식으로 오토로딩될 수 있게 설정된 <code>App</code>으로 설정되어 있습니다. ** <code>app:name</code> 아티즌 명령어를 통해서 네임스페이스를 변경할 수 있습니다**.</p>
 
-<p><code>app</code> 디렉토리는 <code>Console</code>, <code>Http</code> 그리고 <code>Providers</code>와 같은 추가적인 디렉토리들을 가지고 있습니다. <code>Console</code> 과 <code>Http</code> 디렉토리는 어플리케이션의 &quot;코어&quot;에 API를 제공한다고 생각합니다. HTTP 프로토콜 과 CLI 모두 모두 어플리케이션과 상호 관계 메커니즘이지만, 실제 어플리케이션 로직은 포함하지 않습니다. 다시 말해 어플리케이션에 명령을 지시하는 두 가지 방법이라는 것입니다. <code>Console</code> 디렉토리는 모든 아티즌 명령어를 가지고 있으며 <code>Http</code> 디렉토리는 컨트롤러, 필터, 그리고 requests-요청들을 가지고 있습니다.</p>
+<p><code>app</code> 디렉토리는 <code>Console</code>, <code>Http</code> 그리고 <code>Providers</code>와 같은 추가적인 디렉토리들을 가지고 있습니다. <code>Console</code>과 <code>Http</code> 디렉토리는 어플리케이션의 &quot;코어&quot;에 API를 제공한다고 생각합니다. HTTP 프로토콜과 CLI 모두 모두 어플리케이션과 상호 관계 메커니즘이지만, 실제 어플리케이션 로직은 포함하지 않습니다. 다시 말해 어플리케이션에 명령을 지시하는 두 가지 방법이라는 것입니다. <code>Console</code> 디렉토리는 모든 아티즌 명령어를 가지고 있으며 <code>Http</code> 디렉토리는 컨트롤러, 필터, 그리고 requests-요청들을 가지고 있습니다.</p>
 
-<p><code>Commands</code> 디렉토리는 당연하게도, 응용 프로그램의 명령어들을 모아놓은 곳입니다. 각각의 명령어는 응용 프로그램이 큐에 삽입하는 작업을 나타내는 동시에 현재 요청에 대한 라이프 사이클 동안 수행 할 수있는 작업을 나타냅니다.</p>
+<p><code>Commands</code> 디렉토리는 당연하게도, 응용 프로그램의 명령어를 모아놓은 곳입니다. 각각의 명령어는 응용 프로그램이 큐에 삽입하는 작업을 나타내는 동시에 현재 요청에 대한 라이프 사이클 동안 수행 할 수있는 작업을 나타냅니다.</p>
 
 <p><code>Events</code> 디렉토리는 예상할 수 있듯이 이벤트 클래스를 모아놓은 곳입니다. 물론 이벤트를 표현하기 위해서 꼭 클래스를 사용할 필요는 없습니다. 그러나 새로운 이벤트를 사용하기 위해서, 아티즌 명령어를 통해서 생성 된 클래스는 기본적으로 이 디렉토리에 위치합니다.</p>
 
 <p><code>Handlers</code> 디렉토리는 커맨드와 이벤트들을 처리하는 클래스들을 포함하고 있습니다.  핸들러는 커맨드 또는 이벤트를 받아서 해당 명령 또는 발생한 이벤트에 따라 수행 로직을 실행합니다.</p>
 
-<p><code>Services</code> 디렉토리는 어플리케이션에서 필요한 다양한 다양한 “헬퍼” 서비스들을 포함하고 있습니다. 예를 들어 라라벨에 포함된 <code>Registrar</code> 서비스는  어플리케이션에 새로운 사용자의 생성과 검증하는 역할을 수행합니다. 다른 예로는 서비스가 외부 API들과 연결하거나, 다른 시스템 또는 어플리케이션에서 필요한 통계 데이터들을 수집하는 역할을 수행할 수 있습니다.</p>
+<p><code>Services</code> 디렉토리는 어플리케이션에서 필요한 다양한 다양한 “헬퍼” 서비스들을 포함하고 있습니다. 예를 들어, 라라벨에 포함된 <code>Registrar</code> 서비스는  어플리케이션에 새로운 사용자의 생성과 검증하는 역할을 수행합니다. 다른 예로는 서비스가 외부 API들과 연결하거나, 다른 시스템 또는 어플리케이션에서 필요한 통계 데이터들을 수집하는 역할을 수행할 수 있습니다.</p>
 
-<p><code>Exceptions</code> 디렉토리는  어플리케이션의 예외 핸들러를 포함하고 있으며, 또한 응용프로그램에서 발생하는 예외들을 선언해 두기에 적당한 곳입니다.</p>
+<p><code>Exceptions</code> 디렉토리는  어플리케이션의 예외 핸들러를 포함하고 있으며, 또한, 응용프로그램에서 발생하는 예외들을 선언해 두기에 적당한 곳입니다.</p>
 
 <blockquote>
-<p><strong>참고:</strong> <code>app</code> 디렉토리 중에 많은 클래스들이 아티즌 명령어에 의해 생성되어 집니다. 사용 가능한 명령어들을 확인하려면 터미널에서 <code>php artisan list make</code> 명령을 실행하십시오.</p>
+<p><strong>참고:</strong> <code>app</code> 디렉토리 중에 많은 클래스들이 아티즌 명령어에 의해 생성되어 집니다. 사용 가능한 명령어를 확인하려면 터미널에서 <code>php artisan list make</code> 명령을 실행하십시오.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-어플리케이션 구조(Application Structure)-App 디렉토리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-어플리케이션-구조(Application-Structure)-App-디렉토리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="namespacing-your-application"></a></p>
 
 <h2 id="어플리케이션에-네임스페이스-지정하기">어플리케이션에 네임스페이스 지정하기</h2>
 
-<p>앞서 이야기한대로 어플리케이션의 네임스페이스는 기본값으로 <code>App</code>으로 지정되어 있습니다. 하지만 이 네임스페이스를 여러분이 고유한 값으로 변경하고자 한다면 <code>app:name</code> 아티즌 명령어를 통해서 손쉽게 할 수 있습니다. 예를들어 어플리케이션이 “SocialNet”으로 이름을 지정하고자 한다면 다음과 같이 명령어를 실행하면 됩니다:</p>
+<p>앞서 이야기한대로 어플리케이션의 네임스페이스는 기본값으로 <code>App</code>으로 지정되어 있습니다. 하지만 이 네임스페이스를 여러분이 고유한 값으로 변경하고자 한다면 <code>app:name</code> 아티즌 명령어를 통해서 손쉽게 할 수 있습니다. 예를 들어, 어플리케이션이 “SocialNet”으로 이름을 지정하고자 한다면 다음과 같이 명령어를 실행하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">php artisan app:name SocialNet
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-어플리케이션 구조(Application Structure)-어플리케이션에 네임스페이스 지정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-어플리케이션-구조(Application-Structure)-어플리케이션에-네임스페이스-지정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -224,35 +224,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

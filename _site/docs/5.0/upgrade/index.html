@@ -138,7 +138,7 @@
 <p><code>bootstrap/autoload</code> 파일에서 <code>$compiledPath</code> 변수를 다음처럼 변경합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$compiledPath = __DIR__.&#39;/../vendor/compiled.php&#39;;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-5.0.16으로 업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-5.0.16으로-업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="upgrade-5.0"></a></p>
 
@@ -154,7 +154,7 @@
 
 <p>설치된 5.0 버전의 어플리케이션에 추가적인 컴포저 의존 패키지들을 복사해 넣는 것을 잊지 마십시오. 여기에는 SDK와 같은 서드 파티 코드도 포함됩니다.</p>
 
-<p>라라벨5가 릴리즈 된 이후 바로는 라라벨과 연동되는 일부 패키지는 라라벨5와 호환이 되지 않는수도 있습니다. 패키지의 제작자에게 라라벨5 버전에 대한 대응계획을 확인합니다. 컴포저에 어플리케이션을 위한 추가적인 의존 패키지를 추가하였다면 <code>composer updata</code> 를 실행 해야 합니다.</p>
+<p>라라벨5가 릴리즈 된 이후 바로는 라라벨과 연동되는 일부 패키지는 라라벨5와 호환이 되지 않는수도 있습니다. 패키지의 제작자에게 라라벨5 버전에 대한 대응계획을 확인합니다. 컴포저에 어플리케이션을 위한 추가적인 의존 패키지를 추가하였다면 <code>composer updata</code>를 실행 해야 합니다.</p>
 
 <h3 id="네임스페이스">네임스페이스</h3>
 
@@ -164,9 +164,9 @@
 
 <h4 id="마이그레이션-환경-변수">마이그레이션 환경 변수</h4>
 
-<p><code>.env.example</code> 파일을 복사하여 이전 버전에서 <code>.env.php</code> 파일과 동일한 역할을 하는 <code>5.0의</code>.env<code>파일을 생성합니다.</code>APP_ENV<code>와</code>APP_KEY` (암호화 키), 데이터베이스 연결 정보, 캐시 그리고 세션 드라이버와 같은 어플리케이션에서 사용가능항 설정 값들을 지정할 수 있습니다.</p>
+<p><code>.env.example</code> 파일을 복사하여 이전 버전에서 <code>.env.php</code> 파일과 같은 역할을 하는 <code>5.0의</code>.env<code>파일을 생성합니다.</code>APP_ENV<code>와</code>APP_KEY` (암호화 키), 데이터베이스 연결 정보, 캐시 그리고 세션 드라이버와 같은 어플리케이션에서 사용가능항 설정 값들을 지정할 수 있습니다.</p>
 
-<p>추가적으로 이전버전의 <code>.env.php</code> 파일에 들어 있던 사용자가 지정한 값들을 <code>.env</code> 파일(실제 로컬 환경을 위한 값 설정) 과 <code>.env.example</code> 파일 (다른 팀 구성원들이 참고할 샘플 값)에 복사합니다.)에 복사해 넣습니다.</p>
+<p>추가로 이전버전의 <code>.env.php</code> 파일에 들어 있던 사용자가 지정한 값들을 <code>.env</code> 파일(실제 로컬 환경을 위한 값 설정)과 <code>.env.example</code> 파일 (다른 팀 구성원들이 참고할 샘플 값)에 복사합니다.)에 복사해 넣습니다.</p>
 
 <p>환경 설정과 관련된 보다 자세한 내용은 <a href="/laravel-korean-docs/docs/5.0/configuration#environment-configuration">관련 문서</a>를 확인하십시오.</p>
 
@@ -176,9 +176,9 @@
 
 <h4 id="설정-파일들">설정 파일들</h4>
 
-<p>라라벨 5.0은 더 이상 <code>app/config/{구동환경의이름}/</code> 디렉토리를 주어진 구동 환경에 대한 설정파일로 사용하지 않습니다. 대신에  구동 환경에 의해 달라지는 설정 값들을 <code>.env</code> 파일로 이동 시켰습니다. 그리고 나서 설정 파일 안에서 <code>env(‘키’, ‘기본값’)</code> 의 형태로 해당 값들에 엑세스 합니다. <code>config/database.php</code> 설정 파일에서 이러한 사용 예를 확인할 수 있습니다.</p>
+<p>라라벨 5.0은 더 이상 <code>app/config/{구동환경의이름}/</code> 디렉토리를 주어진 구동 환경에 대한 설정파일로 사용하지 않습니다. 대신에  구동 환경에 의해 달라지는 설정 값들을 <code>.env</code> 파일로 이동 시켰습니다. 그리고 나서 설정 파일 안에서 <code>env(‘키’, ‘기본값’)</code>의 형태로 해당 값들에 엑세스 합니다. <code>config/database.php</code> 설정 파일에서 이러한 사용 예를 확인할 수 있습니다.</p>
 
-<p>구동환경과 관계없이 변하지 않는 값들과 또는 <code>env()</code> 를 통해서 여러분의 로컬 환경에 의해서 변화하는 값 두 가지들에 대한 설정 값들을 <code>config/</code> 디렉토리안에 들어 있는 설정 파일들에 지정합니다.</p>
+<p>구동환경과 관계없이 변하지 않는 값들과 또는 <code>env()</code>를 통해서 여러분의 로컬 환경에 의해서 변화하는 값 두 가지들에 대한 설정 값들을 <code>config/</code> 디렉토리안에 들어 있는 설정 파일들에 지정합니다.</p>
 
 <p>기억하십시오 만약 여러분이 <code>.env</code> 파일에 추가적인 키들을 추가하였다면, 마찬가지로 <code>.env.exampl</code> 파일에도 추가합니다. 여러분의 팀 동료들이 이를 참고하여 손쉽게 자신의 <code>.env</code> 파일을 생성하는 데 도움이 될 것입니다.</p>
 
@@ -190,35 +190,35 @@
 
 <p>다음으로 모든 컨트롤러들을 <code>app/Http/Controllers</code> 디렉토리로 옮깁니다. 이 가이드에서는 네임스페이스를 사용하도록 변경하지 않기 때문에, <code>app/Http/Controllers</code> 디렉토리를 <code>composer.json</code> 파일의 <code>classmap</code> 여역에 추가합니다. 그런 다음 <code>app/Http/Controllers/Controller.php</code> 추상  클래스에서 네임스페이스를 제거합니다. 마이그레이션된 컨트롤러가 기본 클래스를 상속 받고 있는지 확인합니다.</p>
 
-<p><code>app/Providers/RouteServiceProvider.php</code> 파일 내부에서 <code>namespace</code> 속성을 <code>null</code> 로 설정합니다.</p>
+<p><code>app/Providers/RouteServiceProvider.php</code> 파일 내부에서 <code>namespace</code> 속성을 <code>null</code>로 설정합니다.</p>
 
 <h3 id="라우트-필터">라우트 필터</h3>
 
 <p><code>app/filters.php</code> 파일에 있던 필터 바인딩들을 <code>app/Providers/RouteServiceProvider.php</code>파일의 <code>boot()</code> 메소드에 복사합니다. <code>app/Providers/RouteServiceProvider.php</code> 파일에 <code>use Illuminate\Support\Facades\Route;</code>를 추가하여 <code>Route</code> 파사드를 사용할 수 있도록 합니다.</p>
 
-<p><code>auth</code> 와 <code>csrf</code> 와 같은 기본적인 라라벨 4.0의 필터는 미들웨어로 변경되었기 때문에 따로 옮길 필요가 없습니다. 이전의 기본 필터들(예를 들어 <code>[&#39;before&#39; =&gt; &#39;auth&#39;]</code>) 을 참조하는 라우트나 컨트롤러들을 수정하여 새로운 미들웨어(예를 들어 <code>[&#39;middleware&#39; =&gt; &#39;auth’].</code>)를 참조 하도록 변경합니다.</p>
+<p><code>auth</code>와 <code>csrf</code>와 같은 기본적인 라라벨 4.0의 필터는 미들웨어로 변경되었기 때문에 따로 옮길 필요가 없습니다. 이전의 기본 필터들(예를 들어, <code>[&#39;before&#39; =&gt; &#39;auth&#39;]</code>)을 참조하는 라우트나 컨트롤러들을 수정하여 새로운 미들웨어(예를 들어, <code>[&#39;middleware&#39; =&gt; &#39;auth’].</code>)를 참조 하도록 변경합니다.</p>
 
-<p>필터는 라라벨5에서 삭제되지 않았습니다. 여러분은 여전히 <code>before</code> 와 <code>after</code> 를 사용하여 사용자 정의 필터를 지정하고 사용할 수 있습니다.</p>
+<p>필터는 라라벨5에서 삭제되지 않았습니다. 여러분은 여전히 <code>before</code>와 <code>after</code>를 사용하여 사용자 정의 필터를 지정하고 사용할 수 있습니다.</p>
 
 <h3 id="전역-csrf">전역 CSRF</h3>
 
-<p>기본적으로 <a href="/laravel-korean-docs/docs/5.0/routing#csrf-protection">CSRF 방지</a> 가 전체 라우트에서 활성화되어 있습니다. 이를 비활성화 시키거나 특정 라우트에서만 수동으로 활성화하고자한다면 <code>App\Http\Kernel</code>파일의  <code>middleware</code> 배열에서 다음 미들웨어를 삭제합니다.</p>
+<p>기본적으로 <a href="/laravel-korean-docs/docs/5.0/routing#csrf-protection">CSRF 방지</a>가 전체 라우트에서 활성화되어 있습니다. 이를 비활성화 시키거나 특정 라우트에서만 수동으로 활성화하고자한다면 <code>App\Http\Kernel</code>파일의  <code>middleware</code> 배열에서 다음 미들웨어를 삭제합니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;App\Http\Middleware\VerifyCsrfToken&#39;,
 </code></pre></div>
-<p>다른곳에서 사용하기 위해서 삭제한 라인을 <code>$routeMiddleware</code> 에 추가합니다:</p>
+<p>다른곳에서 사용하기 위해서 삭제한 라인을 <code>$routeMiddleware</code>에 추가합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;csrf&#39; =&gt; &#39;App\Http\Middleware\VerifyCsrfToken&#39;,
 </code></pre></div>
-<p>이제 개별 라우트 / 컨트롤러에 대해서 <code>[&#39;middleware&#39; =&gt; &#39;csrf&#39;]</code> 와 같이 미들웨어를 지정할 수 있습니다. 미들웨어에 대한 보다 자세한 사항은 <a href="/laravel-korean-docs/docs/5.0/middleware">미들웨어 문서</a>를 참고하십시오.</p>
+<p>이제 개별 라우트 / 컨트롤러에 대해서 <code>[&#39;middleware&#39; =&gt; &#39;csrf&#39;]</code>와 같이 미들웨어를 지정할 수 있습니다. 미들웨어에 대한 보다 자세한 사항은 <a href="/laravel-korean-docs/docs/5.0/middleware">미들웨어 문서</a>를 참고하십시오.</p>
 
 <h3 id="eloquent-모델">Eloquent 모델</h3>
 
-<p>Eloquent 모델을 모아두기 위한 <code>app/Models</code> 디렉토리를 생성합니다. 그런다음에 이 디렉토리를 <code>composer.json</code> 파일의 <code>classmap</code> 에 추가합니다.</p>
+<p>Eloquent 모델을 모아두기 위한 <code>app/Models</code> 디렉토리를 생성합니다. 그런다음에 이 디렉토리를 <code>composer.json</code> 파일의 <code>classmap</code>에 추가합니다.</p>
 
-<p><code>SoftDeletingTrait</code> 을 사용하는 모델은  <code>Illuminate\Database\Eloquent\SoftDeletes</code>을 사용하도록 변경합니다.</p>
+<p><code>SoftDeletingTrait</code>을 사용하는 모델은  <code>Illuminate\Database\Eloquent\SoftDeletes</code>을 사용하도록 변경합니다.</p>
 
 <h4 id="eloquent-캐싱">Eloquent 캐싱</h4>
 
-<p>Eloquent 는 더 이상 쿼리 캐시를 위한 <code>remember</code> 메소드를 제공하지 않습니다. 여러분은 이제 <code>Cache::remember</code> 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 <a href="/laravel-korean-docs/docs/5.0/cache">해당 문서</a>를 참고하십시오.</p>
+<p>Eloquent는 더 이상 쿼리 캐시를 위한 <code>remember</code> 메소드를 제공하지 않습니다. 여러분은 이제 <code>Cache::remember</code> 함수를 사용하여 수동으로 쿼리를 캐싱해야 합니다. 캐시와 관련된 보다 자세한 정보는 <a href="/laravel-korean-docs/docs/5.0/cache">해당 문서</a>를 참고하십시오.</p>
 
 <h3 id="사용자-인증-모델">사용자 인증 모델</h3>
 
@@ -242,23 +242,23 @@
 <p><strong>클래스 선언부분 안에서 다음의 trait들을 사용하도록 합니다:</strong></p>
 <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">use Authenticatable, CanResetPassword;</span>
 </code></pre></div>
-<p>**이 방법을 사용하면, 클래스의 선언부분의 use 블록에서 <code>Illuminate\Auth\Reminders\RemindableTrait</code> 와 <code>Illuminate\Auth\UserTrait</code>를 제거합니다.</p>
+<p>**이 방법을 사용하면, 클래스의 선언부분의 use 블록에서 <code>Illuminate\Auth\Reminders\RemindableTrait</code>와 <code>Illuminate\Auth\UserTrait</code>를 제거합니다.</p>
 
 <h3 id="캐셔-변경사항">캐셔 변경사항</h3>
 
-<p><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a>의 trait 과 인터페이스의 이름이 변경되었습니다.  <code>BillableTrait</code> 대신 <code>Laravel\Cashier\Billable</code> trait을 사용합니다. 그리고 <code>Laravel\Cashier\BillableInterface</code> 대신에 <code>Laravel\Cashier\Contracts\Billable</code> 인터페이스를 사용합니다. 다른 메소드는 변경되지 않았습니다.</p>
+<p><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a>의 trait과 인터페이스의 이름이 변경되었습니다.  <code>BillableTrait</code> 대신 <code>Laravel\Cashier\Billable</code> trait을 사용합니다. 그리고 <code>Laravel\Cashier\BillableInterface</code> 대신에 <code>Laravel\Cashier\Contracts\Billable</code> 인터페이스를 사용합니다. 다른 메소드는 변경되지 않았습니다.</p>
 
 <h3 id="아티즌-명령어들">아티즌 명령어들</h3>
 
-<p><code>app/commands</code> 디렉토리의 모든 커맨드 클래스드들을 새로운 <code>app/Console/Commands</code> 디렉토리로 이옮깁니다. 그다음에 <code>composer.json</code> 파일의 <code>classmap</code> 에 <code>app/Console/Commands</code> 을 추가합니다.</p>
+<p><code>app/commands</code> 디렉토리의 모든 커맨드 클래스드들을 새로운 <code>app/Console/Commands</code> 디렉토리로 이옮깁니다. 그다음에 <code>composer.json</code> 파일의 <code>classmap</code>에 <code>app/Console/Commands</code>을 추가합니다.</p>
 
 <p>그리고 <code>start/artisan.php</code> 파일의 아티즌 명령어 리스트를 <code>app/Console/Kernel.php</code> 파일의 <code>commands</code> 배열에 복사합니다.</p>
 
 <h3 id="데이터베이스-마이그레이션-&amp;-시딩">데이터베이스 마이그레이션 &amp; 시딩</h3>
 
-<p>데이터베이스에 이미 user 테이블에 존재하기 때문에 라라벨 5.0에 포함된 두개의 마이그레이션 파일을 삭제 합니다.</p>
+<p>데이터베이스에 이미 user 테이블에 존재하기 때문에 라라벨 5.0에 포함된 두 개의 마이그레이션 파일을 삭제 합니다.</p>
 
-<p>이전 <code>app/database/migrations</code> 디렉토리의 모든 마이그레이션 클래스들을 새로운 <code>database/migrations</code> 디렉토리로 옮깁니다. 시드 파일들은 <code>app/database/seeds</code> 에서 <code>database/seeds</code> 로 옮깁니다.</p>
+<p>이전 <code>app/database/migrations</code> 디렉토리의 모든 마이그레이션 클래스들을 새로운 <code>database/migrations</code> 디렉토리로 옮깁니다. 시드 파일들은 <code>app/database/seeds</code>에서 <code>database/seeds</code>로 옮깁니다.</p>
 
 <h3 id="글로벌-ioc-바인딩">글로벌 IoC 바인딩</h3>
 
@@ -272,15 +272,15 @@
 
 <h3 id="블레이드-태그-변경">블레이드 태그 변경</h3>
 
-<p>보안을 기본적으로 강화하기 위해서 라라벨5에서는 <code>{{ }}</code> 와 <code>{{{ }}}</code> 구문에서 모든 출력을 escape 합니다. 새로운 <code>{!! !!}</code> 구문이 escape 되지 않은 출력을 위해서 사용되어 집니다. 어플리케이션을 업데이트 할 때 가장 안전한 선택은 이전처럼 출력하기 위해서 기존 구문들을 <code>{!! !!}</code> 표기 방식으로 사용하는 것입니다.</p>
+<p>보안을 기본적으로 강화하기 위해서 라라벨5에서는 <code>{{ }}</code>와 <code>{{{ }}}</code> 구문에서 모든 출력을 escape 합니다. 새로운 <code>{!! !!}</code> 구문이 escape 되지 않은 출력을 위해서 사용되어 집니다. 어플리케이션을 업데이트 할 때 가장 안전한 선택은 이전처럼 출력하기 위해서 기존 구문들을 <code>{!! !!}</code> 표기 방식으로 사용하는 것입니다.</p>
 
-<p>하지만 여러분이 <strong>반드시</strong> 이전 버전의 블레이드 문법을 사용해야 한다면 <code>AppServiceProvider@register</code> 의 마지막에 다음 라인들을 추가하면 됩니다.</p>
+<p>하지만 여러분이 <strong>반드시</strong> 이전 버전의 블레이드 문법을 사용해야 한다면 <code>AppServiceProvider@register</code>의 마지막에 다음 라인들을 추가하면 됩니다.</p>
 <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">\Blade::setRawTags(&#39;{{&#39;, &#39;}}&#39;);</span>
 <span class="x">\Blade::setContentTags(&#39;{{{&#39;, &#39;}}}&#39;);</span>
 <span class="x">\Blade::setEscapedContentTags(&#39;{{{&#39;, &#39;}}}&#39;);</span>
 </code></pre></div>
 <p>이렇게 하는 것이 편리한것만은 아니며 XSS 공격에 대해서 어플리케이션이 취약해질 수도 있습니다.
-또한 코멘트와 <code>{{--</code> 는 더 이상 동작하지 않습니다.</p>
+또한, 코멘트와 <code>{{--</code>는 더 이상 동작하지 않습니다.</p>
 
 <h3 id="다국어-파일">다국어 파일</h3>
 
@@ -296,17 +296,17 @@
 
 <h3 id="기타-파일들">기타 파일들</h3>
 
-<p>프로젝트의 다른 파일들을 복사합니다. 예를 들어 <code>.scrutinizer.yml</code>, <code>bower.json</code> 그리고 다를 비슷한 도구 관련 설정 파일 등입니다.</p>
+<p>프로젝트의 다른 파일들을 복사합니다. 예를 들어, <code>.scrutinizer.yml</code>, <code>bower.json</code> 그리고 다를 비슷한 도구 관련 설정 파일 등입니다.</p>
 
 <p>Sass 나 Less, CoffeeScript 파일들을 원하는 위치로 이동합시다. <code>resources/assets</code> 디렉토리가 기본 위치로 적당할 것입니다.</p>
 
 <h3 id="form-&amp;-html-헬퍼">Form &amp; HTML 헬퍼</h3>
 
-<p>만약 Form 이나 HTML 헬퍼를 사용중이었다면 <code>class &#39;Form&#39; not found</code> 또는 <code>class &#39;Html&#39; not found</code>와 같은 에러 메세지를 확인할 수 있을 것입니다. Form 과 HTML 헬퍼는 라라벨 5.0에서 더 이상 제공하지 않습니다. 하지만 별도의 <a href="http://laravelcollective.com/docs/5.0/html">Laravel Collective</a> 커뮤니티가 주관하는 대체 시스템이 있습니다.</p>
+<p>만약 Form 이나 HTML 헬퍼를 사용중이었다면 <code>class &#39;Form&#39; not found</code> 또는 <code>class &#39;Html&#39; not found</code>와 같은 에러 메세지를 확인할 수 있을 것입니다. Form과 HTML 헬퍼는 라라벨 5.0에서 더 이상 제공하지 않습니다. 하지만 별도의 <a href="http://laravelcollective.com/docs/5.0/html">Laravel Collective</a> 커뮤니티가 주관하는 대체 시스템이 있습니다.</p>
 
-<p>예를 들자면 <code>composer.json</code> 의 <code>require</code> 영역에 <code>&quot;laravelcollective/html&quot;: &quot;~5.0&quot;</code>를 추가할 수도 있습니다 .</p>
+<p>예를 들자면 <code>composer.json</code>의 <code>require</code> 영역에 <code>&quot;laravelcollective/html&quot;: &quot;~5.0&quot;</code>를 추가할 수도 있습니다 .</p>
 
-<p>또한 Form 과 HTML 파사드와 서비스 프로바이더가 필요할 것입니다. <code>config/app.php</code> 를 수정하여 &#39;providers&#39; 배열에 다음 라인을 추가하십시오.</p>
+<p>또한, Form과 HTML 파사드와 서비스 프로바이더가 필요할 것입니다. <code>config/app.php</code>를 수정하여 &#39;providers&#39; 배열에 다음 라인을 추가하십시오.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;Collective\Html\HtmlServiceProvider&#39;,
 </code></pre></div>
 <p>다음으로 &#39;aliases&#39; 배열에 다음라인들을 추가합니다.</p>
@@ -319,9 +319,9 @@
 
 <h3 id="페이지네이션">페이지네이션</h3>
 
-<p><code>$paginator-&gt;links()</code> 로 호출되던 부분을 <code>$paginator-&gt;render()</code>으로 교체하십시오.</p>
+<p><code>$paginator-&gt;links()</code>로 호출되던 부분을 <code>$paginator-&gt;render()</code>으로 교체하십시오.</p>
 
-<p><code>$paginator-&gt;getFrom()</code> 와 <code>$paginator-&gt;getTo()</code>로 호출되던 부분을 각각 <code>$paginator-&gt;firstItem()</code> 와 <code>$paginator-&gt;lastItem()</code> 로 교체합니다.</p>
+<p><code>$paginator-&gt;getFrom()</code>와 <code>$paginator-&gt;getTo()</code>로 호출되던 부분을 각각 <code>$paginator-&gt;firstItem()</code>와 <code>$paginator-&gt;lastItem()</code>로 교체합니다.</p>
 
 <p><code>$paginator-&gt;getPerPage()</code>, <code>$paginator-&gt;getCurrentPage()</code>, <code>$paginator-&gt;getLastPage()</code> 그리고 <code>$paginator-&gt;getTotal()</code>메소드 앞에 접두어로 붙던 “get”을 제거 하십시오(예. <code>$paginator-&gt;perPage()</code>)</p>
 
@@ -337,7 +337,7 @@
 
 <p>Workbench 컴포넌트는 더 이상 제공하지 않습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-4.2에서 5.0으로 업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-4.2에서-5.0으로-업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="upgrade-4.2"></a></p>
 
@@ -367,7 +367,7 @@ class User extends Eloquent {
     use SoftDeletingTrait;
 }
 </code></pre></div>
-<p>또한 수동으로 <code>deleted_at</code> 컬럼을  <code>dates</code> 속성에 추가해주어야 합니다.</p>
+<p>또한, 수동으로 <code>deleted_at</code> 컬럼을  <code>dates</code> 속성에 추가해주어야 합니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Eloquent {
     use SoftDeletingTrait;
 
@@ -377,12 +377,12 @@ class User extends Eloquent {
 <p>모든 soft 삭제 작업을 위한 API는 동일합니다.</p>
 
 <blockquote>
-<p><strong>주의:</strong> <code>SoftDeletingTrait</code> 는 기본 모델에 사용해서는 안됩니다. 실제 모델 클래스에서만 사용하도록 합니다.</p>
+<p><strong>주의:</strong> <code>SoftDeletingTrait</code>는 기본 모델에 사용해서는 안됩니다. 실제 모델 클래스에서만 사용하도록 합니다.</p>
 </blockquote>
 
 <h3 id="뷰-/-페이지네이션-environment-이름-변경">뷰 / 페이지네이션 Environment 이름 변경</h3>
 
-<p>코드상에서 <code>Illuminate\View\Environment</code> 클래스 또는 <code>Illuminate\Pagination\Environment</code> 클래스를 참조하도록 되어 있었다면 그 대신에 <code>Illuminate\View\Factory</code> 와 <code>Illuminate\Pagination\Factory</code>를 참조하도록 변경합니다. 이 두개의 클래스는 기능을 보다 잘 나타내기 위해서 이름이 변경되었습니다.</p>
+<p>코드상에서 <code>Illuminate\View\Environment</code> 클래스 또는 <code>Illuminate\Pagination\Environment</code> 클래스를 참조하도록 되어 있었다면 그 대신에 <code>Illuminate\View\Factory</code>와 <code>Illuminate\Pagination\Factory</code>를 참조하도록 변경합니다. 이 두 개의 클래스는 기능을 보다 잘 나타내기 위해서 이름이 변경되었습니다.</p>
 
 <h3 id="페이지네이션-프리젠터에-파라미터-추가">페이지네이션 프리젠터에 파라미터 추가</h3>
 
@@ -394,17 +394,17 @@ class User extends Eloquent {
 <p>Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭게 <code>encrypt</code> 옵션을 추가합니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;encrypt&#39; =&gt; true
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-4.1에서 4.2로 업그레이드 하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-4.1에서-4.2로-업그레이드-하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="upgrade-4.1.29"></a></p>
 
 <h2 id="4.1.x-이하에서-4.1.29로-업그레이드-하기">4.1.X 이하에서 4.1.29로 업그레이드 하기</h2>
 
-<p>라라벨 4.1.29에서는 모든 데이터베이스 드라이버에 대한 컬럼 인용 부분이 향상되었습니다. 모델에서 <code>fillable</code> 속성을 사용하지 않은 경우 여러 가지 컬럼의 대량 할당에 관한(msass assignment) 취약점으로 부터 어플리케이션을 보호할 수 있습니다. 모델에서 <code>fillable</code> 속성을 사용하여 데이터를 할당하는 경우 어플리케이션이 보다 안전해 집니다. 그러나 여러분이 <code>guarded</code> 속성을 사용하고 있고 사용자로 부터 전달된 배열을 “update” 나 “save” 유형의 기능에 전달하는 경우라면 어플리케이션이 mass assignment 위험에 노출되어 있으므로 즉시 4.1.29로 업그레이드 해야 합니다.</p>
+<p>라라벨 4.1.29에서는 모든 데이터베이스 드라이버에 대한 컬럼 인용 부분이 향상되었습니다. 모델에서 <code>fillable</code> 속성을 사용하지 않은 경우 여러 가지 컬럼의 대량 할당에 관한(msass assignment) 취약점으로부터 어플리케이션을 보호할 수 있습니다. 모델에서 <code>fillable</code> 속성을 사용하여 데이터를 할당하는 경우 어플리케이션이 보다 안전해 집니다. 그러나 여러분이 <code>guarded</code> 속성을 사용하고 있고 사용자로부터 전달된 배열을 “update” 나 “save” 유형의 기능에 전달하는 경우라면 어플리케이션이 mass assignment 위험에 노출되어 있으므로 즉시 4.1.29로 업그레이드 해야 합니다.</p>
 
-<p>라라벨4.1.29로 업그레이드 하기 위해서는 <code>composer update</code> 를 실행하면 됩니다. 이 업데이트에서는 소스 수정이 필요한 사항들은 포함되어 있지 않습니다.</p>
+<p>라라벨4.1.29로 업그레이드 하기 위해서는 <code>composer update</code>를 실행하면 됩니다. 이 업데이트에서는 소스 수정이 필요한 사항들은 포함되어 있지 않습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-4.1.X 이하에서 4.1.29로 업그레이드 하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-4.1.X-이하에서-4.1.29로-업그레이드-하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="upgrade-4.1.26"></a></p>
 
@@ -447,7 +447,7 @@ public function updateRememberToken(UserInterface $user, $token);
 </code></pre></div>
 <p><code>Illuminate\Auth\UserInterface</code>에서도 “업데이트 방법”에서 설명하고 있는 새로운 메소드 3개가 추가되었습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-4.1.25 이하에서 4.1.26으로 업그레이드 하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-4.1.25-이하에서-4.1.26으로-업그레이드-하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="upgrade-4.1"></a></p>
 
@@ -465,9 +465,9 @@ public function updateRememberToken(UserInterface $user, $token);
 
 <h3 id="설정-파일과-옵션-추가">설정 파일과 옵션 추가</h3>
 
-<p><code>app/config/app.php</code> 설정 파일에서 <code>aliases</code> 와 <code>providers</code> 배열을 업데이트 합니다. 배열에서 업데이트 해야될 값은 <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/app.php">이 파일</a>에서 확인할 수 있습니다. 사용자가 별도로 지정한 패키지 서비스 프로바이더와 별칭을 따로 추가하는 것을 잊지 마십시오.</p>
+<p><code>app/config/app.php</code> 설정 파일에서 <code>aliases</code>와 <code>providers</code> 배열을 업데이트 합니다. 배열에서 업데이트 해야될 값은 <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/app.php">이 파일</a>에서 확인할 수 있습니다. 사용자가 별도로 지정한 패키지 서비스 프로바이더와 별칭을 따로 추가하는 것을 잊지 마십시오.</p>
 
-<p>새로운 <code>app/config/remote.php</code> 설정 파일을 <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/remote.php">저장소</a>로 부터 추가합니다.</p>
+<p>새로운 <code>app/config/remote.php</code> 설정 파일을 <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/remote.php">저장소</a>로부터 추가합니다.</p>
 
 <p>새로운 <code>app/config/session.php</code> 파일에서 새로운 <code>expire_on_close</code> 설정 옵션을 추가합니다. 기본값은 <code>false</code>입니다.</p>
 
@@ -476,11 +476,11 @@ public function updateRememberToken(UserInterface $user, $token);
     &#39;database&#39; =&gt; &#39;mysql&#39;, &#39;table&#39; =&gt; &#39;failed_jobs&#39;,
 ],
 </code></pre></div>
-<p><strong>(선택사항)</strong> <code>app/config/view.php</code> 파일에서 <code>pagination</code> 설정 옵션을 <code>pagination::slider-3</code> 으로 업데이트 합니다.</p>
+<p><strong>(선택사항)</strong> <code>app/config/view.php</code> 파일에서 <code>pagination</code> 설정 옵션을 <code>pagination::slider-3</code>으로 업데이트 합니다.</p>
 
 <h3 id="컨트롤러-업데이트">컨트롤러 업데이트</h3>
 
-<p><code>app/controllers/BaseController.php</code> 파일의 최 상단 부분에 <code>use</code> 가 사용되었다면 <code>use Illuminate\Routing\Controllers\Controller;</code> 를 <code>use Illuminate\Routing\Controller;</code>으로 변경합니다.</p>
+<p><code>app/controllers/BaseController.php</code> 파일의 최 상단 부분에 <code>use</code>가 사용되었다면 <code>use Illuminate\Routing\Controllers\Controller;</code>를 <code>use Illuminate\Routing\Controller;</code>으로 변경합니다.</p>
 
 <h3 id="패스워드-리마인더(알리미)-업데이트">패스워드 리마인더(알리미) 업데이트</h3>
 
@@ -490,7 +490,7 @@ public function updateRememberToken(UserInterface $user, $token);
 
 <h3 id="구동환경-감지-업데이트">구동환경 감지 업데이트</h3>
 
-<p>보안의 이유로 어플리케이션의 구동 환경을 감지 하기 위해서 URL 도메인은 더 이상 사용되지 않습니다. 이 값은 손쉽게 요청시에 변경이 가능하여 공력을 가능하게 합니다. 머신의 호스트 네임 (맥, 리눅스, 윈도우 에서 <code>hostname</code> 명령어를 사용하십시오) 을 사용하도록 구동 환경 감지 로직을 변경해야 합니다.</p>
+<p>보안의 이유로 어플리케이션의 구동 환경을 감지 하기 위해서 URL 도메인은 더 이상 사용되지 않습니다. 이 값은 손쉽게 요청시에 변경이 가능하여 공력을 가능하게 합니다. 머신의 호스트 네임 (맥, 리눅스, 윈도우에서 <code>hostname</code> 명령어를 사용하십시오)을 사용하도록 구동 환경 감지 로직을 변경해야 합니다.</p>
 
 <h3 id="로그-파일-간략화.">로그 파일 간략화.</h3>
 
@@ -500,7 +500,7 @@ public function updateRememberToken(UserInterface $user, $token);
 
 <p><code>bootstrap/start.php</code> 파일안에서 <code>$app-&gt;redirectIfTrailingSlash()</code> 호출을 제거 하십시오. 이 기능은 프레임워크에 포함되어 있는 <code>.htaccess</code> 파일에서 처리되어 더 이상 메소드가 필요하지 않습니다.</p>
 
-<p>다음으로 <code>public/.htaccess</code> 파일을 <a href="https://github.com/laravel/laravel/blob/v4.1.0/public/.htaccess">새버전의 파일</a> 으로 교체합니다.</p>
+<p>다음으로 <code>public/.htaccess</code> 파일을 <a href="https://github.com/laravel/laravel/blob/v4.1.0/public/.htaccess">새버전의 파일</a>으로 교체합니다.</p>
 
 <h3 id="현재-라우트-엑세스하기">현재 라우트 엑세스하기</h3>
 
@@ -508,13 +508,13 @@ public function updateRememberToken(UserInterface $user, $token);
 
 <h3 id="컴포저-업데이트">컴포저 업데이트</h3>
 
-<p>변경사항 적용을 완료하면 <code>composer update</code> 를 실행하여 어플리케이션 코어 파일을 업데이트 할 수 있습니다. 로딩과 관련된 에러가 발생한다면 다음처럼 <code>--no-scripts</code> 옵션과 함께 <code>update</code> 명령어를 실행하십시오 <code>composer update --no-scripts</code>.</p>
+<p>변경사항 적용을 완료하면 <code>composer update</code>를 실행하여 어플리케이션 코어 파일을 업데이트 할 수 있습니다. 로딩과 관련된 에러가 발생한다면 다음처럼 <code>--no-scripts</code> 옵션과 함께 <code>update</code> 명령어를 실행하십시오 <code>composer update --no-scripts</code>.</p>
 
 <h3 id="와일드카드-이벤트-리스너">와일드카드 이벤트 리스너</h3>
 
-<p>와일드 카드 이벤트 리스너는 더 이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, <code>Event::firing()</code> 를 사용하십시오.</p>
+<p>와일드 카드 이벤트 리스너는 더 이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, <code>Event::firing()</code>를 사용하십시오.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-업그레이드 가이드(Upgrade Guide)-4.0에서 4.1로 업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-업그레이드-가이드(Upgrade-Guide)-4.0에서-4.1로-업그레이드" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -544,35 +544,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

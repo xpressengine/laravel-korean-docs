@@ -122,7 +122,7 @@
       <article class="content">
       <h1 id="기여-가이드라인(contribution-guidelines)">기여 가이드라인(Contribution Guidelines)</h1>
 
-<p><strong>현재 안정릴리즈 버전</strong>의 문서에 기여하려는 경우에는 해당 버전 브랜치에 보내주시기 바랍니다. 예를 들어 라라벨 5.0의 문서라면 <code>5.0</code> 브랜치에 보내주시기 바랍니다. 다음 릴리즈 버전의 문서로 보내는 경우에는 <code>master</code> 브랜치로 보내 주시기 바랍니다.</p>
+<p><strong>현재 안정릴리즈 버전</strong>의 문서에 기여하려는 경우에는 해당 버전 브랜치에 보내주시기 바랍니다. 예를 들어, 라라벨 5.0의 문서라면 <code>5.0</code> 브랜치에 보내주시기 바랍니다. 다음 릴리즈 버전의 문서로 보내는 경우에는 <code>master</code> 브랜치로 보내 주시기 바랍니다.</p>
 
       </article>
 
@@ -152,35 +152,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

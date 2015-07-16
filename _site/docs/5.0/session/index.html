@@ -143,14 +143,14 @@
 <blockquote>
 <p><strong>참고:</strong> 세션을 암호화하여 저장하고자 한다면 <code>encrypt</code> 설정 옵션을 <code>true</code>로 지정하십시오.</p>
 
-<p><strong>주의</strong> <code>cookie</code> 세션 드라이버를 사용할 때에는 HTTP 커널에서 <strong>절대로</strong> <code>EncryptCookie</code> 미들웨어를 제거해서는 안됩니다. 이 미들웨어를 제거하게 되면, 어플리케이션이 원격으로 부터 코드를 실행하는 취약점이 존재합니다.</p>
+<p><strong>주의</strong> <code>cookie</code> 세션 드라이버를 사용할 때에는 HTTP 커널에서 <strong>절대로</strong> <code>EncryptCookie</code> 미들웨어를 제거해서는 안됩니다. 이 미들웨어를 제거하게 되면, 어플리케이션이 원격으로부터 코드를 실행하는 취약점이 존재합니다.</p>
 </blockquote>
 
 <h4 id="예약어">예약어</h4>
 
 <p>라라벨 프레임워크는 내부적으로 <code>flash</code>라는 세션키를 사용하고 있으므로 이 이름으로 세션을 추가하지 말아야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-세션(Session)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-세션(Session)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="session-usage"></a></p>
 
@@ -198,7 +198,7 @@ $value = Session::get(&#39;key&#39;, function() { return &#39;default&#39;; });
 <h4 id="세션-id-재생성하기">세션 ID 재생성하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Session::regenerate();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-세션(Session)-세션 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-세션(Session)-세션-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="flash-data"></a></p>
 
@@ -213,7 +213,7 @@ $value = Session::get(&#39;key&#39;, function() { return &#39;default&#39;; });
 <h4 id="임시-데이터의-일부-값만-다시-임시-저장하기">임시 데이터의 일부 값만 다시 임시 저장하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Session::keep([&#39;username&#39;, &#39;email&#39;]);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-세션(Session)-임시 데이터" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-세션(Session)-임시-데이터" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="database-sessions"></a></p>
 
@@ -234,13 +234,13 @@ composer dump-autoload
 
 php artisan migrate
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-세션(Session)-데이터베이스 세션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-세션(Session)-데이터베이스-세션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="session-drivers"></a></p>
 
 <h2 id="세션-드라이버">세션 드라이버</h2>
 
-<p>세션 “드라이버” 는 각각의 요청에 따라 세션이 어디에 저장될지를 결정합니다. 라라벨은 별다른 설정 없이 다양한 드라이버를 사용할 수 있습니다:</p>
+<p>세션 “드라이버”는 각각의 요청에 따라 세션이 어디에 저장될지를 결정합니다. 라라벨은 별다른 설정 없이 다양한 드라이버를 사용할 수 있습니다:</p>
 
 <ul>
 <li><code>file</code> - 세션이 <code>storage/framework/sessions</code> 폴더에 저장됩니다.</li>
@@ -254,7 +254,7 @@ php artisan migrate
 <p><strong>주의:</strong> 배열 드라이버의 경우에는 실제로 세션은 유지되지 않기 때문에 <a href="/laravel-korean-docs/docs/5.0/testing">unit tests</a>를 수행하는 데에만 사용하시기 바랍니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-세션(Session)-세션 드라이버" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-세션(Session)-세션-드라이버" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -284,35 +284,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

@@ -135,9 +135,9 @@
 
 <p>어플리케이션의 로그 기능은 <code>Illuminate\Foundation\Bootstrap\ConfigureLogging</code> 부트스트랩 클래스에서 설정됩니다. 이 클래스는 <code>config/app.php</code> 설정 파일의 <code>log</code> 옵션을 참조합니다. </p>
 
-<p>기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 <a href="https://github.com/Seldaek/monolog">Monolog</a> 로깅 라이브러리를 사용하고 있으므로, Monolog 가 제공하는 다양한 핸들러를 이용할 수 있습니다. </p>
+<p>기본적으로 로거는 일단위 로그 파일을 기록하도록 설정되어 있습니다만 필요한경우 이 주기를 변경할 수 있습니다. 라라벨은 인기있는 <a href="https://github.com/Seldaek/monolog">Monolog</a> 로깅 라이브러리를 사용하고 있으므로, Monolog가 제공하는 다양한 핸들러를 이용할 수 있습니다. </p>
 
-<p>예를들어 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 <code>config/app.php</code> 설정파일을 다음과 같이 변경하면 됩니다:</p>
+<p>예를 들어, 일별로 기록되는 로그 파일 대신 하나의 로그 파일을 구성하고 싶다면 <code>config/app.php</code> 설정파일을 다음과 같이 변경하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;log&#39; =&gt; &#39;single&#39;
 </code></pre></div>
 <p>별다른 구성이 없이도 라라벨은 <code>single</code>, <code>daily</code>, <code>syslog</code> 그리고 <code>errorlog</code> 로깅 모드를 지원합니다. 그러나 응용 프로그램에 대한 로깅을 원하는대로 사용자 정의하고자 한다면, <code>ConfigureLogging</code> 부트스트랩 클래스를 재정의 하여 사용할 수도 있습니다. </p>
@@ -149,7 +149,7 @@
 <p>로컬 개발환경을 구성중이라면 <code>APP_DEBUG</code> 환경 변수를 <code>true</code>로 구성해야 할것입니다. 
 *<em>실제 제품 구동 환경이라면, 이 값은 항상 <code>false</code>가 되어야 할것입니다. *</em></p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-에러와-로깅(Errors---Logging)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="handling-errors"></a></p>
 
@@ -180,7 +180,7 @@ public function report(Exception $e)
 
 <p>예외-exception 처리 클래스의 <code>dontReport</code> 속성에 배열로 지정된 유형들은 로그를 남기지 않습니다. 기본적으로 404 에러는 로그파일에 기록되지 않습니다. 필요한 경우에 다른 예외-exception 유형들도 이 배열에 추가할 수 있습니다. </p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-에러 처리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-에러와-로깅(Errors---Logging)-에러-처리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="http-exceptions"></a></p>
 
@@ -198,20 +198,20 @@ public function report(Exception $e)
 
 <p>모든 404에러들을 위한 사용자 정의 뷰를 반환하기 위해서는 <code>resources/views/errors/404.blade.php</code> 파일을 만들어야 합니다. 이 뷰파일은 어플리케이션에 의해 발생하는 모든 404 에러에 사용됩니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-HTTP 예외-exceptions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-에러와-로깅(Errors---Logging)-HTTP-예외-exceptions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="logging"></a></p>
 
 <h2 id="로깅">로깅</h2>
 
-<p>라라벨의 로그 기능은 강력한 <a href="http://github.com/seldaek/monolog">Monolog</a> 라이브러리위에 간단한 레이어를 제공합니다. 기본적으로 라라벨은 일별 로그 파일을 생성하도록 설정되어 있고, 로그 파일들은 <code>storage/logs</code> 에 저장됩니다. 다음과 같이 하여 로그에 정보를 기록할 수도 있습니다:</p>
+<p>라라벨의 로그 기능은 강력한 <a href="http://github.com/seldaek/monolog">Monolog</a> 라이브러리위에 간단한 레이어를 제공합니다. 기본적으로 라라벨은 일별 로그 파일을 생성하도록 설정되어 있고, 로그 파일들은 <code>storage/logs</code>에 저장됩니다. 다음과 같이 하여 로그에 정보를 기록할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Log::info(&#39;This is some useful information.&#39;);
 
 Log::warning(&#39;Something could be going wrong.&#39;);
 
 Log::error(&#39;Something is really going wrong.&#39;);
 </code></pre></div>
-<p>로그는 <a href="http://tools.ietf.org/html/rfc5424">RFC 5424</a> 에 정의되어있는 <strong>debug</strong>, <strong>info</strong>, <strong>notice</strong>, <strong>warning</strong>, <strong>error</strong>, <strong>critical</strong>, 그리고 <strong>alert</strong>의 7가지 로깅 레벨을 제공합니다.</p>
+<p>로그는 <a href="http://tools.ietf.org/html/rfc5424">RFC 5424</a>에 정의되어있는 <strong>debug</strong>, <strong>info</strong>, <strong>notice</strong>, <strong>warning</strong>, <strong>error</strong>, <strong>critical</strong>, 그리고 <strong>alert</strong>의 7가지 로깅 레벨을 제공합니다.</p>
 
 <p>컨텍스트 데이터 배열도 로그 메소드에 전달할 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Log::info(&#39;Log message&#39;, [&#39;context&#39; =&gt; &#39;Other helpful information&#39;]);
@@ -227,7 +227,7 @@ Log::error(&#39;Something is really going wrong.&#39;);
     //
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-에러와 로깅(Errors & Logging)-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-에러와-로깅(Errors---Logging)-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -257,35 +257,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

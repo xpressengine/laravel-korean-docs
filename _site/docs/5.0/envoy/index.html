@@ -143,7 +143,7 @@
 <p><strong>주의:</strong> Envoy는 PHP 버전 5.4 이상의 Mac 또는 Linux 운영 체제에서 동작합니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-installation"></a></p>
 
@@ -161,12 +161,12 @@
     ls -la
 @endtask
 </code></pre></div>
-<p>보시다 시피 파일의 제일 윗 부분에 <code>@servers</code> 에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 <code>on</code> 옵션을 통해서 이 서버들을 참조할 수 있습니다. <code>@task</code> 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다.</p>
+<p>보시다 시피 파일의 제일 윗 부분에 <code>@servers</code>에 배열이 정의되어 있습니다. 작업들의 선언 부분에서 <code>on</code> 옵션을 통해서 이 서버들을 참조할 수 있습니다. <code>@task</code> 선언 부분 안에는 작업이 수행될 때 서버에서 실행될 Bash 코드를 기입합니다.</p>
 
 <p><code>init</code> 명령어를 사용하여 Envoy 파일의 스텁을 쉽게 만들 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">envoy init user@192.168.1.1
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-설치" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-설치" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-running-tasks"></a></p>
 
@@ -189,7 +189,7 @@
 </code></pre></div>
 <h4 id="부트스트래핑">부트스트래핑</h4>
 
-<p><code>@setup</code> 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행시킬 수 있습니다:</p>
+<p><code>@setup</code> 지시어를 사용하여 Envoy 파일에서 변수 선언을하거나 일반적인 PHP 코드를 실행 시킬 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">@setup
     $now = new DateTime();
 
@@ -208,13 +208,13 @@
     php artisan migrate
 @endtask
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-작업 실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-작업-실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-multiple-servers"></a></p>
 
 <h2 id="다수의-서버">다수의 서버</h2>
 
-<p>손쉽게 여러서버에서 작업을 실행시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다:</p>
+<p>손쉽게 여러서버에서 작업을 실행 시킬 수 있습니다. 간단하게 작업 선언부에 서버의 목록을 기입하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">@servers([&#39;web-1&#39; =&gt; &#39;192.168.1.1&#39;, &#39;web-2&#39; =&gt; &#39;192.168.1.2&#39;])
 
 @task(&#39;deploy&#39;, [&#39;on&#39; =&gt; [&#39;web-1&#39;, &#39;web-2&#39;]])
@@ -225,7 +225,7 @@
 </code></pre></div>
 <p>By default, the task will be executed on each server serially. Meaning, the task will finish running on the first server before proceeding to execute on the next server. 기본적으로 작업은 각 서버에서 순차적으로 실행 됩니다. 즉, 첫 번째 서버에서 실행이 끝나면 다음 서버의 실행으로 이동합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-다수의 서버" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-다수의-서버" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-parallel-execution"></a></p>
 
@@ -240,7 +240,7 @@
     php artisan migrate
 @endtask
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-병렬 실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-병렬-실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-task-macros"></a></p>
 
@@ -265,7 +265,7 @@
 <p>이제 <code>deploy</code> 매크로는 하나의 간단한 명령으로 실행됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">envoy run deploy
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-작업 매크로" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-작업-매크로" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-notifications"></a>
 <a name="envoy-hipchat-notifications"></a></p>
@@ -285,7 +285,7 @@
     @hipchat(&#39;token&#39;, &#39;room&#39;, &#39;Envoy&#39;)
 @endafter
 </code></pre></div>
-<p>또한 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. <code>@setup</code> 또는 <code>@include</code>를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다:</p>
+<p>또한, 사용자 정의 메시지를 HipChat 룸에 지정할 수도 있습니다. <code>@setup</code> 또는 <code>@include</code>를 통해서 선언된 변수를 메시지에서 사용할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">@after
     @hipchat(&#39;token&#39;, &#39;room&#39;, &#39;Envoy&#39;, &quot;$task ran on [$environment]&quot;)
 @endafter
@@ -317,16 +317,16 @@
 <p>Note의: Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-알림" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-알림" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="envoy-updating-envoy"></a></p>
 
 <h2 id="envoy-업데이트">Envoy 업데이트</h2>
 
-<p>Envoy 를 업데이트 하려면 컴포저를 사용합니다:</p>
+<p>Envoy를 업데이트 하려면 컴포저를 사용합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">composer global update
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Envoy(Envoy Task Runner)-Envoy 업데이트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Envoy(Envoy-Task-Runner)-Envoy-업데이트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -356,35 +356,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

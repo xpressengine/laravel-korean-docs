@@ -176,7 +176,7 @@ Route::delete(&#39;foo/bar&#39;, function()
 <p>라우트를 위한 URL을 생성할 필요가 많은데 이때는 <code>url</code> 헬퍼함수를 사용하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$url = url(&#39;foo&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-기본적인 라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-기본적인-라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="csrf-protection"></a></p>
 
@@ -186,7 +186,7 @@ Route::delete(&#39;foo/bar&#39;, function()
 
 <p>라라벨은 어플리케이션에 의해서 관리되고 있는 각각의 사용자별 CSRF &quot;토큰&quot;을 자동으로 생성합니다. 이 토큰은 인증된 사용자가 실제로 어플리케이션에 요청을 보내고 있는지 식별하는 데 사용됩니다.</p>
 
-<h4 id="form-에-csrf-토큰-삽입하기">Form 에 CSRF 토큰 삽입하기</h4>
+<h4 id="form에-csrf-토큰-삽입하기">Form에 CSRF 토큰 삽입하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;&lt;?php echo csrf_token(); ?&gt;&quot;&gt;
 </code></pre></div>
 <p>다음처럼 Blade <a href="/laravel-korean-docs/docs/5.0/templates">템플릿 엔진</a>을 사용할 수 있습니다.</p>
@@ -212,19 +212,19 @@ $.ajaxSetup({
 </code></pre></div>
 <h4 id="x-xsrf-token">X-XSRF-TOKEN</h4>
 
-<p>또한 라라벨은 CSRF 토큰을 <code>XSRF-TOKEN</code> 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 <code>X-XSRF-TOKEN</code>을 설정하는 데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다.</p>
+<p>또한, 라라벨은 CSRF 토큰을 <code>XSRF-TOKEN</code> 쿠키에 저장합니다. 이 쿠키값을 요청 헤더(request header)에 <code>X-XSRF-TOKEN</code>을 설정하는 데 사용할 수 있습니다. Angular와 같은 몇몇 자바스크립트 프레임워크는 자동으로 이 값을 사용합니다.</p>
 
 <blockquote>
 <p>참고: <code>X-CSRF-TOKEN</code>와 <code>X-XSRF-TOKEN</code>의 차이점은 전자는 일반적인 텍스트를 사용한다면 후자는 암호화된 값을 사용한다는 것인데, 이는 라라벨에서는 쿠키를 항상 암호화 된 값으로 사용하기 때문입니다. 여러분이 토큰 값을 제공하기 위해<code>csrf_token ()</code>함수를 사용하는 경우는, 아마 <code>X-CSRF-TOKEN</code> 헤더를 사용하게 되는 경우일것입니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-CSRF 보호하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-CSRF-보호하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="method-spoofing"></a></p>
 
 <h2 id="메소드-spoofing-속이기">메소드 Spoofing-속이기</h2>
 
-<p>HTML form은 실제로 <code>PUT</code>, <code>PATCH</code> 와 <code>DELETE</code> 액션을 지원하지 않습니다. 따라서 <code>PUT</code>, <code>PATCH</code> 이나 <code>DELETE</code> 로 지정된 라우트를 호출하는 HTML form을 정의한다면 <code>_method</code> 의 숨겨진 필드를 지정해야 합니다.</p>
+<p>HTML form은 실제로 <code>PUT</code>, <code>PATCH</code>와 <code>DELETE</code> 액션을 지원하지 않습니다. 따라서 <code>PUT</code>, <code>PATCH</code> 이나 <code>DELETE</code>로 지정된 라우트를 호출하는 HTML form을 정의한다면 <code>_method</code>의 숨겨진 필드를 지정해야 합니다.</p>
 
 <p><code>_method</code> 필드로 보내진 값은 HTTP 요청 메소드를 구분하는 데 사용됩니다. 다음 예를 참조하십시오:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;form action=&quot;/foo/bar&quot; method=&quot;POST&quot;&gt;
@@ -232,7 +232,7 @@ $.ajaxSetup({
     &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;&lt;?php echo csrf_token(); ?&gt;&quot;&gt;
 &lt;/form&gt;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-메소드 Spoofing-속이기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-메소드-Spoofing-속이기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="route-parameters"></a></p>
 
@@ -284,7 +284,7 @@ Route::get(&#39;user/{id}&#39;, function($id)
 </code></pre></div>
 <h4 id="글로벌-패턴-지정하기">글로벌 패턴 지정하기</h4>
 
-<p><code>pattern</code> 메소드를 사용하면 라우트 파리미터 변수를 지정한 정규 표현식에서 항상 제약을 할 수 있습니다. 이들은 <code>RouteServiceProvider</code> 의 <code>before</code> 메소드로 정의하는 것을 권장합니다:</p>
+<p><code>pattern</code> 메소드를 사용하면 라우트 파리미터 변수를 지정한 정규 표현식에서 항상 제약을 할 수 있습니다. 이들은 <code>RouteServiceProvider</code>의 <code>before</code> 메소드로 정의하는 것을 권장합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$router-&gt;pattern(&#39;id&#39;, &#39;[0-9]+&#39;);
 </code></pre></div>
 <p>한번 패턴이 지정되고 나면 모든 라우트에서 사용하는 파라미터에 대해서 적용됩니다:</p>
@@ -301,7 +301,7 @@ Route::get(&#39;user/{id}&#39;, function($id)
     //
 }
 </code></pre></div>
-<p>또한 <code>Illuminate\Http\Request</code> 인스턴스를 통해서 현재의 라우트 파라미터에 엑세스 할 수 있습니다. 현재 요청에 대한 인스턴스는 <code>Illuminate\Http\Request</code> 타입힌트를 하거나, <code>Request</code> 파사드를 사용하면 의존성 주입을 통해서 엑세스 할 수 있습니다:</p>
+<p>또한, <code>Illuminate\Http\Request</code> 인스턴스를 통해서 현재의 라우트 파라미터에 엑세스 할 수 있습니다. 현재 요청에 대한 인스턴스는 <code>Illuminate\Http\Request</code> 타입힌트를 하거나, <code>Request</code> 파사드를 사용하면 의존성 주입을 통해서 엑세스 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">use Illuminate\Http\Request;
 
 Route::get(&#39;user/{id}&#39;, function(Request $request, $id)
@@ -312,7 +312,7 @@ Route::get(&#39;user/{id}&#39;, function(Request $request, $id)
     }
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-라우트 파라미터" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-라우트-파라미터" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="named-routes"></a></p>
 
@@ -337,7 +337,7 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
 <p><code>currentRouteName</code> 메소드는 현재의 요청에 대한 라우트 이름을 반환합니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$name = Route::currentRouteName();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-이름이 지정된 라우트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-이름이-지정된-라우트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="route-groups"></a></p>
 
@@ -348,8 +348,6 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
 <p>때때로 많은 라우트들이 URL 세그먼트, 미들웨어, 네임스페이스 등과 같은 공통의 요구사항을 공유하고자 하는 경우가 있습니다. 이러한 옵션들을 모든 라우트에 개별로 각각 지정하는 대신에 라우트 그룹을 통해서 다수의 라우트에 속성을 지정할 수가 있습니다.</p>
 
 <p>속성값들을 공유하는 것은 <code>Route::group</code> 메소드의 첫 번째 인자로 배열을 지정하면 됩니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-Route Groups" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="route-group-middleware"></a></p>
 
@@ -369,8 +367,6 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     });
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="route-group-namespace"></a></p>
 
 <h3 id="네임스페이스">네임스페이스</h3>
@@ -387,10 +383,8 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
 });
 </code></pre></div>
 <blockquote>
-<p><strong>참고:</strong> 기본적으로 <code>RouteServiceProvider</code> 에서 포함하고 있는 <code>routes.php</code> 파일에는 라우트 컨트롤들을 위해서 네임스페이스가 지정되어 있습니다. 따라서 <code>App\Http\Controllers</code>의 전체 네임스페이스를 따로 지정할 필요는 없습니다.</p>
+<p><strong>참고:</strong> 기본적으로 <code>RouteServiceProvider</code>에서 포함하고 있는 <code>routes.php</code> 파일에는 라우트 컨트롤들을 위해서 네임스페이스가 지정되어 있습니다. 따라서 <code>App\Http\Controllers</code>의 전체 네임스페이스를 따로 지정할 필요는 없습니다.</p>
 </blockquote>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-네임스페이스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="sub-domain-routing"></a></p>
 
@@ -409,8 +403,6 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
 
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-서브 도메인 라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="route-prefixing"></a></p>
 
 <h3 id="라우트-접두어-지정하기">라우트 접두어 지정하기</h3>
@@ -424,7 +416,7 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     });
 });
 </code></pre></div>
-<p>또한 <code>prefix</code> 파라미터를 라우트들의 공통 파라미터로 지정할 수 있습니다:</p>
+<p>또한, <code>prefix</code> 파라미터를 라우트들의 공통 파라미터로 지정할 수 있습니다:</p>
 
 <h4 id="라우트-prefix-안에서-url-파라미터-등록하기">라우트 prefix 안에서 URL 파라미터 등록하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Route::group([&#39;prefix&#39; =&gt; &#39;accounts/{account_id}&#39;], function()
@@ -435,7 +427,7 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     });
 });
 </code></pre></div>
-<p>또한 지정된 파라미터 변수의 제약 사항을 정의할 수도 있습니다:</p>
+<p>또한, 지정된 파라미터 변수의 제약 사항을 정의할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Route::group([
     &#39;prefix&#39; =&gt; &#39;accounts/{account_id}&#39;,
     &#39;where&#39; =&gt; [&#39;account_id&#39; =&gt; &#39;[0-9]+&#39;],
@@ -444,13 +436,13 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     // Define Routes Here
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-라우트 접두어 지정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-Route-Groups" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="route-model-binding"></a></p>
 
 <h2 id="라우트-모델-바인딩">라우트 모델 바인딩</h2>
 
-<p>라라벨의 모델 바인딩은 라우트에 클래스 인스턴스를 주입할 수 있는 편리한 방법을 제공합니다. 예를 들어 사용자의 ID를 넘기는 대신에 주어진 ID에 해당하는 User 클래스 인스턴스를 주입할 수 있습니다.</p>
+<p>라라벨의 모델 바인딩은 라우트에 클래스 인스턴스를 주입할 수 있는 편리한 방법을 제공합니다. 예를 들어, 사용자의 ID를 넘기는 대신에 주어진 ID에 해당하는 User 클래스 인스턴스를 주입할 수 있습니다.</p>
 
 <p>먼저 주어진 파라미터에 대한 클래스를 지정하기 위해서 라우트의 <code>model</code> 메소드를 사용하여야 합니다. 이 모델 바인딩은 <code>RouteServiceProvider::boot</code> 안에서 정의되어야 합니다.</p>
 
@@ -468,7 +460,7 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     //
 });
 </code></pre></div>
-<p><code>{user}</code> 파라미터와 <code>App\User</code> 모델이 바인딩되어 있으므로 라우트에는 <code>User</code> 인스턴스가 주입 될것입니다. 예를 들어 <code>profile/</code>으로 요청이 들어오면 ID가 1인 <code>User</code>의 인스턴스가 주입됩니다.</p>
+<p><code>{user}</code> 파라미터와 <code>App\User</code> 모델이 바인딩되어 있으므로 라우트에는 <code>User</code> 인스턴스가 주입 될것입니다. 예를 들어, <code>profile/</code>으로 요청이 들어오면 ID가 1인 <code>User</code>의 인스턴스가 주입됩니다.</p>
 
 <blockquote>
 <p><strong>주의:</strong> 만약 데이터베이스에서 일치하는 모델 인스턴스를 찾이 못하는 경우 404 에러가 발생합니다.</p>
@@ -486,7 +478,7 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
     return User::where(&#39;name&#39;, $value)-&gt;first();
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-라우트 모델 바인딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-라우트-모델-바인딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="throwing-404-errors"></a></p>
 
@@ -495,13 +487,13 @@ $redirect = redirect()-&gt;route(&#39;profile&#39;);
 <p>라우트에서 404 에러를 발생시키는 방법은 2가지가 있습니다. 첫 번째로 <code>abort</code> 헬퍼함수를 사용하는 것입니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">abort(404);
 </code></pre></div>
-<p><code>abort</code> 헬퍼함수는 지정된 상태 코드와 함께 <code>Symfony\Component\HttpKernel\Exception\HttpException</code> 를 던집니다.</p>
+<p><code>abort</code> 헬퍼함수는 지정된 상태 코드와 함께 <code>Symfony\Component\HttpKernel\Exception\HttpException</code>를 던집니다.</p>
 
 <p>두 번째로 직접으로 <code>Symfony\Component\HttpKernel\Exception\NotFoundHttpException</code>을 던지는 것입니다.</p>
 
 <p>404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 <a href="/laravel-korean-docs/docs/5.0/errors#http-exceptions">errors</a> 부분을 참조하십시오.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 라우팅(HTTP Routing)-404 에러 발생시키기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-라우팅(HTTP-Routing)-404-에러-발생시키기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -531,35 +523,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

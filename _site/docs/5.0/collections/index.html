@@ -141,9 +141,9 @@
     return empty($name);
 });
 </code></pre></div>
-<p>보시는 바와 같이 <code>Collection</code> 클래스는 map 매소드와 reject메소드를 체이닝 방식으로 사용할 수 있게 해줍니다. 다시말해서 모든 <code>Collection</code>의 메소드는 <code>Collection</code>의 인스턴스를 반환합니다. 더 자세한 내용을 원하면 다음을 읽어보세요!</p>
+<p>보시는 바와 같이 <code>Collection</code> 클래스는 map 메소드와 reject메소드를 체이닝 방식으로 사용할 수 있게 해줍니다. 다시 말해서 모든 <code>Collection</code>의 메소드는 <code>Collection</code>의 인스턴스를 반환합니다. 더 자세한 내용을 원하면 다음을 읽어보세요!</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-컬렉션(Collections)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-컬렉션(Collections)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="basic-usage"></a></p>
 
@@ -151,7 +151,7 @@
 
 <h4 id="컬렉션-생성하기">컬렉션 생성하기</h4>
 
-<p>앞서 설명한대로 <code>collect</code> 헬퍼함수는 주어진 배열 대신 새로운 <code>Illuminate\Support\Collection</code> 인스턴스를 반환합니다. 또는 <code>Collection</code> 클래스의 <code>make</code> 를 사용할 수도 있습니다:</p>
+<p>앞서 설명한대로 <code>collect</code> 헬퍼 함수는 주어진 배열 대신 새로운 <code>Illuminate\Support\Collection</code> 인스턴스를 반환합니다. 또는, <code>Collection</code> 클래스의 <code>make</code>를 사용할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$collection = collect([1, 2, 3]);
 
 $collection = Collection::make([1, 2, 3]);
@@ -160,9 +160,9 @@ $collection = Collection::make([1, 2, 3]);
 
 <h4 id="컬렉션-둘러보기">컬렉션 둘러보기</h4>
 
-<p>컬렉션에서 사용가능한 메소드를 여기에 모두 나열하는 것 보다 (상당히 많으므로) <a href="http://laravel.com/api/master/Illuminate/Support/Collection.html">API 문서</a>를 살펴보시기 바랍니다!</p>
+<p>컬렉션에서 사용 가능한 메소드를 여기에 모두 나열하는 것보다(상당히 많으므로) <a href="http://laravel.com/api/master/Illuminate/Support/Collection.html">API 문서</a>를 살펴보시기 바랍니다!</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-컬렉션(Collections)-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-컬렉션(Collections)-기본-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -192,35 +192,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

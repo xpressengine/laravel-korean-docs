@@ -146,7 +146,7 @@
 <p><strong>참고:</strong> 라라벨의 쿼리 빌더는 PDO 파라미터 바인딩을 사용하여 SQL injection 공격을 방지합니다. 따라서 쿼리에 바인딩할 문자열들을 따로 정리하고 전달할 필요가 없습니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="selects"></a></p>
 
@@ -169,7 +169,7 @@ foreach ($users as $user)
     }
 });
 </code></pre></div>
-<p><code>Closure</code>에서 <code>false</code> 를 반환하여 결과 분할을 중단 할 수 있습니다:</p>
+<p><code>Closure</code>에서 <code>false</code>를 반환하여 결과 분할을 중단 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)-&gt;chunk(100, function($users)
 {
     //
@@ -233,7 +233,7 @@ $users = DB::table(&#39;users&#39;)
 </code></pre></div>
 <h4 id="동적-where-구문">동적 where 구문</h4>
 
-<p>매직 매소드를 사용하여 where 구문을 동적으로 구성할 수도 있습니다:</p>
+<p>매직 메소드를 사용하여 where 구문을 동적으로 구성할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$admin = DB::table(&#39;users&#39;)-&gt;whereId(1)-&gt;first();
 
 $john = DB::table(&#39;users&#39;)
@@ -254,7 +254,7 @@ $jane = DB::table(&#39;users&#39;)
 <h4 id="offset-&amp;-limit">Offset &amp; Limit</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$users = DB::table(&#39;users&#39;)-&gt;skip(10)-&gt;take(5)-&gt;get();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Selects" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Selects" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="joins"></a></p>
 
@@ -282,7 +282,7 @@ $jane = DB::table(&#39;users&#39;)
         })
         -&gt;get();
 </code></pre></div>
-<p>조인문에서 &quot;where”구문을 사용하고 싶으면 <code>where</code>과 <code>orwhere</code> 메소드를 사용하십시오. 이러한 메소드는 두개의 컬럼을 비교 대신에 주어진 값과 컬럼을 비교합니다:</p>
+<p>조인문에서 &quot;where”구문을 사용하고 싶으면 <code>where</code>과 <code>orwhere</code> 메소드를 사용하십시오. 이러한 메소드는 두 개의 컬럼을 비교 대신에 주어진 값과 컬럼을 비교합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)
         -&gt;join(&#39;contacts&#39;, function($join)
         {
@@ -291,7 +291,7 @@ $jane = DB::table(&#39;users&#39;)
         })
         -&gt;get();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Joins" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Joins" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="advanced-wheres"></a></p>
 
@@ -328,13 +328,13 @@ where exists (
     select 1 from orders where orders.user_id = users.id
 )
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Advanced Wheres 더 복잡한 조건문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Advanced-Wheres-더-복잡한-조건문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="aggregates"></a></p>
 
 <h2 id="aggregates-집계">Aggregates 집계</h2>
 
-<p>쿼리 빌더는 또한 <code>count</code>, <code>max</code>, <code>min</code>, <code>avg</code>, 그리고<code>sum</code>과 같은 집계를 위한 메소드들을 제공하고 있습니다.</p>
+<p>쿼리 빌더는 또한, <code>count</code>, <code>max</code>, <code>min</code>, <code>avg</code>, 그리고<code>sum</code>과 같은 집계를 위한 메소드들을 제공하고 있습니다.</p>
 
 <h4 id="집계를-위한-메소드-사용하기">집계를 위한 메소드 사용하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$users = DB::table(&#39;users&#39;)-&gt;count();
@@ -347,7 +347,7 @@ $price = DB::table(&#39;orders&#39;)-&gt;avg(&#39;price&#39;);
 
 $total = DB::table(&#39;users&#39;)-&gt;sum(&#39;votes&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Aggregates 집계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Aggregates-집계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="raw-expressions"></a></p>
 
@@ -362,7 +362,7 @@ $total = DB::table(&#39;users&#39;)-&gt;sum(&#39;votes&#39;);
                      -&gt;groupBy(&#39;status&#39;)
                      -&gt;get();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-직접 질의구문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-직접-질의구문" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="inserts"></a></p>
 
@@ -375,7 +375,7 @@ $total = DB::table(&#39;users&#39;)-&gt;sum(&#39;votes&#39;);
 </code></pre></div>
 <h4 id="auto-incrementing-id-방식-테이블에-레코드-추가하기">Auto-Incrementing ID 방식 테이블에 레코드 추가하기</h4>
 
-<p>테이블에 auto-incrementing id 가 있다면 <code>insertGetId</code> 를 사용하여 레코드를 추가하고 ID를 얻을 수 있습니다:</p>
+<p>테이블에 auto-incrementing id가 있다면 <code>insertGetId</code>를 사용하여 레코드를 추가하고 ID를 얻을 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$id = DB::table(&#39;users&#39;)-&gt;insertGetId(
     [&#39;email&#39; =&gt; &#39;john@example.com&#39;, &#39;votes&#39; =&gt; 0]
 );
@@ -390,7 +390,7 @@ $total = DB::table(&#39;users&#39;)-&gt;sum(&#39;votes&#39;);
     [&#39;email&#39; =&gt; &#39;dayle@example.com&#39;, &#39;votes&#39; =&gt; 0]
 ]);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Inserts" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Inserts" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="updates"></a></p>
 
@@ -410,10 +410,10 @@ DB::table(&#39;users&#39;)-&gt;decrement(&#39;votes&#39;);
 
 DB::table(&#39;users&#39;)-&gt;decrement(&#39;votes&#39;, 5);
 </code></pre></div>
-<p>또한 업데이트할 추가적인 컬럼을 지정할 수도 있습니다:</p>
+<p>또한, 업데이트할 추가적인 컬럼을 지정할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)-&gt;increment(&#39;votes&#39;, 1, [&#39;name&#39; =&gt; &#39;John&#39;]);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Updates" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Updates" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="deletes"></a></p>
 
@@ -428,7 +428,7 @@ DB::table(&#39;users&#39;)-&gt;decrement(&#39;votes&#39;, 5);
 <h4 id="테이블-비우기">테이블 비우기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)-&gt;truncate();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Deletes" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Deletes" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="unions"></a></p>
 
@@ -441,21 +441,21 @@ $users = DB::table(&#39;users&#39;)-&gt;whereNull(&#39;last_name&#39;)-&gt;union
 </code></pre></div>
 <p><code>unionAll</code> 메소드도 사용가능하며 <code>union</code>과 동일하게 사용합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Unions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Unions" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="pessimistic-locking"></a></p>
 
 <h2 id="pessimistic-locking-배타적-잠금">Pessimistic Locking 배타적 잠금</h2>
 
-<p>쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇가지 기능을 포함하고 있습니다.</p>
+<p>쿼리빌더는 여러분이 SELECT 구문에 “Pessimistic Locking-배타적 잠금” 설정을 할 수 있도록 도와주는몇 가지 기능을 포함하고 있습니다.</p>
 
-<p>“shared lock” 에서 SELECT 문을 실행하려면 <code>sharedLock</code> 메소드를 쿼리에 지정하십시오:</p>
+<p>“shared lock”에서 SELECT 문을 실행하려면 <code>sharedLock</code> 메소드를 쿼리에 지정하십시오:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)-&gt;where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;sharedLock()-&gt;get();
 </code></pre></div>
 <p>SELECT문을 &quot;lock for update&quot; 하려면 <code>lockForUpdate</code> 메소드를 쿼리에 지정하십시오:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::table(&#39;users&#39;)-&gt;where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;lockForUpdate()-&gt;get();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-쿼리빌더(Query Builder)-Pessimistic Locking 배타적 잠금" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-쿼리빌더(Query-Builder)-Pessimistic-Locking-배타적-잠금" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -485,35 +485,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

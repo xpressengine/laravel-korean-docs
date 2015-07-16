@@ -46,7 +46,7 @@ header .btn_area .button:hover {color:#555; border-color:#aaa;}
 
 /* chak comment */
 .chak-comment-wrap { margin: 35px 0 50px; }
-.chak-comment-wrap.active { padding: 18px; background: rgba(248, 248, 248, 0.7); border-radius:4px;}
+.chak-comment-wrap.active { padding: 18px; background: rgba(248, 248, 248, 0.45); border-radius:4px;}
 .chak-comment-widget { padding:18px 10px; border: 2px solid #f4645f; text-align:center; border-radius: 4px; cursor: pointer; font-size: 15px; color: #f4645f; line-height: 20px; }
 .chak-comment-widget .xi-message {margin-right:2px; font-size:22px; vertical-align: bottom;}
 .chak-comment-widget:hover,

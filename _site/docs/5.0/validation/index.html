@@ -138,7 +138,7 @@
 
 <h2 id="기본적인-사용법">기본적인 사용법</h2>
 
-<p>라라벨은 <code>Validator</code> 클래스를 통해 데이터의 유효성을 검사하고, 유효성 검사 실패시 출력될 오류 메시지를 구성할 수 있는 간단하고, 편리한 기능을 제공합니다.</p>
+<p>라라벨은 <code>Validation</code> 클래스를 통해 데이터의 유효성을 검사하고, 유효성 검사 실패 시 출력될 오류 메시지를 구성할 수 있는 간단하고, 편리한 기능을 제공합니다.</p>
 
 <h4 id="기본적인-유효성-검사의-예">기본적인 유효성 검사의 예</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$validator = Validator::make(
@@ -146,7 +146,7 @@
     [&#39;name&#39; =&gt; &#39;required|min:5&#39;]
 );
 </code></pre></div>
-<p><code>make</code> 메소드는 첫 번째 인자로 유효성 검사를 할 데이터를 받습니다. 두 번째 인자로는 그 데이터에 적용되어야 하는 유효성 검사 룰을 전달 받습니다.</p>
+<p><code>make</code> 메소드는 첫 번째 인자로 유효성 검사를 할 데이터를 받습니다. 두 번째 인자로는 그 데이터에 적용되어야 하는 유효성 검사 룰을 전달받습니다.</p>
 
 <h4 id="배열을-사용하여-룰-지정하기">배열을 사용하여 룰 지정하기</h4>
 
@@ -179,12 +179,12 @@
 <p>만약 유효성 검사가 실패하면, validator 인스턴스로부터 오류 메시지를 얻을 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$messages = $validator-&gt;messages();
 </code></pre></div>
-<p>또한 오류 메시지가 제외된, 실패한 유효성 검사 룰을 배열 형태로 얻을 수도 있습니다:</p>
+<p>또한, 오류 메시지가 제외된, 실패한 유효성 검사 룰을 배열 형태로 얻을 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$failed = $validator-&gt;failed();
 </code></pre></div>
 <h4 id="파일-유효성-검사">파일 유효성 검사</h4>
 
-<p><code>Validation</code> 클래스는 파일 유효성 검사를 위한 <code>size</code>, <code>mimes</code> 등의 몇가지 룰을 제공합니다. 파일의 유효성을 검사할 때, 간단히 그 파일들을 다른 데이터들과 함께 validator에 전달하십시오.</p>
+<p><code>Validation</code> 클래스는 파일 유효성 검사를 위한 <code>size</code>, <code>mimes</code> 등의 몇 가지 룰을 제공합니다. 파일의 유효성을 검사할 때, 간단히 그 파일들을 다른 데이터들과 함께 validator에 전달하십시오.</p>
 
 <h3 id="유효성검사-후킹하기">유효성검사 후킹하기</h3>
 
@@ -206,7 +206,7 @@ if ($validator-&gt;fails())
 </code></pre></div>
 <p>필요한 경우 <code>after</code> 콜백에 validator에 추가할 수도 있습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-기본적인 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-기본적인-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="controller-validation"></a></p>
 
@@ -233,7 +233,7 @@ public function store(Request $request)
 
 <p>만약 들어온 요청이 AJAX 요청이라면, 리다이렉트는 실행되지 않습니다. 대신, 422 상태코드의 HTTP 응답이 JSON 형식으로 유효성 검사 오류를 포함한 채 브라우저로 반환될 것입니다.</p>
 
-<p>이와 동일한 작동을 하는 코드를 수동으로 작성한 예입니다:</p>
+<p>이와 같은 작동을 하는 코드를 수동으로 작성한 예입니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">/**
  * Store the incoming blog post.
  *
@@ -266,7 +266,7 @@ protected function formatValidationErrors(Validator $validator)
     return $validator-&gt;errors()-&gt;all();
 }
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-컨트롤러 단위 유효성 검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-컨트롤러-단위-유효성-검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="form-request-validation"></a></p>
 
@@ -303,11 +303,11 @@ public function store(StoreBlogPostRequest $request)
 </code></pre></div>
 <p>들어온 폼 요청은 컨트롤러 메소드가 실행되기 전에 미리 유효성 검사를 거칩니다. 이는 유효성 검사 로직으로 여러분의 컨트롤러를 지저분하게 할 필요가 없다는 것을 의미합니다. 이미 유효성 검사는 실행된 후입니다!</p>
 
-<p>만약 유효성 검사가 실패하면 이전 페이지로의 리다이렉트 응답이 생성되어 사용자에게 보내집니다. 오류들 또한 화면에 출력될 수 있도록 세션에 기록될 것입니다. 만약 요청이 AJAX 요청이면, 422 상태 코드의 HTTP 응답이 JSON 형식의 오류 메시지를 포함한 채 사용자에게 반환됩니다.</p>
+<p>만약 유효성 검사가 실패하면 이전 페이지로의 리다이렉트 응답이 생성되어 사용자에게 보내집니다. 오류들 또한, 화면에 출력될 수 있도록 세션에 기록될 것입니다. 만약 요청이 AJAX 요청이면, 422 상태 코드의 HTTP 응답이 JSON 형식의 오류 메시지를 포함한 채 사용자에게 반환됩니다.</p>
 
 <h3 id="폼-요청-권한-확인하기">폼 요청 권한 확인하기</h3>
 
-<p>또한 폼 요청 클래스는 <code>authorize</code> 메소드를 가지고 있습니다. 이 메소드 안에서 여러분은 사용자가 실제로 주어진 리소스를 업데이트할 권한을 가졌는지 확인 할 수 있습니다. 다음은 만약 사용자가 블로그 포스트의 댓글을 업데이트하려고 시도할 때, 실제로 그들이 그 댓글의 소유자인가를 확인하는 예제입니다:</p>
+<p>또한, 폼 요청 클래스는 <code>authorize</code> 메소드를 가지고 있습니다. 이 메소드 안에서 여러분은 사용자가 실제로 주어진 리소스를 업데이트할 권한을 가졌는지 확인할 수 있습니다. 다음은 만약 사용자가 블로그 포스트의 댓글을 업데이트하려고 시도할 때, 실제로 그들이 그 댓글의 소유자인가를 확인하는 예제입니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">/**
  * Determine if the user is authorized to make this request.
  *
@@ -348,7 +348,7 @@ protected function formatErrors(Validator $validator)
     return $validator-&gt;errors()-&gt;all();
 }
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-폼 요청 유효성 검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-폼-요청-유효성-검사" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="working-with-error-messages"></a></p>
 
@@ -390,7 +390,7 @@ protected function formatErrors(Validator $validator)
     //
 }
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-오류 메시지 사용하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-오류-메시지-사용하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="error-messages-and-views"></a></p>
 
@@ -429,7 +429,7 @@ Route::post(&#39;register&#39;, function()
 <p>그 다음 <code>$errors</code> 변수로부터 이름이 지정된 <code>MessageBag</code> 인스턴스에 접근할 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php echo $errors-&gt;login-&gt;first(&#39;email&#39;); ?&gt;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-오류 메시지 & 뷰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-오류-메시지---뷰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="available-validation-rules"></a></p>
 
@@ -480,15 +480,11 @@ Route::post(&#39;register&#39;, function()
 <li><a href="#rule-url">URL</a></li>
 </ul>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-유효성 검사 룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-accepted"></a></p>
 
 <h4 id="accepted">accepted</h4>
 
 <p>필드의 값이 <em>yes</em>, <em>on</em>, <em>1</em>, 또는 <em>true</em>이어야 합니다. 이 것은 &quot;이용약관&quot; 동의와 같은 필드의 검사에 유용합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-accepted" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-active-url"></a></p>
 
@@ -496,15 +492,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 PHP 함수 <code>checkdnsrr</code>에 기반하여 올바른 URL이어야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-active_url" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-after"></a></p>
 
 <h4 id="after:date">after:<em>date</em></h4>
 
 <p>필드의 값이 주어진 날짜 이후여야 합니다. 이때 날짜는 PHP 함수 <code>strtotime</code>을 통해 생성된 값입니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-after:_date_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-alpha"></a></p>
 
@@ -512,15 +504,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 완벽하게 알파벳 문자로 이루어져야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-alpha" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-alpha-dash"></a></p>
 
 <h4 id="alpha_dash">alpha_dash</h4>
 
 <p>필드의 값이 알파벳 및 숫자와 dash(-), underscore(_)로 이루어져야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-alpha_dash" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-alpha-num"></a></p>
 
@@ -528,15 +516,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 완벽하게 알파벳 및 숫자로 이루어져야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-alpha_num" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-array"></a></p>
 
 <h4 id="array">array</h4>
 
 <p>필드의 값이 반드시 배열 형태이어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-array" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-before"></a></p>
 
@@ -544,15 +528,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 반드시 주어진 날짜보다 앞서야 합니다. 날짜는 <code>strtotime</code> PHP 함수를 통해 비교됩니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-before:_date_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-between"></a></p>
 
 <h4 id="between:min,max">between:<em>min</em>,<em>max</em></h4>
 
-<p>필드의 값이 주어진 <em>min</em> 과 <em>max</em>의 사이의 값이어야 합니다. 문자열, 숫자, 그리고 파일이 <code>size</code> 룰에 의해 같은 방식으로 평가될 수 있습니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-between:_min_,_max_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<p>필드의 값이 주어진 <em>min</em>과 <em>max</em>의 사이의 값이어야 합니다. 문자열, 숫자, 그리고 파일이 <code>size</code> 룰에 의해 같은 방식으로 평가될 수 있습니다.</p>
 
 <p><a name="rule-boolean"></a></p>
 
@@ -560,15 +540,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 반드시 불리언으로 캐스팅될 수 있어야 합니다. 허용되는 값은 <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>, <code>&quot;1&quot;</code>, <code>&quot;0&quot;</code>입니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-boolean" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-confirmed"></a></p>
 
 <h4 id="confirmed">confirmed</h4>
 
-<p>필드의 값이 <code>foo_confirmation</code>의 매칭되는 필드를 가져야 합니다. 예를 들어 만약 필드가 <code>password</code>이면, <code>password_confirmation</code> 필드가 입력 중에 있어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-confirmed" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<p>필드의 값이 <code>foo_confirmation</code>의 매칭되는 필드를 가져야 합니다. 예를 들어, 만약 필드가 <code>password</code>이면, <code>password_confirmation</code> 필드가 입력 중에 있어야 합니다.</p>
 
 <p><a name="rule-date"></a></p>
 
@@ -576,15 +552,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 <code>strtotime</code> PHP 함수에 따라 올바른 날짜여야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-date" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-date-format"></a></p>
 
 <h4 id="date_format:format">date_format:<em>format</em></h4>
 
 <p>필드의 값이 반드시 정의된 <em>format</em>과 일지해야 합니다. <code>date_parse_from_format</code> PHP 함수에 따릅니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-date_format:_format_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-different"></a></p>
 
@@ -592,15 +564,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 주어진 <em>field</em>의 값과 달라야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-different:_field_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-digits"></a></p>
 
 <h4 id="digits:value">digits:<em>value</em></h4>
 
 <p>필드의 값이 반드시 <em>숫자</em>여야 하고, 길이가 <em>value</em>이어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-digits:_value_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-digits-between"></a></p>
 
@@ -608,15 +576,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 주어진 <em>min</em>과 <em>max</em> 사이의 길이를 갖는 숫자여야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-digits_between:_min_,_max_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-email"></a></p>
 
 <h4 id="email">email</h4>
 
 <p>필드의 값이 이메일 주소 형식이어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-email" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-exists"></a></p>
 
@@ -636,15 +600,11 @@ Route::post(&#39;register&#39;, function()
 <p>&quot;where&quot; 구문에 <code>NULL</code>을 사용하여 데이터베이스의 <code>NULL</code> 값인지 체크할 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;email&#39; =&gt; &#39;exists:staff,email,deleted_at,NULL&#39;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-exists:_table_,_column_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-image"></a></p>
 
 <h4 id="image">image</h4>
 
 <p>이미지 파일(jpeg, png, bmp, gif, svg)이어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-image" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-in"></a></p>
 
@@ -652,15 +612,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 주어진 목록에 포함돼 있어야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-in:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-integer"></a></p>
 
 <h4 id="integer">integer</h4>
 
 <p>필드의 값이 정수여야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-integer" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-ip"></a></p>
 
@@ -668,15 +624,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 IP 주소 형식이어야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-ip" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-max"></a></p>
 
 <h4 id="max:value">max:<em>value</em></h4>
 
 <p>필드의 값이 반드시 <em>value</em>보다 작거나 같아야 합니다. 문자열, 숫자, 그리고 파일이 <a href="#rule-size"><code>size</code></a> 룰에 의해 같은 방식으로 평가될 수 있습니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-max:_value_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-mimes"></a></p>
 
@@ -687,15 +639,11 @@ Route::post(&#39;register&#39;, function()
 <h4 id="mime-룰의-기본-사용법">MIME 룰의 기본 사용법</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;photo&#39; =&gt; &#39;mimes:jpeg,bmp,png&#39;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-mimes:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-min"></a></p>
 
 <h4 id="min:value">min:<em>value</em></h4>
 
 <p>필드의 값이 반드시 <em>value</em> 보다 크거나 같아야 합니다. 문자열, 숫자, 그리고 파일이 <a href="#rule-size"><code>size</code></a> 룰에 의해 같은 방식으로 평가될 수 있습니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-min:_value_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-not-in"></a></p>
 
@@ -703,15 +651,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 주어진 목록에 존재하지 않아야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-not_in:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-numeric"></a></p>
 
 <h4 id="numeric">numeric</h4>
 
 <p>필드의 값이 숫자여야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-numeric" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-regex"></a></p>
 
@@ -721,15 +665,11 @@ Route::post(&#39;register&#39;, function()
 
 <p><strong>참고:</strong> <code>regex</code> 패턴을 사용할 때, 특히 정규 표현식에 파이프 문자열이 있다면, 파이프 구분자를 사용하는 대신 배열 형식을 사용하여 룰을 지정할 필요가 있습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-regex:_pattern_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-required"></a></p>
 
 <h4 id="required">required</h4>
 
 <p>입력 값 중에 해당 필드가 존재해야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-required-if"></a></p>
 
@@ -737,15 +677,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>만약 <em>filed</em>의 값이 <em>value</em>중의 하나와 일치한다면, 해당 필드가 반드시 존재해야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required_if:_field_,_value_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-required-with"></a></p>
 
 <h4 id="required_with:foo,bar,...">required_with:<em>foo</em>,<em>bar</em>,...</h4>
 
 <p>다른 지정된 필드중 하나라도 존재한다면, 해당 필드가 반드시 존재해야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required_with:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-required-with-all"></a></p>
 
@@ -753,15 +689,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>다른 지정된 필드가 모두 존재한다면, 해당 필드가 반드시 존재해야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required_with_all:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-required-without"></a></p>
 
 <h4 id="required_without:foo,bar,...">required_without:<em>foo</em>,<em>bar</em>,...</h4>
 
 <p>다른 지정된 필드중 하나라도 존재하지 않으면, 해당 필드가 반드시 존재해야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required_without:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-required-without-all"></a></p>
 
@@ -769,15 +701,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>다른 지정된 필드가 모두 존재하지 않으면, 해당 필드가 존재해야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-required_without_all:_foo_,_bar_,..." ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-same"></a></p>
 
 <h4 id="same:field">same:<em>field</em></h4>
 
 <p>필드의 값이 주어진 <em>field</em>의 값과 일치해야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-same:_field_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-size"></a></p>
 
@@ -785,15 +713,11 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 주어진 <em>value</em>와 일치하는 크기를 가져야 합니다. 문자열 데이터에서는 문자의 개수가 <em>value</em>와 일치해야 합니다. 숫자형식의 데이터에서는 주어진 정수값이 <em>value</em>와 일치해야 합니다. 파일에서는 킬로바이트 형식의 파일 사이즈가 <em>size</em>와 일치해야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-size:_value_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-string"></a></p>
 
 <h4 id="string">string</h4>
 
 <p>필드의 값이 반드시 문자열 형식이어야 합니다.</p>
-
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-string" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="rule-timezone"></a></p>
 
@@ -801,15 +725,13 @@ Route::post(&#39;register&#39;, function()
 
 <p>필드의 값이 <code>timezone_identifiers_list</code> PHP 함수에 따라 유효한 timezone 식별자여야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-timezone" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-unique"></a></p>
 
 <h4 id="unique:table,column,except,idcolumn">unique:<em>table</em>,<em>column</em>,<em>except</em>,<em>idColumn</em></h4>
 
 <p>필드의 값이 주어진 데이터베이스 테이블에서 고유한 값이어야 합니다. 만약 <code>column</code> 지정돼 있지 않다면 필드의 이름이 사용됩니다.</p>
 
-<p>때때로, 여러분은 Validator에 의해서 생성되는 데이터베이스 쿼리에 사용자가 지정한 커넥션을 필요로 할지도 모릅니다. 위에서의 검증 규칙 <code>unique:users</code> 에서는 쿼리에 대해서 기본 데이터베이스 커넥션이 사용됩니다. 이를 재지정하려면 다음과 같이 하면 됩니다:</p>
+<p>때때로, 여러분은 Validator에 의해서 생성되는 데이터베이스 쿼리에 사용자가 지정한 커넥션을 필요로 할지도 모릅니다. 위에서의 검증 규칙 <code>unique:users</code>에서는 쿼리에 대해서 기본 데이터베이스 커넥션이 사용됩니다. 이를 재지정하려면 다음과 같이 하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$verifier = App::make(&#39;validation.presence&#39;);
 
 $verifier-&gt;setConnection(&#39;connectionName&#39;);
@@ -838,8 +760,6 @@ $validator-&gt;setPresenceVerifier($verifier);
 </code></pre></div>
 <p>앞서의 룰에서 오직 <code>account_id</code>가 <code>1</code>인 행만 unique 유효성 검사에 포함됩니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-unique:_table_,_column_,_except_,_idColumn_" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="rule-url"></a></p>
 
 <h4 id="url">url</h4>
@@ -850,7 +770,7 @@ $validator-&gt;setPresenceVerifier($verifier);
 <p><strong>참고:</strong> 이 기능은 PHP의 <code>filter_var</code> 함수를 사용합니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-url" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-유효성-검사-룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="conditionally-adding-rules"></a></p>
 
@@ -865,7 +785,7 @@ $validator-&gt;setPresenceVerifier($verifier);
 
 <h4 id="복잡한-조건부-유효성-검사">복잡한 조건부 유효성 검사</h4>
 
-<p>때때로 여러분은 다른 필드가 100 이상의 값을 가질때에만 주어진 필드가 반드시 존재하길 바랄 수도 있습니다. 또는 다른 필드가 존재할 때에만 두개의 필드가 주어진 값을 가질 필요가 있을수도 있습니다. 이러한 유효성 검사 룰을 추가하는 것이 어렵지 않을 수 있습니다. 우선 <em>고정 룰</em>을 변경할 필요 없이 그대로 사용하여 <code>Validator</code> 인스턴스를 생성합니다:</p>
+<p>때때로 여러분은 다른 필드가 100 이상의 값을 가질때에만 주어진 필드가 반드시 존재하길 바랄 수도 있습니다. 또는 다른 필드가 존재할 때에만 두 개의 필드가 주어진 값을 가질 필요가 있을수도 있습니다. 이러한 유효성 검사 룰을 추가하는 것이 어렵지 않을 수 있습니다. 우선 <em>고정 룰</em>을 변경할 필요 없이 그대로 사용하여 <code>Validator</code> 인스턴스를 생성합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$v = Validator::make($data, [
     &#39;email&#39; =&gt; &#39;required|email&#39;,
     &#39;games&#39; =&gt; &#39;required|numeric&#39;,
@@ -887,7 +807,7 @@ $validator-&gt;setPresenceVerifier($verifier);
 <p><strong>참고:</strong> <code>Closure</code>로 전달된 <code>$input</code> 파라메터는 <code>Illuminate\Support\Fluent</code>의 인스턴스입니다. 그리고 입력된 데이터와 파일에 접근하기 위해 이 오브젝트는 사용할 수 있습니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-조건부 룰 추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-조건부-룰-추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="custom-error-messages"></a></p>
 
@@ -921,8 +841,6 @@ $validator = Validator::make($input, $rules, $messages);
     &#39;email.required&#39; =&gt; &#39;We need to know your e-mail address!&#39;,
 ];
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-사용자 정의 오류 메시지" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
-
 <p><a name="localization"></a></p>
 
 <h4 id="언어-파일에-사용자-정의-메시지-지정하기">언어 파일에 사용자 정의 메시지 지정하기</h4>
@@ -934,7 +852,7 @@ $validator = Validator::make($input, $rules, $messages);
     ],
 ],
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-언어 파일에 사용자 정의 메시지 지정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-사용자-정의-오류-메시지" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="custom-validation-rules"></a></p>
 
@@ -950,10 +868,10 @@ $validator = Validator::make($input, $rules, $messages);
 </code></pre></div>
 <p>커스텀 유효성 검사 클로저는 3개의 인자를 받습니다: 유효성 검사를 할 필드(<code>$attribute</code>)의 이름, 필드의 값(<code>$value</code>), 그리고 룰에 전달될 파라미터들(<code>$parameters</code>)의 배열입니다.</p>
 
-<p>또한 클로저 대신 클래스명과 메소드명을 <code>extend</code> 메소드로 전달할 수도 있습니다.</p>
+<p>또한, 클로저 대신 클래스명과 메소드명을 <code>extend</code> 메소드로 전달할 수도 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Validator::extend(&#39;foo&#39;, &#39;FooValidator@validate&#39;);
 </code></pre></div>
-<p>또한 커스텀 룰에 대한 오류 메시지를 정의할 필요가 있다는 것을 유념하십시오. 인라인 커스텀 메시지 배열을 사용할 수도 있고 validation 언어파일에 추가할 수도 있습니다.</p>
+<p>또한, 커스텀 룰에 대한 오류 메시지를 정의할 필요가 있다는 것을 유념하십시오. 인라인 커스텀 메시지 배열을 사용할 수도 있고 validation 언어파일에 추가할 수도 있습니다.</p>
 
 <h4 id="validator-클래스-확장하기">Validator 클래스 확장하기</h4>
 
@@ -989,7 +907,7 @@ class CustomValidator extends Illuminate\Validation\Validator {
     //
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Validation-사용자 정의 유효성 검사 룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Validation-사용자-정의-유효성-검사-룰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -1019,35 +937,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

@@ -134,11 +134,11 @@
 
 <h2 id="설정">설정</h2>
 
-<p>라라벨은 인기있는 <a href="http://swiftmailer.org">SwiftMailer</a>를 통해서 깔끔하고 단순한 API 를 제공합니다. 메일에 대한 설정 파일은 <code>app/config/mail.php</code> 파일로 SMTP 호스트, 포트, 인증 및 라이브러리를 통해 송신되는 메세지들의 글로벌 <code>form</code> 주소를 설정할 수 있는 옵션들을 제공합니다. 원하는 경우 어떤 SMTP 서버라도 사용가능합니다. 메일을 보낼 때 PHP 의 <code>mail</code> 함수를 사용하려 한다면 설정 파일에서 <code>driver</code> 를 <code>mail</code>로 변경하면 됩니다. 또한 <code>sendmail</code> 드라이버도 사용가능합니다.</p>
+<p>라라벨은 인기있는 <a href="http://swiftmailer.org">SwiftMailer</a>를 통해서 깔끔하고 단순한 API를 제공합니다. 메일에 대한 설정 파일은 <code>app/config/mail.php</code> 파일로 SMTP 호스트, 포트, 인증 및 라이브러리를 통해 송신되는 메세지들의 글로벌 <code>form</code> 주소를 설정할 수 있는 옵션들을 제공합니다. 원하는 경우 어떤 SMTP 서버라도 사용가능합니다. 메일을 보낼 때 PHP의 <code>mail</code> 함수를 사용하려 한다면 설정 파일에서 <code>driver</code>를 <code>mail</code>로 변경하면 됩니다. 또한, <code>sendmail</code> 드라이버도 사용가능합니다.</p>
 
 <h3 id="api-드라이버">API 드라이버</h3>
 
-<p>라라벨은 또한 Mailgun 과 Mandrill의 HTTP API 드라이버들을 제공하고 있습니다. 이러한 API들은 대부분 SMTP 보다 간결하고 빠릅니다. 두 가지의 드라이버를 사용하기 위해서는 어플리케이션에 Guzzle 5 HTTP 라이브러리를  설치해야 합니다. 다음과 같은 라인을 <code>composer.json</code> 파일에 추가하여 Guzzle 5 를 프로젝트에 추가할 수 있습니다:</p>
+<p>라라벨은 또한, Mailgun과 Mandrill의 HTTP API 드라이버들을 제공하고 있습니다. 이러한 API들은 대부분 SMTP 보다 간결하고 빠릅니다. 두 가지의 드라이버를 사용하기 위해서는 어플리케이션에 Guzzle 5 HTTP 라이브러리를  설치해야 합니다. 다음과 같은 라인을 <code>composer.json</code> 파일에 추가하여 Guzzle 5를 프로젝트에 추가할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&quot;guzzlehttp/guzzle&quot;: &quot;~5.0&quot;
 </code></pre></div>
 <h4 id="mailgun-드라이버">Mailgun 드라이버</h4>
@@ -160,7 +160,7 @@
 
 <p><code>config/mail.php</code> 설정 파일에서 <code>driver</code> 옵션을 <code>log</code>로 설정한다면 실제로 이메일을 수신자에게 보내지 않고 로그 파일에 기록하게 됩니다. 이 설정은 주로 로컬에서 빠르게 디버깅을 해야하거나 내용을 확인하고자 할때 유용합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-메일(Mail)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-메일(Mail)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="basic-usage"></a></p>
 
@@ -209,7 +209,7 @@
 <p><strong>주의:</strong> <code>Mail::send</code> 클로저에 전달되는 메세지 인스턴스는 SwiftMailer 메세지 클래스를 확장하므로 이메일을 작성하는 데 필요한 클래스의 메소드들를 사용할 수 있습니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-메일(Mail)-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-메일(Mail)-기본-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="embedding-inline-attachments"></a></p>
 
@@ -224,7 +224,7 @@
     &lt;img src=&quot;&lt;?php echo $message-&gt;embed($pathToFile); ?&gt;&quot;&gt;
 &lt;/body&gt;
 </code></pre></div>
-<h4 id="이메일-뷰에서-raw-데이타를-첨부하는-방법">이메일 뷰에서 Raw 데이타를 첨부하는 방법</h4>
+<h4 id="이메일-뷰에서-raw-데이터를-첨부하는-방법">이메일 뷰에서 Raw 데이터를 첨부하는 방법</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;body&gt;
     Here is an image from raw data:
 
@@ -233,7 +233,7 @@
 </code></pre></div>
 <p><code>$message</code> 변수는 항상 <code>Mail</code> 클래스에 의해서 뷰에 전달된다는 것에 주의하십시오.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-메일(Mail)-인라인 첨부" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-메일(Mail)-인라인-첨부" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="queueing-mail"></a></p>
 
@@ -241,7 +241,7 @@
 
 <h4 id="이메일-메세지-큐잉-하기">이메일 메세지 큐잉 하기</h4>
 
-<p>메일을 송신하는 것은 어플리케이션의 응답 시간을 크게 저하시키기 때문에 많은 개발자들은 이메일 메세지를 백그라운드 에서 보낼 수 있도록 큐-대기행열에 두도록 합니다. 라라벨에서는 내장된 <a href="/laravel-korean-docs/docs/5.0/queues">일관된 큐 API</a>를 통해서 이러한 작업을 손쉽게 수행할 수 있게 합니다. 이메일 메세지를 대기 큐에 넣기 위해서는 간단하게 <code>Mail</code> 파사드의 <code>queue</code> 메소드를 호출하도록 하면 됩니다:</p>
+<p>메일을 송신하는 것은 어플리케이션의 응답 시간을 크게 저하시키기 때문에 많은 개발자들은 이메일 메세지를 백그라운드에서 보낼 수 있도록 큐-대기행열에 두도록 합니다. 라라벨에서는 내장된 <a href="/laravel-korean-docs/docs/5.0/queues">일관된 큐 API</a>를 통해서 이러한 작업을 손쉽게 수행할 수 있게 합니다. 이메일 메세지를 대기 큐에 넣기 위해서는 간단하게 <code>Mail</code> 파사드의 <code>queue</code> 메소드를 호출하도록 하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Mail::queue(&#39;emails.welcome&#39;, $data, function($message)
 {
     $message-&gt;to(&#39;foo@example.com&#39;, &#39;John Smith&#39;)-&gt;subject(&#39;Welcome!&#39;);
@@ -259,7 +259,7 @@
     $message-&gt;to(&#39;foo@example.com&#39;, &#39;John Smith&#39;)-&gt;subject(&#39;Welcome!&#39;);
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-메일(Mail)-메일 큐" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-메일(Mail)-메일-큐" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="mail-and-local-development"></a></p>
 
@@ -269,7 +269,7 @@
 
 <p>만약 실제로 이메일이 어떻게 보여지는지 확인하고자 한다면 <a href="https://mailtrap.io">MailTrap</a>과 같은 서비스를 이용하는 것도 고려해보시기 바랍니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-메일(Mail)-로컬 개발에서의 메일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-메일(Mail)-로컬-개발에서의-메일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -299,35 +299,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

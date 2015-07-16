@@ -137,9 +137,9 @@
 
 <p>물론, 미들웨어는 인증 이외에도 다양한 작업을 수행하도록 작성될 수 있습니다. CORS 미들웨어는 어플리케이션에서 내보내는 모든 응답에 적절한 헤더들을 추가하는 역할을 담당할 수도 있습니다. 로깅 미들웨어는 어플리케이션으로 들어오는 모든 요청을 기록할 수도 있습니다.</p>
 
-<p>라라벨 프레임워크에는 유지보수모드-공사중(maintenance), 인증(authentication), CSRF 보안 등을 위한 미들웨어들이 포함되어 있습니다. 그 미들웨어들은 모두 <code>app/Http/Middleware</code> 디렉토리 안에 위치하고 있습니다.</p>
+<p>라라벨 프레임워크에는 유지보수모드-공사중(maintenance), 인증(authentication), CSRF 보안 등을 위한 미들웨어들이 포함되어 있습니다. 그 미들웨어들은 모두 <code>app/Http/Middleware</code> 디렉토리 안에 있습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="defining-middleware"></a></p>
 
@@ -148,7 +148,7 @@
 <p>새로운 미들웨어를 생성하기 위하여 <code>make:middleware</code> Artisan 명령을 사용할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:middleware OldMiddleware
 </code></pre></div>
-<p>이 명령은 <code>OldMiddleware</code> 클래스를 생성하여 <code>app/Http/Middleware</code> 디렉토리에 위치시킬 것입니다. 이 미들웨어 에서 우리는 입력받은 <code>age</code>가 200보다 클 때에만 요청된 주소에 접근할 수 있도록 허용하려고 합니다. 그렇지 않으면 우리는 사용자를 &quot;home&quot;으로 리다이렉트할 것입니다.</p>
+<p>이 명령은 <code>OldMiddleware</code> 클래스를 생성하여 <code>app/Http/Middleware</code> 디렉토리에 위치시킬 것입니다. 이 미들웨어에서 우리는 입력받은 <code>age</code>가 200보다 클 때에만 요청된 주소에 접근할 수 있도록 허용하려고 합니다. 그렇지 않으면 우리는 사용자를 &quot;home&quot;으로 리다이렉트할 것입니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Http\Middleware;
 
 use Closure;
@@ -212,7 +212,7 @@ class AfterMiddleware implements Middleware {
     }
 }
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-미들웨어 정의하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-미들웨어-정의하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="registering-middleware"></a></p>
 
@@ -232,7 +232,7 @@ class AfterMiddleware implements Middleware {
     //
 }]);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-미들웨어 등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-미들웨어-등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="terminable-middleware"></a></p>
 
@@ -258,7 +258,7 @@ class StartSession implements TerminableMiddleware {
 </code></pre></div>
 <p>위와 같이 <code>handle</code> 메소드를 정의하고 나서 <code>TerminableMiddleware</code>는 <code>terminate</code> 메소드를 추가로 정의합니다. 이 메소드는 요청 변수와 응답 변수를 모두 인자로 받습니다. 종료 가능한 미들웨어를 정의했다면, 그것을 HTTP 커널의 전역 미들웨어 목록에 추가해 주어야 합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-종료가능한 미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-종료가능한-미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -288,35 +288,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

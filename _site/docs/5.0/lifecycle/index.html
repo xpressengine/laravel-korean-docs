@@ -138,7 +138,7 @@
 
 <p>지금 당장 모든 것들을 이해하지 못하더라도 괜찮습니다. 그냥 무엇을 하고 있는지에 대한 기본적인 이해를 얻기 위해 노력하십시오, 여러분이  다른 문서의 여러 부분들을 살펴 볼 수록 지식이 더 쌓일 것입니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="lifecycle-overview"></a></p>
 
@@ -156,9 +156,9 @@
 
 <p>HTTP 커널은 <code>Illuminate\Foundation\Http\Kernel</code> 클래스를 상속하고 있으며, 요청을 실행하기 전에 처리되는 <code>bootstrappers</code> (시작 코드)의 배열을 정의하고 있습니다. 이 시작 코드들은 에러 처리, 로그 설정, 어플리케이션 동작 환경의 감지 등 실제로 요청이 처리되기 전에 수행해야 되는 작업들을 의미합니다.</p>
 
-<p>또한 HTTP 커널은 어플리케이션에서 요청이 처리되기 전에 통과해야하는 HTTP <a href="/laravel-korean-docs/docs/5.0/middleware">미들웨어</a>의 목록을 정의하고 있습니다. 이 미들웨어들은 HTTP 세션 읽고/쓰고, 어플리케이션이 유지 관리 모드인지 확인하고, CSRF 토큰을 확인 하는 작업들을 처리합니다.</p>
+<p>또한, HTTP 커널은 어플리케이션에서 요청이 처리되기 전에 통과해야하는 HTTP <a href="/laravel-korean-docs/docs/5.0/middleware">미들웨어</a>의 목록을 정의하고 있습니다. 이 미들웨어들은 HTTP 세션 읽고/쓰고, 어플리케이션이 유지 관리 모드인지 확인하고, CSRF 토큰을 확인 하는 작업들을 처리합니다.</p>
 
-<p>HTTP 커널의 <code>handle</code> 메소드의 사용법은 매우 간단합니다. 단순하게는 <code>Request</code> 를 받고 <code>Response</code>를 반환합니다. 커널을 어플리케이션 전체를 나타내는 하나의 큰 블랙 박스라고 생각해봅시다. HTTP 요청이 입력되면 HTTP 응답이 반환됩니다.</p>
+<p>HTTP 커널의 <code>handle</code> 메소드의 사용법은 매우 간단합니다. 단순하게는 <code>Request</code>를 받고 <code>Response</code>를 반환합니다. 커널을 어플리케이션 전체를 나타내는 하나의 큰 블랙 박스라고 생각해봅시다. HTTP 요청이 입력되면 HTTP 응답이 반환됩니다.</p>
 
 <h4 id="서비스-프로바이더">서비스 프로바이더</h4>
 
@@ -168,7 +168,7 @@
 
 <p>어플리케이션이 부팅(부트스트래핑)되고 모든 서비스 프로바이더가 등록된 후, <code>Request</code>는 라우터 처리리를 위해서 전달될 것입니다. 라우터는 라우팅 또는 컨트롤러로 요청-request을 전달할뿐만 아니라, 임의의 특정 라우트에 지정된 미들웨어도 실행합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-라이프사이클 개요" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-라이프사이클-개요" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="focus-on-service-providers"></a></p>
 
@@ -178,9 +178,9 @@
 
 <p>라라벨 어플리케이션이 어떻게 구성되어 있는지, 서비스 프로바이더를 통해 부트스트랩되는 과정을 구체적으로 이해하는 것은 매우 중요합니다. 물론 여러분의 어플리케이션을 위한 기본 서비스 프로바이더는 <code>app/Providers</code> 디렉토리에 있습니다.</p>
 
-<p>기본적으로 <code>AppServiceProvider</code> 는 거의 비어 있습니다. 이 프로바이더는 여러분의 고유한 부트스트래핑과 서비스 컨테이너 바인딩 코드를 추가하기 위한 곳입니다. 물론 보다 큰 어플리케이션의 경우, 보다 세부적인 유형으로 구분된 종류별로 서비스 프로바이더를 만들 수도 있습니다.</p>
+<p>기본적으로 <code>AppServiceProvider</code>는 거의 비어 있습니다. 이 프로바이더는 여러분의 고유한 부트스트래핑과 서비스 컨테이너 바인딩 코드를 추가하기 위한 곳입니다. 물론 보다 큰 어플리케이션의 경우, 보다 세부적인 유형으로 구분된 종류별로 서비스 프로바이더를 만들 수도 있습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-서비스 프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-서비스-프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -210,35 +210,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

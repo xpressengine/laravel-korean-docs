@@ -273,7 +273,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$user->touch();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-인서트,-업데이트,-삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-인서트--업데이트--삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="soft-deleting"></a>
 ## 소프트 삭제
@@ -1432,4 +1432,4 @@ JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있�
 
 `appends` 리스트에 속성 하나가 추가되면, 그것은 두 모델의 배열과 JSON 형태로 포함합니다. `appends` 배열의 속성은 모델의 `visible`과 `hidden` 구성에 중요하게 영향을 받습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Converting-To-Arrays-/-JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Converting-To-Arrays---JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

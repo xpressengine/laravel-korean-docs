@@ -139,13 +139,13 @@
 
 <p>현재 라라벨이 지원하는 데이터베이스 시스템은 : MySQL, Postgres, SQLite 그리고 SQL Server입니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-설정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-설정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="read-write-connections"></a></p>
 
 <h2 id="읽기용-/-쓰기용-커넥션">읽기용 / 쓰기용 커넥션</h2>
 
-<p>SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELETE문을 사용하는 데이터베이스에 다른 연결을 사용할고 싶은 경우도 있습니다. Raw 쿼리를 사용하든, 쿼리 빌더 또는 Eloquent ORM 을 사용하든 적절한 연결들을 사용할 수 있습니다.</p>
+<p>SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELETE문을 사용하는 데이터베이스에 다른 연결을 사용할고 싶은 경우도 있습니다. Raw 쿼리를 사용하든, 쿼리 빌더 또는 Eloquent ORM을 사용하든 적절한 연결들을 사용할 수 있습니다. </p>
 
 <p>다음은 어떻게 read / write 커넥션을 설정하는지에 대한 예제입니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&#39;mysql&#39; =&gt; [
@@ -164,9 +164,9 @@
     &#39;prefix&#39;    =&gt; &#39;&#39;,
 ],
 </code></pre></div>
-<p>설정 배열에 <code>read</code> 와 <code>write</code> 두개의 키가 추가 된것을 참고하십시오. 이 키들은 <code>host</code>라는 싱글 키를 포함하는 배열 값을 갖는다: <code>read</code>와 <code>write</code> 연결에대한 나머지 데이터베이스 옵션들은 기본 <code>mysql</code> 배열에서 합쳐(merge)집니다. 따라서 메인 배열값들 중에서 재정의하고자하는 것들만 <code>read</code>와 <code>write</code> 배열에서 입력하면 됩니다. 위의 경우에서는 <code>192.168.1.1</code> 호스트는 “read” 커넥션에서 사용되고, <code>192.168.1.2</code> 호스트는 “write” 커넥션에서 사용되어 집니다. 메인 <code>mysql</code>설정 배열에 포함된 데이터베이스 연결정보, 프리픽스, 캐릭터 셋 등 다른 모든 옵션들은 양쪽연결에서 모두 공유합니다 .</p>
+<p>설정 배열에 <code>read</code>와 <code>write</code> 두 개의 키가 추가 된것을 참고하십시오. 이 키들은 <code>host</code>라는 싱글 키를 포함하는 배열 값을 갖는다: <code>read</code>와 <code>write</code> 연결에대한 나머지 데이터베이스 옵션들은 기본 <code>mysql</code> 배열에서 합쳐(merge)집니다. 따라서 메인 배열값들 중에서 재정의하고자하는 것들만 <code>read</code>와 <code>write</code> 배열에서 입력하면 됩니다. 위의 경우에서는 <code>192.168.1.1</code> 호스트는 “read” 커넥션에서 사용되고, <code>192.168.1.2</code> 호스트는 “write” 커넥션에서 사용되어 집니다. 메인 <code>mysql</code>설정 배열에 포함된 데이터베이스 연결정보, 프리픽스, 캐릭터 셋 등 다른 모든 옵션들은 양쪽연결에서 모두 공유합니다 .</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-읽기용 / 쓰기용 커넥션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-읽기용-/-쓰기용-커넥션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="running-queries"></a></p>
 
@@ -179,7 +179,7 @@
 </code></pre></div>
 <p><code>select</code> 메소드는 항상 결과를 <code>배열</code>로 반환합니다.</p>
 
-<p>또한 named 바인딩을 사용한 쿼리를 실행할 수도 있습니다:</p>
+<p>또한, named 바인딩을 사용한 쿼리를 실행할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$results = DB::select(&#39;select * from users where id = :id&#39;, [&#39;id&#39; =&gt; 1]);
 </code></pre></div>
 <h4 id="insert문-실행">Insert문 실행</h4>
@@ -206,7 +206,7 @@
     //
 });
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-쿼리 실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-쿼리-실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="database-transactions"></a></p>
 
@@ -233,7 +233,7 @@
 <p>마찬가지로, <code>commit</code>메소드로 트랜잭션을 commit할 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::commit();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-데이터베이스 트랜잭션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-데이터베이스-트랜잭션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="accessing-connections"></a></p>
 
@@ -242,7 +242,7 @@
 <p>여러 연결들을 사용할때 <code>DB::connection</code>메소드를 통해 특정 커넥션에 액세스 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$users = DB::connection(&#39;foo&#39;)-&gt;select(...);
 </code></pre></div>
-<p>또한 PDO 인스턴스로 액세스 할 수 있습니다:</p>
+<p>또한, PDO 인스턴스로 액세스 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$pdo = DB::connection()-&gt;getPdo();
 </code></pre></div>
 <p>때로는 주어진 데이터데이스에 다시 연결해야 할 수도 있습니다:</p>
@@ -251,7 +251,7 @@
 <p>PDO인스턴스의 <code>max_connections</code>한계를 넘어서서 데이터베이스 연결을 끊어야하는경우 <code>disconnect</code>메소드를 사용하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">DB::disconnect(&#39;foo&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-커넥션 엑세스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-커넥션-엑세스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="query-logging"></a></p>
 
@@ -263,7 +263,7 @@
 <p>실행된 쿼리들의 배열을 얻으려면 <code>getQueryLog</code>메소드를 사용하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$queries = DB::getQueryLog();
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-쿼리 로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-쿼리-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -293,35 +293,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

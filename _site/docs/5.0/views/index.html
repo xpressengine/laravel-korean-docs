@@ -150,7 +150,7 @@
 </code></pre></div>
 <p>보는바와 같이 <code>view</code> 헬퍼함수에 전달하는 첫 번째 인자는 <code>resources/views</code> 디렉토리에 있는 파일의 이름이 됩니다. 두 번째 전달 인자는 뷰에서 사용하기위한 데이터의 배열입니다.</p>
 
-<p>\당연하게도 뷰는 <code>resources/views</code> 디렉토리의 중첩된 서브 디렉토리를 구성할 수 있습니다. 예를들어 뷰파일이 <code>resources/views/admin/profile.php</code> 처럼 저장되었다면 다음처럼 호출해야 합니다:</p>
+<p>\당연하게도 뷰는 <code>resources/views</code> 디렉토리의 중첩된 서브 디렉토리를 구성할 수 있습니다. 예를 들어, 뷰파일이 <code>resources/views/admin/profile.php</code>처럼 저장되었다면 다음처럼 호출해야 합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return view(&#39;admin.profile&#39;, $data);
 </code></pre></div>
 <h4 id="뷰에-데이터-전달하기">뷰에 데이터 전달하기</h4>
@@ -165,11 +165,11 @@ $view = view(&#39;greeting&#39;)-&gt;withName(&#39;Victoria&#39;);
 <p>필요한 경우에 <code>view</code> 헬퍼함수에 두 번째 인자로 데이터 배열을 전달할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$view = view(&#39;greetings&#39;, $data);
 </code></pre></div>
-<p>이러한 방식으로 정보를 전달할 때,<code>$data</code>는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 <code>{{ $key }}</code> 와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (<code>$data[&#39;key&#39;]</code>는 존재한다고 가정합니다. )</p>
+<p>이러한 방식으로 정보를 전달할 때,<code>$data</code>는 키/값으로 구성된 배열이어야 합니다. 뷰 안에서 여러분은 <code>{{ $key }}</code>와 같이 각각의 키에 해당하는 값에 엑세스 할 수 있습니다. (<code>$data[&#39;$key&#39;]</code>는 존재한다고 가정합니다. )</p>
 
 <h4 id="모든-뷰에서-데이터-공유하기">모든 뷰에서 데이터 공유하기</h4>
 
-<p>때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇가지의 옵션이 있습니다. <code>view</code> 헬퍼함수를 사용하거나 <code>Illuminate\Contracts\View\Factory</code> <a href="/laravel-korean-docs/docs/5.0/contracts">contract</a>를 이용하는 법, 또는 와일드 카드의 <a href="#view-composers">view composer</a>를 통하는 방법입니다.</p>
+<p>때때로 어플리케이션에서 표시하는 모든 뷰에서 데이터를 공유할 필요가 있을 수도 있습니다. 이 경우 몇 가지의 옵션이 있습니다. <code>view</code> 헬퍼 함수를 사용하거나 <code>Illuminate\Contracts\View\Factory</code> <a href="/laravel-korean-docs/docs/5.0/contracts">contract</a>를 이용하는 법, 또는 와일드 카드의 <a href="#view-composers">view composer</a>를 통하는 방법입니다.</p>
 
 <p><code>view</code> 헬퍼함수를 이용하는 예제입니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">view()-&gt;share(&#39;data&#39;, [1, 2, 3]);
@@ -177,7 +177,7 @@ $view = view(&#39;greeting&#39;)-&gt;withName(&#39;Victoria&#39;);
 <p><code>View</code> 파사드를 사용할 수도 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">View::share(&#39;data&#39;, [1, 2, 3]);
 </code></pre></div>
-<p>일반적으로 <code>share</code> 메소드는 서비스 프로바이더의 <code>boot</code> 메소드 안에서 호출합니다.  <code>AppServiceProvider</code> 에서 편하게 추가할수도 있고, 다른 별도의 서비스 프로바이더를 생성하고 구성할 수도 있습니다.</p>
+<p>일반적으로 <code>share</code> 메소드는 서비스 프로바이더의 <code>boot</code> 메소드 안에서 호출합니다.  <code>AppServiceProvider</code>에서 편하게 추가할수도 있고, 다른 별도의 서비스 프로바이더를 생성하고 구성할 수도 있습니다.</p>
 
 <blockquote>
 <p>** 참고:** <code>view</code> 헬퍼함수를 전달 인자 없이 호출하는 경우에는 반환값은 <code>Illuminate\Contracts\View\Factory</code> contract의 구현체가 됩니다.</p>
@@ -191,12 +191,12 @@ $view = view(&#39;greeting&#39;)-&gt;withName(&#39;Victoria&#39;);
     //
 }
 </code></pre></div>
-<h4 id="파일-패스로-부터-view-반환">파일 패스로 부터 view 반환</h4>
+<h4 id="파일-패스로부터-view-반환">파일 패스로부터 view 반환</h4>
 
 <p>필요하다면 절대경로를 기반으로 뷰를 생성할 수도 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return view()-&gt;file($pathToFile, $data);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-뷰(Views)-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-뷰(Views)-기본-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="view-composers"></a></p>
 
@@ -244,7 +244,7 @@ class ComposerServiceProvider extends ServiceProvider {
 }
 </code></pre></div>
 <blockquote>
-<p><strong>참고:</strong> 라라벨은 뷰 컴포저를 위한 디렉토리를 기본적으로 포함하고 있지는 않습니다. 여러분이 원하시는대로 편하게 구성하면 됩니다. 예를 들어 <code>App\Http\ViewComposers</code> 디렉토리를 새롭게 생성할 수 있습니다.</p>
+<p><strong>참고:</strong> 라라벨은 뷰 컴포저를 위한 디렉토리를 기본적으로 포함하고 있지는 않습니다. 여러분이 원하시는대로 편하게 구성하면 됩니다. 예를 들어, <code>App\Http\ViewComposers</code> 디렉토리를 새롭게 생성할 수 있습니다.</p>
 </blockquote>
 
 <p>기억해야 될 부분은 생성한 서비스 프로바이더를 <code>config/app.php</code> 설정 파일의 <code>providers</code> 배열에 추가해야한다는 것입니다.</p>
@@ -292,7 +292,7 @@ class ProfileComposer {
 <p>뷰가 렌더링되기 전에 뷰 컴포저의 <code>composer</code> 메소드가 <code>Illuminate\Contracts\View\View</code> 인스턴스와 함께 호출됩니다. 데이터를 전달하기 위해서 <code>with</code> 메소드를 사용할 수 있습니다.</p>
 
 <blockquote>
-<p><strong>참고:</strong> 모든 뷰 컴포저의 의존성 주입은 <a href="/laravel-korean-docs/docs/5.0/container">service container</a>, 를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다.</p>
+<p><strong>참고:</strong> 모든 뷰 컴포저의 의존성 주입은 <a href="/laravel-korean-docs/docs/5.0/container">service container</a>,를 통해서 이루어 집니다. 그렇기 때문에 필요한 객체의 경우 뷰 컴포저의 생성자에서 타입힌트를 지정한 형태로 지정하면 됩니다.</p>
 </blockquote>
 
 <h4 id="와일드카드-뷰-컴포저">와일드카드 뷰 컴포저</h4>
@@ -322,7 +322,7 @@ class ProfileComposer {
 <p>뷰 <strong>크리에이터</strong>는 뷰 컴포저와 거의 비슷하게 동작합니다; 하지만 뷰 크리에이터는 뷰가 인스턴스화 되는 즉시 실행됩니다. 뷰 크리에이터를 등록하기 위해서는 <code>creator</code> 메소드를 사용합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">View::creator(&#39;profile&#39;, &#39;App\Http\ViewCreators\ProfileCreator&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-뷰(Views)-뷰 컴포저" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-뷰(Views)-뷰-컴포저" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -352,35 +352,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 

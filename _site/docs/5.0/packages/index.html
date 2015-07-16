@@ -136,15 +136,15 @@
 
 <h2 id="소개">소개</h2>
 
-<p>패키지를 개발하는 것은 라라벨에 기능을 추가하는 주요한 방법입니다. 패키지는 예를 들어 날짜 라이브러리인 <a href="https://github.com/briannesbitt/Carbon">Carbon</a>이나 BDD(행위 주도 개발) 테스트 프레임워크인 <a href="https://github.com/Behat/Behat">Behat</a>과 같이 어느 것이든 될 수 있습니다.</p>
+<p>패키지를 개발하는 것은 라라벨에 기능을 추가하는 주요한 방법입니다. 패키지는 예를 들어, 날짜 라이브러리인 <a href="https://github.com/briannesbitt/Carbon">Carbon</a>이나 BDD(행위 주도 개발) 테스트 프레임워크인 <a href="https://github.com/Behat/Behat">Behat</a>과 같이 어느 것이든 될 수 있습니다.</p>
 
-<p>물론 다양한 종류의 패키지가 존재합니다. 라라벨 뿐만 아니라 다른 어떤 프레임워크와도 작동할 수 있는 독립적인 패키지도 있습니다. Carbon 과 Behat 은 이런 독립적으로 동작하는 패키지들의 예입니다. 이러한 패키지들을 라라벨과 사용하려면 <code>composer.json</code>파일에 추가하면 됩니다.</p>
+<p>물론 다양한 종류의 패키지가 존재합니다. 라라벨 뿐만 아니라 다른 어떤 프레임워크와도 작동할 수 있는 독립적인 패키지도 있습니다. Carbon과 Behat 은 이런 독립적으로 동작하는 패키지들의 예입니다. 이러한 패키지들을 라라벨과 사용하려면 <code>composer.json</code>파일에 추가하면 됩니다.</p>
 
 <p>반대로, 라라벨 프레임워크에만 사용할 수 있는 패키지들도 있습니다. 이러한 패키지들은 라라벨 응용 프로그램의 기능을 사용하는 라우트, 컨트롤러, 뷰, 설정들을 가질 것입니다. 이 가이드는 라라벨에 특화된 패키지의 개발을 주로 설명합니다.</p>
 
-<p>모든 라라벨 패키지는 <a href="http://packagist.org">Packagist</a> 와 <a href="http://getcomposer.org">Composer</a>를 통해서 배포되기 때문에 PHP 패키지 배포 도구에 대해 알고 있는 것이 중요합니다.</p>
+<p>모든 라라벨 패키지는 <a href="http://packagist.org">Packagist</a>와 <a href="http://getcomposer.org">Composer</a>를 통해서 배포되기 때문에 PHP 패키지 배포 도구에 대해 알고 있는 것이 중요합니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="views"></a></p>
 
@@ -157,7 +157,7 @@
 <p>일반적으로 패키지의 뷰는 더블 콜론을 사용하여 ”네임 스페이스”를 지정합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return view(&#39;package::view.name&#39;);
 </code></pre></div>
-<p>여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 뷰 파일들이 어디에 있는지 라라벨에 알려주는 것입니다. 예를들어 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 <code>boot</code> 메소드에 다음과 같이 뷰 파일의 위치를 설정할 수 있습니다.</p>
+<p>여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 뷰 파일들이 어디에 있는지 라라벨에 알려주는 것입니다. 예를 들어, 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 <code>boot</code> 메소드에 다음과 같이 뷰 파일의 위치를 설정할 수 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">public function boot()
 {
     $this-&gt;loadViewsFrom(__DIR__.&#39;/path/to/views&#39;, &#39;courier&#39;);
@@ -166,7 +166,7 @@
 <p>이제 패키지에서 다음처럼 뷰파일을 로드 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return view(&#39;courier::view.name&#39;);
 </code></pre></div>
-<p>여러분이 <code>loadViewsFrom</code> 메소드를 사용할 때, 라라벨은 실제로 뷰을 위한 <strong>두개의</strong> 위치를 등록합니다. 하나는 어플리케이션의 <code>resources/views/vendor</code> 디렉토리 이고, 다른 하나는 여러분이 지정한 디렉토리입니다. 앞의 <code>courier</code> 예제를 생각해 보면, 패키지의 뷰가 요청될 때 라라벨은 먼저 <code>resources/views/vendor/courier</code> 디렉토리에 파일이 준비되어 있는지 확인합니다. 이때 뷰를 확인하지 못하면 여러분이 <code>loadViewsFrom</code>를 통해서 지정한 디렉토리에서 패키지 뷰를 찾게 될 것입니다. 이러한 방법은 사용자가 여러분의 패키지 뷰를 수정하거나, 재정의 하기 쉽게 해줍니다.</p>
+<p>여러분이 <code>loadViewsFrom</code> 메소드를 사용할 때, 라라벨은 실제로 뷰을 위한 <strong>두 개의</strong> 위치를 등록합니다. 하나는 어플리케이션의 <code>resources/views/vendor</code> 디렉토리 이고, 다른 하나는 여러분이 지정한 디렉토리입니다. 앞의 <code>courier</code> 예제를 생각해 보면, 패키지의 뷰가 요청될 때 라라벨은 먼저 <code>resources/views/vendor/courier</code> 디렉토리에 파일이 준비되어 있는지 확인합니다. 이때 뷰를 확인하지 못하면 여러분이 <code>loadViewsFrom</code>를 통해서 지정한 디렉토리에서 패키지 뷰를 찾게 될 것입니다. 이러한 방법은 사용자가 여러분의 패키지 뷰를 수정하거나, 재정의 하기 쉽게 해줍니다.</p>
 
 <h4 id="뷰-퍼블리싱">뷰 퍼블리싱</h4>
 
@@ -189,7 +189,7 @@
 <p><strong>참고 :</strong> <code>publishes</code> 메소드는 <strong>어떤</strong> 유형의 파일이라도 원하는 위치로 파일을 퍼블리싱 할 수 있습니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-뷰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-뷰" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="translations"></a></p>
 
@@ -198,7 +198,7 @@
 <p>일반적으로 패키지의 언어파일은 더블 콜론을 사용하여 ”네임 스페이스”를 지정합니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return trans(&#39;package::file.line&#39;);
 </code></pre></div>
-<p>여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 언어 파일들이 어디에 있는지 라라벨에 알려주는 것입니다.  예를들어 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 <code>boot</code> 메소드에 다음과 같이 언어 파일의 위치를 설정할 수 있습니다:</p>
+<p>여러분이 해야 할 것은 주어진 네임스페이스에 해당하는 언어 파일들이 어디에 있는지 라라벨에 알려주는 것입니다.  예를 들어, 여러분의 패키지 이름이 “courier” 라고 할 때 서비스 프로바이더의 <code>boot</code> 메소드에 다음과 같이 언어 파일의 위치를 설정할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">public function boot()
 {
     $this-&gt;loadTranslationsFrom(__DIR__.&#39;/path/to/translations&#39;, &#39;courier&#39;);
@@ -209,7 +209,7 @@
 <p>이제 여러분의 패키지 언어 파일을 다음과 같이 로드 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">return trans(&#39;courier::file.line&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-언어파일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-언어파일" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="configuration"></a></p>
 
@@ -225,18 +225,18 @@
 <p>이제 패키지를 이용하는 사용자가 라라벨의 <code>vendor:public</code> 명령어를 실행하면 패키지 설정 파일이 지정된 위치로 복사 될 것입니다. 설정 파일이 한번 복사되고 나면 다른 설정 파일과 마찬가지로 손쉽게 엑세스 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$value = config(&#39;courier.option&#39;);
 </code></pre></div>
-<p>여러분은 또한 패키지 설정 파일이 어플리케이션의 설정 파일에 합쳐지도록 할 수도 있습니다. 이렇게 하면 퍼블리싱된 설정 파일의 복사에서 사용자가 실제로 재 정의 하기를 원하는 옵션만을 포함 하도록 할 수 있습니다. 설정 파일을 합치려면 서비스 프로바이더의 <code>register</code> 메소드안에서 <code>mergeConfigFrom</code> 메소드를 사용하면 됩니다:</p>
+<p>여러분은 또한, 패키지 설정 파일이 어플리케이션의 설정 파일에 합쳐지도록 할 수도 있습니다. 이렇게 하면 퍼블리싱된 설정 파일의 복사에서 사용자가 실제로 재 정의 하기를 원하는 옵션만을 포함 하도록 할 수 있습니다. 설정 파일을 합치려면 서비스 프로바이더의 <code>register</code> 메소드안에서 <code>mergeConfigFrom</code> 메소드를 사용하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;mergeConfigFrom(
     __DIR__.&#39;/path/to/config/courier.php&#39;, &#39;courier&#39;
 );
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="public-assets"></a></p>
 
-<h2 id="public-의-asset-파일들">Public 의 Asset 파일들</h2>
+<h2 id="public의-asset-파일들">Public의 Asset 파일들</h2>
 
-<p>여러분의 패키지가 JavaScript, CSS 그리고 이미지 파일들 처럼 asset 파일들을 가지고 있을 수 있습니다. 이 파일들을 퍼블리싱 하기 위해서는 서비스 프로바이더의 <code>boot</code> 메소드에서 <code>publishes</code> 메소드를 사용하면 됩니다. 다음 예제에서는 &quot;public&quot; asset 그룹 태그를 추가로 지정하고 있습니다.</p>
+<p>여러분의 패키지가 JavaScript, CSS 그리고 이미지 파일들처럼 asset 파일들을 가지고 있을 수 있습니다. 이 파일들을 퍼블리싱 하기 위해서는 서비스 프로바이더의 <code>boot</code> 메소드에서 <code>publishes</code> 메소드를 사용하면 됩니다. 다음 예제에서는 &quot;public&quot; asset 그룹 태그를 추가로 지정하고 있습니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;publishes([
     __DIR__.&#39;/path/to/assets&#39; =&gt; public_path(&#39;vendor/courier&#39;),
 ], &#39;public&#39;);
@@ -244,9 +244,9 @@
 <p>이제 패키지를 이용하는 사용자가 라라벨의 <code>vendor:public</code> 명령어를 실행하면 패키지 설정 파일이 지정된 위치로 복사 될 것입니다. 일반적으로 패키지가 업데이트 될 때에는 asset 파일들을 덮어써야 하기 때문에 이때에는 <code>--force</code> 플래그를 사용하면 됩니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">php artisan vendor:publish --tag=public --force
 </code></pre></div>
-<p>Public 의 asset 파일들을 항상 안전하게 업데이트하려면 이 명령어들을 <code>composer.json</code> 파일의 <code>post-update-cmd</code> 목록에 추가하는 것이 좋습니다.</p>
+<p>Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명령어를 <code>composer.json</code> 파일의 <code>post-update-cmd</code> 목록에 추가하는 것이 좋습니다.</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-Public 의 Asset 파일들" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-Public-의-Asset-파일들" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="publishing-file-groups"></a></p>
 
@@ -266,7 +266,7 @@ $this-&gt;publishes([
 <p>이제 태그를 지정 하면 파일을 분할하여 퍼블리싱 할 수 있습니다:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">php artisan vendor:publish --provider=&quot;Vendor\Providers\PackageServiceProvider&quot; --tag=&quot;config&quot;
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-파일 그룹 퍼블리싱하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-파일-그룹-퍼블리싱하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="routing"></a></p>
 
@@ -284,7 +284,7 @@ $this-&gt;publishes([
 <p><strong>주의:</strong> 여러분의 패키지가 컨트롤러를 사용하고 있다면 <code>composer.json</code> 파일의 설정을 통해서 오토로드가 될 수 있어야 합니다.</p>
 </blockquote>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-패키지 개발(Package Development)-라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-패키지-개발(Package-Development)-라우팅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
@@ -314,35 +314,40 @@ pageTracker._trackPageview();
 </script>
 <script type="text/javascript">
     $('.chak-comment-widget').each(function(){
-        var apikey = $(this).data('apikey');
-        $.ajax({
-            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
-            dataType : "jsonp",
-            jsonp : "cb",
-            success : function(data){
-                $(this).find('.count').text(data.count);
-            }.bind(this)
-        });
-    });
-    $('.chak-comment-widget').click(function(){
-        var apikey = $(this).data('apikey');
-        var makeIframe = document.createElement("iframe");
-        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
-        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
-        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
-        $(this).after( makeIframe ); chakComment({}, makeIframe);
 
-        $('.chak-comment-widget').parent().addClass('active');
-        $(this).remove();
+        var apikey = $(this).data('chak-apikey');
+        var $count = $(this).find('.count');
+
+        $.ajax({
+            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            dataType : "jsonp",
+            jsonp : "callback",
+        }).done(function(count){
+            $count.text(count);
+        });
+
+        $(this).click(function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("scrolling", "no");
+            iframe.setAttribute("data-chak-apikey", apikey);
+            iframe.setAttribute("data-chak-group", "laravel");
+            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
+            $(this).after( iframe ); chakComment({}, iframe);
+
+            $(this).parent().addClass('active');
+            $(this).remove();
+        });
     });
 </script>
 <script type="text/javascript">
     (function() {
         var chak = document.createElement('script');
-        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        chak.type = 'text/javascript'; chak.src = '//chak.it/static/service.js'; chak.async = true;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
     })();
 </script>
+
 
   </body>
 
