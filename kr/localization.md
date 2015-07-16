@@ -12,7 +12,7 @@
 
 라라벨의 `Lang` 파사드는 어플리케이션이 다국어에 대응하게 할 수 있도록 다양한 언어로 번역 된 문자열을 검색하는 방법을 제공합니다.
 
-<!--chak-comment-지역화 (다국어-Localization)-소개-->
+<!--chak-comment-지역화-(다국어-Localization)-소개-->
 
 <a name="language-files"></a>
 ## 언어 파일들
@@ -48,7 +48,7 @@
 
 	'fallback_locale' => 'en',
 
-<!--chak-comment-지역화 (다국어-Localization)-언어 파일들-->
+<!--chak-comment-지역화-(다국어-Localization)-언어-파일들-->
 
 <a name="basic-usage"></a>
 ## 기본적인 사용법
@@ -82,7 +82,7 @@
 		//
 	}
 
-<!--chak-comment-지역화 (다국어-Localization)-기본적인 사용법-->
+<!--chak-comment-지역화-(다국어-Localization)-기본적인-사용법-->
 
 <a name="pluralization"></a>
 ## 복수 표기
@@ -103,7 +103,7 @@
 
 	'apples' => '{0} There are none|[1,19] There are some|[20,Inf] There are many',
 
-<!--chak-comment-지역화 (다국어-Localization)-복수 표기-->
+<!--chak-comment-지역화-(다국어-Localization)-복수-표기-->
 
 
 <a name="validation"></a>
@@ -111,11 +111,11 @@
 
 검증 오류와 메세지에 대한 다국어 지역화는 <a href="/docs/5.0/validation#localization">검증 문서</a>를 참고하십시오.
 
-<!--chak-comment-지역화 (다국어-Localization)-검증 메세지 지역화하기-->
+<!--chak-comment-지역화-(다국어-Localization)-검증-메세지-지역화하기-->
 
 <a name="overriding-package-language-files"></a>
 ## 패키지 언어 파일 재정의하기
 
 많은 패키지들이 고유한 언어 라인들을 제공하고 있습니다. 출력되는 문구를 수정하기 위해 패키지의 소스를 수정하는 대신 `resources/lang/packages/{locale}/{package}` 디렉토리에 파일을 추가하여 재정의 할 수 있습니다. 예를 들어, `skyrim/hearthfire` 패키지의 영어 라인을 대체 할 필요가 있다면, `resources/lang/packages/en/hearthfire/messages.php`에 언어 파일을 추가 하면 됩니다. 이 파일에서 여러분이 재정의하고자 하는 언어 라인을 지정하면 됩니다. 재정의하지 않은 언어 라인들은 패키지의 언어 파일의 정의를 그대로 따릅니다.
 
-<!--chak-comment-지역화 (다국어-Localization)-패키지 언어 파일 재정의하기-->
+<!--chak-comment-지역화-(다국어-Localization)-패키지-언어-파일-재정의하기-->

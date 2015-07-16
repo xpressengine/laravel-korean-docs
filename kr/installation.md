@@ -9,7 +9,7 @@
 
 라라벨은 의존성 관리를 위해 [컴포저](http://getcomposer.org)를 활용합니다. 따라서 라라벨을 사용하기전 여러분은 라라벨을 설치할 서버(머신)에 Composer-컴포저를 설치할 필요가 있습니다.
 
-<!--chak-comment-설치하기(Installation)-컴포저 설치하기-->
+<!--chak-comment-설치하기(Installation)-컴포저-설치하기-->
 
 <a name="install-laravel"></a>
 ## 라라벨 설치하기
@@ -38,7 +38,7 @@
 
 	php artisan fresh
 
-<!--chak-comment-설치하기(Installation)-라라벨 설치하기-->
+<!--chak-comment-설치하기(Installation)-라라벨-설치하기-->
 
 <a name="server-requirements"></a>
 ## 서버 요구사항
@@ -53,7 +53,7 @@
 
 일부 OS에서 PHP 5.5 버전부터 직접 수동으로 PHP JSON extension을 설치를 요구하기도 합니다. 여러분이 Ubuntu를 사용하신다면 `apt-get install php5-json` 명령어로 설치할 수 있습니다.
 
-<!--chak-comment-설치하기(Installation)-서버 요구사항-->
+<!--chak-comment-설치하기(Installation)-서버-요구사항-->
 
 <a name="configuration"></a>
 ## 설정하기
@@ -104,4 +104,4 @@ Nginx에서 여러분의 서버 설정이 아래의 지시를 따른다면 “pr
 
 물론 [Homestead](/docs/5.0/homestead)를 사용하신다면 pretty URLs는 자동으로 설정되어 있을 것입니다.
 
-<!--chak-comment-설치하기(Installation)-깔끔한 URL-->
+<!--chak-comment-설치하기(Installation)-깔끔한-URL-->

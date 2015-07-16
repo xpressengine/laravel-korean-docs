@@ -209,7 +209,7 @@ Return the last element in the array. Useful for method chaining.
 
 	$last = last($this->returnsArray('foo'));
 
-<!--chak-comment-Helper Functions 헬퍼함수-Arrays 배열-->
+<!--chak-comment-Helper-Functions-헬퍼함수-Arrays-배열-->
 
 <a name="paths"></a>
 ## Paths
@@ -241,7 +241,7 @@ Get the fully qualified path to the `public` directory.
 Get the fully qualified path to the `storage` directory.
 `storage` 폴더의 완전한 경로를 얻습니다.
 
-<!--chak-comment-Helper Functions 헬퍼함수-Paths-->
+<!--chak-comment-Helper-Functions-헬퍼함수-Paths-->
 
 <a name="routing"></a>
 ## Routing
@@ -288,7 +288,7 @@ Register a new RESTful resource route with the router.
 
 	resource('foo', 'FooController');
 
-<!--chak-comment-Helper Functions 헬퍼함수-Routing-->
+<!--chak-comment-Helper-Functions-헬퍼함수-Routing-->
 
 <a name="strings"></a>
 ## Strings
@@ -433,7 +433,7 @@ Translate a given language line with inflection. Alias of `Lang::choice`.
 
 	$value = trans_choice('foo.bar', $count);
 
-<!--chak-comment-Helper Functions 헬퍼함수-Strings-->
+<!--chak-comment-Helper-Functions-헬퍼함수-Strings-->
 
 <a name="urls"></a>
 ## URLs
@@ -480,7 +480,7 @@ Generate a fully qualified URL to the given path.
 
 	echo url('foo/bar', $parameters = [], $secure = null);
 
-<!--chak-comment-Helper Functions 헬퍼함수-URLs-->
+<!--chak-comment-Helper-Functions-헬퍼함수-URLs-->
 
 <a name="miscellaneous"></a>
 ## Miscellaneous
@@ -541,4 +541,4 @@ Return the given object.
 
 	$value = with(new Foo)->doWork();
 
-<!--chak-comment-Helper Functions 헬퍼함수-Miscellaneous-->
+<!--chak-comment-Helper-Functions-헬퍼함수-Miscellaneous-->

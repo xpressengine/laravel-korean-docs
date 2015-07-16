@@ -13,7 +13,7 @@
 
 요청에 대한 모든 처리 로직을 하나의 `routes.php` 파일에 정의하는 것보다 별도의 컨트롤러 클래스를 통해서 구성할 수도 있습니다. 컨트롤러는 클래스를 구성하여 HTTP 요청에 대한 그룹을 지정합니다. 컨트롤러는 일반적으로 `app/Http/Controllers` 디렉토리에 저장합니다.
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-소개-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-소개-->
 
 <a name="basic-controllers"></a>
 ## 기본 컨트롤러
@@ -75,7 +75,7 @@
 
 	$action = Route::currentRouteAction();
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-기본 컨트롤러-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-기본-컨트롤러-->
 
 <a name="controller-middleware"></a>
 ## 컨트롤러 미들웨어
@@ -105,7 +105,7 @@
 
 	}
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-컨트롤러 미들웨어 -->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-컨트롤러-미들웨어--->
 
 <a name="implicit-controllers"></a>
 ## 암시적 컨트롤러
@@ -149,7 +149,7 @@
 		'anyLogin' => 'user.login',
 	]);
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-암시적 컨트롤러-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-암시적-컨트롤러-->
 
 <a name="restful-resource-controllers"></a>
 ## RESTful 리소스 컨트롤러
@@ -223,7 +223,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	Route::resource('photos', 'PhotoController');
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-RESTful 리소스 컨트롤러-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-RESTful-리소스-컨트롤러-->
 
 <a name="dependency-injection-and-controllers"></a>
 ## 의존성 주입 & 컨트롤러
@@ -310,7 +310,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 > **주의:** 메소드 인젝션-주입은 [모델 바인딩](/docs/5.0/routing#route-model-binding)에서도 마찬가지로 동작합니다. 컨테이너는 어느 인자가 모델 바인딩 되었고 어떤 인자가 주입될것인지 영리하게 판단할 것입니다.
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-의존성 주입 & 컨트롤러-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-의존성-주입---컨트롤러-->
 
 <a name="route-caching"></a>
 ## 라우트 캐시
@@ -325,4 +325,4 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	php artisan route:clear
 
-<!--chak-comment-HTTP 컨트롤러(HTTP Controllers)-라우트 캐시-->
+<!--chak-comment-HTTP-컨트롤러(HTTP-Controllers)-라우트-캐시-->

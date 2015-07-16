@@ -27,7 +27,7 @@
 - [Laravel Website 라라벨 웹사이트](https://github.com/laravel/website)
 - [Laravel Art 라라벨 아트웤](https://github.com/laravel/art)
 
-<!--chak-comment-기여 가이드(Contribution Guide)-버그 리포트-->
+<!--chak-comment-기여-가이드(Contribution-Guide)-버그-리포트-->
 
 <a name="core-development-discussion"></a>
 ## 핵심기능에 대한 개발 논의
@@ -36,7 +36,7 @@
 
 `#laravel-dev` IRC 채널은 모든 사람에게 개방되어 있습니다. 토론에 참여하거나, 혹은 그냥보고 있는 것만으로도 괜찮습니다, 채널에 많이 참가하세요!
 
-<!--chak-comment-기여 가이드(Contribution Guide)-핵심기능에 대한 개발 논의-->
+<!--chak-comment-기여-가이드(Contribution-Guide)-핵심기능에-대한-개발-논의-->
 
 <a name="which-branch"></a>
 ## 브랜치 선택
@@ -49,14 +49,14 @@
 
 만약 여러분의 새로운 기능이 메이저인지 마이너인지 명확하지 않다면 Freenode의 `#laravel-dev` IRC 채널에서 Taylor Otwell에 문의 하길바랍니다.
 
-<!--chak-comment-기여 가이드(Contribution Guide)-브랜치 선택-->
+<!--chak-comment-기여-가이드(Contribution-Guide)-브랜치-선택-->
 
 <a name="security-vulnerabilities"></a>
 ## 보안 취약점
 
 만약 라라벨에서 보안 취약점을 발견했다면 테일러 오트웰 <a href="mailto:taylor@laravel.com">taylor@laravel.com</a>에게 이메일을 보내주시길 바랍니다. 모든 보안 취약점은 신속하게 해결될 것입니다.
 
-<!--chak-comment-기여 가이드(Contribution Guide)-보안 취약점-->
+<!--chak-comment-기여-가이드(Contribution-Guide)-보안-취약점-->
 
 <a name="coding-style"></a>
 ## 코딩 스타일
@@ -68,4 +68,4 @@
 - 함수와 컨트롤 구조에서는 반드시 Allman 방식의 괄호를 구성합니다.
 - 인덴트는 탭으로, 정렬은 스페이스로 구성합니다.
 
-<!--chak-comment-기여 가이드(Contribution Guide)-코딩 스타일-->
+<!--chak-comment-기여-가이드(Contribution-Guide)-코딩-스타일-->

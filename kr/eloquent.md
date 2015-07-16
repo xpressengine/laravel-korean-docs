@@ -30,7 +30,7 @@
 
 시작하기에 앞서 `config/database.php` 에 데이터베이스 커넥션이 설정되어 있는지 확인하십시오.
 
-<!--chak-comment-Eloquent ORM-소개-->
+<!--chak-comment-Eloquent-ORM-소개-->
 
 <a name="basic-usage"></a>
 ## 기본 사용법
@@ -138,7 +138,7 @@ Eloquent 쿼리를 실행할 때 사용할 데이터베이스 커넥션을 지�
 
 	$user = User::onWriteConnection()->find(1);
 
-<!--chak-comment-Eloquent ORM-기본 사용법-->
+<!--chak-comment-Eloquent-ORM-기본-사용법-->
 
 <a name="mass-assignment"></a>
 ## 대량 할당
@@ -177,7 +177,7 @@ Eloquent 쿼리를 실행할 때 사용할 데이터베이스 커넥션을 지�
 
 	protected $guarded = ['*'];
 
-<!--chak-comment-Eloquent ORM-대량 할당-->
+<!--chak-comment-Eloquent-ORM-대량-할당-->
 
 <a name="insert-update-delete"></a>
 ## 인서트, 업데이트, 삭제
@@ -267,7 +267,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$user->touch();
 
-<!--chak-comment-Eloquent ORM-인서트, 업데이트, 삭제-->
+<!--chak-comment-Eloquent-ORM-인서트,-업데이트,-삭제-->
 
 <a name="soft-deleting"></a>
 ## 소프트 삭제
@@ -331,7 +331,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		//
 	}
 
-<!--chak-comment-Eloquent ORM-소프트 삭제-->
+<!--chak-comment-Eloquent-ORM-소프트-삭제-->
 
 <a name="timestamps"></a>
 ## 타임스탬프
@@ -362,7 +362,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<!--chak-comment-Eloquent ORM-타임스탬프-->
+<!--chak-comment-Eloquent-ORM-타임스탬프-->
 
 <a name="query-scopes"></a>
 ## 쿼리 스코프
@@ -406,7 +406,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$users = User::ofType('member')->get();
 
-<!--chak-comment-Eloquent ORM-쿼리 스코프-->
+<!--chak-comment-Eloquent-ORM-쿼리-스코프-->
 
 <a name="global-scopes"></a>
 ## 글로벌 스코프
@@ -474,7 +474,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		}
 	}
 
-<!--chak-comment-Eloquent ORM-글로벌 스코프-->
+<!--chak-comment-Eloquent-ORM-글로벌-스코프-->
 
 <a name="relationships"></a>
 ## 관계
@@ -800,7 +800,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<!--chak-comment-Eloquent ORM-관계-->
+<!--chak-comment-Eloquent-ORM-관계-->
 
 <a name="querying-relations"></a>
 ## 관계 쿼리
@@ -853,7 +853,7 @@ Eloquent는 동적 속성을 사용하여 지정된 관계들에 엑세스하는
 
 > **참고:** 여러 결과를 반환하는 관계는 `Illuminate\Database\Eloquent\Collection` 클래스의 인스턴스를 반환할 것입니다.
 
-<!--chak-comment-Eloquent ORM-관계 쿼리-->
+<!--chak-comment-Eloquent-ORM-관계-쿼리-->
 
 <a name="eager-loading"></a>
 ## Eager 로딩
@@ -938,7 +938,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 		$query->orderBy('published_date', 'asc');
 	}]);
 
-<!--chak-comment-Eloquent ORM-Eager 로딩-->
+<!--chak-comment-Eloquent-ORM-Eager-로딩-->
 
 <a name="inserting-related-models"></a>
 ## 관련된 모델 삽입하기
@@ -1025,7 +1025,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 
 	User::find(1)->roles()->save($role, ['expires' => $expires]);
 
-<!--chak-comment-Eloquent ORM-관련된 모델 삽입하기-->
+<!--chak-comment-Eloquent-ORM-관련된-모델-삽입하기-->
 
 <a name="touching-parent-timestamps"></a>
 ## 부모의 타임스탬프 값 갱신
@@ -1051,7 +1051,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 
 	$comment->save();
 
-<!--chak-comment-Eloquent ORM-부모의 타임스탬프 값 갱신-->
+<!--chak-comment-Eloquent-ORM-부모의-타임스탬프-값-갱신-->
 
 <a name="working-with-pivot-tables"></a>
 ## 피벗 테이블 작업
@@ -1098,7 +1098,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 		return new YourCustomPivot($parent, $attributes, $table, $exists);
 	}
 
-<!--chak-comment-Eloquent ORM-피벗 테이블 작업-->
+<!--chak-comment-Eloquent-ORM-피벗-테이블-작업-->
 
 <a name="collections"></a>
 ## 컬렉션
@@ -1186,7 +1186,7 @@ Eloquent 컬렉션에 포함 된 항목을 반복하거나 필터링 할 수 있
 
 	}
 
-<!--chak-comment-Eloquent ORM-컬렉션-->
+<!--chak-comment-Eloquent-ORM-컬렉션-->
 
 <a name="accessors-and-mutators"></a>
 ## Accessors & Mutators
@@ -1219,7 +1219,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 
 	}
 
-<!--chak-comment-Eloquent ORM-Accessors & Mutators-->
+<!--chak-comment-Eloquent-ORM-Accessors---Mutators-->
 
 <a name="date-mutators"></a>
 ## 날짜 Mutators
@@ -1242,7 +1242,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 		return [];
 	}
 
-<!--chak-comment-Eloquent ORM-Date Mutators-->
+<!--chak-comment-Eloquent-ORM-Date-Mutators-->
 
 <a name="attribute-casting"></a>
 ## 속성(Attribute) 캐스팅
@@ -1281,7 +1281,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 	// options은 자동으로 JSON으로 직렬화 됩니다...
 	$user->options = ['foo' => 'bar'];
 
-<!--chak-comment-Eloquent ORM-Attribute Casting-->
+<!--chak-comment-Eloquent-ORM-Attribute-Casting-->
 
 <a name="model-events"></a>
 ## 모델 이벤트
@@ -1319,7 +1319,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 		});
 	}
 
-<!--chak-comment-Eloquent ORM-Model Events-->
+<!--chak-comment-Eloquent-ORM-Model-Events-->
 
 <a name="model-observers"></a>
 ## 모델 관찰자(Observers)
@@ -1346,7 +1346,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 
 	User::observe(new UserObserver);
 
-<!--chak-comment-Eloquent ORM-Model Observers-->
+<!--chak-comment-Eloquent-ORM-Model-Observers-->
 
 <a name="model-url-generation"></a>
 ## 모델 URL 생성하기
@@ -1364,7 +1364,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 		return $this->slug;
 	}
 
-<!--chak-comment-Eloquent ORM-Model URL Generation-->
+<!--chak-comment-Eloquent-ORM-Model-URL-Generation-->
 
 <a name="converting-to-arrays-or-json"></a>
 ## 배열 / JSON으로 전환하기
@@ -1426,4 +1426,4 @@ JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있�
 
 `appends` 리스트에 속성 하나가 추가되면, 그것은 두 모델의 배열과 JSON 형태로 포함합니다. `appends` 배열의 속성은 모델의 `visible`과 `hidden` 구성에 중요하게 영향을 받습니다.
 
-<!--chak-comment-Eloquent ORM-Converting To Arrays / JSON-->
+<!--chak-comment-Eloquent-ORM-Converting-To-Arrays-/-JSON-->

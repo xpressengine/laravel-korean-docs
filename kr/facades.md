@@ -81,7 +81,7 @@
 
 	}
 
-<!--chak-comment-파사드(Facades)-실제 사용법-->
+<!--chak-comment-파사드(Facades)-실제-사용법-->
 
 <a name="creating-facades"></a>
 ## 파사드 생성하기
@@ -132,14 +132,14 @@
 
 [PHP는 타입힌트가 정의되지 않은 유형의 클래스들에 대한 오토로드를 시도 하지 않으므로](https://bugs.php.net/bug.php?id=39003) `aliases` 배열 안에 클래스가 몇몇 인스턴스들 안에서는 사용 가능하지 않습니다. 만약 `\ServiceWrapper\ApiTimeoutException`이 `ApiTimeoutException` 라는 별칭으로 지정되었고, `\ServiceWrapper` 외부 네임 스페이스에서 `catch (ApiTimeoutException $e)`를 하려 해도 던져진 예외는 포착되지 않습니다. 별칭으로 타입힌트가 설정된 클래스들 사이에서도 비슷한 문제는 발생됩니다. 이에대한 유일한 해결책은 타입힌트를 사용하려는 클래스들 제일 앞부분에 `use`를 사용해서 미리 지정해두는 방법입니다.
 
-<!--chak-comment-파사드(Facades)-파사드 생성하기-->
+<!--chak-comment-파사드(Facades)-파사드-생성하기-->
 
 <a name="mocking-facades"></a>
 ## 파사드 Mocking
 
 단위 테스트는 왜 파사드가 저렇게 동작하는지에 대한 매우 중요한 이유입니다. 사실 테스트의 용이성은 파사드가 존재하는 주요한 이유입니다. 보다 자세한 내용에 대해서는 문서의 [mocking facades](/docs/testing#mocking-facades) 섹션을 참고하십시오.
 
-<!--chak-comment-파사드(Facades)-파사드 Mocking-->
+<!--chak-comment-파사드(Facades)-파사드-Mocking-->
 
 <a name="facade-class-reference"></a>
 ## 파사드 참조 목록
@@ -186,4 +186,4 @@ Validator (Instance)  |  [Illuminate\Validation\Validator](http://laravel.com/ap
 View  |  [Illuminate\View\Factory](http://laravel.com/api/5.0/Illuminate/View/Factory.html)  |  `view`
 View (Instance)  |  [Illuminate\View\View](http://laravel.com/api/5.0/Illuminate/View/View.html)  |
 
-<!--chak-comment-파사드(Facades)-파사드 참조 목록-->
+<!--chak-comment-파사드(Facades)-파사드-참조-목록-->

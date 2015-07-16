@@ -39,4 +39,4 @@
 
 컬렉션에서 사용 가능한 메소드를 여기에 모두 나열하는 것보다(상당히 많으므로) [API 문서](http://laravel.com/api/master/Illuminate/Support/Collection.html)를 살펴보시기 바랍니다!
 
-<!--chak-comment-컬렉션(Collections)-기본 사용법-->
+<!--chak-comment-컬렉션(Collections)-기본-사용법-->

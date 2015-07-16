@@ -67,7 +67,7 @@
 
 	}
 
-<!--chak-comment-HTTP Requests-Request 인스턴스 획득하기-->
+<!--chak-comment-HTTP-Requests-Request-인스턴스-획득하기-->
 
 <a name="retrieving-input"></a>
 ## 입력값 검색하기
@@ -103,7 +103,7 @@
 
 	$input = Request::input('products.0.name');
 
-<!--chak-comment-HTTP Requests-입력값 검색하기-->
+<!--chak-comment-HTTP-Requests-입력값-검색하기-->
 
 <a name="old-input"></a>
 ## 이전 입력
@@ -140,7 +140,7 @@
 
 	{{ old('username') }}
 
-<!--chak-comment-HTTP Requests-이전 입력-->
+<!--chak-comment-HTTP-Requests-이전-입력-->
 
 <a name="cookies"></a>
 ## 쿠키
@@ -189,7 +189,7 @@ _영원히는 실제로는 5년을 의미합니다._
 		 }
 	}
 
-<!--chak-comment-HTTP Requests-쿠키-->
+<!--chak-comment-HTTP-Requests-쿠키-->
 
 <a name="files"></a>
 ## 파일 처리
@@ -224,7 +224,7 @@ _영원히는 실제로는 5년을 의미합니다._
 
 그 밖에도 다양한 메소드들이 `UploadedFile` 인스턴스에 준비되어 있습니다. 추가적인 메소들에 대한 정보는 [API 문서](http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/File/UploadedFile.html)를 참고하십시오.
 
-<!--chak-comment-HTTP Requests-파일 처리-->
+<!--chak-comment-HTTP-Requests-파일-처리-->
 
 <a name="other-request-information"></a>
 ## 기타 Request에 대한 정보
@@ -262,4 +262,4 @@ _영원히는 실제로는 5년을 의미합니다._
 
 	$url = Request::url();
 
-<!--chak-comment-HTTP Requests-기타 Request에 대한 정보-->
+<!--chak-comment-HTTP-Requests-기타-Request에-대한-정보-->

@@ -99,11 +99,11 @@ Paginator의 `appends` 메소드를 사용하면 페이지 링크에 쿼리 스�
 
 	http://example.com/something?page=2#foo
 
-<!--chak-comment-페이지네이션(Pagination)-페이지 링크에 추가하기-->
+<!--chak-comment-페이지네이션(Pagination)-페이지-링크에-추가하기-->
 
 <a name="converting-to-json"></a>
 ## JSON으로 변환하기
 
 `Paginator` 클래스는 `Illuminate\Contracts\Support\JsonableInterface` contract을 구현하고`toJson` 메소드를 제공합니다. 따라서 라우트로부터 `Paginator` 객체를  JSON으로 변환할 수 있습니다. 변환된 JSON의 형태는 `total`, `current_page`, 그리고 `last_page`와 같은 메타정보를 포함하고 있습니다. 인스턴스의 데이터는 JSON 배열의 `data` 키를 통해 사용할 수 있습니다.
 
-<!--chak-comment-페이지네이션(Pagination)-JSON으로 변환하기-->
+<!--chak-comment-페이지네이션(Pagination)-JSON으로-변환하기-->

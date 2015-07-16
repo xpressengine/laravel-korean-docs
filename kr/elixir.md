@@ -13,7 +13,7 @@
 
 만약 여러분이 Gulp과 asset compilation를 어떻게 시작해야 되는지 어려워한 적이 있다면 라라벨 Elixir를 좋아하게 될 것입니다!
 
-<!--chak-comment-라라벨 엘릭서(Laravel Elixir)-소개-->
+<!--chak-comment-라라벨-엘릭서(Laravel-Elixir)-소개-->
 
 <a name="installation"></a>
 ## 설치 및 준비
@@ -38,7 +38,7 @@ Elixir를 사용하기전 여러분의 작업환경에 Node.js가 설치되어�
 
 	npm install
 
-<!--chak-comment-라라벨 엘릭서(Laravel Elixir)-설치 및 준비-->
+<!--chak-comment-라라벨-엘릭서(Laravel-Elixir)-설치-및-준비-->
 
 <a name="usage"></a>
 ## 사용법
@@ -279,7 +279,7 @@ elixir(function(mix) {
 });
 ```
 
-<!--chak-comment-라라벨 엘릭서(Laravel Elixir)-사용법-->
+<!--chak-comment-라라벨-엘릭서(Laravel-Elixir)-사용법-->
 
 <a name="gulp"></a>
 ## Gulp
@@ -308,7 +308,7 @@ elixir(function(mix) {
 
 > **참고** 모든 작업은 개발환경에서 진행된다고 가정하고 있으므로 압축되지 않을 것입니다. 실서버용(production)으로 작업 하기 위해서는 `gulp --production`을 사용하십시오.
 
-<!--chak-comment-라라벨 엘릭서(Laravel Elixir)-Gulp-->
+<!--chak-comment-라라벨-엘릭서(Laravel-Elixir)-Gulp-->
 
 <a name="extensions"></a>
 ## 커스텀 작업과 확장
@@ -388,4 +388,4 @@ elixir(function(mix) {
 
 이렇게 추가하면 Picard는 Gulp이 시행될 때마다 약간의 차(Tea)를 요구할 것입니다.
 
-<!--chak-comment-라라벨 엘릭서(Laravel Elixir)-커스텀 작업과 확장-->
+<!--chak-comment-라라벨-엘릭서(Laravel-Elixir)-커스텀-작업과-확장-->

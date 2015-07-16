@@ -37,5 +37,5 @@
 		$hashed = Hash::make('secret');
 	}
 
-<!--chak-comment-해시(Hashing)-기본 사용법-->
+<!--chak-comment-해시(Hashing)-기본-사용법-->
 

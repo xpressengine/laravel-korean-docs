@@ -96,7 +96,7 @@
 
 또한, 여러분이 간단한 인터페이스에 의존하게 되면, 여러분의 코드는 이해하거나 유지보수하기가 더 쉽워집니다. 크고 복잡한 클래스에서 사용할 수 있는 메소드들을 훑어보는 대신, 단순하고 깨끗한 인터페이스를 참고할 수 있습니다.
 
-<!--chak-comment-Contracts-왜 Contract인가?-->
+<!--chak-comment-Contracts-왜-Contract인가--->
 
 <a name="contract-reference"></a>
 ## Contract 레퍼런스
@@ -138,7 +138,7 @@ Contract  |  Laravel 5.x Facade
 [Illuminate\Contracts\View\Factory](https://github.com/illuminate/contracts/blob/master/View/Factory.php) | View::make()
 [Illuminate\Contracts\View\View](https://github.com/illuminate/contracts/blob/master/View/View.php) | &nbsp;
 
-<!--chak-comment-Contracts-Contract 레퍼런스-->
+<!--chak-comment-Contracts-Contract-레퍼런스-->
 
 <a name="how-to-use-contracts"></a>
 ## Contract 사용법
@@ -184,4 +184,4 @@ Contract  |  Laravel 5.x Facade
 
 이벤트리스너가 의존성 해결될 때, 서비스 컨테이너는 클래스의 생성자에 있는 타입힌트를 읽고, 그에 적합한 값을 주입해 줍니다. 서비스 컨테이너에 무언가를 등록하는 것에 대하여 더 알고싶다면, [이 문서](/docs/5.0/container)를 보시기 바랍니다.
 
-<!--chak-comment-Contracts-Contract 사용법-->
+<!--chak-comment-Contracts-Contract-사용법-->

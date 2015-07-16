@@ -88,7 +88,7 @@
 
 필요한 경우 `after` 콜백에 validator에 추가할 수도 있습니다.
 
-<!--chak-comment-Validation-기본적인 사용법-->
+<!--chak-comment-Validation-기본적인-사용법-->
 
 <a name="controller-validation"></a>
 ## 컨트롤러 단위 유효성 검사
@@ -150,7 +150,7 @@
 		return $validator->errors()->all();
 	}
 
-<!--chak-comment-Validation-컨트롤러 단위 유효성 검사-->
+<!--chak-comment-Validation-컨트롤러-단위-유효성-검사-->
 
 <a name="form-request-validation"></a>
 ## 폼 요청 유효성 검사
@@ -238,7 +238,7 @@
 		return $validator->errors()->all();
 	}
 
-<!--chak-comment-Validation-폼 요청 유효성 검사-->
+<!--chak-comment-Validation-폼-요청-유효성-검사-->
 
 <a name="working-with-error-messages"></a>
 ## 오류 메시지 사용하기
@@ -283,7 +283,7 @@
 		//
 	}
 
-<!--chak-comment-Validation-오류 메시지 사용하기-->
+<!--chak-comment-Validation-오류-메시지-사용하기-->
 
 <a name="error-messages-and-views"></a>
 ## 오류 메시지 & 뷰
@@ -325,7 +325,7 @@
 
 	<?php echo $errors->login->first('email'); ?>
 
-<!--chak-comment-Validation-오류 메시지 & 뷰-->
+<!--chak-comment-Validation-오류-메시지---뷰-->
 
 <a name="available-validation-rules"></a>
 ## 유효성 검사 룰
@@ -631,7 +631,7 @@
 
 > **참고:** 이 기능은 PHP의 `filter_var` 함수를 사용합니다.
 
-<!--chak-comment-Validation-유효성 검사 룰-->
+<!--chak-comment-Validation-유효성-검사-룰-->
 
 <a name="conditionally-adding-rules"></a>
 ## 조건부 룰 추가하기
@@ -669,7 +669,7 @@
 
 > **참고:** `Closure`로 전달된 `$input` 파라메터는 `Illuminate\Support\Fluent`의 인스턴스입니다. 그리고 입력된 데이터와 파일에 접근하기 위해 이 오브젝트는 사용할 수 있습니다.
 
-<!--chak-comment-Validation-조건부 룰 추가하기-->
+<!--chak-comment-Validation-조건부-룰-추가하기-->
 
 <a name="custom-error-messages"></a>
 ## 사용자 정의 오류 메시지
@@ -714,7 +714,7 @@
 		],
 	],
 
-<!--chak-comment-Validation-사용자 정의 오류 메시지-->
+<!--chak-comment-Validation-사용자-정의-오류-메시지-->
 
 <a name="custom-validation-rules"></a>
 ## 사용자 정의 유효성 검사 룰
@@ -774,4 +774,4 @@ Validator를 확장하기 위해 클로저를 사용하는 대신에 Validator �
 		//
 	});
 
-<!--chak-comment-Validation-사용자 정의 유효성 검사 룰-->
+<!--chak-comment-Validation-사용자-정의-유효성-검사-룰-->

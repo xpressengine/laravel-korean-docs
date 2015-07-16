@@ -29,4 +29,4 @@
 
 	Crypt::setCipher($cipher);
 
-<!--chak-comment-암호화(Encryption)-기본 사용법-->
+<!--chak-comment-암호화(Encryption)-기본-사용법-->

@@ -10,7 +10,7 @@
 
 기본적인 라라벨 어플리케이션의 구조는 어플리케이션이 크건, 작건 좋은 시작점이 되는것을 의도하고 있습니다. 당연히 어플리케이션을 원하는대로 구성해도 됩니다. 컴포저가 클래스를 오토로딩할 수 있는 한 클래스를 어디에 위치시키는가에 대한 제약사항은 없습니다.
 
-<!--chak-comment-어플리케이션 구조(Application Structure)-소개-->
+<!--chak-comment-어플리케이션-구조(Application-Structure)-소개-->
 
 <a name="the-root-directory"></a>
 ## 루트 디렉토리
@@ -35,7 +35,7 @@
 
 `vendor` 디렉토리는 컴포저의 의존성 폴더입니다.
 
-<!--chak-comment-어플리케이션 구조(Application Structure)-루트 디렉토리-->
+<!--chak-comment-어플리케이션-구조(Application-Structure)-루트-디렉토리-->
 
 <a name="the-app-directory"></a>
 ## App 디렉토리
@@ -56,7 +56,7 @@
 
 > **참고:** `app` 디렉토리 중에 많은 클래스들이 아티즌 명령어에 의해 생성되어 집니다. 사용 가능한 명령어를 확인하려면 터미널에서 `php artisan list make` 명령을 실행하십시오.
 
-<!--chak-comment-어플리케이션 구조(Application Structure)-App 디렉토리-->
+<!--chak-comment-어플리케이션-구조(Application-Structure)-App-디렉토리-->
 
 <a name="namespacing-your-application"></a>
 ## 어플리케이션에 네임스페이스 지정하기
@@ -65,4 +65,4 @@
 
 	php artisan app:name SocialNet
 
-<!--chak-comment-어플리케이션 구조(Application Structure)-어플리케이션에 네임스페이스 지정하기-->
+<!--chak-comment-어플리케이션-구조(Application-Structure)-어플리케이션에-네임스페이스-지정하기-->

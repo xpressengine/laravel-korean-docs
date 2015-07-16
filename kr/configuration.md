@@ -41,7 +41,7 @@
 
 라라벨은 한 가지 권한설정을 해야 합니다: `storage` 폴더와 `vendor` 폴더는 웹서버에서 쓰기접근이 가능해야 합니다.
 
-<!--chak-comment-설정(Configuration)-설치 후 할 일-->
+<!--chak-comment-설정(Configuration)-설치-후-할-일-->
 
 <a name="accessing-configuration-values"></a>
 ## 환경설정값 가져오기
@@ -56,7 +56,7 @@
 
 	$value = config('app.timezone');
 
-<!--chak-comment-설정(Configuration)-환경설정값 가져오기-->
+<!--chak-comment-설정(Configuration)-환경설정값-가져오기-->
 
 <a name="environment-configuration"></a>
 ## 구동환경 설정
@@ -97,7 +97,7 @@
 
 	$environment = App::environment();
 
-<!--chak-comment-설정(Configuration)-구동환경 설정-->
+<!--chak-comment-설정(Configuration)-구동환경-설정-->
 
 <a name="configuration-caching"></a>
 ## 설정 캐시
@@ -106,7 +106,7 @@
 
 일반적으로 배포하는 경우라면 `config:cache` 명령을 실행할 것입니다.
 
-<!--chak-comment-설정(Configuration)-설정 캐시-->
+<!--chak-comment-설정(Configuration)-설정-캐시-->
 
 <a name="maintenance-mode"></a>
 ## 점검 모드(유지보수 모드 - 공사중)
@@ -129,7 +129,7 @@
 
 어플리케이션이 점검 모드인 동안에는 [큐 작업](/docs/5.0/queues)은 동작하지 않습니다. 큐 작업들은 점검 모드가 해제된 어플리케이션이 일반 모드로 전환된 시점에서 계속 처리됩니다.
 
-<!--chak-comment-설정(Configuration)-점검 모드(유지보수 모드 - 공사중)-->
+<!--chak-comment-설정(Configuration)-점검-모드(유지보수-모드---공사중)-->
 
 <a name="pretty-urls"></a>
 ## 깔끔한 URL
@@ -157,4 +157,4 @@ Nginx의 경우라면 아래처럼 사이트 설정에서 지정하면 "깔끔�
 
 당연하게도 [Homestead](/docs/5.0/homestead)를 사용하고 있다면 이미 이러한 설정이 적용되어 있습니다.
 
-<!--chak-comment-설정(Configuration)-깔끔한 URL-->
+<!--chak-comment-설정(Configuration)-깔끔한-URL-->

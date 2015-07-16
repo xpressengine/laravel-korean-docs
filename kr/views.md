@@ -78,7 +78,7 @@
 
     return view()->file($pathToFile, $data);
 
-<!--chak-comment-뷰(Views)-기본 사용법-->
+<!--chak-comment-뷰(Views)-기본-사용법-->
 
 <a name="view-composers"></a>
 ## 뷰 컴포저
@@ -205,4 +205,4 @@
 
     View::creator('profile', 'App\Http\ViewCreators\ProfileCreator');
 
-<!--chak-comment-뷰(Views)-뷰 컴포저-->
+<!--chak-comment-뷰(Views)-뷰-컴포저-->

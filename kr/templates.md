@@ -49,7 +49,7 @@
 
 	@yield('section', 'Default Content')
 
-<!--chak-comment-템플릿(Templates)-블레이드 템플릿-->
+<!--chak-comment-템플릿(Templates)-블레이드-템플릿-->
 
 <a name="other-blade-control-structures"></a>
 ## 기타 블레이드 컨트롤 구조
@@ -144,4 +144,4 @@
 
 	{{-- This comment will not be in the rendered HTML --}}
 
-<!--chak-comment-템플릿(Templates)-기타 블레이드 컨트롤 구조-->
+<!--chak-comment-템플릿(Templates)-기타-블레이드-컨트롤-구조-->

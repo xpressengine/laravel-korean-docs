@@ -18,7 +18,7 @@
 
 라라벨의 `Schema` 클래스는 데이터베이스에 의존하지 않는 테이블 조작 방법을 제공합니다. 이 기능은 라라벨이 지원하는 모든 데이터베이스에서 잘 동작하며 공통의 API를 가지고 있다는 것을 의미합니다.
 
-<!--chak-comment-스키마 빌더(Schema Builder)-소개-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-소개-->
 
 <a name="creating-and-dropping-tables"></a>
 ## 테이블 생성 & 삭제
@@ -49,7 +49,7 @@
 
 	Schema::dropIfExists('users');
 
-<!--chak-comment-스키마 빌더(Schema Builder)-테이블 생성 & 삭제-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-테이블-생성---삭제-->
 
 <a name="adding-columns"></a>
 ## 컬럼 추가하기
@@ -105,7 +105,7 @@
 
 	$table->string('name')->after('email');
 
-<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 추가하기-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-컬럼-추가하기-->
 
 <a name="changing-columns"></a>
 ## 컬럼 변경
@@ -126,7 +126,7 @@
 		$table->string('name', 50)->nullable()->change();
 	});
 
-<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 변경-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-컬럼-변경-->
 
 <a name="renaming-columns"></a>
 ## 컬럼 이름 변경
@@ -142,7 +142,7 @@
 
 > **주의 :** 현재 `enum` 컬럼 타입의 이름을 변경하는 것은 지원되지 않습니다.
 
-<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 이름 변경-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-컬럼-이름-변경-->
 
 <a name="dropping-columns"></a>
 ## 컬럼 삭제
@@ -163,7 +163,7 @@
 		$table->dropColumn(['votes', 'avatar', 'location']);
 	});
 
-<!--chak-comment-스키마 빌더(Schema Builder)-컬럼 삭제-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-컬럼-삭제-->
 
 <a name="checking-existence"></a>
 ## 존재 유무 확인
@@ -184,7 +184,7 @@
 		//
 	}
 
-<!--chak-comment-스키마 빌더(Schema Builder)-존재 유무 확인-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-존재-유무-확인-->
 
 <a name="adding-indexes"></a>
 ## 인덱스 추가하기
@@ -201,7 +201,7 @@
 `$table->unique('email');`  |  유니크 인덱스 추가
 `$table->index('state');`  |  기본 인덱스 추가
 
-<!--chak-comment-스키마 빌더(Schema Builder)-인덱스 추가하기-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-인덱스-추가하기-->
 
 <a name="foreign-keys"></a>
 ## 외래키
@@ -225,7 +225,7 @@
 
 > **주의:** 정수형 증분되는 값(incrementing integer)을 참조하여 외래키를 만들때 외래키 컬럼을 항상 `unsigned`로 만드는 것을 유의해야 합니다.
 
-<!--chak-comment-스키마 빌더(Schema Builder)-외래키-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-외래키-->
 
 <a name="dropping-indexes"></a>
 ## 인덱스 삭제하기
@@ -238,7 +238,7 @@
 `$table->dropUnique('users_email_unique');`  |  “users” 테이블에서 유니크 인덱스 삭제
 `$table->dropIndex('geo_state_index');`  |  “geo” 테이블에서 기본 인덱스 삭제
 
-<!--chak-comment-스키마 빌더(Schema Builder)-인덱스 삭제하기-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-인덱스-삭제하기-->
 
 <a name="dropping-timestamps"></a>
 ## Timestamps와 softDeletes 컬럼 삭제
@@ -250,7 +250,7 @@
 `$table->dropTimestamps();`  |  테이블에서 **created\_at**와 **updated\_at** 컬럼을 삭제
 `$table->dropSoftDeletes();`  |  테이블에서 **deleted\_at** 컬럼을 삭제
 
-<!--chak-comment-스키마 빌더(Schema Builder)-Timestamps와 softDeletes 컬럼 삭제-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-Timestamps와-softDeletes-컬럼-삭제-->
 
 <a name="storage-engines"></a>
 ## 스토리지 엔진
@@ -264,4 +264,4 @@
         $table->string('email');
     });
 
-<!--chak-comment-스키마 빌더(Schema Builder)-스토리지 엔진-->
+<!--chak-comment-스키마-빌더(Schema-Builder)-스토리지-엔진-->

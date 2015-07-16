@@ -81,7 +81,7 @@ HTTP 기반의 어플리케이션은 상태를 저장할수 없기 때문에, HT
 
 	Session::regenerate();
 
-<!--chak-comment-세션(Session)-세션 사용법-->
+<!--chak-comment-세션(Session)-세션-사용법-->
 
 <a name="flash-data"></a>
 ## 임시 데이터
@@ -98,7 +98,7 @@ HTTP 기반의 어플리케이션은 상태를 저장할수 없기 때문에, HT
 
 	Session::keep(['username', 'email']);
 
-<!--chak-comment-세션(Session)-임시 데이터-->
+<!--chak-comment-세션(Session)-임시-데이터-->
 
 <a name="database-sessions"></a>
 ## 데이터베이스 세션
@@ -120,7 +120,7 @@ HTTP 기반의 어플리케이션은 상태를 저장할수 없기 때문에, HT
 
 	php artisan migrate
 
-<!--chak-comment-세션(Session)-데이터베이스 세션-->
+<!--chak-comment-세션(Session)-데이터베이스-세션-->
 
 <a name="session-drivers"></a>
 ## 세션 드라이버
@@ -135,4 +135,4 @@ HTTP 기반의 어플리케이션은 상태를 저장할수 없기 때문에, HT
 
 > **주의:** 배열 드라이버의 경우에는 실제로 세션은 유지되지 않기 때문에 [unit tests](/docs/5.0/testing)를 수행하는 데에만 사용하시기 바랍니다.
 
-<!--chak-comment-세션(Session)-세션 드라이버-->
+<!--chak-comment-세션(Session)-세션-드라이버-->

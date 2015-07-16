@@ -11,7 +11,7 @@
 
 마이그레이션은 데이터베이스용 버전 컨트롤러의 일종입니다. 마이그레이션은 여러분의 팀이 데이터베이스 스키마를 수정하고 현재의 스키마 상태를 유지할 수 있도록 해줍니다. 마이그레이션은 일반적으로 어플리케이션의 스키마를 쉽게 관리할 수 있는 [스키마 빌더](/docs/5.0/schema)와 함께 사용됩니다.
 
-<!--chak-comment-마이그레이션 & 시딩(Migrations & Seeding)-소개-->
+<!--chak-comment-마이그레이션---시딩(Migrations---Seeding)-소개-->
 
 <a name="creating-migrations"></a>
 ## 마이그레이션 생성하기
@@ -28,7 +28,7 @@
 
 	php artisan make:migration create_users_table --create=users
 
-<!--chak-comment-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 생성하기-->
+<!--chak-comment-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-생성하기-->
 
 <a name="running-migrations"></a>
 ## 마이그레이션 실행하기
@@ -45,7 +45,7 @@
 
 	php artisan migrate --force
 
-<!--chak-comment-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 실행하기-->
+<!--chak-comment-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-실행하기-->
 
 <a name="rolling-back-migrations"></a>
 ## 마이그레이션 롤백하기
@@ -64,7 +64,7 @@
 
 	php artisan migrate:refresh --seed
 
-<!--chak-comment-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 롤백하기-->
+<!--chak-comment-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-롤백하기-->
 
 <a name="database-seeding"></a>
 ## 데이터베이스 시딩
@@ -107,4 +107,4 @@
 
 	php artisan migrate:refresh --seed
 
-<!--chak-comment-마이그레이션 & 시딩(Migrations & Seeding)-데이터베이스 시딩-->
+<!--chak-comment-마이그레이션---시딩(Migrations---Seeding)-데이터베이스-시딩-->

@@ -38,7 +38,7 @@
 
 > **참고** 여러분이 `setUp` 메소드를 정의했다면 `parent::setUp`을 호출하는 것을 확인하십시오.
 
-<!--chak-comment-테스팅(Testing)-테스트 정의 & 실행하기-->
+<!--chak-comment-테스팅(Testing)-테스트-정의---실행하기-->
 
 <a name="test-environment"></a>
 ## 테스트 환경
@@ -47,7 +47,7 @@
 
 `testing` 환경 변수는 `phpunit.xml` 파일에 설정되어 있습니다.
 
-<!--chak-comment-테스팅(Testing)-테스트 환경-->
+<!--chak-comment-테스팅(Testing)-테스트-환경-->
 
 <a name="calling-routes-from-tests"></a>
 ## 테스트에서 라우트 호출하기
@@ -84,7 +84,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 	$response = $this->callSecure('GET', 'foo/bar');
 
-<!--chak-comment-테스팅(Testing)-테스트에서 라우트 호출하기-->
+<!--chak-comment-테스팅(Testing)-테스트에서-라우트-호출하기-->
 
 <a name="mocking-facades"></a>
 ## 파사드 Mocking
@@ -111,7 +111,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 > **주의** `Request` 파사드를 mock 해서는 안됩니다. 대신에 테스트를 수행할 때 `call` 메소드에 원하는 입력을 전달하십시오.
 
-<!--chak-comment-테스팅(Testing)-파사드 Mocking-->
+<!--chak-comment-테스팅(Testing)-파사드-Mocking-->
 
 <a name="framework-assertions"></a>
 ## 프레임워크 Assertions
@@ -183,7 +183,7 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 		$this->assertHasOldInput();
 	}
 
-<!--chak-comment-테스팅(Testing)-프레임워크 Assertions-->
+<!--chak-comment-테스팅(Testing)-프레임워크-Assertions-->
 
 <a name="helper-methods"></a>
 ## 헬퍼 메소드
@@ -214,11 +214,11 @@ HTTPS 라우트를 호출하기 위해서는 `callSecure` 메소드를 사용하
 
 시드를 생성하는 데에 대한 보다 자세한 정보는 공식 문서의 [마이그레이션과 시딩](/docs/migrations#database-seeding) 섹션을 참고하십시오.
 
-<!--chak-comment-테스팅(Testing)-헬퍼 메소드-->
+<!--chak-comment-테스팅(Testing)-헬퍼-메소드-->
 
 <a name="refreshing-the-application"></a>
 ## 어플리케이션 새로 고침
 
 이미 알고 있다 시피 여러분은 테스트 메소드에서 `$this->app`을 통해서 어플리케이션([서비스 컨테이너](/docs/5.0/container))에 엑세스 할 수 있습니다. 이 서비스 컨테이너 인스턴스는 각각의 테스트 클래스 마다 새로 고침됩니다. 만약 여러분이 수동으로 어플리케이션을 새로고침 하고 싶은 경우에는 테스트 메소드에서 `refreshApplication` 메소드를 사용하면 됩니다. 이렇게 하면 테스트 케이스가 실행을 시작한 이후 IoC 컨테이너에 등록된 mock 객체와 추가적인 바인딩을 재설정 할것입니다.
 
-<!--chak-comment-테스팅(Testing)-어플리케이션 새로 고침-->
+<!--chak-comment-테스팅(Testing)-어플리케이션-새로-고침-->

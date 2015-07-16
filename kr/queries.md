@@ -19,7 +19,7 @@
 
 > **참고:** 라라벨의 쿼리 빌더는 PDO 파라미터 바인딩을 사용하여 SQL injection 공격을 방지합니다. 따라서 쿼리에 바인딩할 문자열들을 따로 정리하고 전달할 필요가 없습니다.
 
-<!--chak-comment-쿼리빌더(Query Builder)-소개-->
+<!--chak-comment-쿼리빌더(Query-Builder)-소개-->
 
 <a name="selects"></a>
 ## Selects
@@ -143,7 +143,7 @@
 
 	$users = DB::table('users')->skip(10)->take(5)->get();
 
-<!--chak-comment-쿼리빌더(Query Builder)-Selects-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Selects-->
 
 <a name="joins"></a>
 ## Joins
@@ -183,7 +183,7 @@
 	        })
 	        ->get();
 
-<!--chak-comment-쿼리빌더(Query Builder)-Joins-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Joins-->
 
 <a name="advanced-wheres"></a>
 ## Advanced Wheres 더 복잡한 조건문
@@ -223,7 +223,7 @@
 		select 1 from orders where orders.user_id = users.id
 	)
 
-<!--chak-comment-쿼리빌더(Query Builder)-Advanced Wheres 더 복잡한 조건문-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Advanced-Wheres-더-복잡한-조건문-->
 
 <a name="aggregates"></a>
 ## Aggregates 집계
@@ -242,7 +242,7 @@
 
 	$total = DB::table('users')->sum('votes');
 
-<!--chak-comment-쿼리빌더(Query Builder)-Aggregates 집계-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Aggregates-집계-->
 
 <a name="raw-expressions"></a>
 ## 직접 질의구문
@@ -257,7 +257,7 @@
 	                     ->groupBy('status')
 	                     ->get();
 
-<!--chak-comment-쿼리빌더(Query Builder)-직접 질의구문-->
+<!--chak-comment-쿼리빌더(Query-Builder)-직접-질의구문-->
 
 <a name="inserts"></a>
 ## Inserts
@@ -285,7 +285,7 @@
 		['email' => 'dayle@example.com', 'votes' => 0]
 	]);
 
-<!--chak-comment-쿼리빌더(Query Builder)-Inserts-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Inserts-->
 
 <a name="updates"></a>
 ## Updates
@@ -310,7 +310,7 @@
 
 	DB::table('users')->increment('votes', 1, ['name' => 'John']);
 
-<!--chak-comment-쿼리빌더(Query Builder)-Updates-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Updates-->
 
 <a name="deletes"></a>
 ## Deletes
@@ -327,7 +327,7 @@
 
 	DB::table('users')->truncate();
 
-<!--chak-comment-쿼리빌더(Query Builder)-Deletes-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Deletes-->
 
 <a name="unions"></a>
 ## Unions
@@ -340,7 +340,7 @@
 
 `unionAll` 메소드도 사용가능하며 `union`과 동일하게 사용합니다.
 
-<!--chak-comment-쿼리빌더(Query Builder)-Unions-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Unions-->
 
 <a name="pessimistic-locking"></a>
 ## Pessimistic Locking 배타적 잠금
@@ -355,4 +355,4 @@ SELECT문을 "lock for update" 하려면 `lockForUpdate` 메소드를 쿼리에 
 
 	DB::table('users')->where('votes', '>', 100)->lockForUpdate()->get();
 
-<!--chak-comment-쿼리빌더(Query Builder)-Pessimistic Locking 배타적 잠금-->
+<!--chak-comment-쿼리빌더(Query-Builder)-Pessimistic-Locking-배타적-잠금-->

@@ -19,7 +19,7 @@
 
 모든 라라벨 패키지는 [Packagist](http://packagist.org)와 [Composer](http://getcomposer.org)를 통해서 배포되기 때문에 PHP 패키지 배포 도구에 대해 알고 있는 것이 중요합니다.
 
-<!--chak-comment-패키지 개발(Package Development)-소개-->
+<!--chak-comment-패키지-개발(Package-Development)-소개-->
 
 <a name="views"></a>
 ## 뷰
@@ -66,7 +66,7 @@
 
 > **참고 :** `publishes` 메소드는 **어떤** 유형의 파일이라도 원하는 위치로 파일을 퍼블리싱 할 수 있습니다.
 
-<!--chak-comment-패키지 개발(Package Development)-뷰-->
+<!--chak-comment-패키지-개발(Package-Development)-뷰-->
 
 <a name="translations"></a>
 ## 언어파일
@@ -88,7 +88,7 @@
 
 	return trans('courier::file.line');
 
-<!--chak-comment-패키지 개발(Package Development)-언어파일-->
+<!--chak-comment-패키지-개발(Package-Development)-언어파일-->
 
 <a name="configuration"></a>
 ## 설정
@@ -111,7 +111,7 @@
 		__DIR__.'/path/to/config/courier.php', 'courier'
 	);
 
-<!--chak-comment-패키지 개발(Package Development)-설정-->
+<!--chak-comment-패키지-개발(Package-Development)-설정-->
 
 <a name="public-assets"></a>
 ## Public의 Asset 파일들
@@ -128,7 +128,7 @@
 
 Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명령어를 `composer.json` 파일의 `post-update-cmd` 목록에 추가하는 것이 좋습니다.
 
-<!--chak-comment-패키지 개발(Package Development)-Public 의 Asset 파일들-->
+<!--chak-comment-패키지-개발(Package-Development)-Public-의-Asset-파일들-->
 
 <a name="publishing-file-groups"></a>
 ## 파일 그룹 퍼블리싱하기
@@ -149,7 +149,7 @@ Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명�
 
 	php artisan vendor:publish --provider="Vendor\Providers\PackageServiceProvider" --tag="config"
 
-<!--chak-comment-패키지 개발(Package Development)-파일 그룹 퍼블리싱하기-->
+<!--chak-comment-패키지-개발(Package-Development)-파일-그룹-퍼블리싱하기-->
 
 <a name="routing"></a>
 ## 라우팅
@@ -165,4 +165,4 @@ Public의 asset 파일들을 항상 안전하게 업데이트하려면 이 명�
 
 > **주의:** 여러분의 패키지가 컨트롤러를 사용하고 있다면 `composer.json` 파일의 설정을 통해서 오토로드가 될 수 있어야 합니다.
 
-<!--chak-comment-패키지 개발(Package Development)-라우팅-->
+<!--chak-comment-패키지-개발(Package-Development)-라우팅-->

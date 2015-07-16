@@ -30,7 +30,7 @@
 - IronMQ: `iron-io/iron_mq`
 - Redis: `predis/predis ~1.0`
 
-<!--chak-comment-큐(Queues)-환경 설정-->
+<!--chak-comment-큐(Queues)-환경-설정-->
 
 <a name="basic-usage"></a>
 ## 기본 사용법
@@ -121,7 +121,7 @@
 
 > **주의** 이 메소드를 호출하기 위해 커맨드 / 핸들러는 `Illuminate\Queue\InteractsWithQueue` trait를 반드시 사용해야만 합니다.
 
-<!--chak-comment-큐(Queues)-기본 사용법-->
+<!--chak-comment-큐(Queues)-기본-사용법-->
 
 <a name="queueing-closures"></a>
 ## 클로져 큐
@@ -141,7 +141,7 @@
 
 Iron.io [push queues](#push-queues)를 이용하는 경우,  큐로 푸쉬하는 클로저에 추가 예방 조치를 취해야 합니다. 큐 메세지를받는 부분에서 요청이 실제로 Iron.io에서 왔는지 검증하는 토큰을 체크해야 합니다. 예를 들어, 푸쉬된 큐를받는 URL은 `https://yourapp.com/queue/receive?token=SecretToken`와 같이 되어야 합니다.  그런 다음에는 큐 요청을 진행하기 전에 어플리케이션에서 비밀 토큰 값을 체크하도록 합니다.
 
-<!--chak-comment-큐(Queues)-클로져 큐-->
+<!--chak-comment-큐(Queues)-클로져-큐-->
 
 <a name="running-the-queue-listener"></a>
 ## 큐 리스너(Listener) 실행하기
@@ -184,7 +184,7 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 	php artisan queue:work
 
-<!--chak-comment-큐(Queues)-큐 리스너(Listener) 실행하기-->
+<!--chak-comment-큐(Queues)-큐-리스너(Listener)-실행하기-->
 
 <a name="daemon-queue-worker"></a>
 ## 데몬 큐 작업자
@@ -219,7 +219,7 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 비슷하게 데이터베이스 연결은 데몬이 장시간 동작할때 끊어질 수 있습니다. 여러분은 `DB::reconnect` 메소드를 사용하여 다시 커넥션을 가지도록 할 수 있습니다.
 
-<!--chak-comment-큐(Queues)-데몬 큐 작업자-->
+<!--chak-comment-큐(Queues)-데몬-큐-작업자-->
 
 <a name="push-queues"></a>
 ## 큐 푸쉬하기
@@ -243,7 +243,7 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 `marshal` 메소드는 올바른 작업 핸들러 클래스가 작동되도록 할 것입니다. 푸쉬된 큐에서 작업들을 처리하려면 기존에 큐에서 사용한것과 같은 `Queue::push` 메소드를 사용하십시오.
 
-<!--chak-comment-큐(Queues)-큐 푸쉬하기-->
+<!--chak-comment-큐(Queues)-큐-푸쉬하기-->
 
 <a name="failed-jobs"></a>
 ## 실패된 작업
@@ -290,4 +290,4 @@ listener가 사용해야 하는 큐 연결을 지정할 수도 있습니다:
 
 	php artisan queue:flush
 
-<!--chak-comment-큐(Queues)-실패된 작업-->
+<!--chak-comment-큐(Queues)-실패된-작업-->

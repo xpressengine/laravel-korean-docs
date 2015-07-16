@@ -56,7 +56,7 @@
 
 	$url = url('foo');
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-기본적인 라우팅-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-기본적인-라우팅-->
 
 <a name="csrf-protection"></a>
 ## CSRF 보호하기
@@ -100,7 +100,7 @@
 
 > 참고: `X-CSRF-TOKEN`와 `X-XSRF-TOKEN`의 차이점은 전자는 일반적인 텍스트를 사용한다면 후자는 암호화된 값을 사용한다는 것인데, 이는 라라벨에서는 쿠키를 항상 암호화 된 값으로 사용하기 때문입니다. 여러분이 토큰 값을 제공하기 위해`csrf_token ()`함수를 사용하는 경우는, 아마 `X-CSRF-TOKEN` 헤더를 사용하게 되는 경우일것입니다.
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-CSRF 보호하기-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-CSRF-보호하기-->
 
 <a name="method-spoofing"></a>
 ## 메소드 Spoofing-속이기
@@ -114,7 +114,7 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
     	<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     </form>
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-메소드 Spoofing-속이기-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-메소드-Spoofing-속이기-->
 
 <a name="route-parameters"></a>
 ## 라우트 파라미터
@@ -200,7 +200,7 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
 		}
 	});
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-라우트 파라미터-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-라우트-파라미터-->
 
 <a name="named-routes"></a>
 ## 이름이 지정된 라우트
@@ -228,7 +228,7 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
 
 	$name = Route::currentRouteName();
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-이름이 지정된 라우트-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-이름이-지정된-라우트-->
 
 <a name="route-groups"></a>
 ## Route Groups
@@ -325,7 +325,7 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
 		// Define Routes Here
 	});
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-Route Groups-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-Route-Groups-->
 
 <a name="route-model-binding"></a>
 ## 라우트 모델 바인딩
@@ -368,7 +368,7 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
 		return User::where('name', $value)->first();
 	});
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-라우트 모델 바인딩-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-라우트-모델-바인딩-->
 
 <a name="throwing-404-errors"></a>
 ## 404 에러 발생시키기
@@ -383,4 +383,4 @@ HTML form은 실제로 `PUT`, `PATCH`와 `DELETE` 액션을 지원하지 않습�
 
 404 예외 처리와 오류의 커스텀한 처리를 사용하는 보다 자세한 내용은 다음 문서의 [errors](/docs/5.0/errors#http-exceptions) 부분을 참조하십시오.
 
-<!--chak-comment-HTTP 라우팅(HTTP Routing)-404 에러 발생시키기-->
+<!--chak-comment-HTTP-라우팅(HTTP-Routing)-404-에러-발생시키기-->

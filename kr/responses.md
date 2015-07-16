@@ -50,7 +50,7 @@
 	return response()->view('hello')->header('Content-Type', $type)
                      ->withCookie(cookie('name', 'value'));
 
-<!--chak-comment-HTTP Responses-기본적인 Responses-->
+<!--chak-comment-HTTP-Responses-기본적인-Responses-->
 
 <a name="redirects"></a>
 ## 리다이렉트
@@ -117,7 +117,7 @@
 
 	return redirect()->action('App\Http\Controllers\UserController@profile', ['user' => 1]);
 
-<!--chak-comment-HTTP Responses-리다이렉트-->
+<!--chak-comment-HTTP-Responses-리다이렉트-->
 
 <a name="other-responses"></a>
 ## 기타 Response
@@ -145,7 +145,7 @@
 
 > **참고:** 파일 다운로드를 관리하는 Symfony의 HttpFoundation에서 다운로드 할 파일의 이름이 ASCII 파일 이름임을 필요로 하고 있습니다.
 
-<!--chak-comment-HTTP Responses-기타 Response-->
+<!--chak-comment-HTTP-Responses-기타-Response-->
 
 <a name="response-macros"></a>
 ## Response 매크로
@@ -180,4 +180,4 @@
 
 	return response()->caps('foo');
 
-<!--chak-comment-HTTP Responses-Response 매크로-->
+<!--chak-comment-HTTP-Responses-Response-매크로-->

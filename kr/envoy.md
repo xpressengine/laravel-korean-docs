@@ -16,7 +16,7 @@
 
 > **주의:** Envoy는 PHP 버전 5.4 이상의 Mac 또는 Linux 운영 체제에서 동작합니다.
 
-<!--chak-comment-Envoy(Envoy Task Runner)-소개-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-소개-->
 
 <a name="envoy-installation"></a>
 ## 설치
@@ -41,7 +41,7 @@
 
 	envoy init user@192.168.1.1
 
-<!--chak-comment-Envoy(Envoy Task Runner)-설치-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-설치-->
 
 <a name="envoy-running-tasks"></a>
 ## 작업 실행하기
@@ -89,7 +89,7 @@ PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있�
 		php artisan migrate
 	@endtask
 
-<!--chak-comment-Envoy(Envoy Task Runner)-작업 실행하기-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-작업-실행하기-->
 
 <a name="envoy-multiple-servers"></a>
 ## 다수의 서버
@@ -106,7 +106,7 @@ PHP 파일을 인클루드 하기 위해 ```@include```를 이용할 수도 있�
 
 By default, the task will be executed on each server serially. Meaning, the task will finish running on the first server before proceeding to execute on the next server. 기본적으로 작업은 각 서버에서 순차적으로 실행 됩니다. 즉, 첫 번째 서버에서 실행이 끝나면 다음 서버의 실행으로 이동합니다.
 
-<!--chak-comment-Envoy(Envoy Task Runner)-다수의 서버-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-다수의-서버-->
 
 <a name="envoy-parallel-execution"></a>
 ## 병렬 실행
@@ -121,7 +121,7 @@ By default, the task will be executed on each server serially. Meaning, the task
 		php artisan migrate
 	@endtask
 
-<!--chak-comment-Envoy(Envoy Task Runner)-병렬 실행-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-병렬-실행-->
 
 <a name="envoy-task-macros"></a>
 ## 작업 매크로
@@ -147,7 +147,7 @@ By default, the task will be executed on each server serially. Meaning, the task
 
 	envoy run deploy
 
-<!--chak-comment-Envoy(Envoy Task Runner)-작업 매크로-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-작업-매크로-->
 
 <a name="envoy-notifications"></a>
 <a name="envoy-hipchat-notifications"></a>
@@ -198,7 +198,7 @@ Slack 사이트에 `Incoming WebHooks` 통합을 작성하여 webhook URL을 검
 
 > Note의: Slack 알림은 작업이 성공적으로 완료되었을 시에만 보내집니다.
 
-<!--chak-comment-Envoy(Envoy Task Runner)-알림-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-알림-->
 
 <a name="envoy-updating-envoy"></a>
 ## Envoy 업데이트
@@ -207,5 +207,5 @@ Envoy를 업데이트 하려면 컴포저를 사용합니다:
 
 	composer global update
 
-<!--chak-comment-Envoy(Envoy Task Runner)-Envoy 업데이트-->
+<!--chak-comment-Envoy(Envoy-Task-Runner)-Envoy-업데이트-->
 

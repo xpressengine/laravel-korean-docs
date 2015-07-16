@@ -68,7 +68,7 @@
 		return false;
 	});
 
-<!--chak-comment-이벤트(Events)-기본적인 사용법-->
+<!--chak-comment-이벤트(Events)-기본적인-사용법-->
 
 <a name="queued-event-handlers"></a>
 ## 큐에 저장된 이벤트 핸들러
@@ -91,7 +91,7 @@
 
 이미 생성된 핸들러를 큐로 지정된 핸들러로 변경해야 된다면 클래스에 수동으로 `ShouldBeQueued` 인터페이스를 추가해주시면 됩니다.
 
-<!--chak-comment-이벤트(Events)-큐에 저장된 이벤트 핸들러-->
+<!--chak-comment-이벤트(Events)-큐에-저장된-이벤트-핸들러-->
 
 <a name="event-subscribers"></a>
 ## 이벤트 구독 클래스
@@ -145,4 +145,4 @@
 
 	Event::subscribe('UserEventHandler');
 
-<!--chak-comment-이벤트(Events)-이벤트 구독 클래스-->
+<!--chak-comment-이벤트(Events)-이벤트-구독-클래스-->

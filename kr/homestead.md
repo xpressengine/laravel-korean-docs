@@ -20,7 +20,7 @@
 
 홈스테디드는 현재 Vagrant1.7을 기반으로 구성되고 테스트되어 있습니다.
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-소개-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-소개-->
 
 <a name="included-software"></a>
 ## 포함된 소프트웨어들
@@ -38,7 +38,7 @@
 - [Laravel Envoy](/docs/5.0/envoy)
 - [Blackfire Profiler](#blackfire-profiler)
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-포함된 소프트웨어들-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-포함된-소프트웨어들-->
 
 <a name="installation-and-setup"></a>
 ## 설치 & 구성하기
@@ -135,7 +135,7 @@ Vagrant가 가상머신을 구동시키고 공유폴더와 Nginx 사이트를 �
 
 다음은 데이터베이스에 연결하는 방법을 배워보겠습니다!
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-설치 & 구성하기-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-설치---구성하기-->
 
 <a name="daily-usage"></a>
 ## 사용 방법
@@ -172,7 +172,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 
 > **주의:** `serve` 명령어를 실행하고 로컬머신의 `hosts` 파일에 새로운 사이트를 추가하는 것을 잊지 마십시오!
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-사용 방법-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-사용-방법-->
 
 <a name="ports"></a>
 ## 포트
@@ -196,7 +196,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 	      to: 777
 	      protocol: udp
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-포트-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-포트-->
 
 <a name="blackfire-profiler"></a>
 ## Blackfire 프로파일러
@@ -213,4 +213,4 @@ SensioLabs의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로 
 
 Blackfire 인증정보를 설정하고 난 뒤에, 여러분의 홈스테드 디렉토리에서 `vagrant provision`을 사용하여 Box를 다시 실행하십시오. 또한, Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오.
 
-<!--chak-comment-라라벨 홈스테드(Laravel Homestead)-Blackfire 프로파일러-->
+<!--chak-comment-라라벨-홈스테드(Laravel-Homestead)-Blackfire-프로파일러-->

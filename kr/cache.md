@@ -93,7 +93,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis`(~1.0) 패키지를 
 
 	$value = Cache::store('foo')->get('key');
 
-<!--chak-comment-캐시(Cache)-캐시 사용법-->
+<!--chak-comment-캐시(Cache)-캐시-사용법-->
 
 <a name="increments-and-decrements"></a>
 ## 증감 조작하기
@@ -112,7 +112,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis`(~1.0) 패키지를 
 
 	Cache::decrement('key', $amount);
 
-<!--chak-comment-캐시(Cache)-증감 조작하기-->
+<!--chak-comment-캐시(Cache)-증감-조작하기-->
 
 <a name="cache-tags"></a>
 ## 캐시 태그
@@ -147,7 +147,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis`(~1.0) 패키지를 
 
 	Cache::tags('authors')->flush();
 
-<!--chak-comment-캐시(Cache)-캐시 태그-->
+<!--chak-comment-캐시(Cache)-캐시-태그-->
 
 <a name="cache-events"></a>
 ## 캐시 이벤트
@@ -170,7 +170,7 @@ Redis 캐시를 사용하려면 컴포저로 `predis/predis`(~1.0) 패키지를 
 		//
 	});
 
-<!--chak-comment-캐시(Cache)-캐시 이벤트-->
+<!--chak-comment-캐시(Cache)-캐시-이벤트-->
 
 <a name="database-cache"></a>
 ## 데이터베이스 캐시
@@ -206,4 +206,4 @@ Memcached 캐시를 사용하기 위해서는 [Memcached PECL package](http://pe
 
 [Redis 설정](/docs/redis#configuration)을 참고하십시오.
 
-<!--chak-comment-캐시(Cache)-데이터베이스 캐시-->
+<!--chak-comment-캐시(Cache)-데이터베이스-캐시-->

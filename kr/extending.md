@@ -15,7 +15,7 @@
 
 > **참고:** 가급적 시간을 가지고 라라벨에서 제공하는 `CacheManager` 와`SessionManager` 같은 `Manager` 클래스를 살펴보시기 바랍니다.  이러한 클래스들을 살펴보는 것은 라라벨의 내부 동작에 대한 보다 확실한 이해를 줄 것입니다. 모든 매니저 클래스는 각각의 매니저에 편리하고 공통된 기능을 제공하도록 `Illuminate\Support\Manager` 기본 클래스를 상속 받습니다.
 
-<!--chak-comment-프레임워크의 확장(Extending The Framework)-매니저 & 팩토리-->
+<!--chak-comment-프레임워크의-확장(Extending-The-Framework)-매니저---팩토리-->
 
 <a name="cache"></a>
 ## 캐시
@@ -54,7 +54,7 @@
 
 새롭게 지정한 캐시 드라이버 코드를 어디에 올려둘까 고민하고 있다면, Packagist에서 사용할 수 있도록 하는 것을 고려해 보십시오! 또는 `app` 디렉토리에 `Extensions` 네임스페이스를 생성할 수도 있습니다. 라라벨은 엄격한 어플리케이션 구조를 가지고 있지 않기 때문에, 원하는대로 편하게 구조를 결정하면 됩니다.
 
-<!--chak-comment-프레임워크의 확장(Extending The Framework)-캐시-->
+<!--chak-comment-프레임워크의-확장(Extending-The-Framework)-캐시-->
 
 <a name="session"></a>
 ## 세션
@@ -103,7 +103,7 @@
 
 > **참고:** 여러분의 고유한 세션 핸들러를 작성했다면 Packagist와 함께 공유해주세요!
 
-<!--chak-comment-프레임워크의 확장(Extending The Framework)-세션-->
+<!--chak-comment-프레임워크의-확장(Extending-The-Framework)-세션-->
 
 <a name="authentication"></a>
 ## 인증
@@ -162,7 +162,7 @@
 
 `extend` 메소드를 통해서 드라이버를 등록하고 난후에는, `config/auth.php` 설정 파일에서 새로운 드라이버로 설정을 변경하면 됩니다.
 
-<!--chak-comment-프레임워크의 확장(Extending The Framework)-인증-->
+<!--chak-comment-프레임워크의-확장(Extending-The-Framework)-인증-->
 
 <a name="container-based-extension"></a>
 ## 서비스 컨테이너에 의한 확장
@@ -191,4 +191,4 @@
 
 지금까지 컨테이너를에 바인딩된 코어 클래스를 확장하는 일반적인 방법을 살펴보았습니다. 기본적으로 컨테이너에 바인딩된 모든 코어 클래스는 이러한 방법을 통해서 바인딩을 재지정할 수 있습니다. 다시한번 프레임워크에 포함되어 있는 서비스 프로바이더들과 그와 관련된 다양한 클래스들이 어떻게 서비스 컨테이너에 바인딩 되는지, 어떤 키를 사용하는지 살펴보시기 바랍니다. 이렇게 하는 것이 라라벨이 어떻게 동작하는지에 대해서 알 수 있는 좋은 방법이 될것입니다.
 
-<!--chak-comment-프레임워크의 확장(Extending The Framework)-서비스 컨테이너에 의한 확장-->
+<!--chak-comment-프레임워크의-확장(Extending-The-Framework)-서비스-컨테이너에-의한-확장-->
