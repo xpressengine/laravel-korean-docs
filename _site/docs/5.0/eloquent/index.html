@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Eloquent ORM</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/eloquent/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="eloquent-orm">Eloquent ORM</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#basic-usage">기본 사용법</a></li>
+<li><a href="#mass-assignment">대량 할당</a></li>
+<li><a href="#insert-update-delete">인서트, 업데이트, 삭제</a></li>
+<li><a href="#soft-deleting">소프트 삭제</a></li>
+<li><a href="#timestamps">타임스탬프</a></li>
+<li><a href="#query-scopes">쿼리 스코프</a></li>
+<li><a href="#global-scopes">글로벌 스코프</a></li>
+<li><a href="#relationships">관계</a></li>
+<li><a href="#querying-relations">관계 쿼리</a></li>
+<li><a href="#eager-loading">Eager 로딩</a></li>
+<li><a href="#inserting-related-models">관련 모델 삽입</a></li>
+<li><a href="#touching-parent-timestamps">부모의 타임스탬프 업데이트</a></li>
+<li><a href="#working-with-pivot-tables">피벗 테이블 작업</a></li>
+<li><a href="#collections">컬렉션</a></li>
+<li><a href="#accessors-and-mutators">Accessors &amp; Mutators</a></li>
+<li><a href="#date-mutators">날짜 변경</a></li>
+<li><a href="#attribute-casting">속성 캐스팅</a></li>
+<li><a href="#model-events">모델 이벤트</a></li>
+<li><a href="#model-observers">모델 옵저버</a></li>
+<li><a href="#model-url-generation">모델 URL 생성</a></li>
+<li><a href="#converting-to-arrays-or-json">배열 / JSON으로 변환</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>라라벨에 포함된 Eloquent ORM은 여러분의 데이터베이스와 동작하는 아름답고 심플한 액티브 레코드를 제공합니다. 각각의 데이터베이스 테이블은 이에 해당하는 &quot;모델”을 가지고 있습니다.</p>
+
+<p>시작하기에 앞서 <code>config/database.php</code> 에 데이터베이스 커넥션이 설정되어 있는지 확인하십시오.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="basic-usage"></a></p>
+
+<h2 id="기본-사용법">기본 사용법</h2>
+
+<p>시작하기 위해서 Eloquent 모델 하나를 생성합니다. 일반적으로 모델은 <code>app</code>디렉토리에 존재하지만, <code>composer.json</code>파일에 의해서 오토로드 되는 곳이라면 어느곳에든 위치해도 상관없습니다. 모든 Eloquent 모델은 <code>Illuminate\Database\Eloquent\Model</code>을 상속받습니다.</p>
+
+<h4 id="eloquent-모델-정의하기">Eloquent 모델 정의하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {}
+</code></pre></div>
+<p><code>make:model</code> 명령어를 사용하여 Eloquent 모델을 생성할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:model User
+</code></pre></div>
+<p>생성한 <code>User</code> 모델은 어떠한 테이블을 사용할지 엘로퀀트에게 알려주지 않는 다는 점을 주의하십시오. 관련된 테이블이 별도로 지정되지 않는다면 클래스의 “스네이크 케이스” 로 표시된 복수 형태의 이름이 사용되어 집니다. 따라서 이 예제에서는 Eloquent는 <code>User</code> 모델은 <code>users</code>테이블에 레코드를 저장한다고 추정할 것입니다. 여러분은 모델의 <code>table</code>속성을 통해서 고유한 테이블을 지정할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $table = &#39;my_users&#39;;
+
+}
+</code></pre></div>
+<blockquote>
+<p><strong>주의:</strong> Eloquent는 테이블의 primary key 컬럼의 이름을 <code>id</code>로 추정합니다. <code>primaryKey</code> 속성을 통해서 이 컬럼명을 재지정할 수 있습니다. 마찬가지로 <code>connection</code> 속성을 통해서 모델에서 사용해야 하는 데이터베이스 커넥션을 지정할 수 있습니다.</p>
+</blockquote>
+
+<p>모델이 정의되면, 테이블에서 레코드를 검색하거나 생성할 준비가 된 것입니다. 기본적으로 테이블에 <code>updated_at</code> 과 <code>created_at</code>컬럼을 필요로 한다는 점에 유의하십시오. 자동으로 이 컬럼값이 채워지기를 원하지 않는다면 <code>timestamps</code> 속성을 <code>false</code> 로 지정하십시오.</p>
+
+<h4 id="모든-레코드-가져오기">모든 레코드 가져오기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::all();
+</code></pre></div>
+<h4 id="primary-key를-통해서-하나의-레코드-가져오기">Primary Key를 통해서 하나의 레코드 가져오기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+var_dump($user-&gt;name);
+</code></pre></div>
+<blockquote>
+<p><strong>주의:</strong> <a href="/laravel-korean-docs/docs/queries">쿼리 빌더</a>에서 사용가능한 모든 메소드들은 Eloquent 모델에서 동일하게 사용할 수 있습니다.</p>
+</blockquote>
+
+<h4 id="primary-key를-통해서-찾거나-exception-던지기">Primary Key를 통해서 찾거나 Exception 던지기</h4>
+
+<p>때로는 모델을 찾지 못했을 때 Exception을 던지고 싶을 수도 있습니다. 이렇게 하려면 <code>firstOrFail</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$model = User::findOrFail(1);
+
+$model = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;firstOrFail();
+</code></pre></div>
+<p>이렇게 하면 여러분이 별도로 exception을 처리할 수 있게 합니다. 따라서 로그를 남기거나, 필요한 경우 에러 페이지를 보여줄 수 있습니다. <code>ModelNotFoundException</code>을 처리하기 위해서는 <code>app/Exceptions/Handler.php</code>파일에 로직을 추가하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">use Illuminate\Database\Eloquent\ModelNotFoundException;
+
+class Handler extends ExceptionHandler {
+
+    public function render($request, Exception $e)
+    {
+        if ($e instanceof ModelNotFoundException)
+        {
+            // Custom logic for model not found...
+        }
+
+        return parent::render($request, $e);
+    }
+
+}
+</code></pre></div>
+<h4 id="eloquent-모델에서-쿼리-사용하기">Eloquent 모델에서 쿼리 사용하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;take(10)-&gt;get();
+
+foreach ($users as $user)
+{
+    var_dump($user-&gt;name);
+}
+</code></pre></div>
+<h4 id="eloquent-합계">Eloquent 합계</h4>
+
+<p>물론 쿼리 빌더 합계 함수도 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$count = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;count();
+</code></pre></div>
+<p>쿼리빌더 기능을 사용할 수 없다면 <code>whereRaw</code>를 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::whereRaw(&#39;age &gt; ? and votes = 100&#39;, [25])-&gt;get();
+</code></pre></div>
+<h4 id="결과-분할">결과 분할</h4>
+
+<p>만약 처리해야할 Eloquent 레코드가 너무 많다면(몇천의), <code>chunk</code> 커맨드를 사용하여 램 사용량을 줄일 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::chunk(200, function($users)
+{
+    foreach ($users as $user)
+    {
+        //
+    }
+});
+</code></pre></div>
+<p>메소드의 첫번째 인자는 “chunk” 메소드에서 받아 들일 레코드의 갯수 입니다. 두번째 인자는 클로저로 데이터베이스로 부터 분할된 데이터들을 전달 받습니다.</p>
+
+<h4 id="쿼리-커넥션-지정하기">쿼리 커넥션 지정하기</h4>
+
+<p>Eloquent 쿼리를 실행할 때 사용할 데이터베이스 커넥션을 지정할 수도 있습니다. 간단하게 <code>on</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::on(&#39;connection-name&#39;)-&gt;find(1);
+</code></pre></div>
+<p>여러분이 <a href="/laravel-korean-docs/docs/%7B%7Bversion%7D%7D/database#read-write-connections">읽기 / 쓰기용 커넥션</a>을 사용하고 있다면, 다음과 같은 메소들를 통해서 “쓰기용” 커넥션을 강제로 지정할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::onWriteConnection()-&gt;find(1);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="mass-assignment"></a></p>
+
+<h2 id="대량-할당">대량 할당</h2>
+
+<p>새로운 모델을 생성할 때, 여러분은 모델의 생성자에 속성을 나타내는 배열을 전달하게 됩니다. 이 속성들은 모델의 대량-할당을 통해서 모델이 지정됩니다. 이러한 특징은 편리하긴 하지만 사용자의 입력값을 그대로 전달하게 되면 <strong>심각한</strong> 보안 위험을 초래할 수 있습니다. 사용자 입력을 바로 모델에 전달하게 된다면, 사용자는 모든 모델의 속성을 변경할 수 있게됩니다. 따라서 모든 Eloquent 모델은 기본적으로 대량-할당이 되지 않도록 보호되고 있습니다.</p>
+
+<p>대량-할당을 사용하려면 <code>fillable</code> 또는 <code>guarded</code> 속성을 모델에 설정하십시오.</p>
+
+<h4 id="모델에-할당할-수-있는-속성-정의하기">모델에 할당할 수 있는 속성 정의하기</h4>
+
+<p><code>fillable</code> 속성은 모델에서 할당 가능한 속성들을 지정합니다. 이 설정은 클래스나 인스턴스를 통해서 지정이 가능합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $fillable = [&#39;first_name&#39;, &#39;last_name&#39;, &#39;email&#39;];
+
+}
+</code></pre></div>
+<p>이 예제에서는 단지 3개의 속성을 할당 가능한 형태로 지정하였습니다.</p>
+
+<h4 id="모델에-보호해야할-속성-정의하기">모델에 보호해야할 속성 정의하기</h4>
+
+<p><code>fillable</code> 과는 반대로 <code>guarded</code> 속성은 “화이트-리스트” 대신 “블랙-리스트”를 정의합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $guarded = [&#39;id&#39;, &#39;password&#39;];
+
+}
+</code></pre></div>
+<blockquote>
+<p><strong>주의</strong> <code>guarded</code>를 사용하고 있을 때에는, 보호되지 않는 모든 컬럼이 업데이트 되기 때문에, <code>Input::get</code> 또는 사용자가 입력한 배열을 바로 전달하면 안됩니다.</p>
+</blockquote>
+
+<h4 id="모든-속성을-대량-할당으로-부터-보호하기">모든 속성을 대량 할당으로 부터 보호하기</h4>
+
+<p>위의 예제에서는 <code>id</code> 와 <code>password</code> 속성이 대량-할당 대상에서 제외 됩니다. 다른 속성들은 대량-할당이 가능합니다. 모든 속성을 대량-할당으로부터 보호하려면 guard 등록에 <strong>모든</strong> 속성을 지정하도록 할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">protected $guarded = [&#39;*&#39;];
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-대량 할당" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="insert-update-delete"></a></p>
+
+<h2 id="인서트,-업데이트,-삭제">인서트, 업데이트, 삭제</h2>
+
+<p>모델에서 데이터베이스에 새로운 레코드를 만들려면 새로운 모델 인스턴스를 생성하고 <code>save</code> 메소드를 호출하면 됩니다.</p>
+
+<h4 id="새로운-모델-저장하기">새로운 모델 저장하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = new User;
+
+$user-&gt;name = &#39;John&#39;;
+
+$user-&gt;save();
+</code></pre></div>
+<blockquote>
+<p><strong>참고</strong> 일반적으로 Eloquent 모델은 자동으로 auto-incrementing 키를 가집니다. 하지만 만약 고유한 key를 지정하고자 한다면 모델의 <code>incrementing</code> 속성을 <code>false</code>로 지정하십시오.</p>
+</blockquote>
+
+<p>또한 <code>create</code> 메소드를 사용하여 한번에 새로운 모델을 생성할 수도 있습니다. 이 메소드는 생성된 모델의 인스턴스를 반환할 것입니다. 그러나 이렇게 하기 전에 모든 Eloquent 모델들이 대량-할당을 방지 할 수 있도록 모델의 <code>fillable</code> 또는 <code>guarded</code> 속성값을 지정해야 합니다.</p>
+
+<p>auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성한 다음에, 객체의 <code>id</code> 속성에 해당하는 ID를 조회할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$insertedId = $user-&gt;id;
+</code></pre></div>
+<h4 id="모델에-보호되어야할-속성-설정하기">모델에 보호되어야할 속성 설정하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $guarded = [&#39;id&#39;, &#39;account_id&#39;];
+
+}
+</code></pre></div>
+<h4 id="모델의-생성-메소드-사용하기">모델의 생성 메소드 사용하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">// Create a new user in the database...
+$user = User::create([&#39;name&#39; =&gt; &#39;John&#39;]);
+
+// Retrieve the user by the attributes, or create it if it doesn&#39;t exist...
+$user = User::firstOrCreate([&#39;name&#39; =&gt; &#39;John&#39;]);
+
+// Retrieve the user by the attributes, or instantiate a new instance...
+$user = User::firstOrNew([&#39;name&#39; =&gt; &#39;John&#39;]);
+</code></pre></div>
+<h4 id="조회한-모델-업데이트-하기">조회한 모델 업데이트 하기</h4>
+
+<p>모델을 업데이트 하기 위해서는, 우선 해당 모델을 조회한다음, 속성값들을 변경하고 <code>save</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+$user-&gt;email = &#39;john@foo.com&#39;;
+
+$user-&gt;save();
+</code></pre></div>
+<h4 id="모델과-관계된-모델들-저장하기">모델과 관계된 모델들 저장하기</h4>
+
+<p>떄로는 해당 모델 뿐만 아니라 관계된 모든 모델 또한 저장해야 할 수도 있습니다. 이렇게 하려면, <code>push</code> 메서드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;push();
+</code></pre></div>
+<p>또한 모델들에 대한 쿼리를 통해서 업데이트를 실행할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$affectedRows = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;update([&#39;status&#39; =&gt; 2]);
+</code></pre></div>
+<blockquote>
+<p><strong>주의</strong> Eloquent 쿼리 빌더를 사용하여 모델들에 대한 업데이트를 실행할 때에는 모델 이벤트가 발생하지 않습니다.</p>
+</blockquote>
+
+<h4 id="기존-모델-삭제하기">기존 모델 삭제하기</h4>
+
+<p>모델을 삭제하기 위해서는  간단하게 모델 인스턴스에 대해서 <code>delete</code> 메소드를 호출하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+$user-&gt;delete();
+</code></pre></div>
+<h4 id="키를-통해서-모델-삭제하기">키를 통해서 모델 삭제하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::destroy(1);
+
+User::destroy([1, 2, 3]);
+
+User::destroy(1, 2, 3);
+</code></pre></div>
+<p>또한 모델들에 대해서 삭제 쿼리 실행시킬 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$affectedRows = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;delete();
+</code></pre></div>
+<h4 id="모델의-타임스탬프-값만-업데이트-하기">모델의 타임스탬프 값만 업데이트 하기</h4>
+
+<p>단순히 모델의 타임스탬프 값만을 업데이트 하려면 <code>touch</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;touch();
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-인서트, 업데이트, 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="soft-deleting"></a></p>
+
+<h2 id="소프트-삭제">소프트 삭제</h2>
+
+<p>모델에서 소프트 삭제를 사용하는 경우, 데이터베이스에서 실제로 삭제되지 않습니다. 대신에, <code>delete_at</code> 타임스탬프 값이 설정됩니다. 모델에서 소프트 삭제를 사용하려면 모델에서 <code>SoftDeletes</code> trait을 사용하도록 설정하십시오.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">use Illuminate\Database\Eloquent\SoftDeletes;
+
+class User extends Model {
+
+    use SoftDeletes;
+
+    protected $dates = [&#39;deleted_at&#39;];
+
+}
+</code></pre></div>
+<p>테이블에 <code>delete_at</code> 컬럼을 추가하기 위해서는 마이그레이션에서 <code>softDeletes</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$table-&gt;softDeletes();
+</code></pre></div>
+<p>이제 모델에서 <code>delete</code> 메소드를 호출하면, <code>delete_at</code> 컬럼이 현재의 타임스탬프 값으로 설정됩니다. 소프트 삭제를 사용하는 모델에 대해서 쿼리가 실행되면 “삭제된” 모델들은 쿼리 결과에 포함되지 않습니다.</p>
+
+<h4 id="강제로-소프트-삭제된-모델들을-결과에-포함하기">강제로 소프트 삭제된 모델들을 결과에 포함하기</h4>
+
+<p>강제로 소프트 삭제된 모델들을 결과에 나타나게 하기 위해서는, 쿼리에서 <code>withTrashed</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::withTrashed()-&gt;where(&#39;account_id&#39;, 1)-&gt;get();
+</code></pre></div>
+<p><code>withTrashed</code> 메소드는 정의된 관계 모델에서도 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;posts()-&gt;withTrashed()-&gt;get();
+</code></pre></div>
+<p>결과에서 <strong>삭제된 모델들만</strong> 확인하고자 한다면 <code>onlyTrashed</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::onlyTrashed()-&gt;where(&#39;account_id&#39;, 1)-&gt;get();
+</code></pre></div>
+<p>소프트 삭제처리된 모델을 원래 상태로 복원하고자 한다면 <code>restore</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;restore();
+</code></pre></div>
+<p>또한 쿼리에서 <code>restore</code> 메소드를 사용할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::withTrashed()-&gt;where(&#39;account_id&#39;, 1)-&gt;restore();
+</code></pre></div>
+<p><code>withTrashed</code> 와 같이, <code>restore</code> 메소드는 관계 질의에서도 사용할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;posts()-&gt;restore();
+</code></pre></div>
+<p>데이터베이스에서 모델을 완전히 삭제하고자 한다면 <code>forceDelete</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;forceDelete();
+</code></pre></div>
+<p><code>forceDelete</code> 메소드는 관계 질의에서도 동작합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;posts()-&gt;forceDelete();
+</code></pre></div>
+<p>모델 인스턴스가 소프트 삭제된 상태인지 확인하고자 한다면 <code>trashed</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if ($user-&gt;trashed())
+{
+    //
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-소프트 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="timestamps"></a></p>
+
+<h2 id="타임스탬프">타임스탬프</h2>
+
+<p>기본적으로 Eloquent는 데이터베이스 테이블에 자동으로 <code>created_at</code> 과 <code>updated_at</code> 컬럼을 가지도록 되어 있습니다.</p>
+
+<h4 id="disabling-auto-timestamps">Disabling Auto Timestamps</h4>
+
+<h4 id="타임스탬프-자동으로-설정되지-않게-하기">타임스탬프 자동으로 설정되지 않게 하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $table = &#39;users&#39;;
+
+    public $timestamps = false;
+
+}
+</code></pre></div>
+<h4 id="타임-스탬프의-사용자-정의-형식-지정">타임 스탬프의 사용자 정의 형식 지정</h4>
+
+<p>고유한 타임스탬프 형식을 지정하고자 한다면 모델의 <code>getDateFormat</code> 메소드를 재지정하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected function getDateFormat()
+    {
+        return &#39;U&#39;;
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-타임스탬프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="query-scopes"></a></p>
+
+<h2 id="쿼리-스코프">쿼리 스코프</h2>
+
+<h4 id="쿼리-스코프-정의하기">쿼리 스코프 정의하기</h4>
+
+<p>스코프는 여러분들이 모델안에서 쿼리 로직을 쉽게 재사용할 수 있도록 해줍니다. 스코프를 정의하기 위해서는 간단하게 메소드의 이름에 <code>scope</code> 를 접두어로 붙이면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function scopePopular($query)
+    {
+        return $query-&gt;where(&#39;votes&#39;, &#39;&gt;&#39;, 100);
+    }
+
+    public function scopeWomen($query)
+    {
+        return $query-&gt;whereGender(&#39;W&#39;);
+    }
+
+}
+</code></pre></div>
+<h4 id="쿼리-스코프-사용하기">쿼리 스코프 사용하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::popular()-&gt;women()-&gt;orderBy(&#39;created_at&#39;)-&gt;get();
+</code></pre></div>
+<h4 id="동적-다이나믹-스코프">동적-다이나믹 스코프</h4>
+
+<p>때때로 파라미터를 전달받는 스코프를 정의하고자 할 수도 있습니다. 이 경우 간단하게 필요한 파라미터를 스코프 함수에 추가할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function scopeOfType($query, $type)
+    {
+        return $query-&gt;whereType($type);
+    }
+
+}
+</code></pre></div>
+<p>그 뒤에 스코프를 호출할때 필요한 파라미터를 전달하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::ofType(&#39;member&#39;)-&gt;get();
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-쿼리 스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="global-scopes"></a></p>
+
+<h2 id="글로벌-스코프">글로벌 스코프</h2>
+
+<p>때때로 모델에서 실행되는 모든 쿼리에 대해서 스코프를 정의하고자 할 수도 있을 것입니다. 실제로 이러한 방식은 Eloquent가 “소프트 삭제”를 구동시키는 방식입니다. 글로벌 스코프는 PHP의 trait과 <code>Illuminate\Database\Eloquent\ScopeInterface</code>의 구현 클래스를 결합하여 정의합니다.</p>
+
+<p>먼저 trait을 정의합니다. 예를 들어 라라벨에 포함된 <code>SoftDeletes</code> 을 사용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">trait SoftDeletes {
+
+    /**
+     * Boot the soft deleting trait for a model.
+     *
+     * @return void
+     */
+    public static function bootSoftDeletes()
+    {
+        static::addGlobalScope(new SoftDeletingScope);
+    }
+
+}
+</code></pre></div>
+<p>만약 Eloquent 모델이 <code>bootNameOfTrait</code>으로 이름이 붙여진 메소드를 가지고 있는 Trait을 사용한다면, 글로벌 스코프를 등록하거나 혹은 여러분이 하고자 하는 다른 작업들을 할 수 있는 기회를 제공하기 위해서 Eloquent 모델이 부팅될 때 해당 trait 메소드가 호출됩니다. 스코프는 반드시 <code>apply</code> 와 <code>remove</code> 메소드를 가진 <code>ScopeInterface</code>를 구현해야 합니다.</p>
+
+<p><code>apply</code> 메소드는 <code>Illuminate\Database\Eloquent\Builder</code> 쿼리 빌더 객체와 적용할 <code>Model</code> 을 받아 스코프에 추가하고자 하는 <code>where</code>절을 추가하는 역활을 담당합니다. <code>remove</code> 메소드 또한 <code>Builder</code> 객체와 <code>Model</code>을 받고 <code>apply</code> 메소드가 수행한 액션을 되돌리는 역활을 담당합니다. 다시 말해, <code>remove</code> 는 추가된 <code>where</code> 구문(또는 다른 구문)을 제거 해야합니다. 따라서 우리가 고려하는 <code>SoftDeletingScope</code>는 다음처럼 구성할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Apply the scope to a given Eloquent query builder.
+ *
+ * @param  \Illuminate\Database\Eloquent\Builder  $builder
+ * @param  \Illuminate\Database\Eloquent\Model  $model
+ * @return void
+ */
+public function apply(Builder $builder, Model $model)
+{
+    $builder-&gt;whereNull($model-&gt;getQualifiedDeletedAtColumn());
+
+    $this-&gt;extend($builder);
+}
+
+/**
+ * Remove the scope from the given Eloquent query builder.
+ *
+ * @param  \Illuminate\Database\Eloquent\Builder  $builder
+ * @param  \Illuminate\Database\Eloquent\Model  $model
+ * @return void
+ */
+public function remove(Builder $builder, Model $model)
+{
+    $column = $model-&gt;getQualifiedDeletedAtColumn();
+
+    $query = $builder-&gt;getQuery();
+
+    foreach ((array) $query-&gt;wheres as $key =&gt; $where)
+    {
+        // If the where clause is a soft delete date constraint, we will remove it from
+        // the query and reset the keys on the wheres. This allows this developer to
+        // include deleted model in a relationship result set that is lazy loaded.
+        if ($this-&gt;isSoftDeleteConstraint($where, $column))
+        {
+            unset($query-&gt;wheres[$key]);
+
+            $query-&gt;wheres = array_values($query-&gt;wheres);
+        }
+    }
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-글로벌 스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="relationships"></a></p>
+
+<h2 id="관계">관계</h2>
+
+<p>당연하게도 데이터베이스 테이블은 다른 테이블과 관계를 형성합니다. 예를 들어, 하나의 블로그 포스트는 다수의 코멘트를 가질 수 있고, 하나의 주문정보는 주문을 신청한 사용자와 관계되어 있습니다. Eloquent는 이러한 관계를 손쉽게 관리하고, 작동 할 수 있도록합니다. 라라벨은 다양한 종류의 관계형성을 제공합니다:</p>
+
+<ul>
+<li><a href="#one-to-one">일대일</a></li>
+<li><a href="#one-to-many">일대다</a></li>
+<li><a href="#many-to-many">다대다</a></li>
+<li><a href="#has-many-through">연결을 통한 다수를 가지는 관계</a></li>
+<li><a href="#polymorphic-relations">다형성 관계</a></li>
+<li><a href="#many-to-many-polymorphic-relations">다대다 다형성 관계</a></li>
+</ul>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="one-to-one"></a></p>
+
+<h3 id="일-대-일-관계">일 대 일 관계</h3>
+
+<h4 id="일대일-관계-정의하기">일대일 관계 정의하기</h4>
+
+<p>일대일 관계는 매우 기본적인 관계입니다. 예를 들어 <code>User</code> 모델은 하나의 <code>Phone</code> 을 가집니다. 이러한 관계를 Eloquent 에서 정의할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function phone()
+    {
+        return $this-&gt;hasOne(&#39;App\Phone&#39;);
+    }
+
+}
+</code></pre></div>
+<p><code>hasOne</code> 메소드의 첫번째 인자는 관계된 모델의 이름입니다. 관계가 정의되고 나면 Eloquent의 <a href="#dynamic-properties">동적 속성</a>을 통해서 조회할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$phone = User::find(1)-&gt;phone;
+</code></pre></div>
+<p>위의 구문의 다음과 같은 SQL로 동작합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">select * from users where id = 1
+
+select * from phones where user_id = 1
+</code></pre></div>
+<p>Eloquent는 모델의 이름을 기반으로 관계된 외래 키를 추정한다는 것에 주의하십시오. 이 경우, <code>Phone</code> 모델은 <code>user_id</code> 외래 키를 사용 한다고 가정합니다. 만약 이러한 규칙을 재정의 하고자 한다면, <code>hasOne</code> 메소드의 두번째 인자로 외래 키로 사용하고자 하는 컬럼명을 전달하면 됩니다. 더불어, 세번째 인자로 어떠한 로컬 컬럼이 연결에 사용될지 명시 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;hasOne(&#39;App\Phone&#39;, &#39;foreign_key&#39;);
+
+return $this-&gt;hasOne(&#39;App\Phone&#39;, &#39;foreign_key&#39;, &#39;local_key&#39;);
+</code></pre></div>
+<h4 id="역관계-정의하기">역관계 정의하기</h4>
+
+<p><code>Phone</code> 모델에서 관계 설정의 반대, 즉 역관계를 정의하기 위해서는 <code>belongsTo</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Phone extends Model {
+
+    public function user()
+    {
+        return $this-&gt;belongsTo(&#39;App\User&#39;);
+    }
+
+}
+</code></pre></div>
+<p>위의 예제에서 Eloquent는 <code>phones</code> 테이블에서 <code>user_id</code> 컬럼을 찾을 것입니다. 만약 여러분이 따로 외래키를 정의하였다면 <code>belongsTo</code> 메소드에 두번째 인자로 이 키를 전달하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Phone extends Model {
+
+    public function user()
+    {
+        return $this-&gt;belongsTo(&#39;App\User&#39;, &#39;local_key&#39;);
+    }
+
+}
+</code></pre></div>
+<p>추가적으로, 새번째 인자로 부모 테이블과 연결된 컬럼명을 전달 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Phone extends Model {
+
+    public function user()
+    {
+        return $this-&gt;belongsTo(&#39;App\User&#39;, &#39;local_key&#39;, &#39;parent_key&#39;);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-일 대 일 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="one-to-many"></a></p>
+
+<h3 id="일대다-관계">일대다 관계</h3>
+
+<p>일대다 관계의 예는 하나의 블로그 포스트가 “다수의” 코멘트를 가지는 것입니다. 다음처럼 모델을 설정할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Post extends Model {
+
+    public function comments()
+    {
+        return $this-&gt;hasMany(&#39;App\Comment&#39;);
+    }
+
+}
+</code></pre></div>
+<p>이제 <a href="#dynamic-properties">동적 속성</a>을 통해서 포스트의 코멘트들을 엑세스 할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$comments = Post::find(1)-&gt;comments;
+</code></pre></div>
+<p>만약 여러분이 어떤 코멘트들을 조회할 것인지에 대한 추가적인 제약이 필요하다면, <code>comments</code> 메소드와 연결된 체이닝 조건을 호출할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$comments = Post::find(1)-&gt;comments()-&gt;where(&#39;title&#39;, &#39;=&#39;, &#39;foo&#39;)-&gt;first();
+</code></pre></div>
+<p>다시한번, <code>hasMany</code> 메서드에 두번째 인수를 전달하여, 외래 키 컬럼을 재정의 할 수 있습니다. 그리고, <code>hasOne</code> 관계와 같이, 로컬 컬럼 키 역시 명시 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;hasMany(&#39;App\Comment&#39;, &#39;foreign_key&#39;);
+
+return $this-&gt;hasMany(&#39;App\Comment&#39;, &#39;foreign_key&#39;, &#39;local_key&#39;);
+</code></pre></div>
+<h4 id="역관계-정의하기">역관계 정의하기</h4>
+
+<p><code>Comment</code> 모델에 관계 설정의 반대, 즉 역관계를 설정하기 위해서는 <code>belongsTo</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Comment extends Model {
+
+    public function post()
+    {
+        return $this-&gt;belongsTo(&#39;App\Post&#39;);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-일대다 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="many-to-many"></a></p>
+
+<h3 id="다대다-관계">다대다 관계</h3>
+
+<p>다대다 관계는 좀더 복잡한 관계타입입니다. 이러한 예를 들자면 하나의 사용자는 다수의 역활을 가지고, 이 역활은 또한 각각의 사용자와 공유되는 경우입니다. 예를 들어 다수의 사용자가 “관리자” 역활을 가질 수 있습니다. 이 관계를 위해서는 3개의 데이터베이스 테이블이 필요합니다: <code>users</code>, <code>roles</code>, 그리고 <code>role_user</code>입니다. <code>role_user</code> 테이블은 관계가 설정된 모델의 이름을 알파벳 순서로 정렬한 순서에서 이름이 유래되었으며, <code>user_id</code>와 <code>role_id</code> 컬럼을 포함하고 있어야만 합니다.</p>
+
+<p><code>belongsToMany</code> 메소드를 사용하여 다음처럼 다대다 관계를 정의할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function roles()
+    {
+        return $this-&gt;belongsToMany(&#39;App\Role&#39;);
+    }
+
+}
+</code></pre></div>
+<p>이제 <code>User</code> 모델의 역활(roles)들을 조회할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = User::find(1)-&gt;roles;
+</code></pre></div>
+<p>만약 피벗 테이블 이름을 위에서 설명한 형식과 다르게 사용하려면 <code>belongsToMany</code> 메소드의 두 번째 인자로 전달하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;belongsToMany(&#39;App\Role&#39;, &#39;user_roles&#39;);
+</code></pre></div>
+<p>또한 관련된 키 이름 역시 재정의할 수 있습니다 :</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;belongsToMany(&#39;App\Role&#39;, &#39;user_roles&#39;, &#39;user_id&#39;, &#39;foo_id&#39;);
+</code></pre></div>
+<p>그리고 당연하게도 <code>Role</code> 모델에서 역관계를 정의할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Role extends Model {
+
+    public function users()
+    {
+        return $this-&gt;belongsToMany(&#39;App\User&#39;);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다대다 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="has-many-through"></a></p>
+
+<h3 id="연결을-통한-다수를-가지는-관계">연결을 통한 다수를 가지는 관계</h3>
+
+<p>&quot;연결을 통한 다수를 가지는&quot; 관계는 중간 관계를 통해서 떨어진 관계에 엑세스 할 수 있는 편리한 방법을 제공합니다. 예를 들자면, 하나의 <code>Country</code> 모델은 <code>Users</code> 모델을 통해서 다수의 <code>Posts</code> 를 가지고 있을 수 있습니다. 테이블은 다음과 같이 구성될 것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">countries
+    id - integer
+    name - string
+
+users
+    id - integer
+    country_id - integer
+    name - string
+
+posts
+    id - integer
+    user_id - integer
+    title - string
+</code></pre></div>
+<p><code>posts</code> 테이블은 <code>country_id</code> 컬럼을 가지고 있지 않지만, <code>hasManyThrough</code> 관계를 사용하면 <code>$country-&gt;posts</code> 를 통해서 해당 country의 posts에 엑세스 할 수 있습니다.  관계를 정의하는 것을 살펴보겠습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Country extends Model {
+
+    public function posts()
+    {
+        return $this-&gt;hasManyThrough(&#39;App\Post&#39;, &#39;App\User&#39;);
+    }
+
+}
+</code></pre></div>
+<p>만약 수동으로 관계에 필요한 키를 지정하고자 한다면 메소드의 세번째와 네번째 인자로 전달하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Country extends Model {
+
+    public function posts()
+    {
+        return $this-&gt;hasManyThrough(&#39;App\Post&#39;, &#39;App\User&#39;, &#39;country_id&#39;, &#39;user_id&#39;);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-연결을 통한 다수를 가지는 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="polymorphic-relations"></a></p>
+
+<h3 id="다형성-관계">다형성 관계</h3>
+
+<p>다형성 관계는 모델을 하나의 관계뿐만 여러 모델에 속할 수 있도록 합니다. 예를 들어 사진 모델이 직원 모델이나 주문 모델 모두에 소속되어 있을 수 있습니다. 이러한 관계는 다음과 같이 정의 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Photo extends Model {
+
+    public function imageable()
+    {
+        return $this-&gt;morphTo();
+    }
+
+}
+
+class Staff extends Model {
+
+    public function photos()
+    {
+        return $this-&gt;morphMany(&#39;App\Photo&#39;, &#39;imageable&#39;);
+    }
+
+}
+
+class Order extends Model {
+
+    public function photos()
+    {
+        return $this-&gt;morphMany(&#39;App\Photo&#39;, &#39;imageable&#39;);
+    }
+
+}
+</code></pre></div>
+<h4 id="하나의-다형성-관계-조회하기">하나의 다형성 관계 조회하기</h4>
+
+<p>이제 직원 맴버 또는 주문을 통해서 사진을 조회 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$staff = Staff::find(1);
+
+foreach ($staff-&gt;photos as $photo)
+{
+    //
+}
+</code></pre></div>
+<h4 id="다형성-관계의-소유자-조회하기">다형성 관계의 소유자 조회하기</h4>
+
+<p>그러나, 실제로 “다형성”의 마법은 <code>Photo</code> 모델에서 직원 또는 주문을 엑세스할 때 나타납니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$photo = Photo::find(1);
+
+$imageable = $photo-&gt;imageable;
+</code></pre></div>
+<p><code>Photo</code> 모델의 <code>imageable</code> 관계는 사진을 소유하고 있는 모델의 유형에 따라서 <code>Staff</code> 또는 <code>Order</code> 인스턴스 중 하나를 반환합니다.</p>
+
+<h4 id="다형성-관계의-테이블-구조">다형성 관계의 테이블 구조</h4>
+
+<p>이 관계에 대한 이해를 돕기 위해서 다형성 관계에서의 데이터베이스 구조를 살펴보겠습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">staff
+    id - integer
+    name - string
+
+orders
+    id - integer
+    price - integer
+
+photos
+    id - integer
+    path - string
+    imageable_id - integer
+    imageable_type - string
+</code></pre></div>
+<p>주목해야할 핵심적인 필드는 <code>photos</code> 테이블의 <code>imageable_id</code> 와 <code>imageable_type</code> 입니다.  이 예제에서 ID는 직원 또는 주문 의 ID 를 나타내고, type은 소유하고 있는 모델 클래스의 이름을 나타냅니다. 이것은 <code>imageable</code> 관계를 엑세스 할 때 ORM 이 어떤 타입의 소유 모델을 반환해야 하는지 결정해줍니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다형성 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="many-to-many-polymorphic-relations"></a></p>
+
+<h3 id="다대다-다형성-관계">다대다 다형성 관계</h3>
+
+<h4 id="다대다-다형성-관게-테이블-구조">다대다 다형성 관게 테이블 구조</h4>
+
+<p>추가적으로 일반적인 다형성 관계뿐만 아니라, 다대다 다형성 관계도 지정할 수 있습니다. 예를 들어 하나의 블로그 <code>Post</code>와 <code>Video</code> 모델은 하나의 <code>Tag</code> 모델에 다형성 관계를 공유할 수 있습니다. 먼저 테이블 구조를 살펴보겠습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">posts
+    id - integer
+    name - string
+
+videos
+    id - integer
+    name - string
+
+tags
+    id - integer
+    name - string
+
+taggables
+    tag_id - integer
+    taggable_id - integer
+    taggable_type - string
+</code></pre></div>
+<p>이제, 모델에 관계를 설정할 준비가 되었습니다. <code>Post</code> 와 <code>Video</code> 모델은 둘다 <code>tags</code> 메소드를 통해서 <code>morphToMany</code> 관계를 가집니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Post extends Model {
+
+    public function tags()
+    {
+        return $this-&gt;morphToMany(&#39;App\Tag&#39;, &#39;taggable&#39;);
+    }
+
+}
+</code></pre></div>
+<p><code>Tag</code> 모델에서는 각각의 관계에 대한 메소드를 정의할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Tag extends Model {
+
+    public function posts()
+    {
+        return $this-&gt;morphedByMany(&#39;App\Post&#39;, &#39;taggable&#39;);
+    }
+
+    public function videos()
+    {
+        return $this-&gt;morphedByMany(&#39;App\Video&#39;, &#39;taggable&#39;);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-다대다 다형성 관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="querying-relations"></a></p>
+
+<h2 id="관계-쿼리">관계 쿼리</h2>
+
+<h4 id="select-경우-관계-쿼리">SELECT 경우 관계 쿼리</h4>
+
+<p>모델의 레코드에 엑세스할 때, 여러분은 여러분의 결과를 관계의 존재에 따라서 제한하기를 원할 수도 있습니다. 예를 들어 최소한 하나의 코멘트를 가지고 있는 모든 블로그 포스트들을 조회하고자 할 수 있습니다. 이런 경우 <code>has</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$posts = Post::has(&#39;comments&#39;)-&gt;get();
+</code></pre></div>
+<p>또한 메소드에서 사용할 수 있는 연산자와 카운트 갯수를 지정할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$posts = Post::has(&#39;comments&#39;, &#39;&gt;=&#39;, 3)-&gt;get();
+</code></pre></div>
+<p>중첩된 <code>has</code> 문법은 “점” 표기를 통해서 구성할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$posts = Post::has(&#39;comments.votes&#39;)-&gt;get();
+</code></pre></div>
+<p>더 강력한 기능을 원한다면 <code>has</code> 쿼리에 &quot;where&quot;조건을 더하기 위해서 <code>whereHas</code> 과 <code>orWhereHas</code>을 이용할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$posts = Post::whereHas(&#39;comments&#39;, function($q)
+{
+    $q-&gt;where(&#39;content&#39;, &#39;like&#39;, &#39;foo%&#39;);
+
+})-&gt;get();
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계 쿼리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="dynamic-properties"></a></p>
+
+<h3 id="동적-속성">동적 속성</h3>
+
+<p>Eloquent는 동적 속성을 사용하여 지정된 관계들에 엑세스하는 방법을 제공합니다. Eloquent는 자동으로 지정된 관계를 로드하고, 똑똑하게도 <code>get</code> (일대다 관계의 경우) 또는 <code>first</code> (일대일 관계의 경우) 중 어떤 메소드를 호출해야 할지 구분합니다. 그다음에 관계와 동일한 이름의 동적 속성을 통해 엑세스 할 수 있습니다. 예를 들어, 다음의 <code>$phone</code> 모델을 확인해 봅시다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Phone extends Model {
+
+    public function user()
+    {
+        return $this-&gt;belongsTo(&#39;App\User&#39;);
+    }
+
+}
+
+$phone = Phone::find(1);
+</code></pre></div>
+<p>사용자의 이메일을 다음처럼 표시하기 보다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">echo $phone-&gt;user()-&gt;first()-&gt;email;
+</code></pre></div>
+<p>보다 짧고 간단하게 표시할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">echo $phone-&gt;user-&gt;email;
+</code></pre></div>
+<blockquote>
+<p><strong>참고:</strong> 여러 결과를 반환하는 관계는 <code>Illuminate\Database\Eloquent\Collection</code> 클래스의 인스턴스를 반환할 것입니다.</p>
+</blockquote>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-동적 속성" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="eager-loading"></a></p>
+
+<h2 id="eager-로딩">Eager 로딩</h2>
+
+<p>Eager 로딩은 N + 1 쿼리 문제를 위해서 존재합니다. 예를 들어 <code>Book</code> 모델과 관계된 <code>Author</code> 모델이 있다고 가정합니다. 관계에 대한 정의는 다음과 같을 것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Book extends Model {
+
+    public function author()
+    {
+        return $this-&gt;belongsTo(&#39;App\Author&#39;);
+    }
+
+}
+</code></pre></div>
+<p>이제 다음 코드를 살펴보겠습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foreach (Book::all() as $book)
+{
+    echo $book-&gt;author-&gt;name;
+}
+</code></pre></div>
+<p>이 반복문은 테이블에서 모든 책들을 조회하는 1 개의 쿼리를 실행하고, 각각의 책마다 저자를 조회하는 별개의 쿼리를 실행할 것입니다. 따라서, 만약 25개의 책이 있다면, 이 반복문은 26개의 쿼리를 실행하게 됩니다.</p>
+
+<p>다행스럽게도, 우리는 쿼리 수를 현저하게 줄일 수 있는 eager 로딩을 사용할 수 있습니다. <code>with</code>를 통해서 eager 로딩을 사용해야 하는 관계를 지정할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foreach (Book::with(&#39;author&#39;)-&gt;get() as $book)
+{
+    echo $book-&gt;author-&gt;name;
+}
+</code></pre></div>
+<p>위의 루프는 2 개의 쿼리만 실행될것입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">select * from books
+
+select * from authors where id in (1, 2, 3, 4, 5, ...)
+</code></pre></div>
+<p>Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을 크게 향상 시킬 수 있습니다.</p>
+
+<p>당연하게도 한번에 여러개의 관계를 Eager 로딩할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$books = Book::with(&#39;author&#39;, &#39;publisher&#39;)-&gt;get();
+</code></pre></div>
+<p>중첩된 관계에 대해서도 eager 로딩할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$books = Book::with(&#39;author.contacts&#39;)-&gt;get();
+</code></pre></div>
+<p>이 예제에서 <code>author</code> 관계는 eager 로딩될 것이고, 저자의 <code>contacts</code> 관계도 로딩됩니다.</p>
+
+<h3 id="eager-로드의-제약조건">Eager 로드의 제약조건</h3>
+
+<p>때때로, 관계를 Eager 로딩 할 때 조건을 지정하고 싶은 경우도 있습니다. 다음의 예를 보겠습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::with([&#39;posts&#39; =&gt; function($query)
+{
+    $query-&gt;where(&#39;title&#39;, &#39;like&#39;, &#39;%first%&#39;);
+
+}])-&gt;get();
+</code></pre></div>
+<p>이 예제에서 사용자의 포스트들을 eager 로딩하게 되지만, 포스트의 제목이 &quot;first&quot;라는 단어로 구성되어있는 것만이 가져오게 됩니다.</p>
+
+<p>물론, Eager 로딩 클로저는 “제약 조건“에만 한정되어 있지 않습니다. 여러분은 또한 정렬 순서를 지정할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = User::with([&#39;posts&#39; =&gt; function($query)
+{
+    $query-&gt;orderBy(&#39;created_at&#39;, &#39;desc&#39;);
+
+}])-&gt;get();
+</code></pre></div>
+<h3 id="지연된-eager-로딩">지연된 Eager 로딩</h3>
+
+<p>이미 존재하는 모델 컬렉션에서 직접 연관된 모델들을 Eager 로딩하는 것 또한 가능합니다. 이것은 관련된 모델을 로드할지 말지 여부를 동적으로 결정하거나, 캐시와 연동할 때 유용합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$books = Book::all();
+
+$books-&gt;load(&#39;author&#39;, &#39;publisher&#39;);
+</code></pre></div>
+<p>여러분은 또한 쿼리에 제약 조건을 설정하는 클로저를 전달 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$books-&gt;load([&#39;author&#39; =&gt; function($query)
+{
+    $query-&gt;orderBy(&#39;published_date&#39;, &#39;asc&#39;);
+}]);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Eager 로딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="inserting-related-models"></a></p>
+
+<h2 id="관련된-모델-삽입하기">관련된 모델 삽입하기</h2>
+
+<h4 id="관계된-모델-추가하기">관계된 모델 추가하기</h4>
+
+<p>여러분은 종종 새로운 관계 모델을 삽입해야할 필요가 있을 수 있습니다. 예를 들어, 여러분은 포스트와 연결된 새로운 코멘트를 추가하려고 할 수 있습니다. 수동으로 모델에 <code>post_id</code> 외래키를 설정하는 대신에, 새로운 코멘트를 <code>Post</code> 모델을 통해서 바로 추가할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$comment = new Comment([&#39;message&#39; =&gt; &#39;A new comment.&#39;]);
+
+$post = Post::find(1);
+
+$comment = $post-&gt;comments()-&gt;save($comment);
+</code></pre></div>
+<p>이 예제에서, <code>post_id</code> 필드는 삽입된 코멘트 레코드에 자동으로 설정됩니다.</p>
+
+<p>만약 여러개의 관련된 모델을 저장해야 한다면 다음과 같이 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$comments = [
+    new Comment([&#39;message&#39; =&gt; &#39;A new comment.&#39;]),
+    new Comment([&#39;message&#39; =&gt; &#39;Another comment.&#39;]),
+    new Comment([&#39;message&#39; =&gt; &#39;The latest comment.&#39;])
+];
+
+$post = Post::find(1);
+
+$post-&gt;comments()-&gt;saveMany($comments);
+</code></pre></div>
+<h3 id="연관-모델들-(belongs-to)">연관 모델들 (Belongs To)</h3>
+
+<p><code>belongsTo</code> 관계를 업데이트 할때, 여러분은 <code>associate</code> 메소드를 사용할 수 있습니다. 이 메소드는 자식 모델에 외래키를 설정할 것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$account = Account::find(10);
+
+$user-&gt;account()-&gt;associate($account);
+
+$user-&gt;save();
+</code></pre></div>
+<h3 id="관계된-모델-삽입(다대다)">관계된 모델 삽입(다대다)</h3>
+
+<p>여러분은 또한 다대대 관계를 작업해야 하는 경우에도 관계된 모델을 삽입할 수 있습니다. 예제처럼 <code>User</code> 와 <code>Role</code> 모델을 예제로 사용하겠습니다. <code>attach</code> 메소드를 사용하여 새로운 역활을 사용자에게 추가할 수 있습니다.</p>
+
+<h4 id="다대다-모델-추가하기">다대다 모델 추가하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+$user-&gt;roles()-&gt;attach(1);
+</code></pre></div>
+<p>여러분은 또한 해당 관계에 대한 피벗 테이블에 저장되는 속성을 배열로 전달 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;roles()-&gt;attach(1, [&#39;expires&#39; =&gt; $expires]);
+</code></pre></div>
+<p>물론 <code>attach</code>의 반대는 <code>detach</code> 입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;roles()-&gt;detach(1);
+</code></pre></div>
+<p><code>attach</code>와 <code>detach</code> 두가지 모두 ID들의 배열을 받을 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+$user-&gt;roles()-&gt;detach([1, 2, 3]);
+
+$user-&gt;roles()-&gt;attach([1 =&gt; [&#39;attribute1&#39; =&gt; &#39;value1&#39;], 2, 3]);
+</code></pre></div>
+<h4 id="다대다-모델들을-추가하기-위해서-sync-사용하기">다대다 모델들을 추가하기 위해서 Sync 사용하기</h4>
+
+<p>여러분은 또한 관계된 모델들을 추가하기 위해서 <code>sync</code> 메소드를 사용할 수 있습니다. <code>sync</code> 메소드는 피벗 테이블에 배치할 ID들의 배열을 받습니다. 이 연산이 완료된 후, 배열 안의 ID들만 해당 모델의 피벗 테이블에 있게 될것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;roles()-&gt;sync([1, 2, 3]);
+</code></pre></div>
+<h4 id="동기화중에-피벗-데이타-추가하기">동기화중에 피벗 데이타 추가하기</h4>
+
+<p>여러분은 또한 주어진 ID들의 피벗 테이블 값들를 연결 할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user-&gt;roles()-&gt;sync([1 =&gt; [&#39;expires&#39; =&gt; true]]);
+</code></pre></div>
+<p>때떄로 여러분은 하나의 명령어로 관련 모델을 생성하고 추가하기를 원할 수도 있습니다. 이 작업을 위해서는 <code>save</code> 메소드를 사용할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$role = new Role([&#39;name&#39; =&gt; &#39;Editor&#39;]);
+
+User::find(1)-&gt;roles()-&gt;save($role);
+</code></pre></div>
+<p>이 예제에서 새로운 <code>Role</code> 모델은 데이터베이스에 저장되고 사용자 모델에 추가될 것입니다. 또한 이 작업에 영향을 받은 테이블에 저장될 속성 배열을 전달할 수도 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::find(1)-&gt;roles()-&gt;save($role, [&#39;expires&#39; =&gt; $expires]);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관련된 모델 삽입하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="touching-parent-timestamps"></a></p>
+
+<h2 id="부모의-타임스탬프-값-갱신">부모의 타임스탬프 값 갱신</h2>
+
+<p>하나의 <code>Post</code> 에 소속되는 하나의 <code>Comment</code>와 같이, 특정 모델이 다른 모델에 <code>소속될(belongsTo)</code>때와 같이, 가끔 자식 모델이 업데이트 될 때 부모의 타임스탬프를 갱신하는 것이 유용할 때가 있습니다. 예를 들어 <code>Comment</code> 모델이 업데이트 될 때, 자동으로 부모 <code>Post</code> 의 <code>updated_at</code> 타임스탬프가 갱신되기를 바랄 수도 있습니다. Eloquent는 손쉽게 이를 가능하게 합니다. 단지 자식 모델에 관련 모델명을 포함하는 <code>touches</code> 속성을 추가하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class Comment extends Model {
+
+    protected $touches = [&#39;post&#39;];
+
+    public function post()
+    {
+        return $this-&gt;belongsTo(&#39;App\Post&#39;);
+    }
+
+}
+</code></pre></div>
+<p>이제 <code>Comment</code> 가 업데이트 될때, 이를 소유한 <code>Post</code>의 <code>updated_at</code> 컬럼이 갱신 될것입니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$comment = Comment::find(1);
+
+$comment-&gt;text = &#39;Edit to this comment!&#39;;
+
+$comment-&gt;save();
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-부모의 타임스탬프 값 갱신" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="working-with-pivot-tables"></a></p>
+
+<h2 id="피벗-테이블-작업">피벗 테이블 작업</h2>
+
+<p>앞서 배운대로, 다대다 관계를 위해서는 중간 테이블이 필요합니다. Eloquent은 이 테이블을 조작하는 유용한 방법을 제공하고 있습니다. 예를 들어 <code>User</code> 객체가 다수의 <code>Role</code>객체를 가지고 있는 관계를 생각해 봅시다. 이 관계에 엑세스 한 뒤에 모델에 대한 <code>pivot</code> 테이블에 엑세스 할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+foreach ($user-&gt;roles as $role)
+{
+    echo $role-&gt;pivot-&gt;created_at;
+}
+</code></pre></div>
+<p>조회한 <code>Role</code> 모델에 자동으로 <code>pivot</code> 속성이 부여되어 있다는 점을 기억하십시오. 이 속성은 중간 테이블을 나타내는 모델에서 다른 Eloquent모델과 마찬가지로 사용할 수 있습니다.</p>
+
+<p>기본적으로 <code>pivot</code>객체는 단순히 키만 가지고 있습니다. 만약 피벗 테이블이 다른 추가적인 특성을 포함하려면 관계를 정의할 때 지정해주어야 합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;belongsToMany(&#39;App\Role&#39;)-&gt;withPivot(&#39;foo&#39;, &#39;bar&#39;);
+</code></pre></div>
+<p>이제 <code>Role</code> 모델의 <code>pivot</code> 객체에서 <code>foo</code>와 <code>bar</code> 속성에 엑세스 할 수 있을 것입니다.</p>
+
+<p>만약 피벗 테이블에서 자동으로 <code>created_at</code> 과 <code>updated_at</code> 타임 스탬프를 갱신하길 원한다면 관계 정의에서 <code>withTimestamps</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return $this-&gt;belongsToMany(&#39;App\Role&#39;)-&gt;withTimestamps();
+</code></pre></div>
+<h4 id="피벗-테이블의-레코드-삭제하기">피벗 테이블의 레코드 삭제하기</h4>
+
+<p>하나의 모델에 대한 피벗 테이블의 모든 레코드를 삭제하려면 <code>detach</code> 메소드를 사용하면 됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::find(1)-&gt;roles()-&gt;detach();
+</code></pre></div>
+<p>이 작업은 <code>roles</code> 테이블에서는 레코드를 삭제하지 않고 피벗 테이블에 대해서만 동작한다는 점에 주의 하십시오.</p>
+
+<h4 id="피벗-테이블의-레코드-업데이트-하기">피벗 테이블의 레코드 업데이트 하기</h4>
+
+<p>때로는 피벗 테이블을 삭제하지 않고, 업데이트가 필요할 수도 있습니다. 피벗 테이블을 업데이트 하고자 한다면 다음처럼 <code>updateExistingPivot</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::find(1)-&gt;roles()-&gt;updateExistingPivot($roleId, $attributes);
+</code></pre></div>
+<h4 id="사용자-정의-피벗-모델-정의하기">사용자 정의 피벗 모델 정의하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">public function newPivot(Model $parent, array $attributes, $table, $exists)
+{
+    return new YourCustomPivot($parent, $attributes, $table, $exists);
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-피벗 테이블 작업" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="collections"></a></p>
+
+<h2 id="컬렉션">컬렉션</h2>
+
+<p><code>get</code> 메소드를 통해서 또는 하나의 <code>relationship-관계</code>를 통해서 Eloquent로 부터 반환되는 모든 멀티 레코드 결과가 반환되는 경우에는 하나의 컬렉션 객체가 반환됩니다. 이 객체는 <code>IteratorAggregate</code> PHP 인터페이스의 구현체이므로 배열과 같이 반복될수 있습니다. 그리고 이 객체는 결과를 조작할 수 있는 다양한 메소드들 또한 가지고 있습니다.</p>
+
+<h4 id="컬렉션이-키를-가지고-있는지-확인하기">컬렉션이 키를 가지고 있는지 확인하기</h4>
+
+<p>예를 들어 <code>contains</code> 메소드를 사용하여 지정된 primary 키가 결과에 포함되어 있는지 확인 할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = User::find(1)-&gt;roles;
+
+if ($roles-&gt;contains(2))
+{
+    //
+}
+</code></pre></div>
+<p>컬렉션은 배열이나 JSON으로 변환 될 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = User::find(1)-&gt;roles-&gt;toArray();
+
+$roles = User::find(1)-&gt;roles-&gt;toJson();
+</code></pre></div>
+<p>컬렉션을 문자열로 변환하면 JSON이 반환됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = (string) User::find(1)-&gt;roles;
+</code></pre></div>
+<h4 id="컬렉션의-반복">컬렉션의 반복</h4>
+
+<p>Eloquent 컬렉션에 포함 된 항목을 반복하거나 필터링 할 수 있는 유용한 메소드들을 가지고 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = $user-&gt;roles-&gt;each(function($role)
+{
+    //
+});
+</code></pre></div>
+<h4 id="컬렉션의-필터링">컬렉션의 필터링</h4>
+
+<p>컬렉션을 필터링하는 경우, 지정된 콜백은 <a href="http://php.net/manual/en/function.array-filter.php">array_filter</a> 콜백으로 이용됩니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$users = $users-&gt;filter(function($user)
+{
+    return $user-&gt;isAdmin();
+});
+</code></pre></div>
+<blockquote>
+<p><strong>주의:</strong> 컬렉션을 필터링하거나 JSON으로 변환하는 경우, <code>values</code> ​​메소드를 먼저 호출하여 배열의 키를 초기화 하십시오.</p>
+</blockquote>
+
+<h4 id="컬렉션의-각-개체에-콜백을-적용하기">컬렉션의 각 개체에 콜백을 적용하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = User::find(1)-&gt;roles;
+
+$roles-&gt;each(function($role)
+{
+    //
+});
+</code></pre></div>
+<h4 id="값을-기준으로-컬렉션-정렬하기">값을 기준으로 컬렉션 정렬하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = $roles-&gt;sortBy(function($role)
+{
+    return $role-&gt;created_at;
+});
+
+$roles = $roles-&gt;sortByDesc(function($role)
+{
+    return $role-&gt;created_at;
+});
+</code></pre></div>
+<h4 id="값을-기준으로-컬렉션-정렬하기">값을 기준으로 컬렉션 정렬하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$roles = $roles-&gt;sortBy(&#39;created_at&#39;);
+
+$roles = $roles-&gt;sortByDesc(&#39;created_at&#39;);
+</code></pre></div>
+<h4 id="사용자-정의-컬렉션-타입-반환하기">사용자 정의 컬렉션 타입 반환하기</h4>
+
+<p>때로는, 여러분이 추가한 메소드와 함께 사용자 정의 컬렉션 객체를 반환하기를 원할 수도 있습니다. 이때는 <code>newCollection</code> 메소드를 재정의하여 이를 지정할 수 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function newCollection(array $models = [])
+    {
+        return new CustomCollection($models);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-컬렉션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="accessors-and-mutators"></a></p>
+
+<h2 id="accessors-&amp;-mutators">Accessors &amp; Mutators</h2>
+
+<h4 id="defining-an-accessor">Defining An Accessor</h4>
+
+<p>Eloquent provides a convenient way to transform your model attributes when getting or setting them. Simply define a <code>getFooAttribute</code> method on your model to declare an accessor. Keep in mind that the methods should follow camel-casing, even though your database columns are snake-case:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function getFirstNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+}
+</code></pre></div>
+<p>In the example above, the <code>first_name</code> column has an accessor. Note that the value of the attribute is passed to the accessor.</p>
+
+<h4 id="defining-a-mutator">Defining A Mutator</h4>
+
+<p>Mutators are declared in a similar fashion:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    public function setFirstNameAttribute($value)
+    {
+        $this-&gt;attributes[&#39;first_name&#39;] = strtolower($value);
+    }
+
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Accessors & Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="date-mutators"></a></p>
+
+<h2 id="date-mutators">Date Mutators</h2>
+
+<p>By default, Eloquent will convert the <code>created_at</code> and <code>updated_at</code> columns to instances of <a href="https://github.com/briannesbitt/Carbon">Carbon</a>, which provides an assortment of helpful methods, and extends the native PHP <code>DateTime</code> class.</p>
+
+<p>You may customize which fields are automatically mutated, and even completely disable this mutation, by overriding the <code>getDates</code> method of the model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">public function getDates()
+{
+    return [&#39;created_at&#39;];
+}
+</code></pre></div>
+<p>When a column is considered a date, you may set its value to a UNIX timestamp, date string (<code>Y-m-d</code>), date-time string, and of course a <code>DateTime</code> / <code>Carbon</code> instance.</p>
+
+<p>To totally disable date mutations, simply return an empty array from the <code>getDates</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">public function getDates()
+{
+    return [];
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Date Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="attribute-casting"></a></p>
+
+<h2 id="attribute-casting">Attribute Casting</h2>
+
+<p>If you have some attributes that you want to always convert to another data-type, you may add the attribute to the <code>casts</code> property of your model. Otherwise, you will have to define a mutator for each of the attributes, which can be time consuming. Here is an example of using the <code>casts</code> property:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * The attributes that should be casted to native types.
+ *
+ * @var array
+ */
+protected $casts = [
+    &#39;is_admin&#39; =&gt; &#39;boolean&#39;,
+];
+</code></pre></div>
+<p>Now the <code>is_admin</code> attribute will always be cast to a boolean when you access it, even if the underlying value is stored in the database as an integer. Other supported cast types are: <code>integer</code>, <code>real</code>, <code>float</code>, <code>double</code>, <code>string</code>, <code>boolean</code>, <code>object</code> and <code>array</code>.</p>
+
+<p>The <code>array</code> cast is particularly useful for working with columns that are stored as serialized JSON. For example, if your database has a TEXT type field that contains serialized JSON, adding the <code>array</code> cast to that attribute will automatically deserialize the attribute to a PHP array when you access it on your Eloquent model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * The attributes that should be casted to native types.
+ *
+ * @var array
+ */
+protected $casts = [
+    &#39;options&#39; =&gt; &#39;array&#39;,
+];
+</code></pre></div>
+<p>Now, when you utilize the Eloquent model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::find(1);
+
+// $options is an array...
+$options = $user-&gt;options;
+
+// options is automatically serialized back to JSON...
+$user-&gt;options = [&#39;foo&#39; =&gt; &#39;bar&#39;];
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Attribute Casting" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="model-events"></a></p>
+
+<h2 id="model-events">Model Events</h2>
+
+<p>Eloquent models fire several events, allowing you to hook into various points in the model&#39;s lifecycle using the following methods: <code>creating</code>, <code>created</code>, <code>updating</code>, <code>updated</code>, <code>saving</code>, <code>saved</code>, <code>deleting</code>, <code>deleted</code>, <code>restoring</code>, <code>restored</code>.</p>
+
+<p>Whenever a new item is saved for the first time, the <code>creating</code> and <code>created</code> events will fire. If an item is not new and the <code>save</code> method is called, the <code>updating</code> / <code>updated</code> events will fire. In both cases, the <code>saving</code> / <code>saved</code> events will fire.</p>
+
+<h4 id="cancelling-save-operations-via-events">Cancelling Save Operations Via Events</h4>
+
+<p>If <code>false</code> is returned from the <code>creating</code>, <code>updating</code>, <code>saving</code>, or <code>deleting</code> events, the action will be cancelled:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::creating(function($user)
+{
+    if ( ! $user-&gt;isValid()) return false;
+});
+</code></pre></div>
+<h4 id="where-to-register-event-listeners">Where To Register Event Listeners</h4>
+
+<p>Your <code>EventServiceProvider</code> serves as a convenient place to register your model event bindings. For example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/**
+ * Register any other events for your application.
+ *
+ * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+ * @return void
+ */
+public function boot(DispatcherContract $events)
+{
+    parent::boot($events);
+
+    User::creating(function($user)
+    {
+        //
+    });
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model Events" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="model-observers"></a></p>
+
+<h2 id="model-observers">Model Observers</h2>
+
+<p>To consolidate the handling of model events, you may register a model observer. An observer class may have methods that correspond to the various model events. For example, <code>creating</code>, <code>updating</code>, <code>saving</code> methods may be on an observer, in addition to any other model event name.</p>
+
+<p>So, for example, a model observer might look like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class UserObserver {
+
+    public function saving($model)
+    {
+        //
+    }
+
+    public function saved($model)
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p>You may register an observer instance using the <code>observe</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User::observe(new UserObserver);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model Observers" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="model-url-generation"></a></p>
+
+<h2 id="model-url-generation">Model URL Generation</h2>
+
+<p>When you pass a model to the <code>route</code> or <code>action</code> methods, it&#39;s primary key is inserted into the generated URI. For example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::get(&#39;user/{user}&#39;, &#39;UserController@show&#39;);
+
+action(&#39;UserController@show&#39;, [$user]);
+</code></pre></div>
+<p>In this example the <code>$user-&gt;id</code> property will be inserted into the <code>{user}</code> place-holder of the generated URL. However, if you would like to use another property instead of the ID, you may override the <code>getRouteKey</code> method on your model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">public function getRouteKey()
+{
+    return $this-&gt;slug;
+}
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model URL Generation" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="converting-to-arrays-or-json"></a></p>
+
+<h2 id="converting-to-arrays-/-json">Converting To Arrays / JSON</h2>
+
+<h4 id="converting-a-model-to-an-array">Converting A Model To An Array</h4>
+
+<p>When building JSON APIs, you may often need to convert your models and relationships to arrays or JSON. So, Eloquent includes methods for doing so. To convert a model and its loaded relationship to an array, you may use the <code>toArray</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$user = User::with(&#39;roles&#39;)-&gt;first();
+
+return $user-&gt;toArray();
+</code></pre></div>
+<p>Note that entire collections of models may also be converted to arrays:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return User::all()-&gt;toArray();
+</code></pre></div>
+<h4 id="converting-a-model-to-json">Converting A Model To JSON</h4>
+
+<p>To convert a model to JSON, you may use the <code>toJson</code> method:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return User::find(1)-&gt;toJson();
+</code></pre></div>
+<h4 id="returning-a-model-from-a-route">Returning A Model From A Route</h4>
+
+<p>Note that when a model or collection is cast to a string, it will be converted to JSON, meaning you can return Eloquent objects directly from your application&#39;s routes!</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Route::get(&#39;users&#39;, function()
+{
+    return User::all();
+});
+</code></pre></div>
+<h4 id="hiding-attributes-from-array-or-json-conversion">Hiding Attributes From Array Or JSON Conversion</h4>
+
+<p>Sometimes you may wish to limit the attributes that are included in your model&#39;s array or JSON form, such as passwords. To do so, add a <code>hidden</code> property definition to your model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class User extends Model {
+
+    protected $hidden = [&#39;password&#39;];
+
+}
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> When hiding relationships, use the relationship&#39;s <strong>method</strong> name, not the dynamic accessor name.</p>
+</blockquote>
+
+<p>Alternatively, you may use the <code>visible</code> property to define a white-list:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">protected $visible = [&#39;first_name&#39;, &#39;last_name&#39;];
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Converting To Arrays / JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="array-appends"></a>
+Occasionally, you may need to add array attributes that do not have a corresponding column in your database. To do so, simply define an accessor for the value:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">public function getIsAdminAttribute()
+{
+    return $this-&gt;attributes[&#39;admin&#39;] == &#39;yes&#39;;
+}
+</code></pre></div>
+<p>Once you have created the accessor, just add the value to the <code>appends</code> property on the model:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">protected $appends = [&#39;is_admin&#39;];
+</code></pre></div>
+<p>Once the attribute has been added to the <code>appends</code> list, it will be included in both the model&#39;s array and JSON forms. Attributes in the <code>appends</code> array respect the <code>visible</code> and <code>hidden</code> configuration on the model.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-array_appends" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

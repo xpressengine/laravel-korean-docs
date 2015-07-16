@@ -16,7 +16,7 @@ permalink: /docs/5.0/hashing/
 
 마찬가지로, 라라벨과 함께 제공되는 사용자 `Registrar` 서비스는 저장된 패스워드를 해시하기 위한 `bcrypt` 함수를 제공합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-해시(Hashing)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-해시(Hashing)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="basic-usage"></a>
 ## 기본 사용법
@@ -43,5 +43,5 @@ permalink: /docs/5.0/hashing/
 		$hashed = Hash::make('secret');
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-해시(Hashing)-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-해시(Hashing)-기본-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 

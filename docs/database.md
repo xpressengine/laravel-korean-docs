@@ -20,7 +20,7 @@ permalink: /docs/5.0/database/
 
 현재 라라벨이 지원하는 데이터베이스 시스템은 : MySQL, Postgres, SQLite 그리고 SQL Server입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-설정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-설정하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="read-write-connections"></a>
 ## 읽기용 / 쓰기용 커넥션
@@ -47,7 +47,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 설정 배열에 `read`와 `write` 두 개의 키가 추가 된것을 참고하십시오. 이 키들은 `host`라는 싱글 키를 포함하는 배열 값을 갖는다: `read`와 `write` 연결에대한 나머지 데이터베이스 옵션들은 기본 `mysql` 배열에서 합쳐(merge)집니다. 따라서 메인 배열값들 중에서 재정의하고자하는 것들만 `read`와 `write` 배열에서 입력하면 됩니다. 위의 경우에서는 `192.168.1.1` 호스트는 “read” 커넥션에서 사용되고, `192.168.1.2` 호스트는 “write” 커넥션에서 사용되어 집니다. 메인 `mysql`설정 배열에 포함된 데이터베이스 연결정보, 프리픽스, 캐릭터 셋 등 다른 모든 옵션들은 양쪽연결에서 모두 공유합니다 .
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-읽기용 / 쓰기용 커넥션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-읽기용-/-쓰기용-커넥션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="running-queries"></a>
 ## 쿼리 실행
@@ -91,7 +91,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 		//
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-쿼리 실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-쿼리-실행" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="database-transactions"></a>
 ## 데이터베이스 트랜잭션
@@ -119,7 +119,7 @@ SELECT문에서 사용하는 데이터베이스와 INSERT, UPDATE 그리고 DELE
 
 	DB::commit();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-데이터베이스 트랜잭션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-데이터베이스-트랜잭션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="accessing-connections"></a>
 ## 커넥션 엑세스
@@ -140,7 +140,7 @@ PDO인스턴스의 `max_connections`한계를 넘어서서 데이터베이스 �
 
 	DB::disconnect('foo');
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-커넥션 엑세스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-커넥션-엑세스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="query-logging"></a>
 ## 쿼리 로깅
@@ -153,4 +153,4 @@ PDO인스턴스의 `max_connections`한계를 넘어서서 데이터베이스 �
 
 	$queries = DB::getQueryLog();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-기본적인 데이터베이스 사용법(Basic Database Usage)-쿼리 로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-기본적인-데이터베이스-사용법(Basic-Database-Usage)-쿼리-로깅" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

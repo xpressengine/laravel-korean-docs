@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>아티즌 명령어 개발하기(Artisan Development)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/commands/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="아티즌-명령어-개발하기(artisan-development)">아티즌 명령어 개발하기(Artisan Development)</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#building-a-command">명령어 만들기</a></li>
+<li><a href="#registering-commands">명령어 등록하기</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>아티즌에서 제공하는 명령어에 추가적으로 어플리케이션에서 동작하는 자신의 고유한 명령어를 만들 수 있습니다. 여러분의 고유한 명령어는 <code>app/Console/Commands</code> 디렉토리에 저장하면 됩니다만, 실제로는 명령어가 <code>composer.json</code> 세팅을 기반하여 오토도딩 될 수 있다면 어느 위치에 넣어도 상관없습니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 개발하기(Artisan Development)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="building-a-command"></a></p>
+
+<h2 id="명령어-만들기">명령어 만들기</h2>
+
+<h3 id="클래스-생성하기">클래스 생성하기</h3>
+
+<p>새로운 명령어를 생성하기 위해, 아티즌 명령어 <code>make:console</code>을 사용합니다:</p>
+
+<h4 id="새로운-명령어-클래스-생성하기">새로운 명령어 클래스 생성하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:console FooCommand
+</code></pre></div>
+<p>이 명령어는 <code>app/Console/Commands/FooCommand.php</code>파일을 생성할 것입니다.</p>
+
+<p>명령어를 생성할 때 <code>--command</code> 옵션을 사용하면 터미널에서 사용할 명령어 이름을 지정할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan make:console AssignUsers --command=users:assign
+</code></pre></div>
+<h3 id="명령어-작성하기">명령어 작성하기</h3>
+
+<p>명령어가 생성되었으면, 클래스의 <code>name</code> 과 <code>description</code> 를 입력합니다. 이것들은 <code>list</code> 화면에 커맨드를 표시 할 때 사용됩니다.</p>
+
+<p><code>file</code> 메소드는 명령이 실행될 때 호출됩니다. 수행할 로직들을 이 메소드 안에 작성하면 됩니다.</p>
+
+<h3 id="인자-&amp;-옵션">인자 &amp; 옵션</h3>
+
+<p>명령어가 입력 받는 인자와 옵션을 <code>getArguments</code> 와 <code>getOptions</code> 메소드에 정의합니다. 이 두 메소드는 배열 옵션 목록에서 표시되는 커맨드의 배열을 반환합니다.</p>
+
+<p><code>arguments</code> 를 정의하는 정의 배열은 다음과 같은 형식입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[$name, $mode, $description, $defaultValue]
+</code></pre></div>
+<p>인자의 <code>mode</code>는 <code>InputArgument::REQUIRED</code> 또는 <code>InputArgument::OPTIONAL</code> 중 하나의 값을 가집니다.</p>
+
+<p><code>options</code> 를 정의하는 배열은 다음과 같은 형식입니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[$name, $shortcut, $mode, $description, $defaultValue]
+</code></pre></div>
+<p>옵션에서 <code>mode</code> 는 <code>InputOption:REQUIRED</code> , <code>InputOption::OPTIONAL</code> , <code>InputOption::VALUE_IS_ARRAY</code> , <code>InputOption::VALUE_NONE</code> 중 하나의 값을 가집니다.</p>
+
+<p><code>VALUE_IS_ARRAY</code> 모드는 명령 실행시 여러 번 사용되는 스위치를 나타냅니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY
+</code></pre></div>
+<p>위의 모드는 다음의 커맨드를 허용합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan foo --option=bar --option=baz
+</code></pre></div>
+<p><code>VALUE_NONE</code> 옵션은 이 옵션이 단순히 스위치로 사용된다는 것을 나타냅니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">php artisan foo --option
+</code></pre></div>
+<h3 id="retrieving-input-입력값-조회하기">Retrieving Input 입력값 조회하기</h3>
+
+<p>While your command is executing, you will obviously need to access the values for the arguments and options accepted by your application. 명령이 실행중일 때, 응용 프로그램이 받은 인자 및 옵션의 값에 엑세스할 필요가 있습니다. To do so, you may use the <code>argument</code> and <code>option</code> methods: 이 경우 <code>argument</code> 와 <code>option</code>메소드를 사용하면 됩니다.</p>
+
+<h4 id="명령어-인자-값-조회">명령어 인자 값 조회</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = $this-&gt;argument(&#39;name&#39;);
+</code></pre></div>
+<h4 id="모든-인자-값들을-조회하기">모든 인자 값들을 조회하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$arguments = $this-&gt;argument();
+</code></pre></div>
+<h4 id="명령어-옵션-값-조회하기">명령어 옵션 값 조회하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = $this-&gt;option(&#39;name&#39;);
+</code></pre></div>
+<h4 id="모든-옵션-값-조회하기">모든 옵션 값 조회하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$options = $this-&gt;option();
+</code></pre></div>
+<h3 id="출력-작성하기">출력 작성하기</h3>
+
+<p>콘솔에 출력하려면 <code>info</code>, <code>comment</code>, <code>question</code> 과 <code>error</code> 메소드를 사용하면 됩니다. 각 메소드는 용도에 따라 적절한 ANSI 컬러로 표시됩니다.</p>
+
+<h4 id="콘솔에-정보-표시하기">콘솔에 정보 표시하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;info(&#39;Display this on the screen&#39;);
+</code></pre></div>
+<h4 id="콘솔에-에러-메세지-표시하기">콘솔에 에러 메세지 표시하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;error(&#39;Something went wrong!&#39;);
+</code></pre></div>
+<h3 id="질문하기">질문하기</h3>
+
+<p>사용자 입력을 요청하는 <code>ask</code>와 <code>confirm</code> 메소드도 사용할 수 있습니다:</p>
+
+<h4 id="사용자에게-입력을-요구하기">사용자에게 입력을 요구하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$name = $this-&gt;ask(&#39;What is your name?&#39;);
+</code></pre></div>
+<h4 id="사용자에게-비밀-문자열-입력을-요구하기">사용자에게 비밀 문자열 입력을 요구하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$password = $this-&gt;secret(&#39;What is the password?&#39;);
+</code></pre></div>
+<h4 id="사용자에게-확인을-요구하기">사용자에게 확인을 요구하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if ($this-&gt;confirm(&#39;Do you wish to continue? [yes|no]&#39;))
+{
+    //
+}
+</code></pre></div>
+<p><code>confirm</code> 메소드에 대한 기본값을 <code>true</code>와 <code>false</code> 로 지정할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;confirm($question, true);
+</code></pre></div>
+<h3 id="다른-명령어-호출하기">다른 명령어 호출하기</h3>
+
+<p>때로는 해당 명령어가 다른 명령어를 호출해야 할 때가 있습니다. 이 경우에 <code>call</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;call(&#39;command:name&#39;, [&#39;argument&#39; =&gt; &#39;foo&#39;, &#39;--option&#39; =&gt; &#39;bar&#39;]);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 개발하기(Artisan Development)-명령어 만들기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="registering-commands"></a></p>
+
+<h2 id="명령어-등록하기">명령어 등록하기</h2>
+
+<h4 id="아티즌-명령어-등록하기">아티즌 명령어 등록하기</h4>
+
+<p>명령어 작성이 완료되면 명령어를 사용가능하도록 아티즌에 등록할 필요가 있습니다. 이 작업은 일반적으로 <code>app/Console/Kernel.php</code> 파일에서 이루어 집니다. 이 파일에서, 명령어들의 목록을 담고 있는 <code>command</code> 변수를 찾을 수 있을 것입니다. 여러분이 작성한 명령어를 등록하려면 해당 배열에 생성한 명령어 클래스를 추가하십시오.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">protected $commands = [
+    &#39;App\Console\Commands\FooCommand&#39;
+];
+</code></pre></div>
+<p>아티즌이 구동되면서 변수내의 모든 명령어들의 목록을 참고하여 <a href="/laravel-korean-docs/docs/5.0/container">service container</a>들이 자동으로 실행가능한 상태로 아티즌에 등록됩니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-아티즌 명령어 개발하기(Artisan Development)-명령어 등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

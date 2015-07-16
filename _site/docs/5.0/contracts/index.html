@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contracts</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/contracts/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="contracts">Contracts</h1>
+
+<ul>
+<li><a href="#introduction">소개</a></li>
+<li><a href="#why-contracts">왜 Contracts인가?</a></li>
+<li><a href="#contract-reference">Contract 참조</a></li>
+<li><a href="#how-to-use-contracts">Contract 사용법</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2 id="소개">소개</h2>
+
+<p>라라벨의 Contract는 프레임워크에서 제공하는 코어 서비스들을 정의한 인터페이스들의 모음입니다. 예를 들어, <code>Queue</code> Contract에는 어떤 작업들을 큐에서 다룰때 필요한 메소드들이 정의되어 있고, <code>Mailer</code> Contract에는 이메일을 보내기 위해 필요한 메소드들을 정의되어 있습니다.</p>
+
+<p>라라벨 프레임워크에는 각각의 Contract에 상응하는 구현체(구현 클래스)가 있습니다. 예를 들어, 라라벨은 다양한 드라이버로 구현된 <code>Queue</code>의 구현체를 가지고 있고, <code>Mailer</code>의 구현체는 <a href="http://swiftmailer.org/">SwiftMailer</a>를 통해 가지고 있습니다.</p>
+
+<p>라라벨의 모든 Contract는 <a href="https://github.com/illuminate/contracts">별도 Github 저장소</a>를 가지고 있습니다. 이것은 별도의 패키지에 의존하지 않는 하나의 단일 패키지로 다른 패키지 개발자들에 의해서 사용될 수 있도록 하는 모든 사용가능한 contract를 위한 하나의 레퍼런스를 제공합니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="why-contracts"></a></p>
+
+<h2 id="왜-contract인가?">왜 Contract인가?</h2>
+
+<p>아마 여러분은 Contracts와 관련해 몇가지 질문을 가지고 있을 것입니다. 왜 모든 것에 인터페이스를 사용하는 것일까? 인터페이스를 사용하면 더 복잡해지지 않나?</p>
+
+<p>다음의 주제로 인터페이스를 사용하는 이유에 대하여 살펴봅시다: 느슨한 결합과 단순성</p>
+
+<h3 id="느슨한-결합">느슨한 결합</h3>
+
+<p>우선, 한 캐시 구현체에 밀접하게 결합돼 있는 코드를 살펴봅시다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Orders;
+
+class Repository {
+
+    /**
+     * The cache.
+     */
+    protected $cache;
+
+    /**
+     * Create a new repository instance.
+     *
+     * @param  \SomePackage\Cache\Memcached  $cache
+     * @return void
+     */
+    public function __construct(\SomePackage\Cache\Memcached $cache)
+    {
+        $this-&gt;cache = $cache;
+    }
+
+    /**
+     * Retrieve an Order by ID.
+     *
+     * @param  int  $id
+     * @return Order
+     */
+    public function find($id)
+    {
+        if ($this-&gt;cache-&gt;has($id))
+        {
+            //
+        }
+    }
+
+}
+</code></pre></div>
+<p>이 클래스의 코드는 주어진 캐시 구현체와 밀접하게 결합돼 있습니다. 특정 패키지 벤더의 캐시 구상클래스에 의존하기 때문에 이 코드는 캐시 클래스와 밀접하게 결합돼 있는 것입니다. 만약 이 패키지의 API가 변경되면 예로든 코드 또한 변경되어야 합니다.</p>
+
+<p>또한, 코드가 사용하는 캐시(Memcached)를 다른 것(Redia)으로 변경하고자 한다면, 역시나 Repository 클래스를 다시 수정해야만 할 것입니다. 저장소 클래스는 누가 어떻게 데이터를 제공하는지에 대한 정보를 너무 많이 가지고 있어서는 안 됩니다.</p>
+
+<p><strong>이렇게 접근하는 대신, 특정 벤더에 구속되지 않고 단순한 인터페이스에 의존하도록 하여 코드를 개선할 수 있습니다:</strong></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Orders;
+
+use Illuminate\Contracts\Cache\Repository as Cache;
+
+class Repository {
+
+    /**
+     * Create a new repository instance.
+     *
+     * @param  Cache  $cache
+     * @return void
+     */
+    public function __construct(Cache $cache)
+    {
+        $this-&gt;cache = $cache;
+    }
+
+}
+</code></pre></div>
+<p>이제 코드는 어떤 특정 벤더, 심지어 라라벨과도 결합되지 않습니다. Contract는 구현체를 가지지 않고, 의존성도 없기 때문에, 주어진  Contract의 다른 구현체를 쉽게 작성할 수 있습니다. 캐시를 사용하는 코드를 수정하지 않고도 캐시 구현체를 대체할 수 있습니다.</p>
+
+<h3 id="단순성">단순성</h3>
+
+<p>라라벨의 모든 서비스들이 단순한 인터페이스로 보기좋게 정의돼 있으므로, 그 서비스들에 의해 제공되는 기능을 알아내는 것이 매우 쉽습니다. <strong>Contract들이 프레임워크의 기능들에 대한 간결한 도큐먼트의 역할을 하는 것입니다.</strong></p>
+
+<p>또한, 여러분이 간단한 인터페이스에 의존하게 되면, 여러분의 코드는 이해하거나 유지보수하기가 더 쉽워집니다. 크고 복잡한 클래스에서 사용할 수 있는 메소드들을 훑어보는 대신, 단순하고 깨끗한 인터페이스를 참고할 수 있습니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-왜 Contract인가?" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="contract-reference"></a></p>
+
+<h2 id="contract-레퍼런스">Contract 레퍼런스</h2>
+
+<p>아래는 대부분의 라라벨 Contract와 그에 대응되는 파사드들의 레퍼런스입니다:</p>
+
+<table><thead>
+<tr>
+<th>Contract</th>
+<th>Laravel 5.x Facade</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Auth/Guard.php">Illuminate\Contracts\Auth\Guard</a></td>
+<td>Auth</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Auth/PasswordBroker.php">Illuminate\Contracts\Auth\PasswordBroker</a></td>
+<td>Password</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Bus/Dispatcher.php">Illuminate\Contracts\Bus\Dispatcher</a></td>
+<td>Bus</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Cache/Repository.php">Illuminate\Contracts\Cache\Repository</a></td>
+<td>Cache</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Cache/Factory.php">Illuminate\Contracts\Cache\Factory</a></td>
+<td>Cache::driver()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Config/Repository.php">Illuminate\Contracts\Config\Repository</a></td>
+<td>Config</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Container/Container.php">Illuminate\Contracts\Container\Container</a></td>
+<td>App</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Cookie/Factory.php">Illuminate\Contracts\Cookie\Factory</a></td>
+<td>Cookie</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Cookie/QueueingFactory.php">Illuminate\Contracts\Cookie\QueueingFactory</a></td>
+<td>Cookie::queue()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Encryption/Encrypter.php">Illuminate\Contracts\Encryption\Encrypter</a></td>
+<td>Crypt</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Events/Dispatcher.php">Illuminate\Contracts\Events\Dispatcher</a></td>
+<td>Event</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Filesystem/Cloud.php">Illuminate\Contracts\Filesystem\Cloud</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Filesystem/Factory.php">Illuminate\Contracts\Filesystem\Factory</a></td>
+<td>File</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Filesystem/Filesystem.php">Illuminate\Contracts\Filesystem\Filesystem</a></td>
+<td>File</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Foundation/Application.php">Illuminate\Contracts\Foundation\Application</a></td>
+<td>App</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Hashing/Hasher.php">Illuminate\Contracts\Hashing\Hasher</a></td>
+<td>Hash</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Logging/Log.php">Illuminate\Contracts\Logging\Log</a></td>
+<td>Log</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Mail/MailQueue.php">Illuminate\Contracts\Mail\MailQueue</a></td>
+<td>Mail::queue()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Mail/Mailer.php">Illuminate\Contracts\Mail\Mailer</a></td>
+<td>Mail</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Queue/Factory.php">Illuminate\Contracts\Queue\Factory</a></td>
+<td>Queue::driver()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Queue/Queue.php">Illuminate\Contracts\Queue\Queue</a></td>
+<td>Queue</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Redis/Database.php">Illuminate\Contracts\Redis\Database</a></td>
+<td>Redis</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Routing/Registrar.php">Illuminate\Contracts\Routing\Registrar</a></td>
+<td>Route</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Routing/ResponseFactory.php">Illuminate\Contracts\Routing\ResponseFactory</a></td>
+<td>Response</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Routing/UrlGenerator.php">Illuminate\Contracts\Routing\UrlGenerator</a></td>
+<td>URL</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Support/Arrayable.php">Illuminate\Contracts\Support\Arrayable</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Support/Jsonable.php">Illuminate\Contracts\Support\Jsonable</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Support/Renderable.php">Illuminate\Contracts\Support\Renderable</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Validation/Factory.php">Illuminate\Contracts\Validation\Factory</a></td>
+<td>Validator::make()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/Validation/Validator.php">Illuminate\Contracts\Validation\Validator</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/View/Factory.php">Illuminate\Contracts\View\Factory</a></td>
+<td>View::make()</td>
+</tr>
+<tr>
+<td><a href="https://github.com/illuminate/contracts/blob/master/View/View.php">Illuminate\Contracts\View\View</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-Contract 레퍼런스" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="how-to-use-contracts"></a></p>
+
+<h2 id="contract-사용법">Contract 사용법</h2>
+
+<p>그럼 어떻게 Contract의 구현체를 얻을 수 있을까요? 사실 매우 간단합니다. 라라벨에 있는 여러 종류의 클래스들은 컨트롤러, 이벤트리스너, 필터, 큐 작업, 라우트 클로저들을 관리하는 <a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a>를 통해 의존성 해결(resolve) 되고 있습니다. 따라서 의존성이 해결되는 어떤 클래스가 특정 Contract의 구현체를 얻으려면 그 클래스의 생성자에 그 인터페이스를 &quot;type-hint&quot;로 지정해놓으면 됩니다. 그 예로 아래의 이벤트핸들러를 보겠습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;?php namespace App\Handlers\Events;
+
+use App\User;
+use App\Events\NewUserRegistered;
+use Illuminate\Contracts\Redis\Database;
+
+class CacheUserInformation {
+
+    /**
+     * The Redis database implementation.
+     */
+    protected $redis;
+
+    /**
+     * Create a new event handler instance.
+     *
+     * @param  Database  $redis
+     * @return void
+     */
+    public function __construct(Database $redis)
+    {
+        $this-&gt;redis = $redis;
+    }
+
+    /**
+     * Handle the event.
+     *
+     * @param  NewUserRegistered  $event
+     * @return void
+     */
+    public function handle(NewUserRegistered $event)
+    {
+        //
+    }
+
+}
+</code></pre></div>
+<p>이벤트리스너가 의존성 해결될 때, 서비스 컨테이너는 클래스의 생성자에 있는 타입힌트를 읽고, 그에 적합한 값을 주입해 줍니다. 서비스 컨테이너에 무언가를 등록하는 것에 대하여 더 알고싶다면, <a href="/laravel-korean-docs/docs/5.0/container">이 문서</a>를 보시기 바랍니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Contracts-Contract 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

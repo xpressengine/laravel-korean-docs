@@ -36,7 +36,7 @@ permalink: /docs/5.0/eloquent/
 
 시작하기에 앞서 `config/database.php` 에 데이터베이스 커넥션이 설정되어 있는지 확인하십시오.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="basic-usage"></a>
 ## 기본 사용법
@@ -144,7 +144,7 @@ Eloquent 쿼리를 실행할 때 사용할 데이터베이스 커넥션을 지�
 
 	$user = User::onWriteConnection()->find(1);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-기본 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-기본-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="mass-assignment"></a>
 ## 대량 할당
@@ -183,7 +183,7 @@ Eloquent 쿼리를 실행할 때 사용할 데이터베이스 커넥션을 지�
 
 	protected $guarded = ['*'];
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-대량 할당" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-대량-할당" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="insert-update-delete"></a>
 ## 인서트, 업데이트, 삭제
@@ -273,7 +273,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$user->touch();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-인서트, 업데이트, 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-인서트,-업데이트,-삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="soft-deleting"></a>
 ## 소프트 삭제
@@ -337,7 +337,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		//
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-소프트 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-소프트-삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="timestamps"></a>
 ## 타임스탬프
@@ -368,7 +368,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-타임스탬프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-타임스탬프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="query-scopes"></a>
 ## 쿼리 스코프
@@ -412,7 +412,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$users = User::ofType('member')->get();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-쿼리 스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-쿼리-스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="global-scopes"></a>
 ## 글로벌 스코프
@@ -480,7 +480,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 		}
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-글로벌 스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-글로벌-스코프" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="relationships"></a>
 ## 관계
@@ -806,7 +806,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-관계" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="querying-relations"></a>
 ## 관계 쿼리
@@ -859,7 +859,7 @@ Eloquent는 동적 속성을 사용하여 지정된 관계들에 엑세스하는
 
 > **참고:** 여러 결과를 반환하는 관계는 `Illuminate\Database\Eloquent\Collection` 클래스의 인스턴스를 반환할 것입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관계 쿼리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-관계-쿼리" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="eager-loading"></a>
 ## Eager 로딩
@@ -944,7 +944,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 		$query->orderBy('published_date', 'asc');
 	}]);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Eager 로딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Eager-로딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="inserting-related-models"></a>
 ## 관련된 모델 삽입하기
@@ -1031,7 +1031,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 
 	User::find(1)->roles()->save($role, ['expires' => $expires]);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-관련된 모델 삽입하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-관련된-모델-삽입하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="touching-parent-timestamps"></a>
 ## 부모의 타임스탬프 값 갱신
@@ -1057,7 +1057,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 
 	$comment->save();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-부모의 타임스탬프 값 갱신" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-부모의-타임스탬프-값-갱신" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="working-with-pivot-tables"></a>
 ## 피벗 테이블 작업
@@ -1104,7 +1104,7 @@ Eager 로딩의 적절한 사용은 여러분의 어플리케이션의 성능을
 		return new YourCustomPivot($parent, $attributes, $table, $exists);
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-피벗 테이블 작업" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-피벗-테이블-작업" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="collections"></a>
 ## 컬렉션
@@ -1192,14 +1192,14 @@ Eloquent 컬렉션에 포함 된 항목을 반복하거나 필터링 할 수 있
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-컬렉션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-컬렉션" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="accessors-and-mutators"></a>
 ## Accessors & Mutators
 
-#### Defining An Accessor
+#### Accessor 정의하기
 
-Eloquent provides a convenient way to transform your model attributes when getting or setting them. Simply define a `getFooAttribute` method on your model to declare an accessor. Keep in mind that the methods should follow camel-casing, even though your database columns are snake-case:
+Eloquent는 사용자가 getting 또는 setting을 제공할 경우, 사용자 정의 모델의 속성(attributes)을 쉽게 바꿀 수 있는, accessor라는 편리한 방법을 제공합니다. `getFooAttribute` 메소드를 선언하는 사용자 정의 모델에 accessor를 쉽게 정의합니다. accessor를 정의할 때, 사용자의 데이터베이스 컬럼이 snake-case를 사용하더라도 camel-case를 꼭 사용해야 합니다.:
 
 	class User extends Model {
 
@@ -1210,11 +1210,11 @@ Eloquent provides a convenient way to transform your model attributes when getti
 
 	}
 
-In the example above, the `first_name` column has an accessor. Note that the value of the attribute is passed to the accessor.
+예제에서 `first_name` 컬럼에 accessor가 있고, accessor로 속성(attribute) 값이 보내진다는 것에 유의해야 합니다.
 
-#### Defining A Mutator
+#### Mutator 정의하기
 
-Mutators are declared in a similar fashion:
+Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 
 	class User extends Model {
 
@@ -1225,38 +1225,38 @@ Mutators are declared in a similar fashion:
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Accessors & Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Accessors---Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="date-mutators"></a>
-## Date Mutators
+## 날짜 Mutators
 
-By default, Eloquent will convert the `created_at` and `updated_at` columns to instances of [Carbon](https://github.com/briannesbitt/Carbon), which provides an assortment of helpful methods, and extends the native PHP `DateTime` class.
+네이티브 PHP의 `DateTime` 클래스의 확장형이며, 여러 메소드를 제공하는 [Carbon](https://github.com/briannesbitt/Carbon) 클래스의 인스턴스인 `created_at` 컬럼과 `updated_at` 컬럼을 Eloquent가 기본적으로 바꿔줍니다.
 
-You may customize which fields are automatically mutated, and even completely disable this mutation, by overriding the `getDates` method of the model:
+사용자 정의 모델의 `getDates` 메소드를 재정의 하여 필드를 자동으로 바뀌도록 활성화 또는 비활성화 할 수 있습니다.
 
 	public function getDates()
 	{
 		return ['created_at'];
 	}
 
-When a column is considered a date, you may set its value to a UNIX timestamp, date string (`Y-m-d`), date-time string, and of course a `DateTime` / `Carbon` instance.
+사용자는 UNIX 타임스탬프 값, date(`Y-m-d`) 문자열 값, 날짜-시간에 대한 문자열 값, 그리고 `DateTime` / `Carbon` 클래스의 인스턴스 값들을 설정할 수 있습니다.
 
-To totally disable date mutations, simply return an empty array from the `getDates` method:
+완전히 비활성화 된 날짜를 바꾸려면, `getDates` 메소드에서 빈 배열을 리턴합니다.:
 
 	public function getDates()
 	{
 		return [];
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Date Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Date-Mutators" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="attribute-casting"></a>
-## Attribute Casting
+## 속성(Attribute) 캐스팅
 
-If you have some attributes that you want to always convert to another data-type, you may add the attribute to the `casts` property of your model. Otherwise, you will have to define a mutator for each of the attributes, which can be time consuming. Here is an example of using the `casts` property:
+사용자가 항상 다른 데이터 유형으로 변환 할 속성들이 있는 경우, 사용자 정의 모델에 `casts` 값을 추가 할 수 있습니다. 그렇지 않으면, 속성들의 값들을 직접 바꿔줘야 되는데, 이는 시간 낭비입니다. 아래는 'casts`값의 사용 예 입니다.:
 
 	/**
-	 * The attributes that should be casted to native types.
+	 * 해당 속성 값들은 기본 타입으로 캐스팅 해야합니다.
 	 *
 	 * @var array
 	 */
@@ -1264,12 +1264,12 @@ If you have some attributes that you want to always convert to another data-type
 		'is_admin' => 'boolean',
 	];
 
-Now the `is_admin` attribute will always be cast to a boolean when you access it, even if the underlying value is stored in the database as an integer. Other supported cast types are: `integer`, `real`, `float`, `double`, `string`, `boolean`, `object` and `array`.
+이제 사용자가 액세스 할 때 기본 값이 정수로 데이터베이스에 저장되어있는 경우에도 `is_admin` 속성은 항상 부울로 캐스팅됩니다. 캐스팅을 지원하는 유형들은 다음과 같습니다 `integer`,`real`,`float`,`double`,`string`,`boolean`,`object`, `array`.
 
-The `array` cast is particularly useful for working with columns that are stored as serialized JSON. For example, if your database has a TEXT type field that contains serialized JSON, adding the `array` cast to that attribute will automatically deserialize the attribute to a PHP array when you access it on your Eloquent model:
+`array` 캐스트는 직렬화 된 JSON으로 컬럼에 저장하는 작업에 특히 유용합니다. 예를 들어, 데이터베이스에 직렬화 된 JSON을 포함하는 텍스트 형식 필드가있는 경우, `array` 캐스팅을 해당 속성에 추가하면 Eloquent 사용자 정의 모델에 접근할 때 자동으로 역 직렬화 된 PHP 배열 값이 해당 속성 값으로 들어갑니다.:
 
 	/**
-	 * The attributes that should be casted to native types.
+	 * 해당 속성 값들은 기본 타입으로 캐스팅 해야합니다.
 	 *
 	 * @var array
 	 */
@@ -1277,42 +1277,42 @@ The `array` cast is particularly useful for working with columns that are stored
 		'options' => 'array',
 	];
 
-Now, when you utilize the Eloquent model:
+사용자가 Eloquent 모델을 사용하는 경우:
 
 	$user = User::find(1);
 
-	// $options is an array...
+	// $options은 배열 입니다...
 	$options = $user->options;
 
-	// options is automatically serialized back to JSON...
+	// options은 자동으로 JSON으로 직렬화 됩니다...
 	$user->options = ['foo' => 'bar'];
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Attribute Casting" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Attribute-Casting" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="model-events"></a>
-## Model Events
+## 모델 이벤트
 
-Eloquent models fire several events, allowing you to hook into various points in the model's lifecycle using the following methods: `creating`, `created`, `updating`, `updated`, `saving`, `saved`, `deleting`, `deleted`, `restoring`, `restored`.
+Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 수 있도록 다음과 같은 이벤트가 발생합니다.: `creating`, `created`, `updating`, `updated`, `saving`, `saved`, `deleting`, `deleted`, `restoring`, `restored`.
 
-Whenever a new item is saved for the first time, the `creating` and `created` events will fire. If an item is not new and the `save` method is called, the `updating` / `updated` events will fire. In both cases, the `saving` / `saved` events will fire.
+새로운 아이템을 처음 저장 할 경우,`created`, `creating` 이벤트가 발생합니다. 만약 항목이 새로운 아이템이 아니거나, `save` 메서드를 호출 한 경우, `updating`, `updated` 이벤트가 발생합니다. 두 경우 모두 `saving`, `saved` 이벤트가 발생합니다.
 
-#### Cancelling Save Operations Via Events
+#### 저장 기능을 통한 이벤트 취소하기
 
-If `false` is returned from the `creating`, `updating`, `saving`, or `deleting` events, the action will be cancelled:
+`creating`, `updating`, `saving`, `deleting` 이벤트에서 `false`가 리턴되는 경우, 작업이 취소됩니다.:
 
 	User::creating(function($user)
 	{
 		if ( ! $user->isValid()) return false;
 	});
 
-#### Where To Register Event Listeners
+#### 이벤트 리스너를 등록하는 경우
 
-Your `EventServiceProvider` serves as a convenient place to register your model event bindings. For example:
+사용자의`EventServiceProvider`는 모델 이벤트 바인딩을 등록 할 수있는 편리한 장소를 제공합니다. 예제 입니다.:
 
 	/**
-	 * Register any other events for your application.
+	 * 프로그램에 다른 이벤트를 등록합니다.
 	 *
-	 * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+	 * @param  \Illuminate\Contracts\Events\Dispatcher $events
 	 * @return void
 	 */
 	public function boot(DispatcherContract $events)
@@ -1325,14 +1325,14 @@ Your `EventServiceProvider` serves as a convenient place to register your model 
 		});
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model Events" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Model-Events" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="model-observers"></a>
-## Model Observers
+## 모델 관찰자(Observers)
 
-To consolidate the handling of model events, you may register a model observer. An observer class may have methods that correspond to the various model events. For example, `creating`, `updating`, `saving` methods may be on an observer, in addition to any other model event name.
+모델 이벤트의 처리를 통합하기 위해, 당신은 모델 관찰자를 등록 할 수 있습니다. 관찰자 클래스는 다양한 모델 이벤트에 대응하는 방법이 있을 수 있습니다. 예를 들어,`creating`, `updating`, `saving` 메소드는 다른 모델의 이벤트 이름에 추가하여, 관찰자에 있을 수 있습니다.
 
-So, for example, a model observer might look like this:
+따라서, 예를 들어, 모델 관찰자는 다음과 같을 수 있습니다.:
 
 	class UserObserver {
 
@@ -1348,63 +1348,63 @@ So, for example, a model observer might look like this:
 
 	}
 
-You may register an observer instance using the `observe` method:
+사용자는 `observe` 메서드를 사용하여 관찰자 인스턴스를 등록 할 수 있습니다.:
 
 	User::observe(new UserObserver);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model Observers" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Model-Observers" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="model-url-generation"></a>
-## Model URL Generation
+## 모델 URL 생성하기
 
-When you pass a model to the `route` or `action` methods, it's primary key is inserted into the generated URI. For example:
+사용자가 `route` 또는 `action` 메소드에 대한 모델을 통화시킬 때, 기본키가 생성된 URI를 삽입합니다. 예제 입니다.:
 
 	Route::get('user/{user}', 'UserController@show');
 
 	action('UserController@show', [$user]);
 
-In this example the `$user->id` property will be inserted into the `{user}` place-holder of the generated URL. However, if you would like to use another property instead of the ID, you may override the `getRouteKey` method on your model:
+`$user->id` 의 값은 생성된 URL의 `{user}` 위치에 삽입됩니다. 만약 사용자의 ID 대신 다른 속성을 사용하고자 하는 경우에는, 사용자 정의 모델의 `getRouteKey` 메소드를 재정의합니다.:
 
 	public function getRouteKey()
 	{
 		return $this->slug;
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Model URL Generation" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Model-URL-Generation" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="converting-to-arrays-or-json"></a>
-## Converting To Arrays / JSON
+## 배열 / JSON으로 전환하기
 
-#### Converting A Model To An Array
+#### 모델을 배열로 전환하기
 
-When building JSON APIs, you may often need to convert your models and relationships to arrays or JSON. So, Eloquent includes methods for doing so. To convert a model and its loaded relationship to an array, you may use the `toArray` method:
+JSON API를 구축 할 때, 사용자는 종종 배열이나 JSON으로 사용자 정의 모델의 관계를 바꿔야 할 때가 있습니다. 그래서 Eloquent는 모델과 불러온 배열의 관계를 변환할 때 `toArray` 메소드를 사용합니다.:
 
 	$user = User::with('roles')->first();
 
 	return $user->toArray();
 
-Note that entire collections of models may also be converted to arrays:
+참고. 모델의 전체 컬렉션을 배열로 바꿀 수 있습니다.:
 
 	return User::all()->toArray();
 
-#### Converting A Model To JSON
+#### 모델을 JSON으로 전환하기
 
-To convert a model to JSON, you may use the `toJson` method:
+JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있습니다.
 
 	return User::find(1)->toJson();
 
-#### Returning A Model From A Route
+#### 라우트에서 모델 반환하기
 
-Note that when a model or collection is cast to a string, it will be converted to JSON, meaning you can return Eloquent objects directly from your application's routes!
+참고. 모델 또는 컬렉션이 문자열로 캐스팅 될 때, 그것은 JSON으로 변환됩니다. 이것은 Eloquent가 프로그램의 라우트에 직접 객체를 반환할 수 있음을 의미합니다.
 
 	Route::get('users', function()
 	{
 		return User::all();
 	});
 
-#### Hiding Attributes From Array Or JSON Conversion
+#### 배열 또는 JSON 전환에서의 숨기기 속성
 
-Sometimes you may wish to limit the attributes that are included in your model's array or JSON form, such as passwords. To do so, add a `hidden` property definition to your model:
+사용자는 비밀번호와 같은 모델의 배열 또는 JSON 형식에 포함 된 속성을 제한 할 수도 있습니다. 이렇게 하려면, 사용자 정의 모델에 `hidden` 값을 추가하면 됩니다.:
 
 	class User extends Model {
 
@@ -1412,24 +1412,24 @@ Sometimes you may wish to limit the attributes that are included in your model's
 
 	}
 
-> **Note:** When hiding relationships, use the relationship's **method** name, not the dynamic accessor name.
+> **주의:** 관계를 숨기는 경우, 관계의 **메서드** 이름이 아닌, 동적 접근 이름을 사용합니다.
 
-Alternatively, you may use the `visible` property to define a white-list:
+또는, 화이트-리스트를 정의해서 `visible` 값을 사용할 수 있습니다.
 
 	protected $visible = ['first_name', 'last_name'];
 
 <a name="array-appends"></a>
-Occasionally, you may need to add array attributes that do not have a corresponding column in your database. To do so, simply define an accessor for the value:
+때때로, 사용자는 데이터베이스에서 해당 컬럼이 없는 배열 속성을 추가 할 필요가 있습니다. 이렇게 하려면 단순히 값에 대한 accessor를 정의하면 됩니다.:
 
 	public function getIsAdminAttribute()
 	{
 		return $this->attributes['admin'] == 'yes';
 	}
 
-Once you have created the accessor, just add the value to the `appends` property on the model:
+사용자가 accessor를 만든 후, 즉시 사용자 정의 모델의 `appends`에 값을 추가합니다.:
 
 	protected $appends = ['is_admin'];
 
-Once the attribute has been added to the `appends` list, it will be included in both the model's array and JSON forms. Attributes in the `appends` array respect the `visible` and `hidden` configuration on the model.
+`appends` 리스트에 속성 하나가 추가되면, 그것은 두 모델의 배열과 JSON 형태로 포함합니다. `appends` 배열의 속성은 모델의 `visible`과 `hidden` 구성에 중요하게 영향을 받습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-Eloquent ORM-Converting To Arrays / JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-Eloquent-ORM-Converting-To-Arrays-/-JSON" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

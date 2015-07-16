@@ -22,7 +22,7 @@ permalink: /docs/5.0/providers/
 
 여기에서는 서비스 프로바이더를 작성하는 방법과 라라벨 어플리케이션에 등록하는 방법을 배워봅시다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-서비스-프로바이더(Service-Providers)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="basic-provider-example"></a>
 ## 기본적인 프로바이더 예제
@@ -105,7 +105,7 @@ permalink: /docs/5.0/providers/
 		$events->listen('SomeEvent', 'SomeEventHandler');
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-기본적인 프로바이더 예제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-서비스-프로바이더(Service-Providers)-기본적인-프로바이더-예제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="registering-providers"></a>
 ## 프로바이더 등록하기
@@ -120,7 +120,7 @@ permalink: /docs/5.0/providers/
 		'App\Providers\AppServiceProvider',
 	],
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-프로바이더 등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-서비스-프로바이더(Service-Providers)-프로바이더-등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="deferred-providers"></a>
 ## 지연(deferred) 프로바이더
@@ -170,4 +170,4 @@ permalink: /docs/5.0/providers/
 
 라라벨은 지연된 서비스 프로바이더가 제공하는 모든 서비스들의 리스트를 서비스 프로바이더 클래스 이름과 함께 컴파일하고 저장합니다. 그러면 라라벨은 지연된 서비스 프로바이더들 중에 하나에 대한 의존성 해결이 필요할 때에만 프로바이더를 로드합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-서비스 프로바이더(Service Providers)-지연(deferred) 프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-서비스-프로바이더(Service-Providers)-지연(deferred)-프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

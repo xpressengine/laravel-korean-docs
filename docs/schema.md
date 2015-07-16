@@ -24,7 +24,7 @@ permalink: /docs/5.0/schema/
 
 라라벨의 `Schema` 클래스는 데이터베이스에 의존하지 않는 테이블 조작 방법을 제공합니다. 이 기능은 라라벨이 지원하는 모든 데이터베이스에서 잘 동작하며 공통의 API를 가지고 있다는 것을 의미합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="creating-and-dropping-tables"></a>
 ## 테이블 생성 & 삭제
@@ -55,7 +55,7 @@ permalink: /docs/5.0/schema/
 
 	Schema::dropIfExists('users');
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-테이블 생성 & 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-테이블-생성---삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="adding-columns"></a>
 ## 컬럼 추가하기
@@ -111,7 +111,7 @@ permalink: /docs/5.0/schema/
 
 	$table->string('name')->after('email');
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-컬럼 추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-컬럼-추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="changing-columns"></a>
 ## 컬럼 변경
@@ -132,7 +132,7 @@ permalink: /docs/5.0/schema/
 		$table->string('name', 50)->nullable()->change();
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-컬럼 변경" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-컬럼-변경" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="renaming-columns"></a>
 ## 컬럼 이름 변경
@@ -148,7 +148,7 @@ permalink: /docs/5.0/schema/
 
 > **주의 :** 현재 `enum` 컬럼 타입의 이름을 변경하는 것은 지원되지 않습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-컬럼 이름 변경" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-컬럼-이름-변경" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="dropping-columns"></a>
 ## 컬럼 삭제
@@ -169,7 +169,7 @@ permalink: /docs/5.0/schema/
 		$table->dropColumn(['votes', 'avatar', 'location']);
 	});
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-컬럼 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-컬럼-삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="checking-existence"></a>
 ## 존재 유무 확인
@@ -190,7 +190,7 @@ permalink: /docs/5.0/schema/
 		//
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-존재 유무 확인" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-존재-유무-확인" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="adding-indexes"></a>
 ## 인덱스 추가하기
@@ -207,7 +207,7 @@ permalink: /docs/5.0/schema/
 `$table->unique('email');`  |  유니크 인덱스 추가
 `$table->index('state');`  |  기본 인덱스 추가
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-인덱스 추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-인덱스-추가하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="foreign-keys"></a>
 ## 외래키
@@ -231,7 +231,7 @@ permalink: /docs/5.0/schema/
 
 > **주의:** 정수형 증분되는 값(incrementing integer)을 참조하여 외래키를 만들때 외래키 컬럼을 항상 `unsigned`로 만드는 것을 유의해야 합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-외래키" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-외래키" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="dropping-indexes"></a>
 ## 인덱스 삭제하기
@@ -244,7 +244,7 @@ permalink: /docs/5.0/schema/
 `$table->dropUnique('users_email_unique');`  |  “users” 테이블에서 유니크 인덱스 삭제
 `$table->dropIndex('geo_state_index');`  |  “geo” 테이블에서 기본 인덱스 삭제
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-인덱스 삭제하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-인덱스-삭제하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="dropping-timestamps"></a>
 ## Timestamps와 softDeletes 컬럼 삭제
@@ -256,7 +256,7 @@ permalink: /docs/5.0/schema/
 `$table->dropTimestamps();`  |  테이블에서 **created\_at**와 **updated\_at** 컬럼을 삭제
 `$table->dropSoftDeletes();`  |  테이블에서 **deleted\_at** 컬럼을 삭제
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-Timestamps와 softDeletes 컬럼 삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-Timestamps와-softDeletes-컬럼-삭제" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="storage-engines"></a>
 ## 스토리지 엔진
@@ -270,4 +270,4 @@ permalink: /docs/5.0/schema/
         $table->string('email');
     });
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-스키마 빌더(Schema Builder)-스토리지 엔진" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-스키마-빌더(Schema-Builder)-스토리지-엔진" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

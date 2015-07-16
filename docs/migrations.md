@@ -17,7 +17,7 @@ permalink: /docs/5.0/migrations/
 
 마이그레이션은 데이터베이스용 버전 컨트롤러의 일종입니다. 마이그레이션은 여러분의 팀이 데이터베이스 스키마를 수정하고 현재의 스키마 상태를 유지할 수 있도록 해줍니다. 마이그레이션은 일반적으로 어플리케이션의 스키마를 쉽게 관리할 수 있는 [스키마 빌더](/laravel-korean-docs/docs/5.0/schema)와 함께 사용됩니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-마이그레이션---시딩(Migrations---Seeding)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="creating-migrations"></a>
 ## 마이그레이션 생성하기
@@ -34,7 +34,7 @@ permalink: /docs/5.0/migrations/
 
 	php artisan make:migration create_users_table --create=users
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="running-migrations"></a>
 ## 마이그레이션 실행하기
@@ -51,7 +51,7 @@ permalink: /docs/5.0/migrations/
 
 	php artisan migrate --force
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-실행하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="rolling-back-migrations"></a>
 ## 마이그레이션 롤백하기
@@ -70,7 +70,7 @@ permalink: /docs/5.0/migrations/
 
 	php artisan migrate:refresh --seed
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-마이그레이션 롤백하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-마이그레이션---시딩(Migrations---Seeding)-마이그레이션-롤백하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="database-seeding"></a>
 ## 데이터베이스 시딩
@@ -113,4 +113,4 @@ permalink: /docs/5.0/migrations/
 
 	php artisan migrate:refresh --seed
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-마이그레이션 & 시딩(Migrations & Seeding)-데이터베이스 시딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-마이그레이션---시딩(Migrations---Seeding)-데이터베이스-시딩" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

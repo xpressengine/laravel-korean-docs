@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>캐시(Cache)</title>
+  <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/laravel-korean-docs/js/prism.js"></script>
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css">
+  <link rel="stylesheet" href="/laravel-korean-docs/css/layout.css">
+  <link rel="canonical" href="http://www.xpressengine.com/laravel-korean-docs/docs/5.0/cache/">
+</head>
+
+
+  <body>
+
+    <div class="container">
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="/laravel-korean-docs/">Laravel korean docs <small>laravel 한글 매뉴얼</small></a></h1>
+            <div class="btn_area">
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/tree/kr-5.0/kr">View on Github</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs/archive/kr-5.0.zip">Download.zip</a>
+                <a class="button" href="https://github.com/xpressengine/laravel-korean-docs.git">Git Repository</a>
+            </div>
+        </div>
+    </header>
+    <div class="supported">
+        <div class="wrap">
+            <a class="bnr" href="http://www.xpressengine.com"><img src="/laravel-korean-docs/img/bnr1.png" /></a><a class="bnr" href="http://dev.naver.com/d2"><img src="/laravel-korean-docs/img/bnr2.png" /></a><a class="bnr" href="http://xpressengine.github.io/XEIcon/"><img src="/laravel-korean-docs/img/bnr3.png" /></a><a class="bnr" href="http://xpressengine.github.io/Composer-korean-docs/"><img src="/laravel-korean-docs/img/bnr4.png" /></a><a class="bnr" href="http://laravel.com/"><img src="/laravel-korean-docs/img/bnr5.png" /></a>
+        </div>
+    </div>
+    <div class="body docs">
+        <div class="wrap">
+            <section class="sidebar">
+            <ul>
+    <li>Prologue
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/upgrade">업그레이드 가이드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contributions">기여 가이드</a></li>
+        </ul>
+    </li>
+    <li>Setup
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/installation">설치하기</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/configuration">설정</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/homestead">라라벨 홈스테드</a></li>
+        </ul>
+    </li>
+    <li>The Basics
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/routing">HTTP 라우팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/middleware">HTTP 미들웨어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/controllers">HTTP 컨트롤러</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/requests">Requests</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/responses">Responses</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/views">뷰-Views</a></li>
+        </ul>
+    </li>
+    <li>Architecture Foundations
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/providers">서비스 프로바이더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/container">서비스 컨테이너</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/contracts">Contracts</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/facades">파사드</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/lifecycle">라이프사이클</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/structure">어플리케이션 구조</a></li>
+        </ul>
+    </li>
+    <li>Services
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/authentication">인증</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/billing">라라벨 캐셔</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/cache">캐시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/collections">컬렉션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/bus">커맨드 버스</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/extending">프레임워크의 확장</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/elixir">라라벨 엘릭서</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/encryption">암호화</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/envoy">Envoy</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/errors">에러와 로깅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/events">이벤트</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/filesystem">파일시스템 / 클라우드 스토리지</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/hashing">해시</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/helpers">헬퍼 함수</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/localization">지역화-다국어</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/mail">메일</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/packages">패키지 개발</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/pagination">페이지네이션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queues">큐</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/session">세션</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/templates">템플릿</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/testing">테스팅</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/validation">Validation</a></li>
+        </ul>
+    </li>
+    <li>Database
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/database">기본적인 데이터 베이스 사용법</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/queries">쿼리 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/eloquent">Eloquent ORM</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/schema">스키마 빌더</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/migrations">마이그레이션과 시딩</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/redis">Redis</a></li>
+        </ul>
+    </li>
+    <li>Artisan CLI
+        <ul>
+            <li><a href="/laravel-korean-docs/docs/5.0/artisan">아티즌 CLI</a></li>
+            <li><a href="/laravel-korean-docs/docs/5.0/commands">아티즌 명령어 개발하기</a></li>
+        </ul>
+    </li>
+</ul>
+            </section>
+
+      <article class="content">
+      <h1 id="캐시(cache)">캐시(Cache)</h1>
+
+<ul>
+<li><a href="#configuration">설정</a></li>
+<li><a href="#cache-usage">캐시 사용법</a></li>
+<li><a href="#increments-and-decrements">증감 조작하기</a></li>
+<li><a href="#cache-tags">캐시 태그</a></li>
+<li><a href="#cache-events">캐시 이벤트</a></li>
+<li><a href="#database-cache">데이터베이스 캐시</a></li>
+<li><a href="#memcached-cache">Memcached 캐시</a></li>
+<li><a href="#redis-cache">Redis 캐시</a></li>
+</ul>
+
+<p><a name="configuration"></a></p>
+
+<h2 id="설정">설정</h2>
+
+<p>라라벨은 다양한 캐시 시스템을 위한 통일된 API를 제공합니다. 캐시 설정은 <code>config/cache.php</code> 파일에 있습니다. 이 파일에서 전체 응용프로그램에서 기본적으로 사용하는 캐시 드라이버를 지정할 수 있습니다. 라라벨은 <a href="http://memcached.org">Memcached</a> 나 <a href="http://redis.io">Redis</a> 와 같은 인기 있는 백엔드 캐시 시스템을 지원합니다.</p>
+
+<p>캐시 설정 파일은 다양한 여러 옵션을 제공하고 있습니다. 각각의 옵션에 설명이 있으니 참고하시기 바랍니다. 라라벨의 기본 캐시 드라이버는 시리얼라이즈된 데이타를 파일 시스템에 저장하는 <code>file</code> 캐시 드라이버로 설정되어 있습니다.  보다 큰 응용프로그램은 Memcached 나 APC 와 같은 in-memory 캐시를 사용하기를 권장합니다.</p>
+
+<p>Redis 캐시를 사용하려면 컴포저로 <code>predis/predis</code> (~1.0) 패키지를 설치해야 합니다.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="cache-usage"></a></p>
+
+<h2 id="캐시-사용법">캐시 사용법</h2>
+
+<h4 id="캐시에-하나의-아이템-저장하기">캐시에 하나의 아이템 저장하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::put(&#39;key&#39;, &#39;value&#39;, $minutes);
+</code></pre></div>
+<h4 id="객체를-사용하여-만료시간-설정하기">객체를 사용하여 만료시간 설정하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$expiresAt = Carbon::now()-&gt;addMinutes(10);
+
+Cache::put(&#39;key&#39;, &#39;value&#39;, $expiresAt);
+</code></pre></div>
+<h4 id="캐시에-존재하지-않는-아이템이라면-저장하기">캐시에 존재하지 않는 아이템이라면 저장하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::add(&#39;key&#39;, &#39;value&#39;, $minutes);
+</code></pre></div>
+<p><code>add</code> 메소드는 항목이 실제로 캐시에 <strong>추가된</strong> 경우에만 true 를 반환합니다. 그렇지 않다면 <code>false</code>를 반환합니다.</p>
+
+<h4 id="캐시에-존재하는지-확인하기">캐시에 존재하는지 확인하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if (Cache::has(&#39;key&#39;))
+{
+    //
+}
+</code></pre></div>
+<h4 id="캐시에서-하나의-항목을-찾기">캐시에서 하나의 항목을 찾기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::get(&#39;key&#39;);
+</code></pre></div>
+<h4 id="찾는-항목이-없으면-기본값을-반환하기">찾는 항목이 없으면 기본값을 반환하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::get(&#39;key&#39;, &#39;default&#39;);
+
+$value = Cache::get(&#39;key&#39;, function() { return &#39;default&#39;; });
+</code></pre></div>
+<h4 id="캐시에-영구적으로-저장하기">캐시에 영구적으로 저장하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::forever(&#39;key&#39;, &#39;value&#39;);
+</code></pre></div>
+<p>간혹 캐시에서 항목을 조회할때 뿐만 아니라, 값이 없을 경우 기본 값을 캐시에 저장하고 싶은 경우가 있습니다. 이럴 경우 <code>Cache::remember</code> 메소드를 사용하면 됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::remember(&#39;users&#39;, $minutes, function()
+{
+    return DB::table(&#39;users&#39;)-&gt;get();
+});
+</code></pre></div>
+<p><code>remember</code> 와 <code>forever</code>를 결합하여 사용할 수도 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::rememberForever(&#39;users&#39;, function()
+{
+    return DB::table(&#39;users&#39;)-&gt;get();
+});
+</code></pre></div>
+<p>캐시에 저장되는 모든 항목들은 직렬화-시리얼라이즈 되고, 따라서 어떤 유형의 데이터도 자유롭게 저장할 수 있습니다.</p>
+
+<h4 id="캐시에-저장된-아이템-가져오기">캐시에 저장된 아이템 가져오기</h4>
+
+<p>캐시에서 항목을 조회한 후에 삭제를 할 필요가 있으면, <code>pull</code> 메소드를 사용합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::pull(&#39;key&#39;);
+</code></pre></div>
+<h4 id="캐시에서-아이템-삭제하기">캐시에서 아이템 삭제하기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::forget(&#39;key&#39;);
+</code></pre></div>
+<h4 id="특정-저장소에-접근하기">특정 저장소에 접근하기</h4>
+
+<p>다양한 캐시 저장소를 가지고 있다면, <code>store</code> 메소드를 통해서 특정 저장소에서 캐시를 가져올 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$value = Cache::store(&#39;foo&#39;)-&gt;get(&#39;key&#39;);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="increments-and-decrements"></a></p>
+
+<h2 id="증감-조작하기">증감 조작하기</h2>
+
+<p><code>database</code>를 제외한 드라이버는 <code>increment</code> 및 <code>decrement</code> 조작을 지원하고 있습니다:</p>
+
+<h4 id="값-증가시키기">값 증가시키기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::increment(&#39;key&#39;);
+
+Cache::increment(&#39;key&#39;, $amount);
+</code></pre></div>
+<h4 id="값-감소시키기">값 감소시키기</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::decrement(&#39;key&#39;);
+
+Cache::decrement(&#39;key&#39;, $amount);
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-증감 조작하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="cache-tags"></a></p>
+
+<h2 id="캐시-태그">캐시 태그</h2>
+
+<blockquote>
+<p><strong>참고:</strong> 캐시 태그는 <code>file</code>과 <code>database</code> 드라이버를 사용하는 경우 지원되지 않습니다. 또한 &quot;forever&quot;로 저장되는 캐시에 많은 태그를 사용하면 기존 레코드를 자동으로 삭제하는 memcached 와 같은 드라이버에서 최상의 성능을 낼 것입니다.</p>
+</blockquote>
+
+<h4 id="태그된-캐시에-엑세스하기">태그된 캐시에 엑세스하기</h4>
+
+<p>캐시 태그는 캐시에 있는 관련된 아이템들을 태그 할 수 있도록 해주고, 같은 태그가 지정된 전체 캐시를 지울 수도 있습니다. 태그된 캐시에 액세스하려면 <code>tags</code> 메소드를 사용하십시오.</p>
+
+<p>태그 이름 목록을 인수로 전달하거나, 배열로 만들어 전달하여 태그된 캐시를 저장할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::tags(&#39;people&#39;, &#39;authors&#39;)-&gt;put(&#39;John&#39;, $john, $minutes);
+
+Cache::tags([&#39;people&#39;, &#39;artists&#39;])-&gt;put(&#39;Anne&#39;, $anne, $minutes);
+</code></pre></div>
+<p><code>remember</code> , <code>forever</code> , <code>rememberForever</code> 및 이들의 을 포함한 모든 캐시 저장 방법 및 태그를 조합하여 사용할 수 있습니다. 또한 increment 및 decrement 같은 다른 캐시 메소드도 마찬가지로 태그를 캐시 항목에 액세스 할 수 있습니다.</p>
+
+<h4 id="태그된-캐시에-있는-아이템에-접근하기">태그된 캐시에 있는 아이템에 접근하기</h4>
+
+<p>태그가 지정된 캐쉬에 액세스하려면 저장된 것과 동일한 순서로 태그의 목록을 전달합니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$anne = Cache::tags(&#39;people&#39;, &#39;artists&#39;)-&gt;get(&#39;Anne&#39;);
+
+$john = Cache::tags([&#39;people&#39;, &#39;authors&#39;])-&gt;get(&#39;John&#39;);
+</code></pre></div>
+<p>이름 또는 이름의 목록을 지정하고 태그 된 항목을 모두 지울 수 있습니다. 예를 들어 다음 코드는 <code>people</code> 또는 <code>authors</code> 또는 둘 모두에 태그 된 모든 캐시 된 항목이 삭제됩니다. 그러므로 &quot;Anne&quot;과 &quot;John&quot;두 아이템은 캐시에서 제거됩니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::tags(&#39;people&#39;, &#39;authors&#39;)-&gt;flush();
+</code></pre></div>
+<p>한편, 다음 코드에서는 <code>authors</code> 태그 된 캐시 만 삭제되기 때문에 &quot;John&quot;은 삭제되지만 &quot;Anne&quot;는 남아 있습니다.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Cache::tags(&#39;authors&#39;)-&gt;flush();
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 태그" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="cache-events"></a></p>
+
+<h2 id="캐시-이벤트">캐시 이벤트</h2>
+
+<p>캐시가 동작할 때에 특정한 코드를 실행하기 위해서는 캐시에 의해서 실행되는 이벤트 리스너를 등록해야 합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Event::listen(&#39;cache.hit&#39;, function($key, $value) {
+    //
+});
+
+Event::listen(&#39;cache.missed&#39;, function($key) {
+    //
+});
+
+Event::listen(&#39;cache.write&#39;, function($key, $value, $minutes) {
+    //
+});
+
+Event::listen(&#39;cache.delete&#39;, function($key) {
+    //
+});
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-캐시 이벤트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="database-cache"></a></p>
+
+<h2 id="데이터베이스-캐시">데이터베이스 캐시</h2>
+
+<p><code>database</code> 캐시 드라이버를 사용하는 경우 캐시 항목을 저장할 테이블을 준비해야 합니다. 아래에서 테이블을 만드는 <code>Schema</code> 의 예를 확인 할 수 있습니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Schema::create(&#39;cache&#39;, function($table)
+{
+    $table-&gt;string(&#39;key&#39;)-&gt;unique();
+    $table-&gt;text(&#39;value&#39;);
+    $table-&gt;integer(&#39;expiration&#39;);
+});
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-데이터베이스 캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="memcached-cache"></a></p>
+
+<h4 id="memcached-cache">Memcached Cache</h4>
+
+<p>Memcached 캐시를 사용하기 위해서는 <a href="http://pecl.php.net/package/memcached">Memcached PECL package</a>가 설치되어 있어야 합니다.</p>
+
+<p>기본 <a href="#configuration">설정</a>은 TCP/IP 기반의 <a href="http://php.net/manual/en/memcached.addserver.php">Memcached::addServer</a>을 사용합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;memcached&#39; =&gt; array(
+    array(&#39;host&#39; =&gt; &#39;127.0.0.1&#39;, &#39;port&#39; =&gt; 11211, &#39;weight&#39; =&gt; 100),
+),
+</code></pre></div>
+<p><code>host</code> 옵션을 UNIX 소켓을 사용하도록 설정할 수 있으며 이 경우 <code>port</code> 는 <code>0</code> 으로 설정되어 있어야 합니다:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&#39;memcached&#39; =&gt; array(
+    array(&#39;host&#39; =&gt; &#39;/var/run/memcached/memcached.sock&#39;, &#39;port&#39; =&gt; 0, &#39;weight&#39; =&gt; 100),
+),
+</code></pre></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-Memcached Cache" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+<p><a name="redis-cache"></a></p>
+
+<h4 id="redis-cache">Redis Cache</h4>
+
+<p><a href="/laravel-korean-docs/docs/redis#configuration">Redis 설정</a>을 참고하십시오.</p>
+
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-캐시(Cache)-Redis Cache" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+
+      </article>
+
+    
+        </div>
+    </div>
+</div>
+<script>
+$('p a[name]').each(function(){
+  var name = $(this).attr('name');
+  $(this).parent().next('h2').wrapInner('<a name=' + name + '></a>');
+  $(this).parent().remove();
+});
+$('code[class=language-text]').each(function(){
+	$(this).removeClass('language-text').addClass('language-php');
+});
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-46389165-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+    $('.chak-comment-widget').each(function(){
+        var apikey = $(this).data('apikey');
+        $.ajax({
+            url : "http://chak.it/index.php?act=dispCommentboxServiceCommentTotalCount&apikey=" + apikey,
+            dataType : "jsonp",
+            jsonp : "cb",
+            success : function(data){
+                $(this).find('.count').text(data.count);
+            }.bind(this)
+        });
+    });
+    $('.chak-comment-widget').click(function(){
+        var apikey = $(this).data('apikey');
+        var makeIframe = document.createElement("iframe");
+        makeIframe.setAttribute("src", "http://chak.it/index.php?act=dispCommentboxServiceBox&apikey=" + apikey + window.location.hash);
+        makeIframe.setAttribute("scrolling", "no"); makeIframe.setAttribute("data-apikey", apikey);
+        makeIframe.style.border = "none"; makeIframe.style.width = "100%"; makeIframe.frameBorder = "no";
+        $(this).after( makeIframe ); chakComment({}, makeIframe);
+
+        $('.chak-comment-widget').parent().addClass('active');
+        $(this).remove();
+    });
+</script>
+<script type="text/javascript">
+    (function() {
+        var chak = document.createElement('script');
+        chak.type = 'text/javascript'; chak.src = 'http://chak.it/static/chakComment.js'; chak.async = true;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(chak);
+    })();
+</script>
+
+  </body>
+
+</html>

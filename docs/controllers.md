@@ -19,7 +19,7 @@ permalink: /docs/5.0/controllers/
 
 요청에 대한 모든 처리 로직을 하나의 `routes.php` 파일에 정의하는 것보다 별도의 컨트롤러 클래스를 통해서 구성할 수도 있습니다. 컨트롤러는 클래스를 구성하여 HTTP 요청에 대한 그룹을 지정합니다. 컨트롤러는 일반적으로 `app/Http/Controllers` 디렉토리에 저장합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="basic-controllers"></a>
 ## 기본 컨트롤러
@@ -81,7 +81,7 @@ permalink: /docs/5.0/controllers/
 
 	$action = Route::currentRouteAction();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-기본 컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-기본-컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="controller-middleware"></a>
 ## 컨트롤러 미들웨어
@@ -111,7 +111,7 @@ permalink: /docs/5.0/controllers/
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-컨트롤러 미들웨어 " ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-컨트롤러-미들웨어-" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="implicit-controllers"></a>
 ## 암시적 컨트롤러
@@ -155,7 +155,7 @@ permalink: /docs/5.0/controllers/
 		'anyLogin' => 'user.login',
 	]);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-암시적 컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-암시적-컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="restful-resource-controllers"></a>
 ## RESTful 리소스 컨트롤러
@@ -229,7 +229,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	Route::resource('photos', 'PhotoController');
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-RESTful 리소스 컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-RESTful-리소스-컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="dependency-injection-and-controllers"></a>
 ## 의존성 주입 & 컨트롤러
@@ -316,7 +316,7 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 > **주의:** 메소드 인젝션-주입은 [모델 바인딩](/laravel-korean-docs/docs/5.0/routing#route-model-binding)에서도 마찬가지로 동작합니다. 컨테이너는 어느 인자가 모델 바인딩 되었고 어떤 인자가 주입될것인지 영리하게 판단할 것입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-의존성 주입 & 컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-의존성-주입---컨트롤러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="route-caching"></a>
 ## 라우트 캐시
@@ -331,4 +331,4 @@ DELETE    | /photo/{photo}        | destroy      | photo.destroy
 
 	php artisan route:clear
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 컨트롤러(HTTP Controllers)-라우트 캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-컨트롤러(HTTP-Controllers)-라우트-캐시" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

@@ -22,7 +22,7 @@ permalink: /docs/5.0/facades/
 
 > **주의** 파사드에 대해서 알아보기 전에 라라벨의 [서비스 컨테이너](/laravel-korean-docs/docs/5.0/container)에 익숙질 것을 적극 권장합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="explanation"></a>
 ## 설명
@@ -33,7 +33,7 @@ permalink: /docs/5.0/facades/
 
 따라서 여러분이 `Cache::get`과 같이 파사드를 호출할 때, 라라벨은 서비스 컨테이너로부터 의존성을 해결하여 캐시 매니저 획득하고 이 캐시 매니저의 `get` 메소드를 호출해줍니다. 기술적으로 라라벨의 파사드는 라라벨의 서비스 컨테이너를 하나의 서비스로서 사용하기 위한 편리한 기법입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-설명" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-설명" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="practical-usage"></a>
 ## 실제 사용법
@@ -87,7 +87,7 @@ permalink: /docs/5.0/facades/
 
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-실제 사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-실제-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="creating-facades"></a>
 ## 파사드 생성하기
@@ -138,14 +138,14 @@ permalink: /docs/5.0/facades/
 
 [PHP는 타입힌트가 정의되지 않은 유형의 클래스들에 대한 오토로드를 시도 하지 않으므로](https://bugs.php.net/bug.php?id=39003) `aliases` 배열 안에 클래스가 몇몇 인스턴스들 안에서는 사용 가능하지 않습니다. 만약 `\ServiceWrapper\ApiTimeoutException`이 `ApiTimeoutException` 라는 별칭으로 지정되었고, `\ServiceWrapper` 외부 네임 스페이스에서 `catch (ApiTimeoutException $e)`를 하려 해도 던져진 예외는 포착되지 않습니다. 별칭으로 타입힌트가 설정된 클래스들 사이에서도 비슷한 문제는 발생됩니다. 이에대한 유일한 해결책은 타입힌트를 사용하려는 클래스들 제일 앞부분에 `use`를 사용해서 미리 지정해두는 방법입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-파사드-생성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="mocking-facades"></a>
 ## 파사드 Mocking
 
 단위 테스트는 왜 파사드가 저렇게 동작하는지에 대한 매우 중요한 이유입니다. 사실 테스트의 용이성은 파사드가 존재하는 주요한 이유입니다. 보다 자세한 내용에 대해서는 문서의 [mocking facades](/laravel-korean-docs/docs/testing#mocking-facades) 섹션을 참고하십시오.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 Mocking" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-파사드-Mocking" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="facade-class-reference"></a>
 ## 파사드 참조 목록
@@ -192,4 +192,4 @@ Validator (Instance)  |  [Illuminate\Validation\Validator](http://laravel.com/ap
 View  |  [Illuminate\View\Factory](http://laravel.com/api/5.0/Illuminate/View/Factory.html)  |  `view`
 View (Instance)  |  [Illuminate\View\View](http://laravel.com/api/5.0/Illuminate/View/View.html)  |
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-파사드(Facades)-파사드 참조 목록" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파사드(Facades)-파사드-참조-목록" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

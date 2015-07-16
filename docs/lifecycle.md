@@ -19,7 +19,7 @@ permalink: /docs/5.0/lifecycle/
 
 지금 당장 모든 것들을 이해하지 못하더라도 괜찮습니다. 그냥 무엇을 하고 있는지에 대한 기본적인 이해를 얻기 위해 노력하십시오, 여러분이  다른 문서의 여러 부분들을 살펴 볼 수록 지식이 더 쌓일 것입니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="lifecycle-overview"></a>
 ## 라이프사이클 개요
@@ -48,7 +48,7 @@ HTTP 커널의 `handle` 메소드의 사용법은 매우 간단합니다. 단순
 
 어플리케이션이 부팅(부트스트래핑)되고 모든 서비스 프로바이더가 등록된 후, `Request`는 라우터 처리리를 위해서 전달될 것입니다. 라우터는 라우팅 또는 컨트롤러로 요청-request을 전달할뿐만 아니라, 임의의 특정 라우트에 지정된 미들웨어도 실행합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-라이프사이클 개요" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-라이프사이클-개요" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="focus-on-service-providers"></a>
 ## 서비스 프로바이더
@@ -59,4 +59,4 @@ HTTP 커널의 `handle` 메소드의 사용법은 매우 간단합니다. 단순
 
 기본적으로 `AppServiceProvider`는 거의 비어 있습니다. 이 프로바이더는 여러분의 고유한 부트스트래핑과 서비스 컨테이너 바인딩 코드를 추가하기 위한 곳입니다. 물론 보다 큰 어플리케이션의 경우, 보다 세부적인 유형으로 구분된 종류별로 서비스 프로바이더를 만들 수도 있습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-요청에 대한 라이프사이클(Request Lifecycle)-서비스 프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-요청에-대한-라이프사이클(Request-Lifecycle)-서비스-프로바이더" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
