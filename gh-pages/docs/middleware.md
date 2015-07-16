@@ -20,7 +20,7 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 라라벨 프레임워크에는 유지보수모드-공사중(maintenance), 인증(authentication), CSRF 보안 등을 위한 미들웨어들이 포함되어 있습니다. 그 미들웨어들은 모두 `app/Http/Middleware` 디렉토리 안에 있습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="defining-middleware"></a>
 ## 미들웨어 정의하기
@@ -96,7 +96,7 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 		}
 	}
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-미들웨어 정의하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-미들웨어-정의하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="registering-middleware"></a>
 ## 미들웨어 등록하기
@@ -116,7 +116,7 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 		//
 	}]);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-미들웨어 등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-미들웨어-등록하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="terminable-middleware"></a>
 ## 종료가능한 미들웨어
@@ -142,4 +142,4 @@ HTTP 미들웨어는 어플리케이션으로 들어온 HTTP 요청을 간편하
 
 위와 같이 `handle` 메소드를 정의하고 나서 `TerminableMiddleware`는 `terminate` 메소드를 추가로 정의합니다. 이 메소드는 요청 변수와 응답 변수를 모두 인자로 받습니다. 종료 가능한 미들웨어를 정의했다면, 그것을 HTTP 커널의 전역 미들웨어 목록에 추가해 주어야 합니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-HTTP 미들웨어(HTTP Middleware)-종료가능한 미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-HTTP-미들웨어(HTTP-Middleware)-종료가능한-미들웨어" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

@@ -26,7 +26,7 @@ permalink: /docs/5.0/homestead/
 
 홈스테디드는 현재 Vagrant1.7을 기반으로 구성되고 테스트되어 있습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="included-software"></a>
 ## 포함된 소프트웨어들
@@ -44,7 +44,7 @@ permalink: /docs/5.0/homestead/
 - [Laravel Envoy](/laravel-korean-docs/docs/5.0/envoy)
 - [Blackfire Profiler](#blackfire-profiler)
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-포함된 소프트웨어들" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-포함된-소프트웨어들" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="installation-and-setup"></a>
 ## 설치 & 구성하기
@@ -141,7 +141,7 @@ Vagrant가 가상머신을 구동시키고 공유폴더와 Nginx 사이트를 �
 
 다음은 데이터베이스에 연결하는 방법을 배워보겠습니다!
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-설치 & 구성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-설치---구성하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="daily-usage"></a>
 ## 사용 방법
@@ -178,7 +178,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 
 > **주의:** `serve` 명령어를 실행하고 로컬머신의 `hosts` 파일에 새로운 사이트를 추가하는 것을 잊지 마십시오!
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-사용 방법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-사용-방법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="ports"></a>
 ## 포트
@@ -202,7 +202,7 @@ Navicat 나 Sequel Pro를 통해서 MySQL 또는 Postgres 데이터베이스에 
 	      to: 777
 	      protocol: udp
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-포트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-포트" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <a name="blackfire-profiler"></a>
 ## Blackfire 프로파일러
@@ -219,4 +219,4 @@ SensioLabs의 [Blackfire 프로파일러](https://blackfire.io)는 자동으로 
 
 Blackfire 인증정보를 설정하고 난 뒤에, 여러분의 홈스테드 디렉토리에서 `vagrant provision`을 사용하여 Box를 다시 실행하십시오. 또한, Blackfire 설치와 추가 확장에 대해서는 웹사이트에서 [Blackfire 문서](https://blackfire.io/getting-started)를 참고하십시오.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-라라벨 홈스테드(Laravel Homestead)-Blackfire 프로파일러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-라라벨-홈스테드(Laravel-Homestead)-Blackfire-프로파일러" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>

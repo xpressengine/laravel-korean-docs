@@ -25,7 +25,7 @@ permalink: /docs/5.0/authentication/
 
 만약 어플리케이션이 Eloquent를 사용하지 않는다면 라라벨 쿼리 빌더를 사용하는 `database` 인증 드라이버를 사용할 수도 있습니다.
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="authenticating-users"></a>
 ## 사용자 인증
 
@@ -149,7 +149,7 @@ permalink: /docs/5.0/authentication/
 
 `attempt` 메소드가 호출될 때에는 `auth.attempt` [이벤트](/laravel-korean-docs/docs/5.0/events)가 발생합니다. 사용자 인증이 성공적이고 사용자가 로그인되었다면, 마찬가지로 `auth.login` 이벤트가 발생합니다. 
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-사용자 인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-사용자-인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="retrieving-the-authenticated-user"></a>
 ## 인증된 사용자 조회하기
 
@@ -223,7 +223,7 @@ permalink: /docs/5.0/authentication/
 		}
 
 	}
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-인증된 사용자 조회하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-인증된-사용자-조회하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="protecting-routes"></a>
 ## 라우트 제한하기
 
@@ -240,7 +240,7 @@ permalink: /docs/5.0/authentication/
 
 	Route::get('profile', ['middleware' => 'auth', 'uses' => 'ProfileController@show']);
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-라우트 제한하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-라우트-제한하기" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="http-basic-authentication"></a>
 ## HTTP 기본 인증
 
@@ -269,7 +269,7 @@ PHP FastCGI를 사용하는 경우 HTTP 기본 인증이 제대로 작동하지 
 	RewriteCond %{HTTP:Authorization} ^(.+)$
 	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-HTTP 기본 인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-HTTP-기본-인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="password-reminders-and-reset"></a>
 ## 패스워드 알림 & 재설정
 
@@ -295,7 +295,7 @@ PHP FastCGI를 사용하는 경우 HTTP 기본 인증이 제대로 작동하지 
 
 > **참고:** 기본적으로 패스워드 재설정 토큰은 1시간 동안만 유효합니다. `config/auth.php` 파일의 `reminder.expire` 옵션에서 변경할 수 있습니다. 
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-패스워드 알림 & 재설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-패스워드-알림---재설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 <a name="social-authentication"></a>
 
 ## 소셜 인증
@@ -356,4 +356,4 @@ Socialite를 시작하기 위해서는 `composer.json` 파일에 다음 패키�
 	$user->getEmail();
 	$user->getAvatar();
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-apikey="coe00da03b685a0dd18fb6a08af0923de0-laravel-korean-docs-인증 (Authentication)-소셜인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-인증-(Authentication)-소셜인증" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
