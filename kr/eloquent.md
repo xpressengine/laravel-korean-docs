@@ -267,7 +267,7 @@ auto-incrementing ID를 사용하는 새로운 모델을 저장하거나 생성�
 
 	$user->touch();
 
-<!--chak-comment-Eloquent-ORM-인서트,-업데이트,-삭제-->
+<!--chak-comment-Eloquent-ORM-인서트--업데이트--삭제-->
 
 <a name="soft-deleting"></a>
 ## 소프트 삭제
@@ -1426,4 +1426,4 @@ JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있�
 
 `appends` 리스트에 속성 하나가 추가되면, 그것은 두 모델의 배열과 JSON 형태로 포함합니다. `appends` 배열의 속성은 모델의 `visible`과 `hidden` 구성에 중요하게 영향을 받습니다.
 
-<!--chak-comment-Eloquent-ORM-Converting-To-Arrays-/-JSON-->
+<!--chak-comment-Eloquent-ORM-Converting-To-Arrays---JSON-->

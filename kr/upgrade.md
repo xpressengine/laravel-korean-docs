@@ -14,7 +14,7 @@
 
     $compiledPath = __DIR__.'/../vendor/compiled.php';
 
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-5.0.16으로-업그레이드-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-5-0-16으로-업그레이드-->
 
 <a name="upgrade-5.0"></a>
 ## 4.2에서 5.0으로 업그레이드
@@ -229,7 +229,7 @@ Remote 컴포넌트는 더 이상 제공하지 않습니다.
 
 Workbench 컴포넌트는 더 이상 제공하지 않습니다.
 
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4.2에서-5.0으로-업그레이드-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4-2에서-5-0으로-업그레이드-->
 
 <a name="upgrade-4.2"></a>
 ## 4.1에서 4.2로 업그레이드 하기
@@ -285,7 +285,7 @@ Workbench 컴포넌트는 더 이상 제공하지 않습니다.
 Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭게 `encrypt` 옵션을 추가합니다.
 
 	'encrypt' => true
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4.1에서-4.2로-업그레이드-하기-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4-1에서-4-2로-업그레이드-하기-->
 
 <a name="upgrade-4.1.29"></a>
 ## 4.1.X 이하에서 4.1.29로 업그레이드 하기
@@ -294,7 +294,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 라라벨4.1.29로 업그레이드 하기 위해서는 `composer update`를 실행하면 됩니다. 이 업데이트에서는 소스 수정이 필요한 사항들은 포함되어 있지 않습니다.
 
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4.1.X-이하에서-4.1.29로-업그레이드-하기-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4-1-X-이하에서-4-1-29로-업그레이드-하기-->
 
 <a name="upgrade-4.1.26"></a>
 ## 4.1.25 이하에서 4.1.26으로 업그레이드 하기
@@ -336,7 +336,7 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 `Illuminate\Auth\UserInterface`에서도 “업데이트 방법”에서 설명하고 있는 새로운 메소드 3개가 추가되었습니다.
 
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4.1.25-이하에서-4.1.26으로-업그레이드-하기-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4-1-25-이하에서-4-1-26으로-업그레이드-하기-->
 
 <a name="upgrade-4.1"></a>
 ## 4.0에서 4.1로 업그레이드
@@ -402,4 +402,4 @@ Iron.io 큐 드라이버를 사용하는 경우 큐 설정 파일에서 새롭�
 
 와일드 카드 이벤트 리스너는 더 이상 핸들러 함수의 인자에 이벤트를 전달하지 않습니다.  발행된 이벤트를 확인해야 할 필요가 다면, `Event::firing()`를 사용하십시오.
 
-<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4.0에서-4.1로-업그레이드-->
+<!--chak-comment-업그레이드-가이드(Upgrade-Guide)-4-0에서-4-1로-업그레이드-->
