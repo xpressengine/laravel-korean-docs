@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
 
   <title>파일시스템 / 클라우드 스토리지(Filesystem / Cloud Storage)</title>
   <meta name="description" content="라라벨 한글 메뉴얼에 대한 메뉴얼 페이지입니다.">
@@ -135,7 +135,7 @@
 
 <p>라라벨은 Frank de Jonge가 만든 <a href="https://github.com/thephpleague/flysystem">Flysystem</a> 패키지를 기반으로 하는 강력한 추상화된 파일 시스템을 제공합니다. 라라벨의 통합된 파일 시스템은 로컬, 아마존 S3 그리고 Rackspace 클라우드 스토리지를 드라이버들을 통해서 간단하게 사용할 수 있게 제공합니다. 더욱 놀라운 것은, 각각의 시스템에 대해 같은 API를 사용하고 있으므로 스토리지를 매우 쉽게 변경할 수 있다는 것입니다!</p>
 
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템-/-클라우드-스토리지(Filesystem-/-Cloud-Storage)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템---클라우드-스토리지(Filesystem---Cloud-Storage)-소개" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="configuration"></a></p>
 
@@ -155,7 +155,7 @@
 <p><code>local</code> 드라이버를 사용하는 경우, 설정 파일에 정의되어있는 <code>root</code> 디렉토리를 기준으로 모든 파일이 상대적으로 조작된다는 것에 주의하십시오. 기본적으로 이 값은 <code>storage/app</code> 디렉토리로 설정 되어 있습니다. 따라서 다음의 코드는 <code>storage/app/file.txt</code>에 파일을 저장합니다.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Storage::disk(&#39;local&#39;)-&gt;put(&#39;file.txt&#39;, &#39;Contents&#39;);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템-/-클라우드-스토리지(Filesystem-/-Cloud-Storage)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템---클라우드-스토리지(Filesystem---Cloud-Storage)-설정" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="basic-usage"></a></p>
 
@@ -224,7 +224,7 @@ $directories = Storage::allDirectories($directory);
 <h4 id="디렉토리-삭제하기">디렉토리 삭제하기</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Storage::deleteDirectory($directory);
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템-/-클라우드-스토리지(Filesystem-/-Cloud-Storage)-기본적인-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템---클라우드-스토리지(Filesystem---Cloud-Storage)-기본적인-사용법" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
 <p><a name="custom-filesystems"></a></p>
 
@@ -268,7 +268,7 @@ class DropboxFilesystemServiceProvider extends ServiceProvider {
 
 }
 </code></pre></div>
-<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템-/-클라우드-스토리지(Filesystem-/-Cloud-Storage)-사용자-지정-파일-시스템" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
+<div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-파일시스템---클라우드-스토리지(Filesystem---Cloud-Storage)-사용자-지정-파일-시스템" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
       </article>
 
