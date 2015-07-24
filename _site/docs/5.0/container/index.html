@@ -482,16 +482,16 @@ pageTracker._trackPageview();
         var $count = $(this).find('.count');
 
         $.ajax({
-            url : "//chak.it/laravel/api/boxes/" + apikey + "/articles/count",
+            url : "//chak.it/g/api/boxes/" + apikey + "/articles/count",
             dataType : "jsonp",
             jsonp : "callback",
-        }).done(function(count){
-            $count.text(count);
+        }).done(function(data){
+            $count.text(data.count);
         });
 
         $(this).click(function() {
             var iframe = document.createElement("iframe");
-            iframe.setAttribute("src", "//chak.it/laravel/service/" + apikey + window.location.hash);
+            iframe.setAttribute("src", "//chak.it/g/service/" + apikey + window.location.hash);
             iframe.setAttribute("scrolling", "no");
             iframe.setAttribute("data-chak-apikey", apikey);
             iframe.setAttribute("data-chak-group", "laravel");
