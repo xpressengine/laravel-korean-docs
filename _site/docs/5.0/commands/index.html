@@ -281,7 +281,7 @@ pageTracker._trackPageview();
         var $count = $(this).find('.count');
 
         $.ajax({
-            url : "//chak.it/g/api/boxes/" + apikey + "/articles/count",
+            url : "//chak.it/laravel/v1/" + apikey + "/articles/count",
             dataType : "jsonp",
             jsonp : "callback",
         }).done(function(data){
@@ -289,13 +289,12 @@ pageTracker._trackPageview();
         });
 
         $(this).click(function() {
-            var iframe = document.createElement("iframe");
-            iframe.setAttribute("src", "//chak.it/g/service/" + apikey + window.location.hash);
-            iframe.setAttribute("scrolling", "no");
-            iframe.setAttribute("data-chak-apikey", apikey);
-            iframe.setAttribute("data-chak-group", "laravel");
-            iframe.style.border = "none"; iframe.style.width = "100%"; iframe.frameBorder = "no";
-            $(this).after( iframe ); chakComment({}, iframe);
+            var div = document.createElement("div");
+            div.setAttribute("data-chak-apikey", apikey);
+
+            $(this).after(div);
+
+            manuallySetChakService(div);
 
             $(this).parent().addClass('active');
             $(this).remove();
