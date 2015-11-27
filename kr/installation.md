@@ -77,7 +77,7 @@
 <a name="permissions"></a>
 ### 권한
 
-라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 `sotrage`와 `vendor` 폴더에 대한 쓰기권한 허용하십시오.
+라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 `storage`와 `vendor` 폴더에 대한 쓰기권한 허용하십시오.
 
 <!--chak-comment-설치하기(Installation)-권한-->
 
