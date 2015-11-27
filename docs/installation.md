@@ -36,7 +36,10 @@ permalink: /docs/5.0/installation/
 
 터미널에서 컴포저의 `create-project` 커멘드를 사용하여 라라벨을 설치할 수도 있습니다:
 
-	composer create-project laravel/laravel --prefer-dist
+	composer create-project laravel/laravel {directory} "~5.0.0" --prefer-dist
+	
+설치 후에는 최신의 패키지로 업그레이드 해야 합니다. 먼저 `{directory}/vendor/compiled.php` 파일을 삭제하고 설치된 현재 `{directory}` 에서 `composer update` 명령어를 입력하십시오.
+
 
 ### 스캐폴딩
 
@@ -80,7 +83,7 @@ permalink: /docs/5.0/installation/
 <a name="permissions"></a>
 ### 권한
 
-라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 `sotrage`와 `vendor` 폴더에 대한 쓰기권한 허용하십시오.
+라라벨을 구성하기 위해 일부 폴더의 권한을 요구합니다: 웹서버에서 `storage`와 `vendor` 폴더에 대한 쓰기권한 허용하십시오.
 
 <div class="chak-comment-wrap"><div class="chak-comment-widget" data-chak-group="laravel" data-chak-apikey="582898af492efbcdd53990e1c6ccb89d-laravel-korean-docs-설치하기(Installation)-권한" ><i class="xi-message"></i> <strong>클릭</strong>하여 의견을 공유할 수 있습니다. ( 총 <span class="count"><i class="xi-spinner-5 xi-spin"></i></span>개의 의견이 있습니다. )</div></div>
 
