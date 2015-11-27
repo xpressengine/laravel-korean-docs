@@ -742,7 +742,7 @@ Validator를 확장하기 위해 클로저를 사용하는 대신에 Validator �
 
 	<?php
 
-	class CustomValidator extends Illuminate\Validation\Validator {
+	class CustomValidator extends \Illuminate\Validation\Validator {
 
 		public function validateFoo($attribute, $value, $parameters)
 		{
