@@ -1204,7 +1204,7 @@ Eloquent는 사용자가 getting 또는 setting을 제공할 경우, 사용자 �
 
 	}
 
-예제에서 `first_name` 컬럼에 accessor가 있고, accessor로 속성(attribute) 값이 보내진다는 것에 유의해야 합니다.
+위의 예제에서 `first_name` 컬럼에 accessor가 있고, accessor로 속성(attribute) 값이 보내진다는 것에 유의해야 합니다.
 
 #### Mutator 정의하기
 
@@ -1224,7 +1224,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 <a name="date-mutators"></a>
 ## 날짜 Mutators
 
-네이티브 PHP의 `DateTime` 클래스의 확장형이며, 여러 메소드를 제공하는 [Carbon](https://github.com/briannesbitt/Carbon) 클래스의 인스턴스인 `created_at` 컬럼과 `updated_at` 컬럼을 Eloquent가 기본적으로 바꿔줍니다.
+기본적으로 Eloquent는 `created_at` 컬럼과 `updated_at` 컬럼을 [Carbon](https://github.com/briannesbitt/Carbon) 클래스의 인스턴스로(네이티브 PHP의 `DateTime` 클래스의 확장형이며, 여러 메소드를 제공하는) 변환해줍니다.  
 
 사용자 정의 모델의 `getDates` 메소드를 재정의 하여 필드를 자동으로 바뀌도록 활성화 또는 비활성화 할 수 있습니다.
 
@@ -1235,7 +1235,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 
 사용자는 UNIX 타임스탬프 값, date(`Y-m-d`) 문자열 값, 날짜-시간에 대한 문자열 값, 그리고 `DateTime` / `Carbon` 클래스의 인스턴스 값들을 설정할 수 있습니다.
 
-완전히 비활성화 된 날짜를 바꾸려면, `getDates` 메소드에서 빈 배열을 리턴합니다.:
+날짜 변환을 아예 비활성화 하려면, `getDates` 메소드에서 빈 배열을 리턴하면 됩니다.:
 
 	public function getDates()
 	{
@@ -1247,7 +1247,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 <a name="attribute-casting"></a>
 ## 속성(Attribute) 캐스팅
 
-사용자가 항상 다른 데이터 유형으로 변환 할 속성들이 있는 경우, 사용자 정의 모델에 `casts` 값을 추가 할 수 있습니다. 그렇지 않으면, 속성들의 값들을 직접 바꿔줘야 되는데, 이는 시간 낭비입니다. 아래는 'casts`값의 사용 예 입니다.:
+사용자가 항상 다른 데이터 유형으로 변환 할 속성들을 가지고 있는 경우, 사용자 정의 모델에 `casts` 값을 추가 할 수 있습니다. 그렇지 않으면, 속성들의 값들을 직접 바꿔줘야 되는데, 이는 시간 낭비입니다. 아래는 `casts` 값의 사용 예 입니다.:
 
 	/**
 	 * 해당 속성 값들은 기본 타입으로 캐스팅 해야합니다.
@@ -1258,7 +1258,7 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 		'is_admin' => 'boolean',
 	];
 
-이제 사용자가 액세스 할 때 기본 값이 정수로 데이터베이스에 저장되어있는 경우에도 `is_admin` 속성은 항상 부울로 캐스팅됩니다. 캐스팅을 지원하는 유형들은 다음과 같습니다 `integer`,`real`,`float`,`double`,`string`,`boolean`,`object`, `array`.
+이제 사용자가 액세스 할 때 기본 값이 정수로 데이터베이스에 저장되어있는 경우에도 `is_admin` 속성은 항상 boolean으로 캐스팅됩니다. 캐스팅을 지원하는 유형들은 다음과 같습니다 : `integer`, `real`, `float`, `double`, `string`, `boolean`, `object`, `array`.
 
 `array` 캐스트는 직렬화 된 JSON으로 컬럼에 저장하는 작업에 특히 유용합니다. 예를 들어, 데이터베이스에 직렬화 된 JSON을 포함하는 텍스트 형식 필드가있는 경우, `array` 캐스팅을 해당 속성에 추가하면 Eloquent 사용자 정의 모델에 접근할 때 자동으로 역 직렬화 된 PHP 배열 값이 해당 속성 값으로 들어갑니다.:
 
@@ -1286,11 +1286,11 @@ Mutators는 Accessor와 비슷한 방법으로 선업됩니다.:
 <a name="model-events"></a>
 ## 모델 이벤트
 
-Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 수 있도록 다음과 같은 이벤트가 발생합니다.: `creating`, `created`, `updating`, `updated`, `saving`, `saved`, `deleting`, `deleted`, `restoring`, `restored`.
+Eloquent 모델들은 라이프 사이클의 여러 지점을 후킹(hook) 할 수 있도록 다음과 같은 이벤트가 발생합니다.: `creating`, `created`, `updating`, `updated`, `saving`, `saved`, `deleting`, `deleted`, `restoring`, `restored`.
 
 새로운 아이템을 처음 저장 할 경우,`created`, `creating` 이벤트가 발생합니다. 만약 항목이 새로운 아이템이 아니거나, `save` 메서드를 호출 한 경우, `updating`, `updated` 이벤트가 발생합니다. 두 경우 모두 `saving`, `saved` 이벤트가 발생합니다.
 
-#### 저장 기능을 통한 이벤트 취소하기
+#### 이벤트를 통해서 저장 취소하기
 
 `creating`, `updating`, `saving`, `deleting` 이벤트에서 `false`가 리턴되는 경우, 작업이 취소됩니다.:
 
@@ -1301,7 +1301,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 
 #### 이벤트 리스너를 등록하는 경우
 
-사용자의`EventServiceProvider`는 모델 이벤트 바인딩을 등록 할 수있는 편리한 장소를 제공합니다. 예제 입니다.:
+사용자의`EventServiceProvider`는 모델 이벤트 바인딩을 등록 할 수있는 편리한 장소를 제공합니다. 사용 예제:
 
 	/**
 	 * 프로그램에 다른 이벤트를 등록합니다.
@@ -1324,7 +1324,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 <a name="model-observers"></a>
 ## 모델 관찰자(Observers)
 
-모델 이벤트의 처리를 통합하기 위해, 당신은 모델 관찰자를 등록 할 수 있습니다. 관찰자 클래스는 다양한 모델 이벤트에 대응하는 방법이 있을 수 있습니다. 예를 들어,`creating`, `updating`, `saving` 메소드는 다른 모델의 이벤트 이름에 추가하여, 관찰자에 있을 수 있습니다.
+모델 이벤트의 처리를 통합하기 위해, 여러분은 모델 관찰자를 등록 할 수 있습니다. 관찰자 클래스는 다양한 모델 이벤트에 대응하는 메소드를 가질 수 있습니다. 예를 들어,`creating`, `updating`, `saving` 메소드가 관찰자에 있을 수 있고, 다른 어떤 모델 이벤트 이름의 형태로도 있을 수 있습니다. 
 
 따라서, 예를 들어, 모델 관찰자는 다음과 같을 수 있습니다.:
 
@@ -1357,7 +1357,7 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 
 	action('UserController@show', [$user]);
 
-`$user->id` 의 값은 생성된 URL의 `{user}` 위치에 삽입됩니다. 만약 사용자의 ID 대신 다른 속성을 사용하고자 하는 경우에는, 사용자 정의 모델의 `getRouteKey` 메소드를 재정의합니다.:
+위의 예제에서 `$user->id` 의 값은 생성된 URL의 `{user}` 위치에 삽입됩니다. 만약 사용자의 ID 대신 다른 속성을 사용하고자 하는 경우에는, 사용자 정의 모델의 `getRouteKey` 메소드를 재정의 하면 됩니다.:
 
 	public function getRouteKey()
 	{
@@ -1367,9 +1367,9 @@ Eloquent 모델들은 라이프 사이클의 여러 지점을 후크(hook) 할 �
 <!--chak-comment-Eloquent-ORM-Model-URL-Generation-->
 
 <a name="converting-to-arrays-or-json"></a>
-## 배열 / JSON으로 전환하기
+## 배열 / JSON으로 변환하기
 
-#### 모델을 배열로 전환하기
+#### 모델을 배열로 변환하기
 
 JSON API를 구축 할 때, 사용자는 종종 배열이나 JSON으로 사용자 정의 모델의 관계를 바꿔야 할 때가 있습니다. 그래서 Eloquent는 모델과 불러온 배열의 관계를 변환할 때 `toArray` 메소드를 사용합니다.:
 
@@ -1381,7 +1381,7 @@ JSON API를 구축 할 때, 사용자는 종종 배열이나 JSON으로 사용�
 
 	return User::all()->toArray();
 
-#### 모델을 JSON으로 전환하기
+#### 모델을 JSON으로 변환하기
 
 JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있습니다.
 
@@ -1389,16 +1389,16 @@ JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있�
 
 #### 라우트에서 모델 반환하기
 
-참고. 모델 또는 컬렉션이 문자열로 캐스팅 될 때, 그것은 JSON으로 변환됩니다. 이것은 Eloquent가 프로그램의 라우트에 직접 객체를 반환할 수 있음을 의미합니다.
+참고로 모델 또는 컬렉션이 문자열로 캐스팅 될 때, 그것은 JSON 형태로 변환됩니다. 이것은 Eloquent가 프로그램의 라우트에 직접 객체를 반환할 수 있음을 의미합니다.
 
 	Route::get('users', function()
 	{
 		return User::all();
 	});
 
-#### 배열 또는 JSON 전환에서의 숨기기 속성
+#### 배열 또는 JSON 변환에서의 속성값 숨기기
 
-사용자는 비밀번호와 같은 모델의 배열 또는 JSON 형식에 포함 된 속성을 제한 할 수도 있습니다. 이렇게 하려면, 사용자 정의 모델에 `hidden` 값을 추가하면 됩니다.:
+사용자는 비밀번호와 같은 모델의 배열 또는 JSON 형식에 포함 된 속성을 제한 할 수도 있습니다. 이렇게 하기 위해서는, 사용자 정의 모델에 `hidden` 값을 추가하면 됩니다.:
 
 	class User extends Model {
 
@@ -1424,6 +1424,6 @@ JSON으로 모델을 전환할 경우, `toJson` 메소드를 사용할 수 있�
 
 	protected $appends = ['is_admin'];
 
-`appends` 리스트에 속성 하나가 추가되면, 그것은 두 모델의 배열과 JSON 형태로 포함합니다. `appends` 배열의 속성은 모델의 `visible`과 `hidden` 구성에 중요하게 영향을 받습니다.
+속성이 `appends` 리스트에 추가되고나면 모델이 배열이나 JSON 형태로 변환될 때 자동으로 포함되어집니다. `appends` 배열의 속성은 모델에 정의된 `visible`와 `hidden`값에 영향을 받습니다.
 
 <!--chak-comment-Eloquent-ORM-Converting-To-Arrays---JSON-->
